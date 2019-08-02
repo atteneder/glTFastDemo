@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.atteneder.draco": "https://github.com/atteneder/DracoUnity.git",
     "com.atteneder.gltfast": "https://github.com/atteneder/glTFast",
     "com.unity.package-manager-ui": "2.1.2",
     "com.unity.modules.imageconversion": "1.0.0",
