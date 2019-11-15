@@ -36,10 +36,10 @@ OrientationTest/glTF-Binary/OrientationTest.glb
 ReciprocatingSaw/glTF-Binary/ReciprocatingSaw.glb
 RiggedFigure/glTF-Binary/RiggedFigure.glb
 RiggedSimple/glTF-Binary/RiggedSimple.glb
-#SpecGlossVsMetalRough/glTF-Binary/SpecGlossVsMetalRough.glb
+SpecGlossVsMetalRough/glTF-Binary/SpecGlossVsMetalRough.glb
 TextureCoordinateTest/glTF-Binary/TextureCoordinateTest.glb
 TextureSettingsTest/glTF-Binary/TextureSettingsTest.glb
-#UnlitTest/glTF-Binary/UnlitTest.glb
+UnlitTest/glTF-Binary/UnlitTest.glb
 VC/glTF-Binary/VC.glb
 VertexColorTest/glTF-Binary/VertexColorTest.glb
 WaterBottle/glTF-Binary/WaterBottle.glb
