@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 class Tuple<T1,T2> {
     public T1 Item1;
@@ -71,7 +74,7 @@ public class TestGui : MonoBehaviour {
 
     IEnumerator InitGui() {
 
-        #if !UNITY_EDITOR
+#if !UNITY_EDITOR
         string prefix = GltfSampleModels.baseUrl;
 #else
         string prefix = GltfSampleModels.baseUrlLocal;
@@ -149,8 +152,22 @@ public class TestGui : MonoBehaviour {
 
         if(showMenu) {
             GUI.BeginGroup( new Rect(0,0,width,barHeightWidth) );
-            urlField = GUI.TextField( new Rect(0,0,width-buttonWidth,barHeightWidth),urlField);
-    		if(GUI.Button( new Rect(width-buttonWidth,0,buttonWidth,barHeightWidth),"Load")) {
+            
+            float urlFieldWidth = width-buttonWidth;
+
+#if UNITY_EDITOR
+            if(GUI.Button( new Rect(width-buttonWidth*2,0,buttonWidth,barHeightWidth),"Open")) {
+                string path = EditorUtility.OpenFilePanel("Select glTF", "", "glb");
+                if (path.Length != 0)
+                {
+                    GetComponent<TestLoader>().LoadUrl("file://"+path);
+                }
+            }
+            urlFieldWidth -= buttonWidth;
+#endif
+
+            urlField = GUI.TextField( new Rect(0,0,urlFieldWidth,barHeightWidth),urlField);
+            if(GUI.Button( new Rect(width-buttonWidth,0,buttonWidth,barHeightWidth),"Load")) {
                 GetComponent<TestLoader>().LoadUrl(urlField);
             }
             GUI.EndGroup();
