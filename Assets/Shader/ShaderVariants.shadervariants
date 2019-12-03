@@ -8,39 +8,7 @@ ShaderVariantCollection:
   m_PrefabAsset: {fileID: 0}
   m_Name: ShaderVariants
   m_Shaders:
-  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: DIRECTIONAL
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN
-        passType: 4
-      - keywords: DIRECTIONAL _NORMALMAP _SPECGLOSSMAP
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP _SPECGLOSSMAP
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _NORMALMAP _SPECGLOSSMAP
-        passType: 4
-      - keywords: DIRECTIONAL _EMISSION _NORMALMAP _SPECGLOSSMAP
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _EMISSION _NORMALMAP _SPECGLOSSMAP
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _EMISSION _NORMALMAP _SPECGLOSSMAP
-        passType: 4
-      - keywords: DIRECTIONAL _NORMALMAP _SPECGLOSSMAP
-        passType: 5
-      - keywords: SHADOWS_DEPTH
-        passType: 8
-      - keywords: SHADOWS_DEPTH _SPECGLOSSMAP
-        passType: 8
-  - first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  - first: {fileID: 4800000, guid: 99fa998bbbed3408aafa652b466d261d, type: 3}
     second:
       variants:
       - keywords: DIRECTIONAL
@@ -53,21 +21,13 @@ ShaderVariantCollection:
         passType: 4
       - keywords: DIRECTIONAL LIGHTPROBE_SH _EMISSION
         passType: 4
-      - keywords: DIRECTIONAL _ALPHATEST_ON
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHATEST_ON
-        passType: 4
-      - keywords: DIRECTIONAL _ALPHABLEND_ON
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHABLEND_ON
-        passType: 4
-      - keywords: DIRECTIONAL _ALPHAPREMULTIPLY_ON
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHAPREMULTIPLY_ON
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _EMISSION
         passType: 4
       - keywords: DIRECTIONAL _METALLICGLOSSMAP
         passType: 4
       - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _METALLICGLOSSMAP
         passType: 4
       - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP
         passType: 4
@@ -82,31 +42,184 @@ ShaderVariantCollection:
       - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _EMISSION _METALLICGLOSSMAP
           _NORMALMAP
         passType: 4
+      - keywords: DIRECTIONAL _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _METALLICGLOSSMAP _NORMALMAP
+          _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL _EMISSION _METALLICGLOSSMAP _NORMALMAP _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _EMISSION _METALLICGLOSSMAP
+          _NORMALMAP _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL _ALPHABLEND_ON _METALLICGLOSSMAP _NORMALMAP _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHABLEND_ON _METALLICGLOSSMAP _NORMALMAP
+          _OCCLUSION
+        passType: 4
+      - keywords: DIRECTIONAL _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP _OCCLUSION
+          _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _METALLICGLOSSMAP _NORMALMAP
+          _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL _EMISSION _METALLICGLOSSMAP _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _EMISSION _METALLICGLOSSMAP
+          _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL
+        passType: 5
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _OCCLUSION
+        passType: 5
+      - keywords: DIRECTIONAL _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 5
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 5
+      - keywords: POINT SHADOWS_CUBE SHADOWS_SOFT _METALLICGLOSSMAP _NORMALMAP _OCCLUSION
+          _UV_ROTATION
+        passType: 5
+      - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP
+        passType: 8
+      - keywords: SHADOWS_DEPTH _OCCLUSION
+        passType: 8
+      - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP _OCCLUSION
+        passType: 8
+      - keywords: SHADOWS_DEPTH _ALPHABLEND_ON _METALLICGLOSSMAP _OCCLUSION
+        passType: 8
+      - keywords: SHADOWS_DEPTH _UV_ROTATION
+        passType: 8
+      - keywords: SHADOWS_DEPTH _OCCLUSION _UV_ROTATION
+        passType: 8
+      - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP _OCCLUSION _UV_ROTATION
+        passType: 8
+      - keywords: SHADOWS_CUBE _METALLICGLOSSMAP _OCCLUSION _UV_ROTATION
+        passType: 8
+  - first: {fileID: 4800000, guid: f853aafa0bc764a138f572608a37a73c, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN
+        passType: 4
+      - keywords: DIRECTIONAL _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL _EMISSION _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _EMISSION _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _EMISSION _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL _EMISSION _NORMALMAP _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _EMISSION _NORMALMAP _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _EMISSION _NORMALMAP _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL _NORMALMAP
+        passType: 5
+      - keywords: DIRECTIONAL _NORMALMAP _UV_ROTATION
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: SHADOWS_DEPTH _SPECGLOSSMAP
+        passType: 8
+      - keywords: SHADOWS_DEPTH _UV_ROTATION
+        passType: 8
+  - first: {fileID: 4800000, guid: 4340a3cf1cde6416d957808a6ac79eed, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _UV_ROTATION
+        passType: 0
+  - first: {fileID: 4800000, guid: 29eb87de221254429b4fad21f92f99e8, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN
+        passType: 4
+      - keywords: DIRECTIONAL _ALPHATEST_ON
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHATEST_ON
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _ALPHATEST_ON
+        passType: 4
+      - keywords: DIRECTIONAL _ALPHABLEND_ON
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHABLEND_ON
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
       - keywords: DIRECTIONAL _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
         passType: 4
       - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
         passType: 4
-      - keywords: DIRECTIONAL _ALPHABLEND_ON _METALLICGLOSSMAP _NORMALMAP
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHABLEND_ON _METALLICGLOSSMAP _NORMALMAP
-        passType: 4
-      - keywords: DIRECTIONAL _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP _NORMALMAP
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP
-          _NORMALMAP
-        passType: 4
-      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP _OCCLUSION
         passType: 4
       - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _METALLICGLOSSMAP _NORMALMAP
-          _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+          _OCCLUSION
         passType: 4
-      - keywords: DIRECTIONAL
-        passType: 5
+      - keywords: DIRECTIONAL _EMISSION _METALLICGLOSSMAP _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          _OCCLUSION _UV_ROTATION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _EMISSION _METALLICGLOSSMAP
+          _NORMALMAP _OCCLUSION _UV_ROTATION
+        passType: 4
       - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP
         passType: 5
-      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _OCCLUSION _UV_ROTATION
         passType: 5
       - keywords: SHADOWS_DEPTH
         passType: 8
@@ -114,60 +227,22 @@ ShaderVariantCollection:
         passType: 8
       - keywords: SHADOWS_DEPTH _ALPHABLEND_ON
         passType: 8
-      - keywords: SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON
-        passType: 8
       - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP
         passType: 8
       - keywords: SHADOWS_DEPTH _ALPHATEST_ON _METALLICGLOSSMAP
         passType: 8
-      - keywords: SHADOWS_DEPTH _ALPHABLEND_ON _METALLICGLOSSMAP
+      - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP _OCCLUSION _UV_ROTATION
         passType: 8
-      - keywords: SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP
+  - first: {fileID: 4800000, guid: b36b9c00268af4555894f5aa28a329cb, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL _NORMALMAP
+        passType: 5
+      - keywords: SHADOWS_DEPTH
         passType: 8
-      - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-        passType: 8
-  - first: {fileID: 64, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: SHADOWS_SPLIT_SPHERES
-        passType: 0
-  - first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: _SUNDISK_SIMPLE
-        passType: 0
-  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9006, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
