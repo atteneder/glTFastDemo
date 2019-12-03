@@ -3,6 +3,9 @@ using UnityEngine.Events;
 #if !NO_GLTFAST
 using GLTFast;
 #endif
+#if UNITY_GLTF
+using UnityGLTF;
+#endif
 
 public class TestLoader : MonoBehaviour {
 
