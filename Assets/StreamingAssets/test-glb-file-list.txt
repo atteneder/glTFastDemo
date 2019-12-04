@@ -28,7 +28,7 @@ Lantern/glTF-Binary/Lantern.glb
 MetalRoughSpheres/glTF-Binary/MetalRoughSpheres.glb
 Monster/glTF-Binary/Monster.glb
 MorphPrimitivesTest/glTF-Binary/MorphPrimitivesTest.glb
-#MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.glb
+MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.glb
 MultiUVTest/glTF-Binary/MultiUVTest.glb
 NormalTangentMirrorTest/glTF-Binary/NormalTangentMirrorTest.glb
 NormalTangentTest/glTF-Binary/NormalTangentTest.glb
