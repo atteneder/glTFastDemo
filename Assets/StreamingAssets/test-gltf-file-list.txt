@@ -111,8 +111,6 @@ Triangle/glTF/Triangle.gltf
 TriangleWithoutIndices/glTF-Embedded/TriangleWithoutIndices.gltf
 TriangleWithoutIndices/glTF/TriangleWithoutIndices.gltf
 TwoSidedPlane/glTF/TwoSidedPlane.gltf
-TwoSidedPlane/glTF/TwoSidedPlane-unlit.gltf
-TwoSidedPlane/glTF/TwoSidedPlane-SpecGloss.gltf
 UnlitTest/glTF/UnlitTest.gltf
 VC/glTF-Draco/VC.gltf
 VC/glTF-Embedded/VC.gltf
