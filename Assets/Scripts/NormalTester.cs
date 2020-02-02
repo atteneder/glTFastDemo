@@ -7,7 +7,7 @@ public class NormalTester : MonoBehaviour {
 	public Color color = new Color(0,1,0);
 	public float length = 0.1f;
 	public bool showTangents = false;
-	public Color tangentsColor = new Color(0,0,1);
+	public Color tangentsColor = new Color(1,0,1);
 	private Mesh mesh;
 	
 	// Use this for initialization
@@ -23,22 +23,27 @@ public class NormalTester : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(mesh==null) return;
-		
-		for(int i=0;i<mesh.vertices.Length;i++) {
-			Matrix4x4 mat = transform.localToWorldMatrix;
-			Vector3 start = mesh.vertices[i];
+		var tmpVerts = mesh.vertices;
+		var tmpNorms = mesh.normals;
+		var tmpTans = mesh.tangents;
+		Matrix4x4 mat = transform.localToWorldMatrix; // Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);// 
+		var rot = transform.rotation;
+		for(int i=0;i<tmpVerts.Length;i++) {
+			Vector3 start = tmpVerts[i];
 			start = mat.MultiplyPoint3x4(start);
 			Vector3 end;
 			
-			if(showNormals && mesh.normals!=null && mesh.normals.Length>0 ) {
-				end = mesh.vertices[i] + mesh.normals[i]*length;
-				end = mat.MultiplyPoint3x4(end);
+			if(showNormals && tmpNorms!=null && tmpNorms.Length>0 ) {
+				// end = tmpVerts[i] + tmpNorms[i]*length;
+				// end = mat.MultiplyPoint3x4(end);
+				end = start + (rot * tmpNorms[i])*length;
 				UnityEngine.Debug.DrawLine( start, end, color);
 			}
 			
-			if(showTangents && mesh.tangents!=null && mesh.tangents.Length>0 ) {
-				Vector4 t = mesh.tangents[i];
-				end = mat.MultiplyPoint3x4( mesh.vertices[i] + (new Vector3(t.x,t.y,t.z)*(t.w*length) ) );
+			if(showTangents && tmpTans!=null && tmpTans.Length>0 ) {
+				Vector4 t = tmpTans[i];
+				end = mat.MultiplyPoint3x4( tmpVerts[i] + (new Vector3(t.x,t.y,t.z)*(t.w*length) ) );
+				end = start + (rot * new Vector3(t.x,t.y,t.z) )*(t.w*length);
 				UnityEngine.Debug.DrawLine( start, end, tangentsColor);
 			}
 			
