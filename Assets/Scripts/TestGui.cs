@@ -144,6 +144,9 @@ public class TestGui : MonoBehaviour {
 
             guiStyle = GUI.skin.toggle;
             guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
+
+            guiStyle = GUI.skin.label;
+            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
 			screenFactor = float.NaN;
 		}
 
