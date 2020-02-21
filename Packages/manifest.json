@@ -4,7 +4,7 @@
     "com.atteneder.gltfast": "https://github.com/atteneder/glTFast.git",
     "com.unity.ext.nunit": "1.0.0",
     "com.unity.ide.vscode": "1.1.4",
-    "com.unity.test-framework": "1.1.9",
+    "com.unity.test-framework": "1.1.11",
     "com.unity.modules.imageconversion": "1.0.0",
     "com.unity.modules.imgui": "1.0.0",
     "com.unity.modules.jsonserialize": "1.0.0",
