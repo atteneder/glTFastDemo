@@ -19,14 +19,16 @@ BrainStem/glTF-Binary/BrainStem.glb
 Buggy/glTF-Binary/Buggy.glb
 CesiumMan/glTF-Binary/CesiumMan.glb
 CesiumMilkTruck/glTF-Binary/CesiumMilkTruck.glb
+ClearCoatTest/glTF-Binary/ClearCoatTest.glb
 Corset/glTF-Binary/Corset.glb
 DamagedHelmet/glTF-Binary/DamagedHelmet.glb
 Duck/glTF-Binary/Duck.glb
+Fox/glTF-Binary/Fox.glb
 GearboxAssy/glTF-Binary/GearboxAssy.glb
 InterpolationTest/glTF-Binary/InterpolationTest.glb
 Lantern/glTF-Binary/Lantern.glb
 MetalRoughSpheres/glTF-Binary/MetalRoughSpheres.glb
-Monster/glTF-Binary/Monster.glb
+MetalRoughSpheresNoTextures/glTF-Binary/MetalRoughSpheresNoTextures.glb
 MorphPrimitivesTest/glTF-Binary/MorphPrimitivesTest.glb
 MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.glb
 MultiUVTest/glTF-Binary/MultiUVTest.glb
