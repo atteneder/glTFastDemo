@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿#if !(UNITY_ANDROID || UNITY_WEBGL) || UNITY_EDITOR
+#define LOCAL_LOADING
+#endif
+
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -6,31 +10,23 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-class Tuple<T1,T2> {
-    public T1 Item1;
-    public T2 Item2;
-
-    public Tuple(T1 i1,T2 i2) {
-        Item1 = i1;
-        Item2 = i2;
-    }
-}
-
 [RequireComponent(typeof(TestLoader))]
 public class TestGui : MonoBehaviour {
-
 	static float barHeightWidth = 25;
     static float buttonWidth = 50;
     static float listWidth = 150;
     static float listItemHeight = 25;
     static float timeHeight = 20;
 
+    [SerializeField]
+    GltfSampleSet[] sampleSets = null;
+
     public bool showMenu = true;
     // Load files locally (from streaming assets) or via HTTP
     public bool local = false;
 
-    List<Tuple<string,string>> testItems = new List<Tuple<string, string>>();
-    List<Tuple<string,string>> testItemsLocal = new List<Tuple<string, string>>();
+    List<GLTFast.Tuple<string,string>> testItems = new List<GLTFast.Tuple<string, string>>();
+    List<GLTFast.Tuple<string,string>> testItemsLocal = new List<GLTFast.Tuple<string, string>>();
 
     string urlField;
 
@@ -74,42 +70,27 @@ public class TestGui : MonoBehaviour {
 
     IEnumerator InitGui() {
 
-#if !UNITY_EDITOR
-        string prefix = GltfSampleModels.baseUrl;
-#else
-        string prefix = GltfSampleModels.baseUrlLocal;
-#endif
-
-        var prefixLocal = GltfSampleModels.localPath;
-
         var names = new List<string>();
 
-        yield return GltfSampleModels.LoadGltfFileUrls();
-        names.AddRange(GltfSampleModels.gltfFileUrls);
-
-        yield return GltfSampleModels.LoadGlbFileUrls();
-        names.AddRange(GltfSampleModels.glbFileUrls);
-
-        foreach( var n in names ) {
-            var t = GltfSampleModels.GetNameFromPath(n);
-            testItems.Add( new Tuple<string, string>(
-                t,
-                string.Format(
-                    "{0}/{1}"
-                    ,prefix
-                    ,n
-                    )
-                )
-            );
-            testItemsLocal.Add( new Tuple<string, string>(
-                t,
-                string.Format(
-                    "{0}/{1}"
-                    ,prefixLocal
-                    ,n
-                    )
-                )
-            );
+        if(sampleSets!=null) {
+            foreach(var set in sampleSets) {
+                yield return set.Load();
+                if(set.items!=null) {
+                    testItems.AddRange(set.items);
+#if LOCAL_LOADING
+                    foreach(var item in set.itemsLocal) {
+                        testItemsLocal.Add(
+                            new GLTFast.Tuple<string, string>(
+                                item.Item1,
+                                string.Format( "file://{0}", item.Item2)
+                            )
+                        );
+                    }
+#else
+                    testItems.AddRange(set.itemsLocal);
+#endif
+                }
+            }
         }
 	}
 
@@ -220,7 +201,7 @@ public class TestGui : MonoBehaviour {
         minFrame = Mathf.Min(minFrame, Time.deltaTime * 1000 );
         maxFrame = Mathf.Max(maxFrame, Time.deltaTime * 1000 );
     }
-    void GUIDrawItems( List<Tuple<string,string>> items, float listItemWidth) {
+    void GUIDrawItems( List<GLTFast.Tuple<string,string>> items, float listItemWidth) {
         float y = 0;
         foreach( var item in items ) {
             if(GUI.Button(new Rect(0,y,listItemWidth,listItemHeight),item.Item1)) {

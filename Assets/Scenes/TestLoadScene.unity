@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: b6bfc3d1d82664137b41a317a5ddd6eb,
     type: 2}
   m_UseShadowmask: 1
@@ -273,6 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf03a0bd1c09446fabe7711acfc7b231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sampleSets:
+  - {fileID: 11400000, guid: a8c70edfdfb754455bc1443af577a8ac, type: 2}
+  - {fileID: 11400000, guid: 83dbee93b14c84f41a7c57c6ae5fc7e1, type: 2}
+  - {fileID: 11400000, guid: 58cc8e14f586545a6bd606e9f31af13e, type: 2}
   showMenu: 1
   local: 1
 --- !u!4 &1164569222
@@ -326,8 +331,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173143196}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
