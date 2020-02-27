@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019 Andreas Atteneder, All Rights Reserved.
+﻿// Copyright (c) 2020 Andreas Atteneder, All Rights Reserved.
 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,12 +17,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneSelection : MonoBehaviour
 {
-    [SerializeField] string[] scenes;
+    [SerializeField] string[] scenes = null;
     [SerializeField] float width = 300;
     [SerializeField] float height = 100;
     [SerializeField] float yGap = 10;
-    [SerializeField] bool alignRight;
-    [SerializeField] bool alignBottom;
+    [SerializeField] bool alignRight = false;
+    [SerializeField] bool alignBottom = false;
 
     bool hidden;
 
