@@ -19,8 +19,8 @@ public class TestLoader : MonoBehaviour {
     public UnityAction<float> time1Update;
     public UnityAction<float> time2Update;
 
-    GameObject go1;
-    GameObject go2;
+    GameObject go1 = null;
+    GameObject go2 = null;
 
 #if !NO_GLTFAST
     GltfAsset gltf1;
@@ -68,15 +68,15 @@ public class TestLoader : MonoBehaviour {
         time2Update(-1);
 #endif
 
-        go1 = new GameObject();
-        go2 = new GameObject();
 
 #if !NO_GLTFAST
+        go1 = new GameObject();
         gltf1 = go1.AddComponent<GLTFast.GltfAsset>();
         gltf1.url = url;
         gltf1.onLoadComplete += GLTFast_onLoadComplete;
 #endif
 #if UNITY_GLTF
+        go2 = new GameObject();
         go2.transform.rotation = Quaternion.Euler(0,180,0);
         gltf2 = go2.AddComponent<UnityGLTFLoader>();
         gltf2.GLTFUri = url;
