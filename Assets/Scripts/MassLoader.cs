@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿#if !(UNITY_ANDROID || UNITY_WEBGL) || UNITY_EDITOR
+#define LOCAL_LOADING
+#endif
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,17 +15,15 @@ public class MassLoader : MonoBehaviour {
 
         yield return GltfSampleModels.LoadGltfFileUrls();
 
-        var baseUrl = local ? GltfSampleModels.localPath : GltfSampleModels.baseUrl;
-
         // Wait a bit to make sure profiling works
         yield return new WaitForSeconds(1);
 
-		foreach( var n in GltfSampleModels.gltfFileUrls ) {
-            var url = string.Format(
-                "{0}/{1}"
-                ,baseUrl
-                ,n
-                );
+        foreach( var n in GltfSampleModels.gltfFileUrls ) {
+#if LOCAL_LOADING
+            var url = string.Format( "file://{0}", n);
+#else
+            var ulr = n;
+#endif
             var go = new GameObject(System.IO.Path.GetFileNameWithoutExtension(url));
 
 #if UNITY_GLTF
@@ -30,7 +32,6 @@ public class MassLoader : MonoBehaviour {
 #endif
             
 #if !NO_GLTFAST
-            // GLTFast.GLTFast.LoadGlbFile( url, go.transform );
             var gltfAsset = go.AddComponent<GLTFast.GltfAsset>();
             gltfAsset.url = url;
 #endif
