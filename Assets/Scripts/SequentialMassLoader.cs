@@ -5,39 +5,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class SequentialMassLoader : MonoBehaviour
+public class SequentialMassLoader : MassLoader
 {
-    [SerializeField]
-    GltfSampleSet[] sampleSets = null;
-
-    [SerializeField]
-    bool local = true;
-
     bool waitForIt;
     GLTFast.GltfAsset gltfAsset;
 
-    IEnumerator Start()
-    {
-        if(sampleSets!=null) {
-            foreach(var set in sampleSets) {
-                yield return set.Load();
-            }
-        }
+    protected override IEnumerator MassLoadRoutine() {
 
-        // Wait a bit to make sure profiling works
-        yield return new WaitForSeconds(1);
-
-        float startTime = Time.realtimeSinceStartup;
-
-        // foreach (var n in GltfSampleModels.gltfFileUrls)
-        // {
-        //     yield return LoadIt<GLTFast.GltfAsset>(n,baseUrl);
-        // }
-
-        // foreach (var n in GltfSampleModels.glbFileUrls)
-        // {
-        //     yield return LoadIt<GLTFast.GltfAsset>(n,baseUrl);
-        // }
+        stopWatch.StartTime();
 
         int count = 0;
         if(sampleSets!=null) {
@@ -52,28 +27,23 @@ public class SequentialMassLoader : MonoBehaviour
                                 item.Item2
 #endif
                             );
+                            count++;
                         }
-                        count++;
                     } else {
                         foreach(var item in set.items) {
                             yield return LoadIt<GLTFast.GltfAsset>(item.Item2);
+                            count++;
                         }
-                        count++;
                     }
                 }
             }
         }
 
-
-        Debug.LogFormat("Finished loading {1} glTFs in {0} seconds!",Time.realtimeSinceStartup-startTime,count);
+        stopWatch.StopTime();
+        Debug.LogFormat("Finished loading {1} glTFs in {0} milliseconds!",stopWatch.lastDuration,count);
     }
 
     IEnumerator LoadIt<T>(string n) where T:GLTFast.GltfAsset {
-        // var url = string.Format(
-        //     "{0}/{1}"
-        //     , baseUrl
-        //     , n
-        //     );
         var url = n;
         var go = new GameObject(System.IO.Path.GetFileNameWithoutExtension(url));
         
@@ -81,7 +51,6 @@ public class SequentialMassLoader : MonoBehaviour
 
         waitForIt = true;
 
-        // GLTFast.GLTFast.LoadGlbFile( url, go.transform );
         gltfAsset = go.AddComponent<T>();
         gltfAsset.onLoadComplete += OnComplete;
         gltfAsset.url = url;
@@ -90,11 +59,10 @@ public class SequentialMassLoader : MonoBehaviour
             yield return null;
         }
         Destroy(go);
-        yield return null;
     }
 
-    void OnComplete(bool success) {
-        gltfAsset.onLoadComplete -= OnComplete;
+    void OnComplete(GLTFast.GltfAsset asset, bool success) {
+        asset.onLoadComplete -= OnComplete;
         if(!success) {
             Debug.LogError("Ups");
             Destroy(this);

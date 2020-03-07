@@ -16,8 +16,8 @@ public class TestLoader : MonoBehaviour {
 #endif
 
     public UnityAction<string> urlChanged;
-    public UnityAction<float> time1Update;
-    public UnityAction<float> time2Update;
+    public UnityAction loadingBegin;
+    public UnityAction loadingEnd;
 
     GameObject go1 = null;
     GameObject go2 = null;
@@ -30,13 +30,15 @@ public class TestLoader : MonoBehaviour {
 #endif
 
     float startTime = -1;
+    GLTFast.IDeferAgent deferAgent;
 
-	// Use this for initialization
-	void Start () {
-		// LoadUrl( GltfSampleModels.baseUrl+"Duck/glTF-Binary/Duck.glb" );
-	}
-	
-	public void LoadUrl(string url) {
+    // Use this for initialization
+    void Start () {
+        deferAgent = new GLTFast.UninterruptedDeferAgent();
+        // LoadUrl( GltfSampleModels.baseUrl+"Duck/glTF-Binary/Duck.glb" );
+    }
+
+    public void LoadUrl(string url) {
 
 #if !NO_GLTFAST
         if(gltf1!=null) {
@@ -61,18 +63,13 @@ public class TestLoader : MonoBehaviour {
         Debug.Log("loading "+url);
 
         startTime = Time.realtimeSinceStartup;
-#if !NO_GLTFAST
-        time1Update(-1);
-#endif
-#if UNITY_GLTF
-        time2Update(-1);
-#endif
-
+        loadingBegin();
 
 #if !NO_GLTFAST
         go1 = new GameObject();
         gltf1 = go1.AddComponent<GLTFast.GltfAsset>();
-        gltf1.url = url;
+        gltf1.loadOnStartup = false;
+        gltf1.Load(url,deferAgent);
         gltf1.onLoadComplete += GLTFast_onLoadComplete;
 #endif
 #if UNITY_GLTF
@@ -89,7 +86,8 @@ public class TestLoader : MonoBehaviour {
 #if UNITY_GLTF
     void UnityGltf_OnLoadComplete()
     {
-        time2Update((Time.realtimeSinceStartup-startTime)*1000);
+        loadingEnd();
+        // time2Update((Time.realtimeSinceStartup-startTime)*1000);
         var bounds = CalculateLocalBounds(go2.transform);
         
         float targetSize = 2.0f;
@@ -109,9 +107,9 @@ public class TestLoader : MonoBehaviour {
 #endif
 
 #if !NO_GLTFAST
-    void GLTFast_onLoadComplete(bool success)
+    void GLTFast_onLoadComplete(GLTFast.GltfAsset asset, bool success)
     {
-        time1Update((Time.realtimeSinceStartup-startTime)*1000);
+        loadingEnd();
 
         if(success) {
             var bounds = CalculateLocalBounds(gltf1.transform);

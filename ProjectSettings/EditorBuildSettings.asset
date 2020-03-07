@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SequentialMassLoader.unity
     guid: 38f1556cab39e4e0687e2dc1f0526a1c
   - enabled: 1
-    path: Assets/Scenes/MassLoader.unity
+    path: Assets/Scenes/FastMassLoader.unity
     guid: 2de85f55fa9b94700b07a00aa4a0d5f6
+  - enabled: 1
+    path: Assets/Scenes/ResponsiveMassLoader.unity
+    guid: f258793d08df04fcda6f4200b0f14c1d
   m_configObjects: {}

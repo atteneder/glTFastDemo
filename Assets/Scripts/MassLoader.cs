@@ -1,40 +1,29 @@
-﻿#if !(UNITY_ANDROID || UNITY_WEBGL) || UNITY_EDITOR
-#define LOCAL_LOADING
-#endif
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MassLoader : MonoBehaviour {
+public abstract class MassLoader : MonoBehaviour
+{
+    [SerializeField]
+    protected GltfSampleSet[] sampleSets = null;
 
-    public bool local = false;
+    [SerializeField]
+    protected bool local = true;
 
-	// Use this for initialization
-	IEnumerator Start () {
+    [SerializeField]
+    protected StopWatch stopWatch = null;
 
-        yield return GltfSampleModels.LoadGltfFileUrls();
-
+    IEnumerator Start()
+    {
+        if(sampleSets!=null) {
+            foreach(var set in sampleSets) {
+                yield return set.Load();
+            }
+        }
         // Wait a bit to make sure profiling works
         yield return new WaitForSeconds(1);
+        StartCoroutine(MassLoadRoutine());
+    }
 
-        foreach( var n in GltfSampleModels.gltfFileUrls ) {
-#if LOCAL_LOADING
-            var url = string.Format( "file://{0}", n);
-#else
-            var ulr = n;
-#endif
-            var go = new GameObject(System.IO.Path.GetFileNameWithoutExtension(url));
-
-#if UNITY_GLTF
-            var gltf = go.AddComponent<UnityGLTF.GLTFComponent>();
-            gltf.GLTFUri = url;
-#endif
-            
-#if !NO_GLTFAST
-            var gltfAsset = go.AddComponent<GLTFast.GltfAsset>();
-            gltfAsset.url = url;
-#endif
-        }
-	}
+    protected abstract IEnumerator MassLoadRoutine();
 }

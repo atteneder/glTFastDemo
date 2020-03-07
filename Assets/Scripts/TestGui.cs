@@ -12,14 +12,20 @@ using UnityEditor;
 
 [RequireComponent(typeof(TestLoader))]
 public class TestGui : MonoBehaviour {
-	static float barHeightWidth = 25;
+
+    public static float screenFactor;
+
+    static float barHeightWidth = 25;
     static float buttonWidth = 50;
     static float listWidth = 150;
     static float listItemHeight = 25;
-    static float timeHeight = 20;
 
     [SerializeField]
     GltfSampleSet[] sampleSets = null;
+
+
+    [SerializeField]
+    StopWatch stopWatch = null;
 
     public bool showMenu = true;
     // Load files locally (from streaming assets) or via HTTP
@@ -30,31 +36,38 @@ public class TestGui : MonoBehaviour {
 
     string urlField;
 
-	float screenFactor;   
-
-    float startTime = -1;
-    float minFrame = float.MaxValue;
-    float maxFrame = float.MinValue;
-#if !NO_GLTFAST
-	float time1 = -1;
-#endif
-#if UNITY_GLTF
-	float time2 = -1;
-#endif
-
     Vector2 scrollPos;
 
-	private void Awake()
-	{
+    public static void CalculateScreenFactor() {
+        screenFactor = Mathf.Max( 1, Mathf.Floor( Screen.dpi / 100f ));
+    }
 
-		screenFactor = Mathf.Max( 1, Mathf.Floor( Screen.dpi / 100f ));
+    public static void TrySetGUIStyles() {
+        if(!float.IsNaN(screenFactor)) {
+            // Init time gui style adjustments
+            var guiStyle = GUI.skin.button;
+            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
 
-		barHeightWidth *= screenFactor;
+            guiStyle = GUI.skin.toggle;
+            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
+
+            guiStyle = GUI.skin.label;
+            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
+            screenFactor = float.NaN;
+       }
+    }
+
+    private void Awake()
+    {
+        CalculateScreenFactor();
+
+        barHeightWidth *= screenFactor;
         buttonWidth *= screenFactor;
         listWidth *= screenFactor;
         listItemHeight *= screenFactor;
-        timeHeight *= screenFactor;
-        
+
+        stopWatch.posX = listWidth;
+
 #if PLATFORM_WEBGL && !UNITY_EDITOR
         // Hide UI in glTF compare web
         HideUI();
@@ -64,9 +77,18 @@ public class TestGui : MonoBehaviour {
 
         var tl = GetComponent<TestLoader>();
         tl.urlChanged += UrlChanged;
-        tl.time1Update += Time1Update;
-        tl.time2Update += Time2Update;
-	}
+        tl.loadingBegin += OnLoadingBegin;
+        tl.loadingEnd += OnLoadingEnd;
+    }
+
+    void OnLoadingBegin() {
+        stopWatch.StartTime();
+    }
+
+    void OnLoadingEnd() {
+        showMenu = true;
+        stopWatch.StopTime();
+    }
 
     IEnumerator InitGui() {
 
@@ -92,47 +114,20 @@ public class TestGui : MonoBehaviour {
                 }
             }
         }
-	}
+    }
 
-	void UrlChanged(string newUrl)
+    void UrlChanged(string newUrl)
     {
-        startTime = Time.realtimeSinceStartup;
+        stopWatch.StartTime();
         urlField = newUrl;
-        minFrame = float.MaxValue;
-        maxFrame = float.MinValue;
     }
 
-    void Time1Update(float time)
+    private void OnGUI()
     {
-#if !NO_GLTFAST
-		time1 = time;
-#endif
-    }
+        TrySetGUIStyles();
 
-    void Time2Update(float time)
-    {
-#if UNITY_GLTF
-		time2 = time;
-#endif
-    }
-
-	private void OnGUI()
-	{
-		if(!float.IsNaN(screenFactor)) {
-			// Init time gui style adjustments
-			var guiStyle = GUI.skin.button;
-            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
-
-            guiStyle = GUI.skin.toggle;
-            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
-
-            guiStyle = GUI.skin.label;
-            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
-			screenFactor = float.NaN;
-		}
-
-		float width = Screen.width;
-		float height = Screen.height;
+        float width = Screen.width;
+        float height = Screen.height;
 
         if(showMenu) {
             GUI.BeginGroup( new Rect(0,0,width,barHeightWidth) );
@@ -168,49 +163,24 @@ public class TestGui : MonoBehaviour {
     
             GUI.EndScrollView();
         }
-        string label;
-
-        float now = (Time.realtimeSinceStartup-startTime)*1000;
-        #if !NO_GLTFAST
-        if(startTime>=0 || time1>=0) {
-            if(startTime>=0 && time1<0) UpdateFrameTimes();
-			label = string.Format(
-                "glTFast time: {0:0.00} ms (min: {1:0.0} ms max: {2:0.0} ms)"
-                ,time1>=0 ? time1 : now
-                ,minFrame < float.MaxValue ? minFrame : '-'
-                ,maxFrame > float.MinValue ? maxFrame : '-'
-                );
-			GUI.Label(new Rect(listWidth+10,height-timeHeight,width-listWidth-10,timeHeight),label);
-        }
-        #endif
-        #if UNITY_GLTF
-        if(startTime>=0 || time2>=0) {
-            if(startTime>=0 && time2<0) UpdateFrameTimes();
-            label = string.Format(
-                "UnityGLTF time: {0:0.00} ms (min: {1:0.0} ms max: {2:0.0} ms)"
-                , time2>=0 ? time2 : now
-                ,minFrame < float.MaxValue ? minFrame : '-'
-                ,maxFrame > float.MinValue ? maxFrame : '-'
-                );
-            GUI.Label(new Rect(listWidth+10,height-timeHeight,width-listWidth-10,timeHeight),label);
-        }
-        #endif
-	}
-
-    void UpdateFrameTimes() {
-        minFrame = Mathf.Min(minFrame, Time.deltaTime * 1000 );
-        maxFrame = Mathf.Max(maxFrame, Time.deltaTime * 1000 );
     }
+
     void GUIDrawItems( List<GLTFast.Tuple<string,string>> items, float listItemWidth) {
         float y = 0;
         foreach( var item in items ) {
             if(GUI.Button(new Rect(0,y,listItemWidth,listItemHeight),item.Item1)) {
+                // Hide menu during loading, since it can distort the performance profiling.
+                showMenu = false;
                 GetComponent<TestLoader>().LoadUrl(item.Item2);
             }
             y+=listItemHeight;
         }
     }
-    public void HideUI() {
-        showMenu = false;
+
+    void OnDestroy() {
+        var tl = GetComponent<TestLoader>();
+        tl.urlChanged -= UrlChanged;
+        tl.loadingBegin -= OnLoadingBegin;
+        tl.loadingEnd -= OnLoadingEnd;
     }
 }

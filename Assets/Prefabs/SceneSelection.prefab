@@ -46,10 +46,9 @@ MonoBehaviour:
   scenes:
   - Main
   - TestLoadScene
-  - MassLoader
+  - FastMassLoader
+  - ResponsiveMassLoader
   - SequentialMassLoader
-  scenes2:
-    m_Handle: 0
   width: 300
   height: 100
   yGap: 10

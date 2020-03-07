@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 272718841}
   - component: {fileID: 272718840}
+  - component: {fileID: 272718842}
   m_Layer: 0
   m_Name: SequentialMassLoader
   m_TagString: Untagged
@@ -151,9 +152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sampleSets:
-  - {fileID: 11400000, guid: 83dbee93b14c84f41a7c57c6ae5fc7e1, type: 2}
-  - {fileID: 11400000, guid: 58cc8e14f586545a6bd606e9f31af13e, type: 2}
+  - {fileID: 11400000, guid: 586ce4a70c8cb495d9844ac3924001b8, type: 2}
   local: 1
+  stopWatch: {fileID: 272718842}
 --- !u!4 &272718841
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +169,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &272718842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272718839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e37a86ddb6cb444ba7fe0f7ab265836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posX: 0
 --- !u!1 &600916160
 GameObject:
   m_ObjectHideFlags: 0
