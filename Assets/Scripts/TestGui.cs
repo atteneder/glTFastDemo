@@ -14,14 +14,12 @@ using UnityEditor;
 public class TestGui : MonoBehaviour {
 
     public static float screenFactor;
+    public static float listWidth = 150;
+    public static float barHeightWidth = 25;
+    public static float listItemHeight = 25;
+    public static float buttonWidth = 50;
 
-    static float barHeightWidth = 25;
-    static float buttonWidth = 50;
-    static float listWidth = 150;
-    static float listItemHeight = 25;
-
-    [SerializeField]
-    GltfSampleSet[] sampleSets = null;
+    GltfSampleSet sampleSet = null;
 
 
     [SerializeField]
@@ -72,8 +70,9 @@ public class TestGui : MonoBehaviour {
         // Hide UI in glTF compare web
         HideUI();
 #endif
-        
-        StartCoroutine(InitGui());
+
+        var selectSet = GetComponent<SampleSetSelectGui>();
+        selectSet.onSampleSetSelected += OnSampleSetSelected;
 
         var tl = GetComponent<TestLoader>();
         tl.urlChanged += UrlChanged;
@@ -90,32 +89,35 @@ public class TestGui : MonoBehaviour {
         stopWatch.StopTime();
     }
 
-    IEnumerator InitGui() {
+    void OnSampleSetSelected(GltfSampleSet newSet) {
 
-        var names = new List<string>();
-
-        if(sampleSets!=null) {
-            foreach(var set in sampleSets) {
-                yield return set.Load();
-                if(set.items!=null) {
-                    testItems.AddRange(set.items);
-#if LOCAL_LOADING
-                    foreach(var item in set.itemsLocal) {
-                        testItemsLocal.Add(
-                            new GLTFast.Tuple<string, string>(
-                                item.Item1,
-                                string.Format( "file://{0}", item.Item2)
-                            )
-                        );
-                    }
-#else
-                    testItems.AddRange(set.itemsLocal);
-#endif
-                }
-            }
+        if(newSet==null || newSet.items==null) {
+            Debug.LogError("Empty sample set!");
         }
+
+        sampleSet = newSet;
+
+#if LOCAL_LOADING
+        foreach(var item in sampleSet.itemsLocal) {
+            testItemsLocal.Add(
+                new GLTFast.Tuple<string, string>(
+                    item.Item1,
+                    string.Format( "file://{0}", item.Item2)
+                )
+            );
+        }
+#else
+        testItems.AddRange(set.itemsLocal);
+#endif
     }
 
+    void ResetSampleSet() {
+        sampleSet = null;
+        testItemsLocal.Clear();
+        testItems.Clear();
+        var selectSet = GetComponent<SampleSetSelectGui>();
+        selectSet.enabled = true;
+    }
     void UrlChanged(string newUrl)
     {
         stopWatch.StartTime();
@@ -129,7 +131,7 @@ public class TestGui : MonoBehaviour {
         float width = Screen.width;
         float height = Screen.height;
 
-        if(showMenu) {
+        if(showMenu && sampleSet!=null) {
             GUI.BeginGroup( new Rect(0,0,width,barHeightWidth) );
             
             float urlFieldWidth = width-buttonWidth;
@@ -150,23 +152,30 @@ public class TestGui : MonoBehaviour {
                 GetComponent<TestLoader>().LoadUrl(urlField);
             }
             GUI.EndGroup();
-    
+
+            var items = local ? testItemsLocal : testItems;
+
             float listItemWidth = listWidth-16;
             local = GUI.Toggle(new Rect(listWidth,barHeightWidth,listWidth*2,barHeightWidth),local,local?"local":"http");
             scrollPos = GUI.BeginScrollView(
                 new Rect(0,barHeightWidth,listWidth,height-barHeightWidth),
                 scrollPos,
-                new Rect(0,0,listItemWidth, listItemHeight*testItems.Count)
+                new Rect(0,0,listItemWidth, listItemHeight*items.Count)
             );
 
-            GUIDrawItems( local ? testItemsLocal : testItems, listItemWidth );
+            if(GUI.Button(new Rect(0,0,listItemWidth,listItemHeight),"change set")) {
+                ResetSampleSet();
+                return;
+            }
+
+            GUIDrawItems( items, listItemWidth, listItemHeight );
     
             GUI.EndScrollView();
         }
     }
 
-    void GUIDrawItems( List<GLTFast.Tuple<string,string>> items, float listItemWidth) {
-        float y = 0;
+    void GUIDrawItems( List<GLTFast.Tuple<string,string>> items, float listItemWidth, float yPos) {
+        float y = yPos;
         foreach( var item in items ) {
             if(GUI.Button(new Rect(0,y,listItemWidth,listItemHeight),item.Item1)) {
                 // Hide menu during loading, since it can distort the performance profiling.

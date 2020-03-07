@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 1164569221}
   - component: {fileID: 1164569223}
   - component: {fileID: 1164569224}
+  - component: {fileID: 1164569225}
   m_Layer: 0
   m_Name: TestGui
   m_TagString: Untagged
@@ -275,8 +276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf03a0bd1c09446fabe7711acfc7b231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sampleSets:
-  - {fileID: 11400000, guid: 586ce4a70c8cb495d9844ac3924001b8, type: 2}
   stopWatch: {fileID: 1164569224}
   showMenu: 1
   local: 1
@@ -319,6 +318,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posX: 150
+--- !u!114 &1164569225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164569220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9532318f77f01496a98fa0b09f0683e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sampleSets:
+  - {fileID: 11400000, guid: 58cc8e14f586545a6bd606e9f31af13e, type: 2}
+  - {fileID: 11400000, guid: 83dbee93b14c84f41a7c57c6ae5fc7e1, type: 2}
+  - {fileID: 11400000, guid: a8c70edfdfb754455bc1443af577a8ac, type: 2}
+  - {fileID: 11400000, guid: 586ce4a70c8cb495d9844ac3924001b8, type: 2}
 --- !u!1 &1173143196
 GameObject:
   m_ObjectHideFlags: 0
