@@ -18,15 +18,14 @@ public class SimultaneousMassLoader : MassLoader {
 
     int loadedCount;
 
-    Queue<GLTFast.GltfAsset> visibleAssets;
+    Queue<GLTFast.GltfAsset> visibleAssets = new Queue<GLTFast.GltfAsset>();
 
-    protected override IEnumerator MassLoadRoutine () {
+    protected override IEnumerator MassLoadRoutine (GltfSampleSet sampleSet) {
 
         stopWatch.StartTime();
 
         int count = 0;
         loadedCount = 0;
-        visibleAssets = new Queue<GLTFast.GltfAsset>(numVisibleAssets);
 
         GLTFast.IDeferAgent deferAgent;
         if(strategy==Strategy.Fast) {
@@ -35,32 +34,28 @@ public class SimultaneousMassLoader : MassLoader {
             deferAgent = gameObject.AddComponent<GLTFast.TimeBudgetPerFrameDeferAgent>();
         }
 
-        if(sampleSets!=null) {
-            foreach(var set in sampleSets) {
-                if(set.items!=null) {
-                    if(local) {
-                        foreach(var item in set.itemsLocal) {
-                            LoadIt(
+        if(sampleSet.items!=null) {
+            if(local) {
+                foreach(var item in sampleSet.itemsLocal) {
+                    LoadIt(
 #if LOCAL_LOADING
-                                string.Format( "file://{0}", item.Item2)
+                        string.Format( "file://{0}", item.Item2)
 #else
-                                item.Item2
+                        item.Item2
 #endif
-                                ,deferAgent
-                            );
-                            count++;
-                            if(deferAgent.ShouldDefer()) {
-                                yield return null;
-                            }
-                        }
-                    } else {
-                        foreach(var item in set.items) {
-                            LoadIt(item.Item2,deferAgent);
-                            count++;
-                            if(deferAgent.ShouldDefer()) {
-                                yield return null;
-                            }
-                        }
+                        ,deferAgent
+                    );
+                    count++;
+                    if(deferAgent.ShouldDefer()) {
+                        yield return null;
+                    }
+                }
+            } else {
+                foreach(var item in sampleSet.items) {
+                    LoadIt(item.Item2,deferAgent);
+                    count++;
+                    if(deferAgent.ShouldDefer()) {
+                        yield return null;
                     }
                 }
             }
@@ -72,6 +67,9 @@ public class SimultaneousMassLoader : MassLoader {
 
         stopWatch.StopTime();
         Debug.LogFormat("Finished loading {1} glTFs in {0} milliseconds!",stopWatch.lastDuration,count);
+
+        var selectSet = GetComponent<SampleSetSelectGui>();
+        selectSet.enabled = true;
     }
 
     void LoadIt(string n, GLTFast.IDeferAgent deferAgent) {

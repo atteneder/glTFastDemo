@@ -5,25 +5,20 @@ using UnityEngine;
 public abstract class MassLoader : MonoBehaviour
 {
     [SerializeField]
-    protected GltfSampleSet[] sampleSets = null;
-
-    [SerializeField]
     protected bool local = true;
 
     [SerializeField]
     protected StopWatch stopWatch = null;
 
-    IEnumerator Start()
+    void Start()
     {
-        if(sampleSets!=null) {
-            foreach(var set in sampleSets) {
-                yield return set.Load();
-            }
-        }
-        // Wait a bit to make sure profiling works
-        yield return new WaitForSeconds(1);
-        StartCoroutine(MassLoadRoutine());
+        var selectSet = GetComponent<SampleSetSelectGui>();
+        selectSet.onSampleSetSelected += OnSampleSetSelected;
     }
 
-    protected abstract IEnumerator MassLoadRoutine();
+    void OnSampleSetSelected(GltfSampleSet sampleSet) {
+        StartCoroutine(MassLoadRoutine(sampleSet));
+    }
+
+    protected abstract IEnumerator MassLoadRoutine(GltfSampleSet sampleSet);
 }

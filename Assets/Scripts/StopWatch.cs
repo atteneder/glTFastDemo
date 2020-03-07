@@ -27,10 +27,6 @@ public class StopWatch : MonoBehaviour
         }
     }
 
-    void Awake() {
-        TestGui.CalculateScreenFactor();
-    }
-
     public void StartTime() {
         startTime = Time.realtimeSinceStartup;
         duration = 0;
@@ -57,8 +53,7 @@ public class StopWatch : MonoBehaviour
     }
 
     void OnGUI() {
-        TestGui.TrySetGUIStyles();
-
+        GlobalGui.Init();
         if(running || duration>=0) {
             float width = Screen.width;
             float height = Screen.height;

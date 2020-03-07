@@ -13,12 +13,6 @@ using UnityEditor;
 [RequireComponent(typeof(TestLoader))]
 public class TestGui : MonoBehaviour {
 
-    public static float screenFactor;
-    public static float listWidth = 150;
-    public static float barHeightWidth = 25;
-    public static float listItemHeight = 25;
-    public static float buttonWidth = 50;
-
     GltfSampleSet sampleSet = null;
 
 
@@ -36,35 +30,9 @@ public class TestGui : MonoBehaviour {
 
     Vector2 scrollPos;
 
-    public static void CalculateScreenFactor() {
-        screenFactor = Mathf.Max( 1, Mathf.Floor( Screen.dpi / 100f ));
-    }
-
-    public static void TrySetGUIStyles() {
-        if(!float.IsNaN(screenFactor)) {
-            // Init time gui style adjustments
-            var guiStyle = GUI.skin.button;
-            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
-
-            guiStyle = GUI.skin.toggle;
-            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
-
-            guiStyle = GUI.skin.label;
-            guiStyle.fontSize = Mathf.RoundToInt(14 * screenFactor);
-            screenFactor = float.NaN;
-       }
-    }
-
     private void Awake()
     {
-        CalculateScreenFactor();
-
-        barHeightWidth *= screenFactor;
-        buttonWidth *= screenFactor;
-        listWidth *= screenFactor;
-        listItemHeight *= screenFactor;
-
-        stopWatch.posX = listWidth;
+        stopWatch.posX = GlobalGui.listWidth;
 
 #if PLATFORM_WEBGL && !UNITY_EDITOR
         // Hide UI in glTF compare web
@@ -126,49 +94,47 @@ public class TestGui : MonoBehaviour {
 
     private void OnGUI()
     {
-        TrySetGUIStyles();
-
         float width = Screen.width;
         float height = Screen.height;
 
         if(showMenu && sampleSet!=null) {
-            GUI.BeginGroup( new Rect(0,0,width,barHeightWidth) );
+            GUI.BeginGroup( new Rect(0,0,width,GlobalGui.barHeightWidth) );
             
-            float urlFieldWidth = width-buttonWidth;
+            float urlFieldWidth = width-GlobalGui.buttonWidth;
 
 #if UNITY_EDITOR
-            if(GUI.Button( new Rect(width-buttonWidth*2,0,buttonWidth,barHeightWidth),"Open")) {
+            if(GUI.Button( new Rect(width-GlobalGui.buttonWidth*2,0,GlobalGui.buttonWidth,GlobalGui.barHeightWidth),"Open")) {
                 string path = EditorUtility.OpenFilePanel("Select glTF", "", "glb");
                 if (path.Length != 0)
                 {
                     GetComponent<TestLoader>().LoadUrl("file://"+path);
                 }
             }
-            urlFieldWidth -= buttonWidth;
+            urlFieldWidth -= GlobalGui.buttonWidth;
 #endif
 
-            urlField = GUI.TextField( new Rect(0,0,urlFieldWidth,barHeightWidth),urlField);
-            if(GUI.Button( new Rect(width-buttonWidth,0,buttonWidth,barHeightWidth),"Load")) {
+            urlField = GUI.TextField( new Rect(0,0,urlFieldWidth,GlobalGui.barHeightWidth),urlField);
+            if(GUI.Button( new Rect(width-GlobalGui.buttonWidth,0,GlobalGui.buttonWidth,GlobalGui.barHeightWidth),"Load")) {
                 GetComponent<TestLoader>().LoadUrl(urlField);
             }
             GUI.EndGroup();
 
             var items = local ? testItemsLocal : testItems;
 
-            float listItemWidth = listWidth-16;
-            local = GUI.Toggle(new Rect(listWidth,barHeightWidth,listWidth*2,barHeightWidth),local,local?"local":"http");
+            float listItemWidth = GlobalGui.listWidth-16;
+            local = GUI.Toggle(new Rect(GlobalGui.listWidth,GlobalGui.barHeightWidth,GlobalGui.listWidth*2,GlobalGui.barHeightWidth),local,local?"local":"http");
             scrollPos = GUI.BeginScrollView(
-                new Rect(0,barHeightWidth,listWidth,height-barHeightWidth),
+                new Rect(0,GlobalGui.barHeightWidth,GlobalGui.listWidth,height-GlobalGui.barHeightWidth),
                 scrollPos,
-                new Rect(0,0,listItemWidth, listItemHeight*items.Count)
+                new Rect(0,0,listItemWidth, GlobalGui.listItemHeight*items.Count)
             );
 
-            if(GUI.Button(new Rect(0,0,listItemWidth,listItemHeight),"change set")) {
+            if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"change set")) {
                 ResetSampleSet();
                 return;
             }
 
-            GUIDrawItems( items, listItemWidth, listItemHeight );
+            GUIDrawItems( items, listItemWidth, GlobalGui.listItemHeight );
     
             GUI.EndScrollView();
         }
@@ -177,12 +143,12 @@ public class TestGui : MonoBehaviour {
     void GUIDrawItems( List<GLTFast.Tuple<string,string>> items, float listItemWidth, float yPos) {
         float y = yPos;
         foreach( var item in items ) {
-            if(GUI.Button(new Rect(0,y,listItemWidth,listItemHeight),item.Item1)) {
+            if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),item.Item1)) {
                 // Hide menu during loading, since it can distort the performance profiling.
                 showMenu = false;
                 GetComponent<TestLoader>().LoadUrl(item.Item2);
             }
-            y+=listItemHeight;
+            y+=GlobalGui.listItemHeight;
         }
     }
 
