@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class SampleSetSelectGui : MonoBehaviour
 {
     [SerializeField]
-    GltfSampleSet[] sampleSets = null;
+    GltfSampleSetCollection sampleSetCollection = null;
 
     public UnityAction<GltfSampleSet> onSampleSetSelected;
 
@@ -17,10 +17,8 @@ public class SampleSetSelectGui : MonoBehaviour
     }
 
     IEnumerator InitGui() {
-        if(sampleSets!=null) {
-            foreach(var set in sampleSets) {
-                yield return set.Load();
-            }
+        if(sampleSetCollection!=null) {
+            yield return sampleSetCollection.LoadAll();
         }
     }
 
@@ -34,12 +32,12 @@ public class SampleSetSelectGui : MonoBehaviour
         scrollPos = GUI.BeginScrollView(
             new Rect(0,GlobalGui.barHeightWidth,GlobalGui.listWidth,height-GlobalGui.barHeightWidth),
             scrollPos,
-            new Rect(0,0,listItemWidth, GlobalGui.listItemHeight*sampleSets.Length)
+            new Rect(0,0,listItemWidth, GlobalGui.listItemHeight*sampleSetCollection.sampleSets.Length)
         );
 
 
         float y = 0;
-        foreach( var set in sampleSets ) {
+        foreach( var set in sampleSetCollection.sampleSets ) {
             if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),set.name)) {
                 // Hide menu during loading, since it can distort the performance profiling.
                 this.enabled = false;

@@ -1,5 +1,4 @@
 # List of all glTF-Sample-Models
-# Unsupported files are commented with a leading '#'
 
 2CylinderEngine/glTF-Binary/2CylinderEngine.glb
 AlphaBlendModeTest/glTF-Binary/AlphaBlendModeTest.glb

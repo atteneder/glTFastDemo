@@ -1,0 +1,16 @@
+#highres_suzanne.glb
+#highres_suzanne_tangents.glb
+#highres_suzanne/highres_suzanne_normal.gltf
+#highres_suzanne/highres_suzanne_unlit.gltf
+#highres_suzanne/highres_suzanne.gltf
+
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb
+highres_suzanne_tangents.glb

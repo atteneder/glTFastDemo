@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2bdf3fe6678e40fea6df4342d07093a, type: 3}
-  m_Name: glTF-Sample-Models-binary
+  m_Name: glTF-gltf
   m_EditorClassIdentifier: 
-  fileListPath: test-glb-file-list.txt
+  fileListPath: glTF_gltf.txt
   baseLocalPath: /Users/Shared/SDK/glTF-Sample-Models/2.0
   streamingAssetsPath: glTF-Sample-Models/2.0
   baseUrlWeb: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/
