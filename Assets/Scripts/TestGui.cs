@@ -36,7 +36,7 @@ public class TestGui : MonoBehaviour {
 
 #if PLATFORM_WEBGL && !UNITY_EDITOR
         // Hide UI in glTF compare web
-        HideUI();
+        showMenu = false;
 #endif
 
         var selectSet = GetComponent<SampleSetSelectGui>();
@@ -65,18 +65,17 @@ public class TestGui : MonoBehaviour {
 
         sampleSet = newSet;
 
-#if LOCAL_LOADING
         foreach(var item in sampleSet.itemsLocal) {
+#if LOCAL_LOADING
             testItemsLocal.Add(
                 new GLTFast.Tuple<string, string>(
                     item.Item1,
                     string.Format( "file://{0}", item.Item2)
                 )
             );
-        }
-#else
-        testItems.AddRange(set.itemsLocal);
 #endif
+        }
+        testItems.AddRange(sampleSet.items);
     }
 
     void ResetSampleSet() {

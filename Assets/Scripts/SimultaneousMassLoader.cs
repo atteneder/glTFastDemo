@@ -79,7 +79,7 @@ public class SimultaneousMassLoader : MassLoader {
         var gltfAsset = go.AddComponent<GLTFast.GltfAsset>();
         gltfAsset.loadOnStartup = false; // prevent auto-loading
         gltfAsset.onLoadComplete += OnComplete;
-        gltfAsset.Load(url,deferAgent); // load manually with custom defer agent
+        gltfAsset.Load(url,null,deferAgent); // load manually with custom defer agent
     }
 
     void OnComplete(GLTFast.GltfAsset asset, bool success) {

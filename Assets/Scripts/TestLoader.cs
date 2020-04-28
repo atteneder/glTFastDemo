@@ -69,7 +69,7 @@ public class TestLoader : MonoBehaviour {
         go1 = new GameObject();
         gltf1 = go1.AddComponent<GLTFast.GltfAsset>();
         gltf1.loadOnStartup = false;
-        gltf1.Load(url,deferAgent);
+        gltf1.Load(url,null,deferAgent);
         gltf1.onLoadComplete += GLTFast_onLoadComplete;
 #endif
 #if UNITY_GLTF

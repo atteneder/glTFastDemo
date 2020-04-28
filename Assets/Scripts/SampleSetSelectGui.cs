@@ -13,6 +13,11 @@ public class SampleSetSelectGui : MonoBehaviour
     Vector2 scrollPos;
 
     void Awake() {
+#if PLATFORM_WEBGL && !UNITY_EDITOR
+        // Hide UI in glTF compare web
+        Destroy(this);
+        return;
+#endif
         StartCoroutine(InitGui());
     }
 
