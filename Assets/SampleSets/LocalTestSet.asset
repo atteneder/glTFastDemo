@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileListPath: local-test-files.txt
   baseLocalPath: /Users/Shared/Documents/gltf
-  streamingAssetsPath: 
+  streamingAssetsPath: local
   baseUrlWeb: 
   baseUrlLocal: 
