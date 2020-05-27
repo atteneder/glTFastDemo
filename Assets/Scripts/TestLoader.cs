@@ -122,11 +122,13 @@ public class TestLoader : MonoBehaviour {
                 targetSize / bounds.extents.z
                 );
     
-            gltf1.transform.localScale = Vector3.one * scale;
-            Vector3 pos = bounds.center;
-            pos.x += bounds.extents.x * variantDistance;;
-            pos *= -scale;
-            gltf1.transform.position = pos;
+            if (!float.IsNaN(scale) && !float.IsInfinity(scale)) {
+                gltf1.transform.localScale = Vector3.one * scale;
+                Vector3 pos = bounds.center;
+                pos.x += bounds.extents.x * variantDistance;;
+                pos *= -scale;
+                gltf1.transform.position = pos;
+            }
         } else {
             Debug.LogError("TestLoader: loading failed!");
         }
