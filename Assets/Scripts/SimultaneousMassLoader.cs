@@ -18,7 +18,7 @@ public class SimultaneousMassLoader : MassLoader {
 
     int loadedCount;
 
-    Queue<GLTFast.GltfAsset> visibleAssets = new Queue<GLTFast.GltfAsset>();
+    Queue<GLTFast.GltfAssetBase> visibleAssets = new Queue<GLTFast.GltfAssetBase>();
 
     protected override IEnumerator MassLoadRoutine (GltfSampleSet sampleSet) {
 
@@ -82,7 +82,7 @@ public class SimultaneousMassLoader : MassLoader {
         gltfAsset.Load(url,null,deferAgent); // load manually with custom defer agent
     }
 
-    void OnComplete(GLTFast.GltfAsset asset, bool success) {
+    void OnComplete(GLTFast.GltfAssetBase asset, bool success) {
         if(visibleAssets.Count>=numVisibleAssets) {
             var oldAsset = visibleAssets.Dequeue();
             // oldAsset.gameObject.SetActive(false);

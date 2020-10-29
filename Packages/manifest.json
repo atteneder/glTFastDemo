@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "com.atteneder.draco": "https://gitlab.com/atteneder/DracoUnity.git",
-    "com.atteneder.gltfast": "https://github.com/atteneder/glTFast.git",
-    "com.atteneder.ktx": "https://gitlab.com/atteneder/ktxunity.git",
+    "com.atteneder.draco": "1.3.0",
+    "com.atteneder.gltfast": "file:/Users/Shared/Projects/glTFast",
+    "com.atteneder.ktx": "0.8.1",
     "com.unity.burst": "1.3.0-preview.10",
     "com.unity.ext.nunit": "1.0.0",
-    "com.unity.ide.vscode": "1.2.0",
-    "com.unity.test-framework": "1.1.14",
+    "com.unity.ide.vscode": "1.2.2",
+    "com.unity.test-framework": "1.1.18",
     "com.unity.modules.imageconversion": "1.0.0",
     "com.unity.modules.imgui": "1.0.0",
     "com.unity.modules.jsonserialize": "1.0.0",
@@ -15,5 +15,14 @@
   },
   "testables": [
     "com.atteneder.gltfast"
+  ],
+  "scopedRegistries": [
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.atteneder"
+      ]
+    }
   ]
 }

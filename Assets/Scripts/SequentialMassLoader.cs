@@ -60,7 +60,7 @@ public class SequentialMassLoader : MassLoader
         Destroy(go);
     }
 
-    void OnComplete(GLTFast.GltfAsset asset, bool success) {
+    void OnComplete(GLTFast.GltfAssetBase asset, bool success) {
         asset.onLoadComplete -= OnComplete;
         if(!success) {
             Debug.LogError("Ups");

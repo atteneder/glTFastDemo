@@ -107,13 +107,15 @@ public class TestLoader : MonoBehaviour {
 #endif
 
 #if !NO_GLTFAST
-    void GLTFast_onLoadComplete(GLTFast.GltfAsset asset, bool success)
+    void GLTFast_onLoadComplete(GLTFast.GltfAssetBase asset, bool success)
     {
         loadingEnd();
 
         if(success) {
             var bounds = CalculateLocalBounds(gltf1.transform);
             
+            // AddMotion(gltf1.transform);
+
             float targetSize = 2.0f;
             
             float scale = Mathf.Min(
@@ -131,6 +133,16 @@ public class TestLoader : MonoBehaviour {
             }
         } else {
             Debug.LogError("TestLoader: loading failed!");
+        }
+    }
+
+    void AddMotion(Transform transform) {
+        if(transform.GetComponent<Renderer>()==null) {
+            transform.gameObject.AddComponent<MotionTest>();
+        }
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            AddMotion(transform.GetChild(i));
         }
     }
 #endif

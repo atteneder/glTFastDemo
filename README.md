@@ -10,7 +10,7 @@ Like this demo? You can show your appreciation and ...
 
 ## License
 
-Copyright (c) 2019 Andreas Atteneder, All Rights Reserved.
+Copyright (c) 2020 Andreas Atteneder, All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use files in this repository except in compliance with the License.
