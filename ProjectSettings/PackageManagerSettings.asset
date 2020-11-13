@@ -20,8 +20,8 @@ MonoBehaviour:
     m_Url: https://packages.unity.com
     m_Scopes: []
     m_IsDefault: 1
-  - m_Id: scoped:OpenUPM
-    m_Name: OpenUPM
+  - m_Id: scoped:Atteneder
+    m_Name: Atteneder
     m_Url: https://package.openupm.com
     m_Scopes:
     - com.atteneder
@@ -31,14 +31,14 @@ MonoBehaviour:
   m_RegistryInfoDraft:
     m_ErrorMessage: 
     m_Original:
-      m_Id: scoped:OpenUPM
-      m_Name: OpenUPM
+      m_Id: scoped:Atteneder
+      m_Name: Atteneder
       m_Url: https://package.openupm.com
       m_Scopes:
       - com.atteneder
       m_IsDefault: 0
     m_Modified: 0
-    m_Name: OpenUPM
+    m_Name: Atteneder
     m_Url: https://package.openupm.com
     m_Scopes:
     - com.atteneder

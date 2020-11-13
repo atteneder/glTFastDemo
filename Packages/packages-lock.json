@@ -8,10 +8,11 @@
       "url": "https://package.openupm.com"
     },
     "com.atteneder.gltfast": {
-      "version": "file:/Users/Shared/Projects/glTFast",
+      "version": "2.1.0",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
     },
     "com.atteneder.ktx": {
       "version": "0.8.1",
