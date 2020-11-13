@@ -2,7 +2,6 @@
 
 2CylinderEngine/glTF-Draco/2CylinderEngine.gltf
 2CylinderEngine/glTF-Embedded/2CylinderEngine.gltf
-2CylinderEngine/glTF/2CylinderEngine.gltf
 AlphaBlendModeTest/glTF-Embedded/AlphaBlendModeTest.gltf
 AlphaBlendModeTest/glTF/AlphaBlendModeTest.gltf
 AnimatedCube/glTF/AnimatedCube.gltf
@@ -44,8 +43,10 @@ Buggy/glTF-Embedded/Buggy.gltf
 Buggy/glTF/Buggy.gltf
 Cameras/glTF-Embedded/Cameras.gltf
 Cameras/glTF/Cameras.gltf
+CesiumMan/glTF-Draco/CesiumMan.gltf
 CesiumMan/glTF-Embedded/CesiumMan.gltf
 CesiumMan/glTF/CesiumMan.gltf
+CesiumMilkTruck/glTF-Draco/CesiumMilkTruck.gltf
 CesiumMilkTruck/glTF-Embedded/CesiumMilkTruck.gltf
 CesiumMilkTruck/glTF/CesiumMilkTruck.gltf
 ClearCoatTest/glTF/ClearCoatTest.gltf
@@ -75,6 +76,7 @@ Lantern/glTF/Lantern.gltf
 MetalRoughSpheres/glTF-Embedded/MetalRoughSpheres.gltf
 MetalRoughSpheres/glTF/MetalRoughSpheres.gltf
 MetalRoughSpheresNoTextures/glTF/MetalRoughSpheresNoTextures.gltf
+MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.gltf
 MorphPrimitivesTest/glTF/MorphPrimitivesTest.gltf
 MultiUVTest/glTF-Embedded/MultiUVTest.gltf
 MultiUVTest/glTF/MultiUVTest.gltf
@@ -87,8 +89,10 @@ OrientationTest/glTF/OrientationTest.gltf
 ReciprocatingSaw/glTF-Draco/ReciprocatingSaw.gltf
 ReciprocatingSaw/glTF-Embedded/ReciprocatingSaw.gltf
 ReciprocatingSaw/glTF/ReciprocatingSaw.gltf
+RiggedFigure/glTF-Draco/RiggedFigure.gltf
 RiggedFigure/glTF-Embedded/RiggedFigure.gltf
 RiggedFigure/glTF/RiggedFigure.gltf
+RiggedSimple/glTF-Draco/RiggedSimple.gltf
 RiggedSimple/glTF-Embedded/RiggedSimple.gltf
 RiggedSimple/glTF/RiggedSimple.gltf
 SciFiHelmet/glTF/SciFiHelmet.gltf
@@ -96,6 +100,8 @@ SimpleMeshes/glTF-Embedded/SimpleMeshes.gltf
 SimpleMeshes/glTF/SimpleMeshes.gltf
 SimpleMorph/glTF-Embedded/SimpleMorph.gltf
 SimpleMorph/glTF/SimpleMorph.gltf
+SimpleSkin/glTF-Embedded/SimpleSkin.gltf
+SimpleSkin/glTF/SimpleSkin.gltf
 SimpleSparseAccessor/glTF-Embedded/SimpleSparseAccessor.gltf
 SimpleSparseAccessor/glTF/SimpleSparseAccessor.gltf
 SpecGlossVsMetalRough/glTF/SpecGlossVsMetalRough.gltf
@@ -105,7 +111,9 @@ TextureCoordinateTest/glTF-Embedded/TextureCoordinateTest.gltf
 TextureCoordinateTest/glTF/TextureCoordinateTest.gltf
 TextureSettingsTest/glTF-Embedded/TextureSettingsTest.gltf
 TextureSettingsTest/glTF/TextureSettingsTest.gltf
+TextureTransformMultiTest/glTF/TextureTransformMultiTest.gltf
 TextureTransformTest/glTF/TextureTransformTest.gltf
+TransmissionTest/glTF/TransmissionTest.gltf
 Triangle/glTF-Embedded/Triangle.gltf
 Triangle/glTF/Triangle.gltf
 TriangleWithoutIndices/glTF-Embedded/TriangleWithoutIndices.gltf

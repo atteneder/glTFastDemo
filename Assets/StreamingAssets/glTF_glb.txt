@@ -1,6 +1,5 @@
 # List of all glTF-Sample-Models
 
-2CylinderEngine/glTF-Binary/2CylinderEngine.glb
 AlphaBlendModeTest/glTF-Binary/AlphaBlendModeTest.glb
 AnimatedMorphCube/glTF-Binary/AnimatedMorphCube.glb
 AnimatedMorphSphere/glTF-Binary/AnimatedMorphSphere.glb
@@ -29,7 +28,6 @@ Lantern/glTF-Binary/Lantern.glb
 MetalRoughSpheres/glTF-Binary/MetalRoughSpheres.glb
 MetalRoughSpheresNoTextures/glTF-Binary/MetalRoughSpheresNoTextures.glb
 MorphPrimitivesTest/glTF-Binary/MorphPrimitivesTest.glb
-MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.glb
 MultiUVTest/glTF-Binary/MultiUVTest.glb
 NormalTangentMirrorTest/glTF-Binary/NormalTangentMirrorTest.glb
 NormalTangentTest/glTF-Binary/NormalTangentTest.glb
@@ -40,6 +38,8 @@ RiggedSimple/glTF-Binary/RiggedSimple.glb
 SpecGlossVsMetalRough/glTF-Binary/SpecGlossVsMetalRough.glb
 TextureCoordinateTest/glTF-Binary/TextureCoordinateTest.glb
 TextureSettingsTest/glTF-Binary/TextureSettingsTest.glb
+TextureTransformMultiTest/glTF-Binary/TextureTransformMultiTest.glb
+TransmissionTest/glTF-Binary/TransmissionTest.glb
 UnlitTest/glTF-Binary/UnlitTest.glb
 VC/glTF-Binary/VC.glb
 VertexColorTest/glTF-Binary/VertexColorTest.glb
