@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GLTFast.Loading;
@@ -22,7 +23,7 @@ public class TestDownloads : MonoBehaviour
 
         for (int i = 0; i < urls.Length; i++)
         {
-            dls[i] = x.RequestTexture(urls[i]);
+            dls[i] = x.RequestTexture(new Uri(urls[i]));
         }
 
         for (int i = 0; i < urls.Length; i++)
