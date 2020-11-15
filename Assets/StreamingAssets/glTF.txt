@@ -1,6 +1,7 @@
 # List of all glTF-Sample-Models
 # for performance tests
 # embed versions are not relevant and are commented
+# draco compressed files are not considered atm
 
 2CylinderEngine/glTF-Binary/2CylinderEngine.glb
 #2CylinderEngine/glTF-Draco/2CylinderEngine.gltf
