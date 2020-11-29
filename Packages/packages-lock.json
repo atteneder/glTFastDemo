@@ -41,6 +41,15 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.ide.rider": {
+      "version": "1.1.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.1"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ide.vscode": {
       "version": "1.2.3",
       "depth": 0,
@@ -66,6 +75,12 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.modules.animation": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.modules.imageconversion": {
       "version": "1.0.0",
       "depth": 0,
@@ -79,6 +94,12 @@
       "dependencies": {}
     },
     "com.unity.modules.jsonserialize": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.physics": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
