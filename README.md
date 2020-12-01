@@ -2,12 +2,6 @@
 
 Unity project that demonstrates how to use the [glTFast package](https://github.com/atteneder/glTFast).
 
-## Support
-
-Like this demo? You can show your appreciation and ...
-
-[![Buy me a coffee](https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0)](https://ko-fi.com/C0C3BW7G)
-
 ## License
 
 Copyright (c) 2020 Andreas Atteneder, All Rights Reserved.
