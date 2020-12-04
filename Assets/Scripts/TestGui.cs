@@ -2,9 +2,8 @@
 #define LOCAL_LOADING
 #endif
 
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -23,8 +22,8 @@ public class TestGui : MonoBehaviour {
     // Load files locally (from streaming assets) or via HTTP
     public bool local = false;
 
-    List<GLTFast.Tuple<string,string>> testItems = new List<GLTFast.Tuple<string, string>>();
-    List<GLTFast.Tuple<string,string>> testItemsLocal = new List<GLTFast.Tuple<string, string>>();
+    List<Tuple<string,string>> testItems = new List<Tuple<string, string>>();
+    List<Tuple<string,string>> testItemsLocal = new List<Tuple<string, string>>();
 
     string urlField;
 
@@ -59,23 +58,23 @@ public class TestGui : MonoBehaviour {
 
     void OnSampleSetSelected(GltfSampleSet newSet) {
 
-        if(newSet==null || newSet.items==null) {
+        if(newSet==null || newSet.itemCount<1) {
             Debug.LogError("Empty sample set!");
         }
 
         sampleSet = newSet;
 
-        foreach(var item in sampleSet.itemsLocal) {
+        foreach(var item in sampleSet.GetItemsPrefixed()) {
 #if LOCAL_LOADING
             testItemsLocal.Add(
-                new GLTFast.Tuple<string, string>(
-                    item.Item1,
-                    string.Format( "file://{0}", item.Item2)
+                new Tuple<string, string>(
+                    item.name,
+                    string.Format( "file://{0}", item.path)
                 )
             );
 #endif
+            testItems.Add( new Tuple<string, string>(item.name,item.path));
         }
-        testItems.AddRange(sampleSet.items);
     }
 
     void ResetSampleSet() {
@@ -139,7 +138,7 @@ public class TestGui : MonoBehaviour {
         }
     }
 
-    void GUIDrawItems( List<GLTFast.Tuple<string,string>> items, float listItemWidth, float yPos) {
+    void GUIDrawItems( List<Tuple<string,string>> items, float listItemWidth, float yPos) {
         float y = yPos;
         foreach( var item in items ) {
             if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),item.Item1)) {

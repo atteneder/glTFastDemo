@@ -15,23 +15,21 @@ public class SequentialMassLoader : MassLoader
         stopWatch.StartTime();
 
         int count = 0;
-        if(sampleSet.items!=null) {
-            if(local) {
-                foreach(var item in sampleSet.itemsLocal) {
-                    yield return LoadIt<GLTFast.GltfAsset>(
+        if(local) {
+            foreach(var item in sampleSet.GetItemsPrefixed()) {
+                yield return LoadIt<GLTFast.GltfAsset>(
 #if LOCAL_LOADING
-                        string.Format( "file://{0}", item.Item2)
+                    string.Format( "file://{0}", item.path)
 #else
-                        item.Item2
+                    item.Item2
 #endif
-                    );
-                    count++;
-                }
-            } else {
-                foreach(var item in sampleSet.items) {
-                    yield return LoadIt<GLTFast.GltfAsset>(item.Item2);
-                    count++;
-                }
+                );
+                count++;
+            }
+        } else {
+            foreach(var item in sampleSet.GetItemsPrefixed(false)) {
+                yield return LoadIt<GLTFast.GltfAsset>(item.path);
+                count++;
             }
         }
 

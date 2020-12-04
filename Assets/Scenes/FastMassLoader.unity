@@ -304,6 +304,11 @@ PrefabInstance:
       propertyPath: strategy
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2328192675002547300, guid: 80607025cbe9c4c79a301c68973da6b5,
+        type: 3}
+      propertyPath: local
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2328192675002547301, guid: 80607025cbe9c4c79a301c68973da6b5,
         type: 3}
       propertyPath: m_LocalPosition.x

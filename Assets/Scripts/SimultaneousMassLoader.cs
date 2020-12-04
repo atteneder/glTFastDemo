@@ -34,29 +34,28 @@ public class SimultaneousMassLoader : MassLoader {
             deferAgent = gameObject.AddComponent<GLTFast.TimeBudgetPerFrameDeferAgent>();
         }
 
-        if(sampleSet.items!=null) {
-            if(local) {
-                foreach(var item in sampleSet.itemsLocal) {
-                    LoadIt(
+        
+        if(local) {
+            foreach(var item in sampleSet.GetItemsPrefixed()) {
+                LoadIt(
 #if LOCAL_LOADING
-                        string.Format( "file://{0}", item.Item2)
+                    string.Format( "file://{0}", item.path)
 #else
-                        item.Item2
+                    item.Item2
 #endif
-                        ,deferAgent
-                    );
-                    count++;
-                    if(deferAgent.ShouldDefer()) {
-                        yield return null;
-                    }
+                    ,deferAgent
+                );
+                count++;
+                if(deferAgent.ShouldDefer()) {
+                    yield return null;
                 }
-            } else {
-                foreach(var item in sampleSet.items) {
-                    LoadIt(item.Item2,deferAgent);
-                    count++;
-                    if(deferAgent.ShouldDefer()) {
-                        yield return null;
-                    }
+            }
+        } else {
+            foreach(var item in sampleSet.GetItemsPrefixed(false)) {
+                LoadIt(item.path,deferAgent);
+                count++;
+                if(deferAgent.ShouldDefer()) {
+                    yield return null;
                 }
             }
         }

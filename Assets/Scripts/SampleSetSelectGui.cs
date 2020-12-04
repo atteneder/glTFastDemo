@@ -18,13 +18,6 @@ public class SampleSetSelectGui : MonoBehaviour
         Destroy(this);
         return;
 #endif
-        StartCoroutine(InitGui());
-    }
-
-    IEnumerator InitGui() {
-        if(sampleSetCollection!=null) {
-            yield return sampleSetCollection.LoadAll();
-        }
     }
 
     private void OnGUI()

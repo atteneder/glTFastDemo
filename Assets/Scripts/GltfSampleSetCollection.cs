@@ -6,12 +6,4 @@ using UnityEngine;
 public class GltfSampleSetCollection : ScriptableObject
 {
     public GltfSampleSet[] sampleSets;
-
-    public IEnumerator LoadAll() {
-        if(sampleSets!=null) {
-            foreach(var set in sampleSets) {
-                yield return set.Load();
-            }
-        }
-    }
 }
