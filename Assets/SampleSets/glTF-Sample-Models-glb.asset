@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bdf3fe6678e40fea6df4342d07093a, type: 3}
+  m_Name: glTF-Sample-Models-glb
+  m_EditorClassIdentifier: 
+  baseLocalPath: /Users/Shared/SDK/glTF-Sample-Models/2.0
+  streamingAssetsPath: glTF-Sample-Models/2.0
+  baseUrlWeb: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/
+  baseUrlLocal: http://localhost:8080/glTF-Sample-Models/2.0/
+  items:
+  - active: 1
+    item:
+      name: 2CylinderEngine.glb
+      path: 2CylinderEngine/glTF-Binary/2CylinderEngine.glb
+  - active: 1
+    item:
+      name: AlphaBlendModeTest.glb
+      path: AlphaBlendModeTest/glTF-Binary/AlphaBlendModeTest.glb
+  - active: 1
+    item:
+      name: AnimatedMorphCube.glb
+      path: AnimatedMorphCube/glTF-Binary/AnimatedMorphCube.glb
+  - active: 1
+    item:
+      name: AnimatedMorphSphere.glb
+      path: AnimatedMorphSphere/glTF-Binary/AnimatedMorphSphere.glb
+  - active: 1
+    item:
+      name: AntiqueCamera.glb
+      path: AntiqueCamera/glTF-Binary/AntiqueCamera.glb
+  - active: 1
+    item:
+      name: Avocado.glb
+      path: Avocado/glTF-Binary/Avocado.glb
+  - active: 1
+    item:
+      name: BarramundiFish.glb
+      path: BarramundiFish/glTF-Binary/BarramundiFish.glb
+  - active: 1
+    item:
+      name: BoomBox.glb
+      path: BoomBox/glTF-Binary/BoomBox.glb
+  - active: 1
+    item:
+      name: Box.glb
+      path: Box/glTF-Binary/Box.glb
+  - active: 1
+    item:
+      name: BoxAnimated.glb
+      path: BoxAnimated/glTF-Binary/BoxAnimated.glb
+  - active: 1
+    item:
+      name: BoxInterleaved.glb
+      path: BoxInterleaved/glTF-Binary/BoxInterleaved.glb
+  - active: 1
+    item:
+      name: BoxTextured.glb
+      path: BoxTextured/glTF-Binary/BoxTextured.glb
+  - active: 1
+    item:
+      name: BoxTexturedNonPowerOfTwo.glb
+      path: BoxTexturedNonPowerOfTwo/glTF-Binary/BoxTexturedNonPowerOfTwo.glb
+  - active: 1
+    item:
+      name: BoxVertexColors.glb
+      path: BoxVertexColors/glTF-Binary/BoxVertexColors.glb
+  - active: 1
+    item:
+      name: BrainStem.glb
+      path: BrainStem/glTF-Binary/BrainStem.glb
+  - active: 1
+    item:
+      name: Buggy.glb
+      path: Buggy/glTF-Binary/Buggy.glb
+  - active: 1
+    item:
+      name: CesiumMan.glb
+      path: CesiumMan/glTF-Binary/CesiumMan.glb
+  - active: 1
+    item:
+      name: CesiumMilkTruck.glb
+      path: CesiumMilkTruck/glTF-Binary/CesiumMilkTruck.glb
+  - active: 1
+    item:
+      name: ClearCoatTest.glb
+      path: ClearCoatTest/glTF-Binary/ClearCoatTest.glb
+  - active: 1
+    item:
+      name: Corset.glb
+      path: Corset/glTF-Binary/Corset.glb
+  - active: 1
+    item:
+      name: DamagedHelmet.glb
+      path: DamagedHelmet/glTF-Binary/DamagedHelmet.glb
+  - active: 1
+    item:
+      name: Duck.glb
+      path: Duck/glTF-Binary/Duck.glb
+  - active: 1
+    item:
+      name: Fox.glb
+      path: Fox/glTF-Binary/Fox.glb
+  - active: 1
+    item:
+      name: GearboxAssy.glb
+      path: GearboxAssy/glTF-Binary/GearboxAssy.glb
+  - active: 1
+    item:
+      name: InterpolationTest.glb
+      path: InterpolationTest/glTF-Binary/InterpolationTest.glb
+  - active: 1
+    item:
+      name: Lantern.glb
+      path: Lantern/glTF-Binary/Lantern.glb
+  - active: 1
+    item:
+      name: MetalRoughSpheres.glb
+      path: MetalRoughSpheres/glTF-Binary/MetalRoughSpheres.glb
+  - active: 1
+    item:
+      name: MetalRoughSpheresNoTextures.glb
+      path: MetalRoughSpheresNoTextures/glTF-Binary/MetalRoughSpheresNoTextures.glb
+  - active: 1
+    item:
+      name: MorphPrimitivesTest.glb
+      path: MorphPrimitivesTest/glTF-Binary/MorphPrimitivesTest.glb
+  - active: 1
+    item:
+      name: MultiUVTest.glb
+      path: MultiUVTest/glTF-Binary/MultiUVTest.glb
+  - active: 1
+    item:
+      name: NormalTangentMirrorTest.glb
+      path: NormalTangentMirrorTest/glTF-Binary/NormalTangentMirrorTest.glb
+  - active: 1
+    item:
+      name: NormalTangentTest.glb
+      path: NormalTangentTest/glTF-Binary/NormalTangentTest.glb
+  - active: 1
+    item:
+      name: OrientationTest.glb
+      path: OrientationTest/glTF-Binary/OrientationTest.glb
+  - active: 1
+    item:
+      name: ReciprocatingSaw.glb
+      path: ReciprocatingSaw/glTF-Binary/ReciprocatingSaw.glb
+  - active: 1
+    item:
+      name: RiggedFigure.glb
+      path: RiggedFigure/glTF-Binary/RiggedFigure.glb
+  - active: 1
+    item:
+      name: RiggedSimple.glb
+      path: RiggedSimple/glTF-Binary/RiggedSimple.glb
+  - active: 1
+    item:
+      name: SpecGlossVsMetalRough.glb
+      path: SpecGlossVsMetalRough/glTF-Binary/SpecGlossVsMetalRough.glb
+  - active: 1
+    item:
+      name: TextureCoordinateTest.glb
+      path: TextureCoordinateTest/glTF-Binary/TextureCoordinateTest.glb
+  - active: 1
+    item:
+      name: TextureSettingsTest.glb
+      path: TextureSettingsTest/glTF-Binary/TextureSettingsTest.glb
+  - active: 1
+    item:
+      name: TextureTransformMultiTest.glb
+      path: TextureTransformMultiTest/glTF-Binary/TextureTransformMultiTest.glb
+  - active: 1
+    item:
+      name: TransmissionTest.glb
+      path: TransmissionTest/glTF-Binary/TransmissionTest.glb
+  - active: 1
+    item:
+      name: UnlitTest.glb
+      path: UnlitTest/glTF-Binary/UnlitTest.glb
+  - active: 1
+    item:
+      name: VC.glb
+      path: VC/glTF-Binary/VC.glb
+  - active: 1
+    item:
+      name: VertexColorTest.glb
+      path: VertexColorTest/glTF-Binary/VertexColorTest.glb
+  - active: 1
+    item:
+      name: WaterBottle.glb
+      path: WaterBottle/glTF-Binary/WaterBottle.glb
