@@ -1,0 +1,17 @@
+{
+    "name": "glTFastDemo",
+    "references": [
+        "glTFast",
+        "glTFastEditor",
+        "glTFastSample"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
