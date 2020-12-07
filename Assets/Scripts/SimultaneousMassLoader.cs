@@ -41,7 +41,7 @@ public class SimultaneousMassLoader : MassLoader {
 #if LOCAL_LOADING
                     string.Format( "file://{0}", item.path)
 #else
-                    item.Item2
+                    item.path
 #endif
                     ,deferAgent
                 );
