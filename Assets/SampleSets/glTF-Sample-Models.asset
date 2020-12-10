@@ -551,6 +551,10 @@ MonoBehaviour:
       path: SciFiHelmet/glTF/SciFiHelmet.gltf
   - active: 1
     item:
+      name: SheenCloth.gltf
+      path: SheenCloth/glTF/SheenCloth.gltf
+  - active: 1
+    item:
       name: SimpleMeshes.gltf
       path: SimpleMeshes/glTF/SimpleMeshes.gltf
   - active: 1
@@ -633,6 +637,14 @@ MonoBehaviour:
     item:
       name: TextureTransformTest.gltf
       path: TextureTransformTest/glTF/TextureTransformTest.gltf
+  - active: 1
+    item:
+      name: ToyCar.gltf
+      path: ToyCar/glTF/ToyCar.gltf
+  - active: 1
+    item:
+      name: ToyCar.glb
+      path: ToyCar/glTF-Binary/ToyCar.glb
   - active: 1
     item:
       name: TransmissionTest.gltf
