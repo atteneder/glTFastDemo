@@ -106,7 +106,6 @@ public class TestGui : MonoBehaviour {
     }
     void UrlChanged(string newUrl)
     {
-        stopWatch.StartTime();
         urlField = newUrl;
     }
 
@@ -125,7 +124,7 @@ public class TestGui : MonoBehaviour {
                 string path = EditorUtility.OpenFilePanel("Select glTF", "", "glb");
                 if (path.Length != 0)
                 {
-                    GetComponent<TestLoader>().LoadUrl("file://"+path);
+                    LoadUrl("file://"+path);
                 }
             }
             urlFieldWidth -= GlobalGui.buttonWidth;
@@ -133,7 +132,7 @@ public class TestGui : MonoBehaviour {
 
             urlField = GUI.TextField( new Rect(0,0,urlFieldWidth,GlobalGui.barHeightWidth),urlField);
             if(GUI.Button( new Rect(width-GlobalGui.buttonWidth,0,GlobalGui.buttonWidth,GlobalGui.barHeightWidth),"Load")) {
-                GetComponent<TestLoader>().LoadUrl(urlField);
+                LoadUrl(urlField);
             }
             GUI.EndGroup();
 
@@ -164,10 +163,14 @@ public class TestGui : MonoBehaviour {
             if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),item.Item1)) {
                 // Hide menu during loading, since it can distort the performance profiling.
                 showMenu = false;
-                GetComponent<TestLoader>().LoadUrl(item.Item2);
+                LoadUrl(item.Item2);
             }
             y+=GlobalGui.listItemHeight;
         }
+    }
+
+    async void LoadUrl(string url) {
+        await GetComponent<TestLoader>().LoadUrl(url);
     }
 
     void OnDestroy() {

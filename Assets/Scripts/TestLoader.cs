@@ -1,4 +1,4 @@
-﻿// Copyright 2020-2021 Andreas Atteneder
+// Copyright 2020-2021 Andreas Atteneder
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 //
 
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 #if !NO_GLTFAST
@@ -53,14 +54,8 @@ public class TestLoader : MonoBehaviour {
         // LoadUrl( GltfSampleModels.baseUrl+"Duck/glTF-Binary/Duck.glb" );
     }
 
-    public void LoadUrl(string url) {
+    public async Task LoadUrl(string url) {
 
-#if !NO_GLTFAST
-        if(gltf1!=null) {
-            gltf1.onLoadComplete-= GLTFast_onLoadComplete;
-            gltf1 = null;
-        }
-#endif
 #if UNITY_GLTF
         if(gltf2!=null) {
             gltf2.onLoadComplete-= UnityGltf_OnLoadComplete;
@@ -78,14 +73,20 @@ public class TestLoader : MonoBehaviour {
         Debug.Log("loading "+url);
 
         startTime = Time.realtimeSinceStartup;
+        urlChanged(url);
         loadingBegin();
 
 #if !NO_GLTFAST
         go1 = new GameObject();
         gltf1 = go1.AddComponent<GLTFast.GltfAsset>();
         gltf1.loadOnStartup = false;
-        gltf1.Load(url,null,deferAgent);
-        gltf1.onLoadComplete += GLTFast_onLoadComplete;
+        var success = await gltf1.Load(url,null,deferAgent);
+        loadingEnd();
+        if(success) {
+            GLTFast_onLoadComplete(gltf1);
+        } else {
+            Debug.LogError("TestLoader: loading failed!");
+        }
 #endif
 #if UNITY_GLTF
         go2 = new GameObject();
@@ -94,8 +95,6 @@ public class TestLoader : MonoBehaviour {
         gltf2.GLTFUri = url;
         gltf2.onLoadComplete += UnityGltf_OnLoadComplete;
 #endif
-
-        urlChanged(url);
     }
 
 #if UNITY_GLTF
@@ -122,32 +121,26 @@ public class TestLoader : MonoBehaviour {
 #endif
 
 #if !NO_GLTFAST
-    void GLTFast_onLoadComplete(GLTFast.GltfAssetBase asset, bool success)
+    void GLTFast_onLoadComplete(GltfAssetBase asset)
     {
-        loadingEnd();
+        var bounds = CalculateLocalBounds(asset.transform);
+        
+        // AddMotion(asset.transform);
 
-        if(success) {
-            var bounds = CalculateLocalBounds(gltf1.transform);
-            
-            // AddMotion(gltf1.transform);
+        float targetSize = 2.0f;
+        
+        float scale = Mathf.Min(
+            targetSize / bounds.extents.x,
+            targetSize / bounds.extents.y,
+            targetSize / bounds.extents.z
+            );
 
-            float targetSize = 2.0f;
-            
-            float scale = Mathf.Min(
-                targetSize / bounds.extents.x,
-                targetSize / bounds.extents.y,
-                targetSize / bounds.extents.z
-                );
-    
-            if (!float.IsNaN(scale) && !float.IsInfinity(scale)) {
-                gltf1.transform.localScale = Vector3.one * scale;
-                Vector3 pos = bounds.center;
-                pos.x += bounds.extents.x * variantDistance;;
-                pos *= -scale;
-                gltf1.transform.position = pos;
-            }
-        } else {
-            Debug.LogError("TestLoader: loading failed!");
+        if (!float.IsNaN(scale) && !float.IsInfinity(scale)) {
+            asset.transform.localScale = Vector3.one * scale;
+            Vector3 pos = bounds.center;
+            pos.x += bounds.extents.x * variantDistance;;
+            pos *= -scale;
+            asset.transform.position = pos;
         }
     }
 

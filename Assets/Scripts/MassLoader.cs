@@ -1,4 +1,4 @@
-﻿// Copyright 2020-2021 Andreas Atteneder
+// Copyright 2020-2021 Andreas Atteneder
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using GLTFast.Tests;
 
@@ -32,8 +32,8 @@ public abstract class MassLoader : MonoBehaviour
     }
 
     void OnSampleSetSelected(GltfSampleSet sampleSet) {
-        StartCoroutine(MassLoadRoutine(sampleSet));
+        MassLoadRoutine(sampleSet);
     }
 
-    protected abstract IEnumerator MassLoadRoutine(GltfSampleSet sampleSet);
+    protected abstract void MassLoadRoutine(GltfSampleSet sampleSet);
 }

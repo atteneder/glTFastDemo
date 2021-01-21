@@ -1,4 +1,4 @@
-﻿// Copyright 2020-2021 Andreas Atteneder
+// Copyright 2020-2021 Andreas Atteneder
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 //
 
 using System;
-using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using GLTFast.Loading;
 
@@ -25,26 +25,29 @@ public class TestDownloads : MonoBehaviour
     public Texture2D[] results;
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    async void Start()
     {
         var headers = new []{
             new HttpHeader(){Key="key",Value="value"}
         };
         var x = new CustomHeaderDownloadProvider(headers);
 
-        var dls = new ITextureDownload[urls.Length];
+        var downloadTasks = new Task<ITextureDownload>[urls.Length];
         results = new Texture2D[urls.Length];
 
-        for (int i = 0; i < urls.Length; i++)
-        {
-            dls[i] = x.RequestTexture(new Uri(urls[i]));
+        for (var i = 0; i < urls.Length; i++) {
+            downloadTasks[i] = x.RequestTexture(new Uri(urls[i]));
+        }
+
+        var downloads = await Task.WhenAll(downloadTasks);
+
+        for (var index = 0; index < downloads.Length; index++) {
+            results[index] = downloads[index].texture;
         }
 
         for (int i = 0; i < urls.Length; i++)
         {
-            var ad = dls[i];
-            yield return ad;
-            results[i] = ad.texture;
+            var ad = downloadTasks[i];
         }
     }
 }
