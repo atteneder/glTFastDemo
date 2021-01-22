@@ -30,13 +30,12 @@ public class SceneSelection : MonoBehaviour
 #if PLATFORM_WEBGL && !UNITY_EDITOR
         // Hide UI in glTF compare web
         Destroy(this);
-        return;
-#endif
-
+#else
         if(scenes!=null) {
             var scene = SceneManager.GetActiveScene();
             hidden = scene.name!=scenes[0];
         }
+#endif
     }
 
     void OnGUI() {
