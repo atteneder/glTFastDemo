@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>%UNITY_WEB_NAME%</title>
-    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script src="glTFast/%UNITY_WEBGL_LOADER_URL%"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%");
+      var gameInstance = UnityLoader.instantiate("gameContainer", "glTFast/%UNITY_WEBGL_BUILD_URL%");
       gameInstance.Module.onRuntimeInitialized = function() {
         parent.globals.onReady('%UNITY_WEB_NAME%');
       };
