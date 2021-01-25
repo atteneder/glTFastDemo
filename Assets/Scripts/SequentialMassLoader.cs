@@ -23,7 +23,6 @@ using GLTFast.Tests;
 
 public class SequentialMassLoader : MassLoader
 {
-    bool waitForIt;
     GLTFast.GltfAsset gltfAsset;
 
     protected override async void MassLoadRoutine(GltfSampleSet sampleSet) {
