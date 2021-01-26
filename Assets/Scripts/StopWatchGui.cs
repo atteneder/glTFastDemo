@@ -15,7 +15,7 @@
 
 using System;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
+using GLTFast.Tests;
 
 [RequireComponent(typeof(StopWatch))]
 public class StopWatchGui : MonoBehaviour {
