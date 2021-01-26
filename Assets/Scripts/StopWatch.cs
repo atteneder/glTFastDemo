@@ -17,6 +17,10 @@ using UnityEngine;
 
 public class StopWatch : MonoBehaviour {
     
+    [Tooltip("Maximum time a frame can take. Frame times will not exceed this value even if the actual frame time was longer.")]
+    [SerializeField]
+    float maxDeltaTime = 10;
+    
     float m_StartTime = -1;
     float m_MinFrameTime = float.MaxValue;
     float m_MaxFrameTime = float.MinValue;
@@ -35,6 +39,10 @@ public class StopWatch : MonoBehaviour {
     public float averageFrameTime => m_FPSDuration / frameCount;
     public float minFrameTimeTime => m_MinFrameTime;
     public float maxFrameTimeTime => m_MaxFrameTime;
+
+    void Awake() {
+        Time.maximumDeltaTime = maxDeltaTime;
+    }
 
     public void StartTime() {
         m_StartTime = Time.realtimeSinceStartup;
