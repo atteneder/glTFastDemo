@@ -39,8 +39,8 @@ public class StopWatchGui : MonoBehaviour {
             ? string.Format(
                 " (fps avg: {0} min: {1} ms max: {2} ms)"
                 ,m_StopWatch.averageFrameTime.ToString("0.00")
-                ,m_StopWatch.minFrameTimeTime < float.MaxValue ? m_StopWatch.minFrameTimeTime.ToString("0.00") : "-"
-                ,m_StopWatch.maxFrameTimeTime > float.MinValue ? m_StopWatch.maxFrameTimeTime.ToString("0.00") : "-"
+                ,m_StopWatch.minFrameTime < float.MaxValue ? m_StopWatch.minFrameTime.ToString("0.00") : "-"
+                ,m_StopWatch.maxFrameTime > float.MinValue ? m_StopWatch.maxFrameTime.ToString("0.00") : "-"
             )
             : "";
             var label = string.Format(
