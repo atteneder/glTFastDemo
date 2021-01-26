@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2328192675002547301}
   - component: {fileID: 2328192675002547300}
   - component: {fileID: 2328192675002547302}
+  - component: {fileID: 9025781268217053638}
   - component: {fileID: 2165204266040700615}
   m_Layer: 0
   m_Name: MassLoader
@@ -58,7 +59,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2328192675002547299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e37a86ddb6cb444ba7fe0f7ab265836, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f276fbc045ea4078bc375686d48c1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDeltaTime: 10
+--- !u!114 &9025781268217053638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328192675002547299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ed61ba2f0e5425c9c0905eea917122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   posX: 0
