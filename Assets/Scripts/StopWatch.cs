@@ -50,8 +50,6 @@ public class StopWatch : MonoBehaviour {
     public void StopTime() {
         m_Running = false;
         m_Duration = now;
-        var delta = Time.deltaTime * 1000;
-        UpdateFrameTimes(delta);
         m_ConsiderLastFrame = true;
     }
 
