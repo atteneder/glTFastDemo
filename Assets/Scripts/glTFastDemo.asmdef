@@ -3,8 +3,7 @@
     "references": [
         "glTFast",
         "glTFastEditor",
-        "glTFastSample",
-        "glTFastTests"
+        "glTFastSample"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
