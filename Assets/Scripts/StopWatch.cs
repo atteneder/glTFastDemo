@@ -78,7 +78,6 @@ public class StopWatch : MonoBehaviour {
         // Skip handling frame twice (happened when StopTime was called)
         if (m_EndFrameCount >= currentFrame) return;
         m_EndFrameCount = currentFrame;
-        Debug.Log($"frame {m_EndFrameCount-m_StartFrameCount}: {delta}");
         if(m_EndFrameCount > m_StartFrameCount) {
             m_MinFrameTime = Mathf.Min(m_MinFrameTime, delta );
             m_MaxFrameTime = Mathf.Max(m_MaxFrameTime, delta );
