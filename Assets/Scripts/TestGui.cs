@@ -35,6 +35,9 @@ public class TestGui : MonoBehaviour {
     [SerializeField]
     StopWatch stopWatch = null;
 
+    [SerializeField]
+    StopWatchGui stopWatchGui = null;
+
     public bool showMenu = true;
     // Load files locally (from streaming assets) or via HTTP
     public bool local = false;
@@ -48,7 +51,7 @@ public class TestGui : MonoBehaviour {
 
     private void Awake()
     {
-        stopWatch.posX = GlobalGui.listWidth;
+        stopWatchGui.posX = GlobalGui.listWidth;
 
 #if PLATFORM_WEBGL && !UNITY_EDITOR
         // Hide UI in glTF compare web

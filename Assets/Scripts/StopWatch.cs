@@ -15,87 +15,67 @@
 
 using UnityEngine;
 
-public class StopWatch : MonoBehaviour
-{
-    public float posX;
+public class StopWatch : MonoBehaviour {
+    
+    float m_StartTime = -1;
+    float m_MinFrameTime = float.MaxValue;
+    float m_MaxFrameTime = float.MinValue;
+    float m_Duration = -1;
+    float m_FPSDuration;
+    int m_StartFrameCount;
+    int m_EndFrameCount;
+    bool m_Running;
+    bool m_ConsiderLastFrame;
 
-    float startTime = -1;
-    float minFrame = float.MaxValue;
-    float maxFrame = float.MinValue;
-    float duration = -1;
-    float fpsDuration;
-    int startFrameCount;
-    int endFrameCount;
-    bool running;
+    public float now => (Time.realtimeSinceStartup-m_StartTime)*1000;
 
-    float now {
-        get {
-            return (Time.realtimeSinceStartup-startTime)*1000;
-        }
-    }
-
-    public float lastDuration {
-        get {
-            return duration;
-        }
-    }
+    public bool active => m_Running || m_Duration>=0;
+    public float lastDuration => m_Duration;
+    public int frameCount => m_EndFrameCount-m_StartFrameCount;
+    public float averageFrameTime => m_FPSDuration / frameCount;
+    public float minFrameTimeTime => m_MinFrameTime;
+    public float maxFrameTimeTime => m_MaxFrameTime;
 
     public void StartTime() {
-        startTime = Time.realtimeSinceStartup;
-        duration = 0;
-        fpsDuration = 0;
-        minFrame = float.MaxValue;
-        maxFrame = float.MinValue;
-        startFrameCount = Time.frameCount;
-        endFrameCount = startFrameCount;
-        running = true;
+        m_StartTime = Time.realtimeSinceStartup;
+        m_Duration = 0;
+        m_FPSDuration = 0;
+        m_MinFrameTime = float.MaxValue;
+        m_MaxFrameTime = float.MinValue;
+        m_StartFrameCount = Time.frameCount;
+        m_EndFrameCount = m_StartFrameCount;
+        m_Running = true;
     }
 
     public void StopTime() {
-        running = false;
+        m_Running = false;
+        m_Duration = now;
         var delta = Time.deltaTime * 1000;
         UpdateFrameTimes(delta);
+        m_ConsiderLastFrame = true;
     }
 
     void Update() {
-        if(running) {
-            var delta = Time.deltaTime * 1000;
-            fpsDuration += delta;
-            UpdateFrameTimes(delta);
-        }
-    }
-
-    void OnGUI() {
-        GlobalGui.Init();
-        if(running || duration>=0) {
-            float width = Screen.width;
-            float height = Screen.height;
-            var frameCount = endFrameCount-startFrameCount;
-            var fpsString = (frameCount > 0)
-            ? string.Format(
-                " (fps avg: {0} min: {1} ms max: {2} ms)"
-                ,(fpsDuration/(float)frameCount).ToString("0.00")
-                ,minFrame < float.MaxValue ? minFrame.ToString("0.00") : "-"
-                ,maxFrame > float.MinValue ? maxFrame.ToString("0.00") : "-"
-            )
-            : "";
-            var label = string.Format(
-                "glTFast time: {0:0.00} ms{1}"
-                ,duration>=0 ? duration : now
-                ,fpsString
-                );
-
-            var timeHeight = GUI.skin.label.fontSize*1.5f;
-            GUI.Label(new Rect(posX+10,height-timeHeight,width-posX-10,timeHeight),label);
+        if(m_Running || m_ConsiderLastFrame) {
+            m_Duration = now;
+            if (m_StartFrameCount < Time.frameCount) {
+                var delta = Time.deltaTime * 1000;
+                m_FPSDuration += delta;
+                UpdateFrameTimes(delta);
+            }
+            m_ConsiderLastFrame = false;
         }
     }
 
     void UpdateFrameTimes(float delta) {
-        duration = now;
-        endFrameCount = Time.frameCount;
-        if(endFrameCount > startFrameCount) {
-            minFrame = Mathf.Min(minFrame, delta );
-            maxFrame = Mathf.Max(maxFrame, delta );
+        var currentFrame = Time.frameCount;
+        // Skip handling frame twice (happened when StopTime was called)
+        if (m_EndFrameCount >= currentFrame) return;
+        m_EndFrameCount = currentFrame;
+        Debug.Log($"frame {m_EndFrameCount-m_StartFrameCount}: {delta}");
+        if(m_EndFrameCount > m_StartFrameCount) {
+            m_MinFrameTime = Mathf.Min(m_MinFrameTime, delta );
+            m_MaxFrameTime = Mathf.Max(m_MaxFrameTime, delta );
         }
     }
 }
