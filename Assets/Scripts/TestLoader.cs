@@ -30,6 +30,8 @@ public class TestLoader : MonoBehaviour {
 #else
     public const float variantDistance = 0;
 #endif
+    
+    [SerializeField] bool responsive = true;
 
     public UnityAction<string> urlChanged;
     public UnityAction loadingBegin;
@@ -50,7 +52,11 @@ public class TestLoader : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        deferAgent = new GLTFast.UninterruptedDeferAgent();
+        if(responsive) {
+            deferAgent = gameObject.AddComponent<TimeBudgetPerFrameDeferAgent>();
+        } else {
+            deferAgent = new UninterruptedDeferAgent();
+        }
         // LoadUrl( GltfSampleModels.baseUrl+"Duck/glTF-Binary/Duck.glb" );
     }
 
