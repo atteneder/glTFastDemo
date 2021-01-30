@@ -76,6 +76,9 @@ public class TestLoader : MonoBehaviour {
             Destroy(go2);
         }
 
+        // Wait one frame to minimize distortion by current frame's delta time
+        await Task.Yield();
+        
         Debug.Log("loading "+url);
 
         startTime = Time.realtimeSinceStartup;
