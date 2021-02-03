@@ -2,6 +2,29 @@
 
 Unity project that demonstrates how to use the [glTFast package](https://github.com/atteneder/glTFast).
 
+## Build Optimization
+
+To make sure the build size remains low, certify the following:
+
+- Activate "Strip Engine Code" in *Player Settings*
+- Don't install any not strictly required packages (built-in or otherwise)
+
+### For Release Builds
+
+#### Disable Testing
+
+Remove the following block from `Packages/manifest.json`
+
+```json
+  "testables": [
+    "com.atteneder.gltfast"
+  ],
+```
+
+Then remove the package *Test Framework* (com.unity.test-framework) and anything that depends on it.
+
+> To remove compiler errors, restarting the Editor may be required
+
 ## License
 
 Copyright (c) 2020 Andreas Atteneder, All Rights Reserved.
