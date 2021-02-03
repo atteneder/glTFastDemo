@@ -20,7 +20,8 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using GLTFast.Tests;
+using GLTFast.Samples;
+using GLTFast.Utils;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -29,7 +30,7 @@ using UnityEditor;
 [RequireComponent(typeof(TestLoader))]
 public class TestGui : MonoBehaviour {
 
-    GltfSampleSet sampleSet = null;
+    SampleSet sampleSet = null;
 
 
     [SerializeField]
@@ -76,7 +77,7 @@ public class TestGui : MonoBehaviour {
         stopWatch.StopTime();
     }
 
-    void OnSampleSetSelected(GltfSampleSet newSet) {
+    void OnSampleSetSelected(SampleSet newSet) {
 
         if(newSet==null || newSet.itemCount<1) {
             Debug.LogError("Empty sample set!");

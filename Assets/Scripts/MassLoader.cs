@@ -15,7 +15,9 @@
 
 using System.Threading.Tasks;
 using UnityEngine;
-using GLTFast.Tests;
+using GLTFast;
+using GLTFast.Utils;
+using GLTFast.Samples;
 
 public abstract class MassLoader : MonoBehaviour
 {
@@ -31,9 +33,9 @@ public abstract class MassLoader : MonoBehaviour
         selectSet.onSampleSetSelected += OnSampleSetSelected;
     }
 
-    void OnSampleSetSelected(GltfSampleSet sampleSet) {
+    void OnSampleSetSelected(SampleSet sampleSet) {
         MassLoadRoutine(sampleSet);
     }
 
-    protected abstract void MassLoadRoutine(GltfSampleSet sampleSet);
+    protected abstract void MassLoadRoutine(SampleSet sampleSet);
 }

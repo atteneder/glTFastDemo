@@ -19,13 +19,13 @@
 
 using System.Threading.Tasks;
 using UnityEngine;
-using GLTFast.Tests;
+using GLTFast.Samples;
 
 public class SequentialMassLoader : MassLoader
 {
     GLTFast.GltfAsset gltfAsset;
 
-    protected override async void MassLoadRoutine(GltfSampleSet sampleSet) {
+    protected override async void MassLoadRoutine(SampleSet sampleSet) {
 
         stopWatch.StartTime();
 

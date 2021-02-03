@@ -15,14 +15,14 @@
 
 using UnityEngine;
 using UnityEngine.Events;
-using GLTFast.Tests;
+using GLTFast.Samples;
 
 public class SampleSetSelectGui : MonoBehaviour
 {
     [SerializeField]
-    GltfSampleSetCollection sampleSetCollection = null;
+    SampleSetCollection sampleSetCollection = null;
 
-    public UnityAction<GltfSampleSet> onSampleSetSelected;
+    public UnityAction<SampleSet> onSampleSetSelected;
 
     Vector2 scrollPos;
 

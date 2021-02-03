@@ -21,7 +21,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
-using GLTFast.Tests;
+using GLTFast.Samples;
 
 public class SimultaneousMassLoader : MassLoader {
 
@@ -35,7 +35,7 @@ public class SimultaneousMassLoader : MassLoader {
 
     Queue<GLTFast.GltfAssetBase> visibleAssets = new Queue<GLTFast.GltfAssetBase>();
 
-    protected override async void MassLoadRoutine (GltfSampleSet sampleSet) {
+    protected override async void MassLoadRoutine (SampleSet sampleSet) {
 
         stopWatch.StartTime();
 
