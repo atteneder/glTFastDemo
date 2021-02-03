@@ -3,16 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>%UNITY_WEB_NAME%</title>
-    <script src="glTFast/%UNITY_WEBGL_LOADER_URL%"></script>
+    <title>{{{ PRODUCT_NAME }}}</title>
+    <script src="Build/{{{ LOADER_FILENAME }}}"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "glTFast/%UNITY_WEBGL_BUILD_URL%");
-      gameInstance.Module.onRuntimeInitialized = function() {
-        parent.globals.onReady('%UNITY_WEB_NAME%');
+      onSuccess = function(unityInstance) {
+        window.gameInstance = unityInstance;
+        parent.globals.onReady('{{{ PRODUCT_NAME }}}');
       };
     </script>
   </head>
-  <body style="margin: 0px">
-    <div id="gameContainer" style="wid/a: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: 0px"></div>
+  <body style="margin: 0px; overflow:hidden;">
+    <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} style="width: {{{ WIDTH }}}px; height: {{{ HEIGHT }}}px; background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}}"></canvas>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/{{{ DATA_FILENAME }}}",
+        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+        memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "{{{ COMPANY_NAME }}}",
+        productName: "{{{ PRODUCT_NAME }}}",
+        productVersion: "{{{ PRODUCT_VERSION }}}",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then(onSuccess);
+    </script>
   </body>
 </html>
