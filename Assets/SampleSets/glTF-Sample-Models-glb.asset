@@ -123,6 +123,10 @@ MonoBehaviour:
       path: Lantern/glTF-Binary/Lantern.glb
   - active: 1
     item:
+      name: MaterialsVariantsShoe.glb
+      path: MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb
+  - active: 1
+    item:
       name: MetalRoughSpheres.glb
       path: MetalRoughSpheres/glTF-Binary/MetalRoughSpheres.glb
   - active: 1
@@ -163,6 +167,10 @@ MonoBehaviour:
       path: RiggedSimple/glTF-Binary/RiggedSimple.glb
   - active: 1
     item:
+      name: SheenChair.glb
+      path: SheenChair/glTF-Binary/SheenChair.glb
+  - active: 1
+    item:
       name: SpecGlossVsMetalRough.glb
       path: SpecGlossVsMetalRough/glTF-Binary/SpecGlossVsMetalRough.glb
   - active: 1
@@ -177,6 +185,10 @@ MonoBehaviour:
     item:
       name: TextureTransformMultiTest.glb
       path: TextureTransformMultiTest/glTF-Binary/TextureTransformMultiTest.glb
+  - active: 1
+    item:
+      name: ToyCar.glb
+      path: ToyCar/glTF-Binary/ToyCar.glb
   - active: 1
     item:
       name: TransmissionTest.glb

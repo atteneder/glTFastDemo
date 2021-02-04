@@ -571,6 +571,14 @@ MonoBehaviour:
       path: SheenChair/glTF-Binary/SheenChair.glb
   - active: 1
     item:
+      name: SheenChair.gltf
+      path: SheenChair/glTF/SheenChair.gltf
+  - active: 1
+    item:
+      name: SheenChair.glb
+      path: SheenChair/glTF-Binary/SheenChair.glb
+  - active: 1
+    item:
       name: SheenCloth.gltf
       path: SheenCloth/glTF/SheenCloth.gltf
   - active: 1

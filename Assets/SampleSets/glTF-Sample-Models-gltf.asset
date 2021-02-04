@@ -123,6 +123,10 @@ MonoBehaviour:
       path: Box/glTF-Embedded/Box.gltf
   - active: 1
     item:
+      name: Box With Spaces.gltf
+      path: Box With Spaces/glTF/Box With Spaces.gltf
+  - active: 1
+    item:
       name: BoxAnimated.gltf
       path: BoxAnimated/glTF/BoxAnimated.gltf
   - active: 1
@@ -315,6 +319,10 @@ MonoBehaviour:
       path: Lantern/glTF-pbrSpecularGlossiness/Lantern.gltf
   - active: 1
     item:
+      name: MaterialsVariantsShoe.gltf
+      path: MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf
+  - active: 1
+    item:
       name: MetalRoughSpheres.gltf
       path: MetalRoughSpheres/glTF/MetalRoughSpheres.gltf
   - active: 1
@@ -407,6 +415,14 @@ MonoBehaviour:
       path: SciFiHelmet/glTF/SciFiHelmet.gltf
   - active: 1
     item:
+      name: SheenChair.gltf
+      path: SheenChair/glTF/SheenChair.gltf
+  - active: 1
+    item:
+      name: SheenCloth.gltf
+      path: SheenCloth/glTF/SheenCloth.gltf
+  - active: 1
+    item:
       name: SimpleMeshes.gltf
       path: SimpleMeshes/glTF/SimpleMeshes.gltf
   - active: 1
@@ -473,6 +489,10 @@ MonoBehaviour:
     item:
       name: TextureTransformTest.gltf
       path: TextureTransformTest/glTF/TextureTransformTest.gltf
+  - active: 1
+    item:
+      name: ToyCar.gltf
+      path: ToyCar/glTF/ToyCar.gltf
   - active: 1
     item:
       name: TransmissionTest.gltf
