@@ -20,7 +20,7 @@
       "url": "https://package.openupm.com"
     },
     "com.atteneder.ktx": {
-      "version": "1.0.0-preview",
+      "version": "1.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {

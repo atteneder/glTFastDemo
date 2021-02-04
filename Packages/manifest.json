@@ -2,7 +2,7 @@
   "dependencies": {
     "com.atteneder.draco": "1.4.0",
     "com.atteneder.gltfast": "3.0.0-preview",
-    "com.atteneder.ktx": "1.0.0-preview",
+    "com.atteneder.ktx": "1.0.0",
     "com.unity.ext.nunit": "1.0.6",
     "com.unity.ide.rider": "3.0.3",
     "com.unity.ide.vscode": "1.2.3",
