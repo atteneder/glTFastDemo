@@ -159,6 +159,10 @@ MonoBehaviour:
       path: Box/glTF-Embedded/Box.gltf
   - active: 1
     item:
+      name: Box With Spaces.gltf
+      path: Box With Spaces/glTF/Box With Spaces.gltf
+  - active: 1
+    item:
       name: BoxAnimated.gltf
       path: BoxAnimated/glTF/BoxAnimated.gltf
   - active: 1
@@ -419,6 +423,14 @@ MonoBehaviour:
       path: Lantern/glTF-pbrSpecularGlossiness/Lantern.gltf
   - active: 1
     item:
+      name: MaterialsVariantsShoe.gltf
+      path: MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf
+  - active: 1
+    item:
+      name: MaterialsVariantsShoe.glb
+      path: MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb
+  - active: 1
+    item:
       name: MetalRoughSpheres.gltf
       path: MetalRoughSpheres/glTF/MetalRoughSpheres.gltf
   - active: 1
@@ -449,15 +461,15 @@ MonoBehaviour:
     item:
       name: MorphPrimitivesTest.gltf
       path: MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.gltf
-  - active: 1
+  - active: 0
     item:
       name: MultiUVTest.gltf
       path: MultiUVTest/glTF/MultiUVTest.gltf
-  - active: 1
+  - active: 0
     item:
       name: MultiUVTest.glb
       path: MultiUVTest/glTF-Binary/MultiUVTest.glb
-  - active: 1
+  - active: 0
     item:
       name: MultiUVTest.gltf
       path: MultiUVTest/glTF-Embedded/MultiUVTest.gltf
@@ -549,6 +561,14 @@ MonoBehaviour:
     item:
       name: SciFiHelmet.gltf
       path: SciFiHelmet/glTF/SciFiHelmet.gltf
+  - active: 0
+    item:
+      name: SheenChair.gltf
+      path: SheenChair/glTF/SheenChair.gltf
+  - active: 0
+    item:
+      name: SheenChair.glb
+      path: SheenChair/glTF-Binary/SheenChair.glb
   - active: 1
     item:
       name: SheenCloth.gltf
@@ -625,11 +645,11 @@ MonoBehaviour:
     item:
       name: TextureSettingsTest.gltf
       path: TextureSettingsTest/glTF-Embedded/TextureSettingsTest.gltf
-  - active: 1
+  - active: 0
     item:
       name: TextureTransformMultiTest.gltf
       path: TextureTransformMultiTest/glTF/TextureTransformMultiTest.gltf
-  - active: 1
+  - active: 0
     item:
       name: TextureTransformMultiTest.glb
       path: TextureTransformMultiTest/glTF-Binary/TextureTransformMultiTest.glb
