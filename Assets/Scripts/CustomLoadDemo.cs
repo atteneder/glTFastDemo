@@ -15,7 +15,7 @@ public class CustomLoadDemo : MonoBehaviour {
     }
 
     static async Task CustomInstantiation() {
-        var gltf = new GLTFast.GLTFast();
+        var gltf = new GLTFast.GltfImport();
         var success = await gltf.Load("file:///path/to/file.gltf");
 
         if (success) {
@@ -44,7 +44,7 @@ public class CustomLoadDemo : MonoBehaviour {
         var tasks = new List<Task>();
         
         foreach( var url in manyUrls) {
-            var gltf = new GLTFast.GLTFast(null,deferAgent);
+            var gltf = new GLTFast.GltfImport(null,deferAgent);
             var task = gltf.Load(url).ContinueWith(
                 t => {
                     if (t.Result) {
