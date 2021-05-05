@@ -20,7 +20,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using GLTFast.Samples;
+using GLTFTest.Sample;
 using GLTFast.Utils;
 
 #if UNITY_EDITOR

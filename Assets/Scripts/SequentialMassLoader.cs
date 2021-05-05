@@ -19,7 +19,7 @@
 
 using System.Threading.Tasks;
 using UnityEngine;
-using GLTFast.Samples;
+using GLTFTest.Sample;
 
 public class SequentialMassLoader : MassLoader
 {

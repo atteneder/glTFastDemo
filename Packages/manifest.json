@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "com.atteneder.draco": "1.4.0",
-    "com.atteneder.gltfast": "3.1.0",
+    "com.atteneder.gltf-test-framework": "https://github.com/atteneder/gltf-test-framework.git",
+    "com.atteneder.gltfast": "3.2.0",
     "com.atteneder.ktx": "1.0.0",
     "com.unity.ext.nunit": "1.0.6",
     "com.unity.ide.rider": "3.0.6",
@@ -20,7 +21,8 @@
     "com.unity.modules.unitywebrequesttexture": "1.0.0"
   },
   "testables": [
-    "com.atteneder.gltfast"
+    "com.atteneder.gltfast",
+    "com.atteneder.gltf-test-framework"
   ],
   "scopedRegistries": [
     {

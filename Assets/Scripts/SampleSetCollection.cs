@@ -14,7 +14,7 @@
 //
 
 using UnityEngine;
-using GLTFast.Samples;
+using GLTFTest.Sample;
 
 [CreateAssetMenu(fileName = "glTF-SampleSet-collection", menuName = "ScriptableObjects/glTFast SampleSetCollection", order = 2)]
 public class SampleSetCollection : ScriptableObject

@@ -15,7 +15,7 @@
 
 using UnityEngine;
 using UnityEngine.Events;
-using GLTFast.Samples;
+using GLTFTest.Sample;
 
 public class SampleSetSelectGui : MonoBehaviour
 {

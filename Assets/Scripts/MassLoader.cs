@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using GLTFast;
 using GLTFast.Utils;
-using GLTFast.Samples;
+using GLTFTest.Sample;
 
 public abstract class MassLoader : MonoBehaviour
 {
