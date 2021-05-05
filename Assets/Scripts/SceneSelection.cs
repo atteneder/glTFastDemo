@@ -31,9 +31,11 @@ public class SceneSelection : MonoBehaviour
         // Hide UI in glTF compare web
         Destroy(this);
 #else
-        if(scenes!=null) {
+        if(scenes!=null && scenes.Length>0) {
             var scene = SceneManager.GetActiveScene();
             hidden = scene.name!=scenes[0];
+        } else {
+            enabled = false;
         }
 #endif
     }
