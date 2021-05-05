@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ContentModelUserStore">
-    <attachedFolders />
-    <explicitIncludes>
+  <component name="UserContentModel">
+    <attachedFolders>
       <Path>../glTFast2</Path>
+    </attachedFolders>
+    <explicitIncludes>
       <Path>Library/PackageCache/com.atteneder.draco@1.3.0</Path>
       <Path>Library/PackageCache/com.atteneder.draco@1.4.0</Path>
       <Path>Library/PackageCache/com.atteneder.ktx@0.9.1</Path>
@@ -29,7 +30,6 @@
       <Path>.idea</Path>
       <Path>.vscode</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
