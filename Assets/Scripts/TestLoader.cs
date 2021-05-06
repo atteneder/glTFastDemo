@@ -134,8 +134,6 @@ public class TestLoader : MonoBehaviour {
     {
         var bounds = CalculateLocalBounds(asset.transform);
         
-        // AddMotion(asset.transform);
-
         float targetSize = 2.0f;
         
         float scale = Mathf.Min(
@@ -150,16 +148,6 @@ public class TestLoader : MonoBehaviour {
             pos.x += bounds.extents.x * variantDistance;;
             pos *= -scale;
             asset.transform.position = pos;
-        }
-    }
-
-    void AddMotion(Transform transform) {
-        if(transform.GetComponent<Renderer>()==null) {
-            transform.gameObject.AddComponent<MotionTest>();
-        }
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            AddMotion(transform.GetChild(i));
         }
     }
 #endif
