@@ -24,9 +24,9 @@ public class CustomLoadDemo : MonoBehaviour {
             Debug.LogFormat("The first material is called {0}", material.name);
 
             // Instantiate the scene multiple times
-            gltf.InstantiateGltf(new GameObject("Instance 1").transform);
-            gltf.InstantiateGltf(new GameObject("Instance 2").transform);
-            gltf.InstantiateGltf(new GameObject("Instance 3").transform);
+            gltf.InstantiateMainScene(new GameObject("Instance 1").transform);
+            gltf.InstantiateMainScene(new GameObject("Instance 2").transform);
+            gltf.InstantiateMainScene(new GameObject("Instance 3").transform);
         }
         else {
             Debug.LogError("Loading glTF failed!");
@@ -48,7 +48,7 @@ public class CustomLoadDemo : MonoBehaviour {
             var task = gltf.Load(url).ContinueWith(
                 t => {
                     if (t.Result) {
-                        gltf.InstantiateGltf(transform);
+                        gltf.InstantiateMainScene(transform);
                     }
                 },
                 TaskScheduler.FromCurrentSynchronizationContext()

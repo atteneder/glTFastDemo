@@ -50,8 +50,13 @@ public class TestGui : MonoBehaviour {
 
     Vector2 scrollPos;
 
-    private void Awake()
-    {
+    string[] sceneNames;
+    TestLoader testLoader;
+    
+    int? currentSceneIndex => testLoader.currentSceneIndex;
+
+    void Awake() {
+        testLoader = GetComponent<TestLoader>();
         stopWatchGui.posX = GlobalGui.listWidth;
 
 #if PLATFORM_WEBGL && !UNITY_EDITOR
@@ -62,10 +67,9 @@ public class TestGui : MonoBehaviour {
         var selectSet = GetComponent<SampleSetSelectGui>();
         selectSet.onSampleSetSelected += OnSampleSetSelected;
 
-        var tl = GetComponent<TestLoader>();
-        tl.urlChanged += UrlChanged;
-        tl.loadingBegin += OnLoadingBegin;
-        tl.loadingEnd += OnLoadingEnd;
+        testLoader.urlChanged += UrlChanged;
+        testLoader.loadingBegin += OnLoadingBegin;
+        testLoader.loadingEnd += OnLoadingEnd;
     }
 
     void OnLoadingBegin() {
@@ -147,12 +151,20 @@ public class TestGui : MonoBehaviour {
                 new Rect(0,0,listItemWidth, GlobalGui.listItemHeight*items.Count)
             );
 
-            if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"change set")) {
-                ResetSampleSet();
-                return;
-            }
+            if (sceneNames == null || sceneNames.Length<2) {
+                if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"change set")) {
+                    ResetSampleSet();
+                    return;
+                }
 
-            GUIDrawItems( items, listItemWidth, GlobalGui.listItemHeight );
+                GUIDrawItems( items, listItemWidth, GlobalGui.listItemHeight );
+            } else {
+                if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"back to set")) {
+                    sceneNames = null;
+                    return;
+                }
+                GUIDrawScenes( listItemWidth, GlobalGui.listItemHeight );
+            }
     
             GUI.EndScrollView();
         }
@@ -169,15 +181,34 @@ public class TestGui : MonoBehaviour {
             y+=GlobalGui.listItemHeight;
         }
     }
+    
+    void GUIDrawScenes( float listItemWidth, float yPos) {
+        var y = yPos;
+        for (var index = 0; index < sceneNames.Length; index++) {
+            var sceneName = sceneNames[index] ?? $"Unnamed scene ({index})";
+            GUI.enabled = !currentSceneIndex.HasValue || currentSceneIndex.Value != index;
+            if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),sceneName)) {
+                var loader = GetComponent<TestLoader>();
+                loader.ClearScene();
+                stopWatch.StartTime();
+                loader.InstantiateScene(index);
+                stopWatch.StopTime();
+            }
+            GUI.enabled = true;
+            y+=GlobalGui.listItemHeight;
+        }
+    }
+
 
     async void LoadUrlAsync(string url) {
-        await GetComponent<TestLoader>().LoadUrl(url);
+        var loader = GetComponent<TestLoader>();
+        await loader.LoadUrl(url);
+        sceneNames = loader.GetSceneNames();
     }
 
     void OnDestroy() {
-        var tl = GetComponent<TestLoader>();
-        tl.urlChanged -= UrlChanged;
-        tl.loadingBegin -= OnLoadingBegin;
-        tl.loadingEnd -= OnLoadingEnd;
+        testLoader.urlChanged -= UrlChanged;
+        testLoader.loadingBegin -= OnLoadingBegin;
+        testLoader.loadingEnd -= OnLoadingEnd;
     }
 }

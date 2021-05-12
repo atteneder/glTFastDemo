@@ -37,6 +37,24 @@ public class TestLoader : MonoBehaviour {
     public UnityAction loadingBegin;
     public UnityAction loadingEnd;
 
+    public string[] GetSceneNames() {
+#if !NO_GLTFAST
+        return gltf1.sceneNames;
+#else
+        return null;
+#endif 
+    }
+
+    public int? currentSceneIndex {
+        get {
+#if !NO_GLTFAST
+            return gltf1.currentSceneId;
+#else
+            return null;
+#endif
+        }
+    }
+    
     GameObject go1 = null;
     GameObject go2 = null;
 
@@ -103,6 +121,18 @@ public class TestLoader : MonoBehaviour {
         gltf2 = go2.AddComponent<UnityGLTFLoader>();
         gltf2.GLTFUri = url;
         gltf2.onLoadComplete += UnityGltf_OnLoadComplete;
+#endif
+    }
+
+    public void ClearScene() {
+#if !NO_GLTFAST
+        gltf1.ClearScenes();
+#endif
+    }
+
+    public void InstantiateScene(int sceneIndex) {
+#if !NO_GLTFAST
+        var success = gltf1.InstantiateScene(sceneIndex);
 #endif
     }
 
