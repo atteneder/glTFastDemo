@@ -24,7 +24,7 @@ public class TrackballCamera : MonoBehaviour
     
     public Transform target;
     public float distance = 2f;
-    float yaw = 25;
+    float yaw = 205;
     float pitch = -30;
 
 

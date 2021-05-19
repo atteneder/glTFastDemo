@@ -1,5 +1,6 @@
 {
     "name": "glTFastDemo",
+    "rootNamespace": "",
     "references": [
         "glTFast",
         "glTFastEditor",
@@ -12,6 +13,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.atteneder.gltfast",
+            "expression": "4.0",
+            "define": "GLTFAST_4_OR_NEWER"
+        }
+    ],
     "noEngineReferences": false
 }

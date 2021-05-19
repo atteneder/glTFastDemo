@@ -38,7 +38,7 @@ public class TestLoader : MonoBehaviour {
     public UnityAction loadingEnd;
 
     public string[] GetSceneNames() {
-#if !NO_GLTFAST
+#if GLTFAST_4_OR_NEWER
         return gltf1.sceneNames;
 #else
         return null;
@@ -47,7 +47,7 @@ public class TestLoader : MonoBehaviour {
 
     public int? currentSceneIndex {
         get {
-#if !NO_GLTFAST
+#if GLTFAST_4_OR_NEWER
             return gltf1.currentSceneId;
 #else
             return null;
@@ -125,13 +125,13 @@ public class TestLoader : MonoBehaviour {
     }
 
     public void ClearScene() {
-#if !NO_GLTFAST
+#if GLTFAST_4_OR_NEWER
         gltf1.ClearScenes();
 #endif
     }
 
     public void InstantiateScene(int sceneIndex) {
-#if !NO_GLTFAST
+#if GLTFAST_4_OR_NEWER
         var success = gltf1.InstantiateScene(sceneIndex);
 #endif
     }
