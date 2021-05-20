@@ -123,6 +123,10 @@ MonoBehaviour:
       path: Lantern/glTF-Binary/Lantern.glb
   - active: 1
     item:
+      name: MaterialsVariantsShoe.glb
+      path: MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb
+  - active: 1
+    item:
       name: MetalRoughSpheres.glb
       path: MetalRoughSpheres/glTF-Binary/MetalRoughSpheres.glb
   - active: 1
@@ -133,6 +137,10 @@ MonoBehaviour:
     item:
       name: MorphPrimitivesTest.glb
       path: MorphPrimitivesTest/glTF-Binary/MorphPrimitivesTest.glb
+  - active: 1
+    item:
+      name: MorphStressTest.glb
+      path: MorphStressTest/glTF-Binary/MorphStressTest.glb
   - active: 1
     item:
       name: MultiUVTest.glb
@@ -155,6 +163,10 @@ MonoBehaviour:
       path: ReciprocatingSaw/glTF-Binary/ReciprocatingSaw.glb
   - active: 1
     item:
+      name: RecursiveSkeletons.glb
+      path: RecursiveSkeletons/glTF-Binary/RecursiveSkeletons.glb
+  - active: 1
+    item:
       name: RiggedFigure.glb
       path: RiggedFigure/glTF-Binary/RiggedFigure.glb
   - active: 1
@@ -163,12 +175,28 @@ MonoBehaviour:
       path: RiggedSimple/glTF-Binary/RiggedSimple.glb
   - active: 1
     item:
+      name: SheenChair.glb
+      path: SheenChair/glTF-Binary/SheenChair.glb
+  - active: 1
+    item:
       name: SpecGlossVsMetalRough.glb
       path: SpecGlossVsMetalRough/glTF-Binary/SpecGlossVsMetalRough.glb
   - active: 1
     item:
+      name: SpecularTest.glb
+      path: SpecularTest/glTF-Binary/SpecularTest.glb
+  - active: 1
+    item:
       name: TextureCoordinateTest.glb
       path: TextureCoordinateTest/glTF-Binary/TextureCoordinateTest.glb
+  - active: 1
+    item:
+      name: TextureEncodingTest.glb
+      path: TextureEncodingTest/glTF-Binary/TextureEncodingTest.glb
+  - active: 1
+    item:
+      name: TextureLinearInterpolationTest.glb
+      path: TextureLinearInterpolationTest/glTF-Binary/TextureLinearInterpolationTest.glb
   - active: 1
     item:
       name: TextureSettingsTest.glb
@@ -177,6 +205,14 @@ MonoBehaviour:
     item:
       name: TextureTransformMultiTest.glb
       path: TextureTransformMultiTest/glTF-Binary/TextureTransformMultiTest.glb
+  - active: 1
+    item:
+      name: ToyCar.glb
+      path: ToyCar/glTF-Binary/ToyCar.glb
+  - active: 1
+    item:
+      name: TransmissionRoughnessTest.glb
+      path: TransmissionRoughnessTest/glTF-Binary/TransmissionRoughnessTest.glb
   - active: 1
     item:
       name: TransmissionTest.glb

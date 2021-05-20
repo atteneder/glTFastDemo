@@ -461,15 +461,23 @@ MonoBehaviour:
     item:
       name: MorphPrimitivesTest.gltf
       path: MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.gltf
-  - active: 0
+  - active: 1
+    item:
+      name: MorphStressTest.gltf
+      path: MorphStressTest/glTF/MorphStressTest.gltf
+  - active: 1
+    item:
+      name: MorphStressTest.glb
+      path: MorphStressTest/glTF-Binary/MorphStressTest.glb
+  - active: 1
     item:
       name: MultiUVTest.gltf
       path: MultiUVTest/glTF/MultiUVTest.gltf
-  - active: 0
+  - active: 1
     item:
       name: MultiUVTest.glb
       path: MultiUVTest/glTF-Binary/MultiUVTest.glb
-  - active: 0
+  - active: 1
     item:
       name: MultiUVTest.gltf
       path: MultiUVTest/glTF-Embedded/MultiUVTest.gltf
@@ -527,6 +535,14 @@ MonoBehaviour:
       path: ReciprocatingSaw/glTF-Embedded/ReciprocatingSaw.gltf
   - active: 1
     item:
+      name: RecursiveSkeletons.gltf
+      path: RecursiveSkeletons/glTF/RecursiveSkeletons.gltf
+  - active: 1
+    item:
+      name: RecursiveSkeletons.glb
+      path: RecursiveSkeletons/glTF-Binary/RecursiveSkeletons.glb
+  - active: 1
+    item:
       name: RiggedFigure.gltf
       path: RiggedFigure/glTF/RiggedFigure.gltf
   - active: 1
@@ -561,11 +577,11 @@ MonoBehaviour:
     item:
       name: SciFiHelmet.gltf
       path: SciFiHelmet/glTF/SciFiHelmet.gltf
-  - active: 0
+  - active: 1
     item:
       name: SheenChair.gltf
       path: SheenChair/glTF/SheenChair.gltf
-  - active: 0
+  - active: 1
     item:
       name: SheenChair.glb
       path: SheenChair/glTF-Binary/SheenChair.glb
@@ -615,6 +631,14 @@ MonoBehaviour:
       path: SpecGlossVsMetalRough/glTF-Binary/SpecGlossVsMetalRough.glb
   - active: 1
     item:
+      name: SpecularTest.gltf
+      path: SpecularTest/glTF/SpecularTest.gltf
+  - active: 1
+    item:
+      name: SpecularTest.glb
+      path: SpecularTest/glTF-Binary/SpecularTest.glb
+  - active: 1
+    item:
       name: Sponza.gltf
       path: Sponza/glTF/Sponza.gltf
   - active: 1
@@ -635,6 +659,22 @@ MonoBehaviour:
       path: TextureCoordinateTest/glTF-Embedded/TextureCoordinateTest.gltf
   - active: 1
     item:
+      name: TextureEncodingTest.gltf
+      path: TextureEncodingTest/glTF/TextureEncodingTest.gltf
+  - active: 1
+    item:
+      name: TextureEncodingTest.glb
+      path: TextureEncodingTest/glTF-Binary/TextureEncodingTest.glb
+  - active: 1
+    item:
+      name: TextureLinearInterpolationTest.gltf
+      path: TextureLinearInterpolationTest/glTF/TextureLinearInterpolationTest.gltf
+  - active: 1
+    item:
+      name: TextureLinearInterpolationTest.glb
+      path: TextureLinearInterpolationTest/glTF-Binary/TextureLinearInterpolationTest.glb
+  - active: 1
+    item:
       name: TextureSettingsTest.gltf
       path: TextureSettingsTest/glTF/TextureSettingsTest.gltf
   - active: 1
@@ -645,11 +685,11 @@ MonoBehaviour:
     item:
       name: TextureSettingsTest.gltf
       path: TextureSettingsTest/glTF-Embedded/TextureSettingsTest.gltf
-  - active: 0
+  - active: 1
     item:
       name: TextureTransformMultiTest.gltf
       path: TextureTransformMultiTest/glTF/TextureTransformMultiTest.gltf
-  - active: 0
+  - active: 1
     item:
       name: TextureTransformMultiTest.glb
       path: TextureTransformMultiTest/glTF-Binary/TextureTransformMultiTest.glb
@@ -665,6 +705,14 @@ MonoBehaviour:
     item:
       name: ToyCar.glb
       path: ToyCar/glTF-Binary/ToyCar.glb
+  - active: 1
+    item:
+      name: TransmissionRoughnessTest.gltf
+      path: TransmissionRoughnessTest/glTF/TransmissionRoughnessTest.gltf
+  - active: 1
+    item:
+      name: TransmissionRoughnessTest.glb
+      path: TransmissionRoughnessTest/glTF-Binary/TransmissionRoughnessTest.glb
   - active: 1
     item:
       name: TransmissionTest.gltf
