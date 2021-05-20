@@ -327,7 +327,7 @@ public class TestGui : MonoBehaviour {
             cameraObject.SetActive(true);
         }
         sceneInstance = loader.sceneInstance;
-        if (sceneInstance.cameras != null && sceneInstance.cameras.Count > 0) {
+        if (sceneInstance?.cameras != null && sceneInstance.cameras.Count > 0) {
             var names = new string[sceneInstance.cameras.Count];
             for (var index = 0; index < sceneInstance.cameras.Count; index++) {
                 names[index] = sceneInstance.cameras[index].name;

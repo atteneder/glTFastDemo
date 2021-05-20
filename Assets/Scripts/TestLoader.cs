@@ -111,6 +111,11 @@ public class TestLoader : MonoBehaviour {
         var success = await gltf1.Load(url,null,deferAgent);
         loadingEnd();
         if(success) {
+            if (!gltf1.currentSceneId.HasValue && gltf1.sceneCount > 0) {
+                // Fallback to first scene
+                Debug.LogWarning("glTF has no main scene. Falling back to first scene.");
+                gltf1.InstantiateScene(0);
+            }
             GLTFast_onLoadComplete(gltf1);
         } else {
             Debug.LogError("TestLoader: loading failed!");
