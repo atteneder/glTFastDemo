@@ -395,6 +395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestGui
       objectReference: {fileID: 0}
+    - target: {fileID: 7832398387831198113, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
+        type: 3}
+      propertyPath: cameraObject
+      value: 
+      objectReference: {fileID: 870010691}
     - target: {fileID: 7832398387831198114, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
         type: 3}
       propertyPath: m_RootOrder

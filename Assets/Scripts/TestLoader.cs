@@ -60,6 +60,7 @@ public class TestLoader : MonoBehaviour {
 
 #if !NO_GLTFAST
     GltfAsset gltf1;
+    public GameObjectInstantiator.SceneInstance sceneInstance { get; private set; }
 #endif
 #if UNITY_GLTF
     UnityGLTFLoader gltf2;
@@ -133,6 +134,7 @@ public class TestLoader : MonoBehaviour {
     public void InstantiateScene(int sceneIndex) {
 #if GLTFAST_4_OR_NEWER
         var success = gltf1.InstantiateScene(sceneIndex);
+        sceneInstance = gltf1.sceneInstance;
 #endif
     }
 
@@ -160,8 +162,8 @@ public class TestLoader : MonoBehaviour {
 #endif
 
 #if !NO_GLTFAST
-    void GLTFast_onLoadComplete(GltfAssetBase asset)
-    {
+    void GLTFast_onLoadComplete(GltfAssetBase asset) {
+        sceneInstance = asset.sceneInstance;
         var bounds = CalculateLocalBounds(asset.transform);
         
         float targetSize = 2.0f;

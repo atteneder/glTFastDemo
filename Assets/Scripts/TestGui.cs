@@ -20,8 +20,9 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using GLTFTest.Sample;
+using GLTFast;
 using GLTFast.Utils;
+using GLTFTest.Sample;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -29,6 +30,76 @@ using UnityEditor;
 
 [RequireComponent(typeof(TestLoader))]
 public class TestGui : MonoBehaviour {
+
+    public class DropDown {
+        public bool show { get; private set; }
+        string[] items;
+        Vector2 scrollViewVector = Vector2.zero;
+        int indexNumber;
+        float buttonHeight = GlobalGui.listItemHeight;
+        bool allowUnset = false;
+        string label = null;
+        GUIStyle buttonStyle;
+
+        public DropDown(string[] items, bool allowUnset = false, string label = null ) {
+            this.items = items;
+            this.allowUnset = allowUnset;
+            this.label = label;
+            buttonHeight = GlobalGui.listItemHeight;
+        }
+
+        public void SetIndex(int index) {
+            indexNumber = index;
+        }
+        
+        public void DrawGUI( Rect dropDownRect, Action<int> selectCallback ) {
+
+            if (buttonStyle == null) {
+                buttonStyle = GUI.skin.button;
+                buttonStyle.clipping = TextClipping.Clip;
+                buttonStyle.wordWrap = false;
+            }
+            
+            string mainButtonText;
+            if (string.IsNullOrEmpty(label)) {
+                mainButtonText = indexNumber>=0 ? items[indexNumber] : "Select";
+            }
+            else {
+                mainButtonText = indexNumber>=0 ? $"{label}: {items[indexNumber]}" : $"Select {label}";
+            }
+            
+            if (GUI.Button(new Rect((dropDownRect.x), dropDownRect.y, dropDownRect.width, buttonHeight), mainButtonText)) {
+                show = !show;
+            }
+
+            if (show) {
+                var itemCount = items.Length + (allowUnset ? 1 : 0);
+                var totalHeight = itemCount * buttonHeight;
+                scrollViewVector = GUI.BeginScrollView(
+                    new Rect(dropDownRect.x,dropDownRect.y+buttonHeight,dropDownRect.width,dropDownRect.height-buttonHeight),
+                    scrollViewVector,
+                    new Rect(0, 0, dropDownRect.width, totalHeight)
+                    );
+
+                GUI.Box(new Rect(0, 0, dropDownRect.width, Mathf.Max(dropDownRect.height, (itemCount * buttonHeight))), "");
+
+                var y = 0f;
+                for (int index = allowUnset?-1:0; index < items.Length; index++) {
+
+                    var buttonLabel = index < 0 ? "None" : items[index];
+                    if (GUI.Button(new Rect(0, y, dropDownRect.width, buttonHeight), buttonLabel)) {
+                        show = false;
+                        indexNumber = index;
+                        selectCallback(index);
+                    }
+
+                    y += buttonHeight;
+                }
+
+                GUI.EndScrollView();
+            }
+        }
+    }
 
     SampleSet sampleSet = null;
 
@@ -43,6 +114,10 @@ public class TestGui : MonoBehaviour {
     // Load files locally (from streaming assets) or via HTTP
     public bool local = false;
 
+    [SerializeField]
+    GameObject cameraObject;
+
+    
     List<Tuple<string,string>> testItems = new List<Tuple<string, string>>();
     List<Tuple<string,string>> testItemsLocal = new List<Tuple<string, string>>();
 
@@ -51,6 +126,10 @@ public class TestGui : MonoBehaviour {
     Vector2 scrollPos;
 
     string[] sceneNames;
+    GameObjectInstantiator.SceneInstance sceneInstance;
+    DropDown sceneDropDown;
+    DropDown cameraDropDown;
+    
     TestLoader testLoader;
     
     int? currentSceneIndex => testLoader.currentSceneIndex;
@@ -151,19 +230,43 @@ public class TestGui : MonoBehaviour {
                 new Rect(0,0,listItemWidth, GlobalGui.listItemHeight*items.Count)
             );
 
-            if (sceneNames == null || sceneNames.Length<2) {
+            if (sceneDropDown != null || cameraDropDown != null) {
+                var y = 0f;
+                bool somethingShown = false;
+                
+                if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"back to set")) {
+                    sceneNames = null;
+                    sceneDropDown = null;
+                    cameraDropDown = null;
+                    return;
+                }
+
+                var dropdownHeight = GlobalGui.listItemHeight * 5;
+                y += GlobalGui.listItemHeight;
+                
+                if (sceneDropDown != null) {
+                    sceneDropDown.DrawGUI(
+                        new Rect(0, y, listItemWidth, dropdownHeight), 
+                        i => SetSceneIndex(i));
+                    y += GlobalGui.listItemHeight;
+                    somethingShown = sceneDropDown.show;
+                }
+
+                if (!somethingShown && cameraDropDown != null) {
+                    cameraDropDown?.DrawGUI(
+                        new Rect(0, y, listItemWidth, dropdownHeight),
+                        i => SetCameraIndex(i) );
+                    somethingShown = cameraDropDown.show;
+                }
+            }
+            
+            else {
                 if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"change set")) {
                     ResetSampleSet();
                     return;
                 }
 
                 GUIDrawItems( items, listItemWidth, GlobalGui.listItemHeight );
-            } else {
-                if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"back to set")) {
-                    sceneNames = null;
-                    return;
-                }
-                GUIDrawScenes( listItemWidth, GlobalGui.listItemHeight );
             }
     
             GUI.EndScrollView();
@@ -181,29 +284,61 @@ public class TestGui : MonoBehaviour {
             y+=GlobalGui.listItemHeight;
         }
     }
+
+    void SetSceneIndex(int index) {
+        var loader = GetComponent<TestLoader>();
+        cameraDropDown = null;
+        loader.ClearScene();
+        stopWatch.StartTime();
+        loader.InstantiateScene(index);
+        stopWatch.StopTime();
+        CreateCameraDropDown(loader);
+    }
     
-    void GUIDrawScenes( float listItemWidth, float yPos) {
-        var y = yPos;
-        for (var index = 0; index < sceneNames.Length; index++) {
-            var sceneName = sceneNames[index] ?? $"Unnamed scene ({index})";
-            GUI.enabled = !currentSceneIndex.HasValue || currentSceneIndex.Value != index;
-            if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),sceneName)) {
-                var loader = GetComponent<TestLoader>();
-                loader.ClearScene();
-                stopWatch.StartTime();
-                loader.InstantiateScene(index);
-                stopWatch.StopTime();
-            }
-            GUI.enabled = true;
-            y+=GlobalGui.listItemHeight;
+    void SetCameraIndex(int index) {
+        for (var i = 0; i < sceneInstance.cameras.Count; i++) {
+            var camera = sceneInstance.cameras[i];
+            camera.enabled = i == index;
+        }
+
+        if (cameraObject != null) {
+            cameraObject.SetActive(index < 0);
         }
     }
-
 
     async void LoadUrlAsync(string url) {
         var loader = GetComponent<TestLoader>();
         await loader.LoadUrl(url);
         sceneNames = loader.GetSceneNames();
+        if (sceneNames != null && sceneNames.Length > 1) {
+            sceneDropDown = new DropDown(sceneNames, label:"Scene");
+            if (loader.currentSceneIndex.HasValue) {
+                sceneDropDown.SetIndex(loader.currentSceneIndex.Value);
+            }
+        } else {
+            sceneDropDown = null;
+        }
+        
+        CreateCameraDropDown(loader);
+    }
+
+    void CreateCameraDropDown(TestLoader loader) {
+        if (cameraObject != null) {
+            cameraObject.SetActive(true);
+        }
+        sceneInstance = loader.sceneInstance;
+        if (sceneInstance.cameras != null && sceneInstance.cameras.Count > 0) {
+            var names = new string[sceneInstance.cameras.Count];
+            for (var index = 0; index < sceneInstance.cameras.Count; index++) {
+                names[index] = sceneInstance.cameras[index].name;
+            }
+
+            cameraDropDown = new DropDown(names, true, "Camera");
+            cameraDropDown.SetIndex(-1);
+        }
+        else {
+            cameraDropDown = null;
+        }
     }
 
     void OnDestroy() {
