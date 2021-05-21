@@ -1,10 +1,12 @@
 {
   "dependencies": {
     "com.atteneder.draco": {
-      "version": "1.4.0",
+      "version": "3.0.1",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.burst": "1.4.8"
+      },
       "url": "https://package.openupm.com"
     },
     "com.atteneder.gltf-test-framework": {
@@ -15,7 +17,7 @@
       "hash": "d948dd4bb5c2a60820592bcc3d109d3c42e677f7"
     },
     "com.atteneder.gltfast": {
-      "version": "3.1.0",
+      "version": "4.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -34,6 +36,15 @@
         "com.unity.modules.unitywebrequest": "1.0.0"
       },
       "url": "https://package.openupm.com"
+    },
+    "com.unity.burst": {
+      "version": "1.4.8",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",

@@ -1,9 +1,10 @@
 {
   "dependencies": {
-    "com.atteneder.draco": "1.4.0",
+    "com.atteneder.draco": "3.0.1",
     "com.atteneder.gltf-test-framework": "https://github.com/atteneder/gltf-test-framework.git",
-    "com.atteneder.gltfast": "3.2.0",
+    "com.atteneder.gltfast": "4.0.0",
     "com.atteneder.ktx": "1.0.0",
+    "com.unity.burst": "1.4.8",
     "com.unity.ext.nunit": "1.0.6",
     "com.unity.ide.rider": "3.0.6",
     "com.unity.ide.vscode": "1.2.3",
