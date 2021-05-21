@@ -64,6 +64,9 @@ public class CustomLoadDemo : MonoBehaviour {
                     if (t.Result) {
 #if GLTFAST_4_OR_NEWER
                         gltf.InstantiateMainScene(transform);
+                        for (int sceneId = 0; sceneId < gltf.sceneCount; sceneId++) {
+                            gltf.InstantiateScene(transform, sceneId);
+                        }
 #else
                         gltf.InstantiateGltf(transform);
 #endif
