@@ -224,12 +224,7 @@ public class TestGui : MonoBehaviour {
 
             float listItemWidth = GlobalGui.listWidth-16;
             local = GUI.Toggle(new Rect(GlobalGui.listWidth,GlobalGui.barHeightWidth,GlobalGui.listWidth*2,GlobalGui.barHeightWidth),local,local?"local":"http");
-            scrollPos = GUI.BeginScrollView(
-                new Rect(0,GlobalGui.barHeightWidth,GlobalGui.listWidth,height-GlobalGui.barHeightWidth),
-                scrollPos,
-                new Rect(0,0,listItemWidth, GlobalGui.listItemHeight*items.Count)
-            );
-
+            
             if (sceneDropDown != null || cameraDropDown != null) {
                 var y = 0f;
                 bool somethingShown = false;
@@ -241,7 +236,7 @@ public class TestGui : MonoBehaviour {
                     return;
                 }
 
-                var dropdownHeight = GlobalGui.listItemHeight * 5;
+                var dropdownHeight = Screen.height-y;
                 y += GlobalGui.listItemHeight;
                 
                 if (sceneDropDown != null) {
@@ -252,24 +247,26 @@ public class TestGui : MonoBehaviour {
                     somethingShown = sceneDropDown.show;
                 }
 
+                dropdownHeight = Screen.height-y;
                 if (!somethingShown && cameraDropDown != null) {
                     cameraDropDown?.DrawGUI(
                         new Rect(0, y, listItemWidth, dropdownHeight),
                         i => SetCameraIndex(i) );
                     somethingShown = cameraDropDown.show;
                 }
-            }
-            
-            else {
+            } else {
+                scrollPos = GUI.BeginScrollView(
+                    new Rect(0,GlobalGui.barHeightWidth,GlobalGui.listWidth,height-GlobalGui.barHeightWidth),
+                    scrollPos,
+                    new Rect(0,0,listItemWidth, GlobalGui.listItemHeight*items.Count)
+                );
                 if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"change set")) {
                     ResetSampleSet();
                     return;
                 }
-
                 GUIDrawItems( items, listItemWidth, GlobalGui.listItemHeight );
+                GUI.EndScrollView();
             }
-    
-            GUI.EndScrollView();
         }
     }
 
