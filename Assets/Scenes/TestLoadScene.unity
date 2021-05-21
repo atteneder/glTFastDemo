@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1173143197}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465788, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -224,9 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yawSensitivity: 1
   pitchSensitivity: 1
-  scrollSensitivity: 1
-  target: {fileID: 1037917613}
-  distance: 7
+  scrollSensitivity: 0.1
 --- !u!1 &1037917612
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,5 +453,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7832398387831198115, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
+        type: 3}
+      propertyPath: trackBallCtrl
+      value: 
+      objectReference: {fileID: 870010696}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc4282f063a7424b9ab4a6cf85a17bf, type: 3}

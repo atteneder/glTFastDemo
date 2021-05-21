@@ -15,34 +15,55 @@
 
 using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
 public class TrackballCamera : MonoBehaviour
 {
- 
+    const float defaultDistance = 1f;
+    const float minDistanceFactor = .1f;
+    const float maxDistanceFactor = 5;
+
+    const float initialDistance = 1f;
+    const float initialYaw = 205f;
+    const float initialPitch = -30f;
+    
 	public float yawSensitivity = 1;
 	public float pitchSensitivity = 1;
-    public float scrollSensitivity = 1;
+
+    [Range(.01f,.5f)]
+    public float scrollSensitivity = .1f;
     
-    public Transform target;
-    public float distance = 2f;
-    float yaw = 205;
-    float pitch = -30;
+    float distance = initialDistance;
+    float yaw = initialYaw;
+    float pitch = initialPitch;
+    Bounds? target;
+    float targetSize;
+    Vector3? lastMousePosition;
 
-
-    private Vector3? lastMousePosition;
-    // Use this for initialization
-    void Start ()
-    {
+    Camera myCamera;
+    
+    public void SetTarget(Bounds bounds) {
+        target = bounds;
+        targetSize = bounds.extents.magnitude*2;
+        ResetPerspective();
+        SetCameraParameters();
     }
- 
-    // Update is called once per frame
-    void LateUpdate ()
-    {
-        var mousePosn = Input.mousePosition;
- 
+
+    public void UnsetTarget() {
+        target = null;
+        targetSize = defaultDistance;
+        ResetPerspective();
+        SetCameraParameters();
+    }
+    
+    void Start() {
+        myCamera = GetComponent<Camera>();
+    }
+    
+    void LateUpdate () {
         var mouseBtn = Input.GetMouseButton (0);
 
         var scroll = Input.GetAxis("Mouse ScrollWheel");
-        distance = Mathf.Clamp(distance - scroll*scrollSensitivity,.1f,50);
+        distance = Mathf.Clamp(distance - scroll*scrollSensitivity,minDistanceFactor,maxDistanceFactor);
         if (mouseBtn) {
             var pos = Input.mousePosition;
             if(lastMousePosition.HasValue) {
@@ -55,6 +76,23 @@ public class TrackballCamera : MonoBehaviour
         }
         transform.rotation = Quaternion.AngleAxis(yaw,Vector3.up) * Quaternion.AngleAxis(pitch,Vector3.left);
         var dir = transform.forward;
-        transform.position = (target==null? Vector3.zero:target.position) - dir*distance;
+
+        var pivot = Vector3.zero;
+        
+        if (target.HasValue) {
+            pivot = target.Value.center;
+        }
+        transform.position = pivot - dir*(distance*targetSize);
+    }
+
+    void ResetPerspective() {
+        distance = initialDistance;
+        yaw = initialYaw;
+        pitch = initialPitch;
+    }
+
+    void SetCameraParameters() {
+        myCamera.nearClipPlane = targetSize * .0001f;
+        myCamera.farClipPlane = targetSize * (maxDistanceFactor+1);
     }
 }

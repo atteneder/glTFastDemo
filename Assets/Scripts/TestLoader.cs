@@ -37,6 +37,8 @@ public class TestLoader : MonoBehaviour {
     public UnityAction loadingBegin;
     public UnityAction loadingEnd;
 
+    [SerializeField] TrackballCamera trackBallCtrl;
+    
     public string[] GetSceneNames() {
 #if GLTFAST_4_OR_NEWER
         return gltf1.sceneNames;
@@ -170,21 +172,9 @@ public class TestLoader : MonoBehaviour {
     void GLTFast_onLoadComplete(GltfAssetBase asset) {
         sceneInstance = asset.sceneInstance;
         var bounds = CalculateLocalBounds(asset.transform);
-        
-        float targetSize = 2.0f;
-        
-        float scale = Mathf.Min(
-            targetSize / bounds.extents.x,
-            targetSize / bounds.extents.y,
-            targetSize / bounds.extents.z
-            );
 
-        if (!float.IsNaN(scale) && !float.IsInfinity(scale)) {
-            asset.transform.localScale = Vector3.one * scale;
-            Vector3 pos = bounds.center;
-            pos.x += bounds.extents.x * variantDistance;;
-            pos *= -scale;
-            asset.transform.position = pos;
+        if (trackBallCtrl != null) {
+            trackBallCtrl.SetTarget(bounds);
         }
     }
 #endif
