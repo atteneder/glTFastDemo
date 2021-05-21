@@ -199,6 +199,9 @@ public class TestGui : MonoBehaviour {
         float height = Screen.height;
 
         if(showMenu && sampleSet!=null) {
+            
+            var y = 0f;
+            
             GUI.BeginGroup( new Rect(0,0,width,GlobalGui.barHeightWidth) );
             
             float urlFieldWidth = width-GlobalGui.buttonWidth;
@@ -219,17 +222,16 @@ public class TestGui : MonoBehaviour {
                 LoadUrlAsync(urlField);
             }
             GUI.EndGroup();
-
-            var items = local ? testItemsLocal : testItems;
+            y += GlobalGui.barHeightWidth;
 
             float listItemWidth = GlobalGui.listWidth-16;
             local = GUI.Toggle(new Rect(GlobalGui.listWidth,GlobalGui.barHeightWidth,GlobalGui.listWidth*2,GlobalGui.barHeightWidth),local,local?"local":"http");
             
             if (sceneDropDown != null || cameraDropDown != null) {
-                var y = 0f;
+                
                 bool somethingShown = false;
                 
-                if(GUI.Button(new Rect(0,0,listItemWidth,GlobalGui.listItemHeight),"back to set")) {
+                if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),"back to set")) {
                     sceneNames = null;
                     sceneDropDown = null;
                     cameraDropDown = null;
@@ -255,6 +257,7 @@ public class TestGui : MonoBehaviour {
                     somethingShown = cameraDropDown.show;
                 }
             } else {
+                var items = local ? testItemsLocal : testItems;
                 scrollPos = GUI.BeginScrollView(
                     new Rect(0,GlobalGui.barHeightWidth,GlobalGui.listWidth,height-GlobalGui.barHeightWidth),
                     scrollPos,
