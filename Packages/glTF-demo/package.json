@@ -1,0 +1,27 @@
+{
+  "name": "com.atteneder.gltf-demo",
+  "version": "0.1.0",
+  "displayName": "glTF Demo Project",
+  "description": "Project for demonstration and testing of glTF run-time loading",
+  "unity": "2019.3",
+  "keywords": [
+    "mesh",
+    "gltf",
+    "asset",
+    "format",
+    "draco",
+    "ktx",
+    "basis",
+    "universal",
+    "basisu"
+  ],
+  "author": {
+    "name": "Andreas Atteneder",
+    "email": "andreas.atteneder@gmail.com",
+    "url": "https://pixel.engineer"
+  },
+  "type": "sample",
+  "dependencies": {
+    "com.atteneder.gltfast": "4.0.0"
+  }
+}

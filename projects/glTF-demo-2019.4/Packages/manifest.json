@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "com.atteneder.draco": "3.0.1",
+    "com.atteneder.gltf-test-framework": "https://github.com/atteneder/gltf-test-framework.git",
+    "com.atteneder.gltfast": "4.0.0",
+    "com.atteneder.ktx": "1.0.0",
+    "com.atteneder.gltf-demo": "file:../../../packages/glTF-demo",
+    "com.unity.burst": "1.4.8",
+    "com.unity.ext.nunit": "1.0.6",
+    "com.unity.ide.rider": "3.0.6",
+    "com.unity.ide.vscode": "1.2.3",
+    "com.unity.performance.profile-analyzer": "1.0.3",
+    "com.unity.test-framework": "1.1.24",
+    "com.unity.test-framework.performance": "2.8.0-preview",
+    "com.unity.ui.builder": "1.0.0-preview.14",
+    "com.unity.modules.animation": "1.0.0",
+    "com.unity.modules.imageconversion": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.physics2d": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.modules.unitywebrequesttexture": "1.0.0"
+  },
+  "testables": [
+    "com.atteneder.gltfast",
+    "com.atteneder.gltf-test-framework"
+  ],
+  "scopedRegistries": [
+    {
+      "name": "Atteneder",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.atteneder"
+      ]
+    }
+  ]
+}
