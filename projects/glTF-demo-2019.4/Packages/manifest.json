@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.atteneder.draco": "3.0.1",
+    "com.atteneder.draco": "3.0.2",
     "com.atteneder.gltf-test-framework": "https://github.com/atteneder/gltf-test-framework.git",
     "com.atteneder.gltfast": "4.0.0",
     "com.atteneder.ktx": "1.0.0",
