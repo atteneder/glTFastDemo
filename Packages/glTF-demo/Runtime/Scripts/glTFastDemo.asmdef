@@ -1,10 +1,10 @@
 {
     "name": "glTFastDemo",
-    "rootNamespace": "",
     "references": [
         "glTFast",
         "glTFastEditor",
-        "glTF-test-framework"
+        "glTF-test-framework",
+        "glTF-test-framework.Sample"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
