@@ -39,6 +39,10 @@ MonoBehaviour:
       path: AntiqueCamera/glTF-Binary/AntiqueCamera.glb
   - active: 1
     item:
+      name: AttenuationTest.glb
+      path: AttenuationTest/glTF-Binary/AttenuationTest.glb
+  - active: 1
+    item:
       name: Avocado.glb
       path: Avocado/glTF-Binary/Avocado.glb
   - active: 1
@@ -103,6 +107,10 @@ MonoBehaviour:
       path: DamagedHelmet/glTF-Binary/DamagedHelmet.glb
   - active: 1
     item:
+      name: DragonAttenuation.glb
+      path: DragonAttenuation/glTF-Binary/DragonAttenuation.glb
+  - active: 1
+    item:
       name: Duck.glb
       path: Duck/glTF-Binary/Duck.glb
   - active: 1
@@ -113,6 +121,10 @@ MonoBehaviour:
     item:
       name: GearboxAssy.glb
       path: GearboxAssy/glTF-Binary/GearboxAssy.glb
+  - active: 1
+    item:
+      name: GlamVelvetSofa.glb
+      path: GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb
   - active: 1
     item:
       name: InterpolationTest.glb
