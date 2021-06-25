@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "com.atteneder.draco": "3.0.1",
+    "com.atteneder.draco": "3.0.3",
     "com.atteneder.gltf-demo": "file:../../../packages/glTF-demo",
     "com.atteneder.gltf-test-framework": "file:/Users/aa/u/glTF-test-framework",
-    "com.atteneder.gltfast": "4.0.0",
+    "com.atteneder.gltfast": "4.0.1",
     "com.atteneder.ktx": "1.0.0",
     "com.unity.burst": "1.5.4",
     "com.unity.ext.nunit": "1.0.6",
