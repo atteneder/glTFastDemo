@@ -1,0 +1,895 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bdf3fe6678e40fea6df4342d07093a, type: 3}
+  m_Name: glTF-Asset-Generator
+  m_EditorClassIdentifier: 
+  baseLocalPath: /Users/aa/sdk/glTF-Asset-Generator/Output
+  streamingAssetsPath: glTF-Asset-Generator/Output
+  baseUrlWeb: https://raw.githubusercontent.com/KhronosGroup/glTF-Asset-Generator/master/Output
+  baseUrlLocal: http://localhost:8080/glTF-Asset-Generator/Output
+  items:
+  - active: 1
+    item:
+      name: Mesh_NoPosition_00.gltf
+      path: Negative/Mesh_NoPosition/Mesh_NoPosition_00.gltf
+  - active: 1
+    item:
+      name: Mesh_NoPosition_01.gltf
+      path: Negative/Mesh_NoPosition/Mesh_NoPosition_01.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_00.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_00.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_01.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_01.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_02.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_02.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_03.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_03.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_04.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_04.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_05.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_05.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_06.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_06.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_07.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_07.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_08.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_08.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_09.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_09.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_10.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_10.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_11.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_11.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_12.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_12.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveRestart_13.gltf
+      path: Negative/Mesh_PrimitiveRestart/Mesh_PrimitiveRestart_13.gltf
+  - active: 1
+    item:
+      name: Accessor_Sparse_01.gltf
+      path: Positive/Accessor_Sparse/Accessor_Sparse_01.gltf
+  - active: 1
+    item:
+      name: Accessor_Sparse_02.gltf
+      path: Positive/Accessor_Sparse/Accessor_Sparse_02.gltf
+  - active: 1
+    item:
+      name: Accessor_Sparse_03.gltf
+      path: Positive/Accessor_Sparse/Accessor_Sparse_03.gltf
+  - active: 1
+    item:
+      name: Accessor_Sparse_00.gltf
+      path: Positive/Accessor_Sparse/Accessor_Sparse_00/Accessor_Sparse_00.gltf
+  - active: 1
+    item:
+      name: Accessor_SparseType_00.gltf
+      path: Positive/Accessor_SparseType/Accessor_SparseType_00.gltf
+  - active: 1
+    item:
+      name: Accessor_SparseType_01.gltf
+      path: Positive/Accessor_SparseType/Accessor_SparseType_01.gltf
+  - active: 1
+    item:
+      name: Accessor_SparseType_02.gltf
+      path: Positive/Accessor_SparseType/Accessor_SparseType_02.gltf
+  - active: 1
+    item:
+      name: Accessor_SparseType_03.gltf
+      path: Positive/Accessor_SparseType/Accessor_SparseType_03.gltf
+  - active: 1
+    item:
+      name: Accessor_SparseType_04.gltf
+      path: Positive/Accessor_SparseType/Accessor_SparseType_04.gltf
+  - active: 1
+    item:
+      name: Accessor_SparseType_05.gltf
+      path: Positive/Accessor_SparseType/Accessor_SparseType_05.gltf
+  - active: 1
+    item:
+      name: Accessor_SparseType_06.gltf
+      path: Positive/Accessor_SparseType/Accessor_SparseType_06.gltf
+  - active: 1
+    item:
+      name: Animation_Node_00.gltf
+      path: Positive/Animation_Node/Animation_Node_00.gltf
+  - active: 1
+    item:
+      name: Animation_Node_01.gltf
+      path: Positive/Animation_Node/Animation_Node_01.gltf
+  - active: 1
+    item:
+      name: Animation_Node_02.gltf
+      path: Positive/Animation_Node/Animation_Node_02.gltf
+  - active: 1
+    item:
+      name: Animation_Node_03.gltf
+      path: Positive/Animation_Node/Animation_Node_03.gltf
+  - active: 1
+    item:
+      name: Animation_Node_04.gltf
+      path: Positive/Animation_Node/Animation_Node_04.gltf
+  - active: 1
+    item:
+      name: Animation_Node_05.gltf
+      path: Positive/Animation_Node/Animation_Node_05.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_00.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_00.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_01.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_01.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_02.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_02.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_03.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_03.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_04.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_04.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_05.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_05.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_06.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_06.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_07.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_07.gltf
+  - active: 1
+    item:
+      name: Animation_NodeMisc_08.gltf
+      path: Positive/Animation_NodeMisc/Animation_NodeMisc_08.gltf
+  - active: 1
+    item:
+      name: Animation_SamplerType_00.gltf
+      path: Positive/Animation_SamplerType/Animation_SamplerType_00.gltf
+  - active: 1
+    item:
+      name: Animation_SamplerType_01.gltf
+      path: Positive/Animation_SamplerType/Animation_SamplerType_01.gltf
+  - active: 1
+    item:
+      name: Animation_SamplerType_02.gltf
+      path: Positive/Animation_SamplerType/Animation_SamplerType_02.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_00.gltf
+      path: Positive/Animation_Skin/Animation_Skin_00.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_01.gltf
+      path: Positive/Animation_Skin/Animation_Skin_01.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_02.gltf
+      path: Positive/Animation_Skin/Animation_Skin_02.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_03.gltf
+      path: Positive/Animation_Skin/Animation_Skin_03.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_04.gltf
+      path: Positive/Animation_Skin/Animation_Skin_04.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_05.gltf
+      path: Positive/Animation_Skin/Animation_Skin_05.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_06.gltf
+      path: Positive/Animation_Skin/Animation_Skin_06.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_07.gltf
+      path: Positive/Animation_Skin/Animation_Skin_07.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_08.gltf
+      path: Positive/Animation_Skin/Animation_Skin_08.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_09.gltf
+      path: Positive/Animation_Skin/Animation_Skin_09.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_10.gltf
+      path: Positive/Animation_Skin/Animation_Skin_10.gltf
+  - active: 1
+    item:
+      name: Animation_Skin_11.gltf
+      path: Positive/Animation_Skin/Animation_Skin_11.gltf
+  - active: 1
+    item:
+      name: Animation_SkinType_00.gltf
+      path: Positive/Animation_SkinType/Animation_SkinType_00.gltf
+  - active: 1
+    item:
+      name: Animation_SkinType_01.gltf
+      path: Positive/Animation_SkinType/Animation_SkinType_01.gltf
+  - active: 1
+    item:
+      name: Animation_SkinType_02.gltf
+      path: Positive/Animation_SkinType/Animation_SkinType_02.gltf
+  - active: 1
+    item:
+      name: Animation_SkinType_03.gltf
+      path: Positive/Animation_SkinType/Animation_SkinType_03.gltf
+  - active: 1
+    item:
+      name: Buffer_Interleaved_00.gltf
+      path: Positive/Buffer_Interleaved/Buffer_Interleaved_00.gltf
+  - active: 1
+    item:
+      name: Buffer_Interleaved_01.gltf
+      path: Positive/Buffer_Interleaved/Buffer_Interleaved_01.gltf
+  - active: 1
+    item:
+      name: Buffer_Interleaved_02.gltf
+      path: Positive/Buffer_Interleaved/Buffer_Interleaved_02.gltf
+  - active: 1
+    item:
+      name: Buffer_Interleaved_03.gltf
+      path: Positive/Buffer_Interleaved/Buffer_Interleaved_03.gltf
+  - active: 1
+    item:
+      name: Buffer_Interleaved_04.gltf
+      path: Positive/Buffer_Interleaved/Buffer_Interleaved_04.gltf
+  - active: 1
+    item:
+      name: Buffer_Misc_00.gltf
+      path: Positive/Buffer_Misc/Buffer_Misc_00.gltf
+  - active: 1
+    item:
+      name: Compatibility_00.gltf
+      path: Positive/Compatibility/Compatibility_00.gltf
+  - active: 1
+    item:
+      name: Compatibility_01.gltf
+      path: Positive/Compatibility/Compatibility_01.gltf
+  - active: 1
+    item:
+      name: Compatibility_02.gltf
+      path: Positive/Compatibility/Compatibility_02.gltf
+  - active: 1
+    item:
+      name: Compatibility_03.gltf
+      path: Positive/Compatibility/Compatibility_03.gltf
+  - active: 1
+    item:
+      name: Compatibility_04.gltf
+      path: Positive/Compatibility/Compatibility_04.gltf
+  - active: 1
+    item:
+      name: Compatibility_05.gltf
+      path: Positive/Compatibility/Compatibility_05.gltf
+  - active: 1
+    item:
+      name: Compatibility_06.gltf
+      path: Positive/Compatibility/Compatibility_06.gltf
+  - active: 1
+    item:
+      name: Instancing_00.gltf
+      path: Positive/Instancing/Instancing_00.gltf
+  - active: 1
+    item:
+      name: Instancing_01.gltf
+      path: Positive/Instancing/Instancing_01.gltf
+  - active: 1
+    item:
+      name: Instancing_02.gltf
+      path: Positive/Instancing/Instancing_02.gltf
+  - active: 1
+    item:
+      name: Instancing_03.gltf
+      path: Positive/Instancing/Instancing_03.gltf
+  - active: 1
+    item:
+      name: Instancing_04.gltf
+      path: Positive/Instancing/Instancing_04.gltf
+  - active: 1
+    item:
+      name: Instancing_05.gltf
+      path: Positive/Instancing/Instancing_05.gltf
+  - active: 1
+    item:
+      name: Instancing_06.gltf
+      path: Positive/Instancing/Instancing_06.gltf
+  - active: 1
+    item:
+      name: Instancing_07.gltf
+      path: Positive/Instancing/Instancing_07.gltf
+  - active: 1
+    item:
+      name: Instancing_08.gltf
+      path: Positive/Instancing/Instancing_08.gltf
+  - active: 1
+    item:
+      name: Instancing_09.gltf
+      path: Positive/Instancing/Instancing_09.gltf
+  - active: 1
+    item:
+      name: Instancing_10.gltf
+      path: Positive/Instancing/Instancing_10.gltf
+  - active: 1
+    item:
+      name: Instancing_11.gltf
+      path: Positive/Instancing/Instancing_11.gltf
+  - active: 1
+    item:
+      name: Instancing_12.gltf
+      path: Positive/Instancing/Instancing_12.gltf
+  - active: 1
+    item:
+      name: Instancing_13.gltf
+      path: Positive/Instancing/Instancing_13.gltf
+  - active: 1
+    item:
+      name: Material_00.gltf
+      path: Positive/Material/Material_00.gltf
+  - active: 1
+    item:
+      name: Material_01.gltf
+      path: Positive/Material/Material_01.gltf
+  - active: 1
+    item:
+      name: Material_02.gltf
+      path: Positive/Material/Material_02.gltf
+  - active: 1
+    item:
+      name: Material_03.gltf
+      path: Positive/Material/Material_03.gltf
+  - active: 1
+    item:
+      name: Material_04.gltf
+      path: Positive/Material/Material_04.gltf
+  - active: 1
+    item:
+      name: Material_05.gltf
+      path: Positive/Material/Material_05.gltf
+  - active: 1
+    item:
+      name: Material_06.gltf
+      path: Positive/Material/Material_06.gltf
+  - active: 1
+    item:
+      name: Material_07.gltf
+      path: Positive/Material/Material_07.gltf
+  - active: 1
+    item:
+      name: Material_AlphaBlend_00.gltf
+      path: Positive/Material_AlphaBlend/Material_AlphaBlend_00.gltf
+  - active: 1
+    item:
+      name: Material_AlphaBlend_01.gltf
+      path: Positive/Material_AlphaBlend/Material_AlphaBlend_01.gltf
+  - active: 1
+    item:
+      name: Material_AlphaBlend_02.gltf
+      path: Positive/Material_AlphaBlend/Material_AlphaBlend_02.gltf
+  - active: 1
+    item:
+      name: Material_AlphaBlend_03.gltf
+      path: Positive/Material_AlphaBlend/Material_AlphaBlend_03.gltf
+  - active: 1
+    item:
+      name: Material_AlphaBlend_04.gltf
+      path: Positive/Material_AlphaBlend/Material_AlphaBlend_04.gltf
+  - active: 1
+    item:
+      name: Material_AlphaBlend_05.gltf
+      path: Positive/Material_AlphaBlend/Material_AlphaBlend_05.gltf
+  - active: 1
+    item:
+      name: Material_AlphaBlend_06.gltf
+      path: Positive/Material_AlphaBlend/Material_AlphaBlend_06.gltf
+  - active: 1
+    item:
+      name: Material_AlphaMask_00.gltf
+      path: Positive/Material_AlphaMask/Material_AlphaMask_00.gltf
+  - active: 1
+    item:
+      name: Material_AlphaMask_01.gltf
+      path: Positive/Material_AlphaMask/Material_AlphaMask_01.gltf
+  - active: 1
+    item:
+      name: Material_AlphaMask_02.gltf
+      path: Positive/Material_AlphaMask/Material_AlphaMask_02.gltf
+  - active: 1
+    item:
+      name: Material_AlphaMask_03.gltf
+      path: Positive/Material_AlphaMask/Material_AlphaMask_03.gltf
+  - active: 1
+    item:
+      name: Material_AlphaMask_04.gltf
+      path: Positive/Material_AlphaMask/Material_AlphaMask_04.gltf
+  - active: 1
+    item:
+      name: Material_AlphaMask_05.gltf
+      path: Positive/Material_AlphaMask/Material_AlphaMask_05.gltf
+  - active: 1
+    item:
+      name: Material_AlphaMask_06.gltf
+      path: Positive/Material_AlphaMask/Material_AlphaMask_06.gltf
+  - active: 1
+    item:
+      name: Material_DoubleSided_00.gltf
+      path: Positive/Material_DoubleSided/Material_DoubleSided_00.gltf
+  - active: 1
+    item:
+      name: Material_DoubleSided_01.gltf
+      path: Positive/Material_DoubleSided/Material_DoubleSided_01.gltf
+  - active: 1
+    item:
+      name: Material_DoubleSided_02.gltf
+      path: Positive/Material_DoubleSided/Material_DoubleSided_02.gltf
+  - active: 1
+    item:
+      name: Material_DoubleSided_03.gltf
+      path: Positive/Material_DoubleSided/Material_DoubleSided_03.gltf
+  - active: 1
+    item:
+      name: Material_DoubleSided_04.gltf
+      path: Positive/Material_DoubleSided/Material_DoubleSided_04.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_00.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_00.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_01.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_01.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_02.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_02.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_03.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_03.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_04.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_04.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_05.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_05.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_06.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_06.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_07.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_07.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_08.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_08.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_09.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_09.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_10.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_10.gltf
+  - active: 1
+    item:
+      name: Material_MetallicRoughness_11.gltf
+      path: Positive/Material_MetallicRoughness/Material_MetallicRoughness_11.gltf
+  - active: 1
+    item:
+      name: Material_Mixed_00.gltf
+      path: Positive/Material_Mixed/Material_Mixed_00.gltf
+  - active: 1
+    item:
+      name: Material_Mixed_01.gltf
+      path: Positive/Material_Mixed/Material_Mixed_01.gltf
+  - active: 1
+    item:
+      name: Material_Mixed_02.gltf
+      path: Positive/Material_Mixed/Material_Mixed_02.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_00.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_00.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_01.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_01.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_02.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_02.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_03.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_03.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_04.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_04.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_05.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_05.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_06.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_06.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_07.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_07.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_08.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_08.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_09.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_09.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_10.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_10.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_11.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_11.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_12.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_12.gltf
+  - active: 1
+    item:
+      name: Material_SpecularGlossiness_13.gltf
+      path: Positive/Material_SpecularGlossiness/Material_SpecularGlossiness_13.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveAttribute_00.gltf
+      path: Positive/Mesh_PrimitiveAttribute/Mesh_PrimitiveAttribute_00.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveAttribute_01.gltf
+      path: Positive/Mesh_PrimitiveAttribute/Mesh_PrimitiveAttribute_01.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveAttribute_02.gltf
+      path: Positive/Mesh_PrimitiveAttribute/Mesh_PrimitiveAttribute_02.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveAttribute_03.gltf
+      path: Positive/Mesh_PrimitiveAttribute/Mesh_PrimitiveAttribute_03.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveAttribute_04.gltf
+      path: Positive/Mesh_PrimitiveAttribute/Mesh_PrimitiveAttribute_04.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveAttribute_05.gltf
+      path: Positive/Mesh_PrimitiveAttribute/Mesh_PrimitiveAttribute_05.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveAttribute_06.gltf
+      path: Positive/Mesh_PrimitiveAttribute/Mesh_PrimitiveAttribute_06.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_00.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_00.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_01.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_01.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_02.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_02.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_03.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_03.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_04.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_04.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_05.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_05.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_06.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_06.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_07.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_07.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_08.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_08.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_09.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_09.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_10.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_10.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_11.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_11.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_12.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_12.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_13.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_13.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_14.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_14.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveMode_15.gltf
+      path: Positive/Mesh_PrimitiveMode/Mesh_PrimitiveMode_15.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveVertexColor_00.gltf
+      path: Positive/Mesh_PrimitiveVertexColor/Mesh_PrimitiveVertexColor_00.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveVertexColor_01.gltf
+      path: Positive/Mesh_PrimitiveVertexColor/Mesh_PrimitiveVertexColor_01.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveVertexColor_02.gltf
+      path: Positive/Mesh_PrimitiveVertexColor/Mesh_PrimitiveVertexColor_02.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveVertexColor_03.gltf
+      path: Positive/Mesh_PrimitiveVertexColor/Mesh_PrimitiveVertexColor_03.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveVertexColor_04.gltf
+      path: Positive/Mesh_PrimitiveVertexColor/Mesh_PrimitiveVertexColor_04.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitiveVertexColor_05.gltf
+      path: Positive/Mesh_PrimitiveVertexColor/Mesh_PrimitiveVertexColor_05.gltf
+  - active: 1
+    item:
+      name: Mesh_Primitives_00.gltf
+      path: Positive/Mesh_Primitives/Mesh_Primitives_00.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_00.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_00.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_01.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_01.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_02.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_02.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_03.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_03.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_04.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_04.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_05.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_05.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_06.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_06.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_07.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_07.gltf
+  - active: 1
+    item:
+      name: Mesh_PrimitivesUV_08.gltf
+      path: Positive/Mesh_PrimitivesUV/Mesh_PrimitivesUV_08.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_00.gltf
+      path: Positive/Node_Attribute/Node_Attribute_00.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_01.gltf
+      path: Positive/Node_Attribute/Node_Attribute_01.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_02.gltf
+      path: Positive/Node_Attribute/Node_Attribute_02.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_03.gltf
+      path: Positive/Node_Attribute/Node_Attribute_03.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_04.gltf
+      path: Positive/Node_Attribute/Node_Attribute_04.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_05.gltf
+      path: Positive/Node_Attribute/Node_Attribute_05.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_06.gltf
+      path: Positive/Node_Attribute/Node_Attribute_06.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_07.gltf
+      path: Positive/Node_Attribute/Node_Attribute_07.gltf
+  - active: 1
+    item:
+      name: Node_Attribute_08.gltf
+      path: Positive/Node_Attribute/Node_Attribute_08.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_00.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_00.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_01.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_01.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_02.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_02.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_03.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_03.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_04.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_04.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_05.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_05.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_06.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_06.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_07.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_07.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_08.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_08.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_09.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_09.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_10.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_10.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_11.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_11.gltf
+  - active: 1
+    item:
+      name: Node_NegativeScale_12.gltf
+      path: Positive/Node_NegativeScale/Node_NegativeScale_12.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_00.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_00.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_01.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_01.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_02.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_02.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_03.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_03.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_04.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_04.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_05.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_05.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_06.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_06.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_07.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_07.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_08.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_08.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_09.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_09.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_10.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_10.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_11.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_11.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_12.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_12.gltf
+  - active: 1
+    item:
+      name: Texture_Sampler_13.gltf
+      path: Positive/Texture_Sampler/Texture_Sampler_13.gltf
