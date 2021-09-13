@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.atteneder.draco": {
-      "version": "3.1.0",
+      "version": "3.3.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.burst": "1.4.8"
+        "com.unity.burst": "1.4.11"
       },
       "url": "https://package.openupm.com"
     },
@@ -22,17 +22,18 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "c25535b4571c732cf9aa4e7a5f3545dfc249ae49"
+      "hash": "49c5ff8f36b8d6028200a82bfb23d92819e1664e"
     },
     "com.atteneder.gltfast": {
-      "version": "4.2.0",
+      "version": "4.3.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.modules.unitywebrequesttexture": "1.0.0",
-        "com.unity.mathematics": "1.2.1"
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.burst": "1.4.11"
       },
       "url": "https://package.openupm.com"
     },
@@ -54,6 +55,16 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.collections": {
+      "version": "0.9.0-preview.6",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework.performance": "2.0.8-preview",
+        "com.unity.burst": "1.3.0-preview.12"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 0,
@@ -70,11 +81,14 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.ide.vscode": {
-      "version": "1.2.3",
+    "com.unity.jobs": {
+      "version": "0.2.10-preview.13",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.collections": "0.9.0-preview.6",
+        "com.unity.mathematics": "1.1.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
@@ -113,7 +127,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ui.builder": {
-      "version": "1.0.0-preview.15",
+      "version": "1.0.0-preview.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
