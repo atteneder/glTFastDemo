@@ -326,6 +326,10 @@ public class TestGui : MonoBehaviour {
         if (cameraObject != null) {
             cameraObject.SetActive(true);
         }
+        
+#if UNITY_DOTS_HYBRID
+        // TODO: query cameras and feed into list
+#else
         sceneInstance = loader.sceneInstance;
         if (sceneInstance?.cameras != null && sceneInstance.cameras.Count > 0) {
             var names = new string[sceneInstance.cameras.Count];
@@ -336,7 +340,9 @@ public class TestGui : MonoBehaviour {
             cameraDropDown = new DropDown(names, true, "Camera");
             cameraDropDown.SetIndex(-1);
         }
-        else {
+        else
+#endif
+        {
             cameraDropDown = null;
         }
     }

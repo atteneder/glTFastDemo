@@ -61,8 +61,12 @@ public class TestLoader : MonoBehaviour {
     GameObject go2 = null;
 
 #if !NO_GLTFAST
+#if UNITY_DOTS_HYBRID
+    GltfEntityAsset gltf1;
+#else
     GltfAsset gltf1;
     public GameObjectInstantiator.SceneInstance sceneInstance { get; private set; }
+#endif
 #endif
 #if UNITY_GLTF
     UnityGLTFLoader gltf2;
@@ -91,6 +95,7 @@ public class TestLoader : MonoBehaviour {
 #endif
 
         if(go1!=null) {
+            gltf1.ClearScenes();
             Destroy(go1);
         }
         if(go2!=null) {
@@ -108,7 +113,12 @@ public class TestLoader : MonoBehaviour {
 
 #if !NO_GLTFAST
         go1 = new GameObject();
-        gltf1 = go1.AddComponent<GLTFast.GltfAsset>();
+        
+#if UNITY_DOTS_HYBRID
+        gltf1 = go1.AddComponent<GltfEntityAsset>();
+#else
+        gltf1 = go1.AddComponent<GltfAsset>();
+#endif
         gltf1.loadOnStartup = false;
         var success = await gltf1.Load(url,null,deferAgent);
         loadingEnd();
@@ -141,7 +151,9 @@ public class TestLoader : MonoBehaviour {
     public void InstantiateScene(int sceneIndex) {
 #if GLTFAST_4_OR_NEWER
         var success = gltf1.InstantiateScene(sceneIndex);
+#if !UNITY_DOTS_HYBRID
         sceneInstance = gltf1.sceneInstance;
+#endif
 #endif
     }
 
@@ -170,12 +182,17 @@ public class TestLoader : MonoBehaviour {
 
 #if !NO_GLTFAST
     void GLTFast_onLoadComplete(GltfAssetBase asset) {
-        sceneInstance = asset.sceneInstance;
+#if UNITY_DOTS_HYBRID
+        // TODO: calculate the bounding box
+        trackBallCtrl.SetTarget(new Bounds(asset.transform.position,Vector3.one));
+#else
+        sceneInstance = (asset as GltfAsset).sceneInstance;
         var bounds = CalculateLocalBounds(asset.transform);
 
         if (trackBallCtrl != null) {
             trackBallCtrl.SetTarget(bounds);
         }
+#endif
     }
 #endif
 

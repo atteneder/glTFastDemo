@@ -2,6 +2,8 @@
     "name": "glTFastDemo",
     "references": [
         "glTFast",
+        "glTFastSchema",
+        "glTFast.dots",
         "glTFastEditor",
         "glTF-test-framework",
         "glTF-test-framework.Sample"
@@ -14,6 +16,11 @@
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [
+        {
+            "name": "com.unity.rendering.hybrid",
+            "expression": "0.10.0",
+            "define": "UNITY_DOTS_HYBRID"
+        },
         {
             "name": "com.atteneder.gltfast",
             "expression": "4.0",
