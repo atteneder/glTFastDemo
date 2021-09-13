@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using GLTFast;
+using GLTFast.Schema;
 using UnityEngine;
 
 public class CustomLoadDemo : MonoBehaviour {
@@ -14,6 +15,25 @@ public class CustomLoadDemo : MonoBehaviour {
         await CustomDeferAgent();
     }
 
+    static async Task CustomImportSettings() {
+        var gltf = new GLTFast.GltfImport();
+        // Create a settings object and configure it accordingly
+        var settings = new ImportSettings {
+            generateMipMaps = true,
+            anisotropicFilterLevel = 3,
+            nodeNameMethod = ImportSettings.NameImportMethod.OriginalUnique
+        };
+        // Load the glTF and pass along the settings
+        var success = await gltf.Load("file:///path/to/file.gltf", settings);
+
+        if (success) {
+            gltf.InstantiateMainScene(new GameObject("glTF").transform);
+        }
+        else {
+            Debug.LogError("Loading glTF failed!");
+        }
+    }
+    
     static async Task CustomInstantiation() {
 #if GLTFAST_4_OR_NEWER
         var gltf = new GLTFast.GltfImport();
