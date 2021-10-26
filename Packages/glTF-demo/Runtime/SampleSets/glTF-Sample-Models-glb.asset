@@ -131,6 +131,10 @@ MonoBehaviour:
       path: InterpolationTest/glTF-Binary/InterpolationTest.glb
   - active: 1
     item:
+      name: IridescentDishWithOlives.glb
+      path: IridescentDishWithOlives/glTF-Binary/IridescentDishWithOlives.glb
+  - active: 1
+    item:
       name: Lantern.glb
       path: Lantern/glTF-Binary/Lantern.glb
   - active: 1
@@ -153,6 +157,10 @@ MonoBehaviour:
     item:
       name: MorphStressTest.glb
       path: MorphStressTest/glTF-Binary/MorphStressTest.glb
+  - active: 1
+    item:
+      name: MosquitoInAmber.glb
+      path: MosquitoInAmber/glTF-Binary/MosquitoInAmber.glb
   - active: 1
     item:
       name: MultiUVTest.glb

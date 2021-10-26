@@ -83,10 +83,6 @@ MonoBehaviour:
       path: Avocado/glTF-Quantized/Avocado.gltf
   - active: 1
     item:
-      name: Avocado.gltf
-      path: Avocado/glTF-pbrSpecularGlossiness/Avocado.gltf
-  - active: 1
-    item:
       name: BarramundiFish.gltf
       path: BarramundiFish/glTF/BarramundiFish.gltf
   - active: 1
@@ -95,20 +91,12 @@ MonoBehaviour:
       path: BarramundiFish/glTF-Draco/BarramundiFish.gltf
   - active: 1
     item:
-      name: BarramundiFish.gltf
-      path: BarramundiFish/glTF-pbrSpecularGlossiness/BarramundiFish.gltf
-  - active: 1
-    item:
       name: BoomBox.gltf
       path: BoomBox/glTF/BoomBox.gltf
   - active: 1
     item:
       name: BoomBox.gltf
       path: BoomBox/glTF-Draco/BoomBox.gltf
-  - active: 1
-    item:
-      name: BoomBox.gltf
-      path: BoomBox/glTF-pbrSpecularGlossiness/BoomBox.gltf
   - active: 1
     item:
       name: BoomBoxWithAxes.gltf
@@ -239,10 +227,6 @@ MonoBehaviour:
       path: Corset/glTF-Draco/Corset.gltf
   - active: 1
     item:
-      name: Corset.gltf
-      path: Corset/glTF-pbrSpecularGlossiness/Corset.gltf
-  - active: 1
-    item:
       name: Cube.gltf
       path: Cube/glTF/Cube.gltf
   - active: 1
@@ -315,6 +299,10 @@ MonoBehaviour:
       path: InterpolationTest/glTF/InterpolationTest.gltf
   - active: 1
     item:
+      name: IridescentDishWithOlives.gltf
+      path: IridescentDishWithOlives/glTF/IridescentDishWithOlives.gltf
+  - active: 1
+    item:
       name: Lantern.gltf
       path: Lantern/glTF/Lantern.gltf
   - active: 1
@@ -325,10 +313,6 @@ MonoBehaviour:
     item:
       name: Lantern.gltf
       path: Lantern/glTF-Quantized/Lantern.gltf
-  - active: 1
-    item:
-      name: Lantern.gltf
-      path: Lantern/glTF-pbrSpecularGlossiness/Lantern.gltf
   - active: 1
     item:
       name: MaterialsVariantsShoe.gltf
@@ -357,6 +341,10 @@ MonoBehaviour:
     item:
       name: MorphStressTest.gltf
       path: MorphStressTest/glTF/MorphStressTest.gltf
+  - active: 1
+    item:
+      name: MosquitoInAmber.gltf
+      path: MosquitoInAmber/glTF/MosquitoInAmber.gltf
   - active: 1
     item:
       name: MultiUVTest.gltf
@@ -585,7 +573,3 @@ MonoBehaviour:
     item:
       name: WaterBottle.gltf
       path: WaterBottle/glTF-Draco/WaterBottle.gltf
-  - active: 1
-    item:
-      name: WaterBottle.gltf
-      path: WaterBottle/glTF-pbrSpecularGlossiness/WaterBottle.gltf
