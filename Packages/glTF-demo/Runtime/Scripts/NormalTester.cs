@@ -30,7 +30,15 @@ public class NormalTester : MonoBehaviour {
 		MeshFilter mf = GetComponent<MeshFilter>();
 		if(mf!=null) {
 			mesh = mf.sharedMesh;
-			
+		}
+		else {
+			var smr = GetComponent<SkinnedMeshRenderer>();
+			if (smr != null) {
+				mesh = smr.sharedMesh;
+			}
+		}
+
+		if (mesh != null) {
 			Debug.Log("Mesh "+mesh.name+ " "+mesh.vertices.Length+" "+mesh.normals.Length+" "+mesh.tangents.Length);
 		}
 	}
