@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "com.atteneder.draco": "3.3.0",
+    "com.atteneder.draco": "4.0.0",
     "com.atteneder.gltf-demo": "file:../../../packages/glTF-demo",
     "com.atteneder.gltf-test-framework": "https://github.com/atteneder/gltf-test-framework.git",
-    "com.atteneder.gltfast": "4.3.1",
-    "com.unity.burst": "1.6.0",
+    "com.atteneder.gltfast": "4.4.3",
+    "com.unity.burst": "1.6.1",
     "com.unity.ide.rider": "3.0.7",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.imageconversion": "1.0.0",

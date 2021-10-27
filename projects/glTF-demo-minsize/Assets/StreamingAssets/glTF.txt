@@ -23,15 +23,12 @@ Avocado/glTF/Avocado.gltf
 Avocado/glTF-Binary/Avocado.glb
 Avocado/glTF-Draco/Avocado.gltf
 Avocado/glTF-Quantized/Avocado.gltf
-Avocado/glTF-pbrSpecularGlossiness/Avocado.gltf
 BarramundiFish/glTF/BarramundiFish.gltf
 BarramundiFish/glTF-Binary/BarramundiFish.glb
 BarramundiFish/glTF-Draco/BarramundiFish.gltf
-BarramundiFish/glTF-pbrSpecularGlossiness/BarramundiFish.gltf
 BoomBox/glTF/BoomBox.gltf
 BoomBox/glTF-Binary/BoomBox.glb
 BoomBox/glTF-Draco/BoomBox.gltf
-BoomBox/glTF-pbrSpecularGlossiness/BoomBox.gltf
 BoomBoxWithAxes/glTF/BoomBoxWithAxes.gltf
 Box/glTF/Box.gltf
 Box/glTF-Binary/Box.glb
@@ -76,7 +73,6 @@ ClearCoatTest/glTF-Binary/ClearCoatTest.glb
 Corset/glTF/Corset.gltf
 Corset/glTF-Binary/Corset.glb
 Corset/glTF-Draco/Corset.gltf
-Corset/glTF-pbrSpecularGlossiness/Corset.gltf
 Cube/glTF/Cube.gltf
 DamagedHelmet/glTF/DamagedHelmet.gltf
 DamagedHelmet/glTF-Binary/DamagedHelmet.glb
@@ -102,11 +98,12 @@ GlamVelvetSofa/glTF/GlamVelvetSofa.gltf
 GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb
 InterpolationTest/glTF/InterpolationTest.gltf
 InterpolationTest/glTF-Binary/InterpolationTest.glb
+IridescentDishWithOlives/glTF/IridescentDishWithOlives.gltf
+IridescentDishWithOlives/glTF-Binary/IridescentDishWithOlives.glb
 Lantern/glTF/Lantern.gltf
 Lantern/glTF-Binary/Lantern.glb
 Lantern/glTF-Draco/Lantern.gltf
 Lantern/glTF-Quantized/Lantern.gltf
-Lantern/glTF-pbrSpecularGlossiness/Lantern.gltf
 MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf
 MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb
 MetalRoughSpheres/glTF/MetalRoughSpheres.gltf
@@ -119,6 +116,8 @@ MorphPrimitivesTest/glTF-Binary/MorphPrimitivesTest.glb
 MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.gltf
 MorphStressTest/glTF/MorphStressTest.gltf
 MorphStressTest/glTF-Binary/MorphStressTest.glb
+MosquitoInAmber/glTF/MosquitoInAmber.gltf
+MosquitoInAmber/glTF-Binary/MosquitoInAmber.glb
 MultiUVTest/glTF/MultiUVTest.gltf
 MultiUVTest/glTF-Binary/MultiUVTest.glb
 MultiUVTest/glTF-Embedded/MultiUVTest.gltf
@@ -199,4 +198,3 @@ VertexColorTest/glTF-Embedded/VertexColorTest.gltf
 WaterBottle/glTF/WaterBottle.gltf
 WaterBottle/glTF-Binary/WaterBottle.glb
 WaterBottle/glTF-Draco/WaterBottle.gltf
-WaterBottle/glTF-pbrSpecularGlossiness/WaterBottle.gltf
