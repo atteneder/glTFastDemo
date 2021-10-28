@@ -28,12 +28,14 @@ Fox/glTF-Binary/Fox.glb
 GearboxAssy/glTF-Binary/GearboxAssy.glb
 GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb
 InterpolationTest/glTF-Binary/InterpolationTest.glb
+IridescentDishWithOlives/glTF-Binary/IridescentDishWithOlives.glb
 Lantern/glTF-Binary/Lantern.glb
 MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb
 MetalRoughSpheres/glTF-Binary/MetalRoughSpheres.glb
 MetalRoughSpheresNoTextures/glTF-Binary/MetalRoughSpheresNoTextures.glb
 MorphPrimitivesTest/glTF-Binary/MorphPrimitivesTest.glb
 MorphStressTest/glTF-Binary/MorphStressTest.glb
+MosquitoInAmber/glTF-Binary/MosquitoInAmber.glb
 MultiUVTest/glTF-Binary/MultiUVTest.glb
 NormalTangentMirrorTest/glTF-Binary/NormalTangentMirrorTest.glb
 NormalTangentTest/glTF-Binary/NormalTangentTest.glb

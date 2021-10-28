@@ -16,13 +16,10 @@ AttenuationTest/glTF/AttenuationTest.gltf
 Avocado/glTF/Avocado.gltf
 Avocado/glTF-Draco/Avocado.gltf
 Avocado/glTF-Quantized/Avocado.gltf
-Avocado/glTF-pbrSpecularGlossiness/Avocado.gltf
 BarramundiFish/glTF/BarramundiFish.gltf
 BarramundiFish/glTF-Draco/BarramundiFish.gltf
-BarramundiFish/glTF-pbrSpecularGlossiness/BarramundiFish.gltf
 BoomBox/glTF/BoomBox.gltf
 BoomBox/glTF-Draco/BoomBox.gltf
-BoomBox/glTF-pbrSpecularGlossiness/BoomBox.gltf
 BoomBoxWithAxes/glTF/BoomBoxWithAxes.gltf
 Box/glTF/Box.gltf
 Box/glTF-Draco/Box.gltf
@@ -55,7 +52,6 @@ CesiumMilkTruck/glTF-Embedded/CesiumMilkTruck.gltf
 ClearCoatTest/glTF/ClearCoatTest.gltf
 Corset/glTF/Corset.gltf
 Corset/glTF-Draco/Corset.gltf
-Corset/glTF-pbrSpecularGlossiness/Corset.gltf
 Cube/glTF/Cube.gltf
 DamagedHelmet/glTF/DamagedHelmet.gltf
 DamagedHelmet/glTF-Embedded/DamagedHelmet.gltf
@@ -74,10 +70,10 @@ GearboxAssy/glTF-Draco/GearboxAssy.gltf
 GearboxAssy/glTF-Embedded/GearboxAssy.gltf
 GlamVelvetSofa/glTF/GlamVelvetSofa.gltf
 InterpolationTest/glTF/InterpolationTest.gltf
+IridescentDishWithOlives/glTF/IridescentDishWithOlives.gltf
 Lantern/glTF/Lantern.gltf
 Lantern/glTF-Draco/Lantern.gltf
 Lantern/glTF-Quantized/Lantern.gltf
-Lantern/glTF-pbrSpecularGlossiness/Lantern.gltf
 MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf
 MetalRoughSpheres/glTF/MetalRoughSpheres.gltf
 MetalRoughSpheres/glTF-Embedded/MetalRoughSpheres.gltf
@@ -85,6 +81,7 @@ MetalRoughSpheresNoTextures/glTF/MetalRoughSpheresNoTextures.gltf
 MorphPrimitivesTest/glTF/MorphPrimitivesTest.gltf
 MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.gltf
 MorphStressTest/glTF/MorphStressTest.gltf
+MosquitoInAmber/glTF/MosquitoInAmber.gltf
 MultiUVTest/glTF/MultiUVTest.gltf
 MultiUVTest/glTF-Embedded/MultiUVTest.gltf
 NormalTangentMirrorTest/glTF/NormalTangentMirrorTest.gltf
@@ -142,4 +139,3 @@ VertexColorTest/glTF/VertexColorTest.gltf
 VertexColorTest/glTF-Embedded/VertexColorTest.gltf
 WaterBottle/glTF/WaterBottle.gltf
 WaterBottle/glTF-Draco/WaterBottle.gltf
-WaterBottle/glTF-pbrSpecularGlossiness/WaterBottle.gltf
