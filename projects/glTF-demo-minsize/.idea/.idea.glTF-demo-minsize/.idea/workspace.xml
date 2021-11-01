@@ -5,33 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8aed9d-0ee7-4068-9542-123359a656c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/SampleSets/AllSampleSets.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/SampleSets/AllSampleSets.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/SampleSets/local.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/SampleSets/local.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scenes/FastMassLoader.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scenes/FastMassLoader.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scenes/TestLoadScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scenes/TestLoadScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scenes/TestLoadScene/ReflectionProbe-0.exr" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scenes/TestLoadScene/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scripts/CustomLoadDemo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scripts/CustomLoadDemo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scripts/TestGui.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scripts/TestGui.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scripts/TestLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scripts/TestLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scripts/glTFastDemo.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/Scripts/glTFastDemo.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/UniversalRenderPipeline/UniversalRenderPipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/UniversalRenderPipeline/UniversalRenderPipelineAsset.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/UniversalRenderPipeline/UniversalRenderPipelineAsset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/glTF-demo/Runtime/UniversalRenderPipeline/UniversalRenderPipelineAsset_Renderer.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4-urp/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4-urp/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4-urp/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4-urp/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4-urp/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4-urp/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF-Sample-Models-glb.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF-Sample-Models-glb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF-Sample-Models-gltf.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF-Sample-Models-gltf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF-Sample-Models.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF-Sample-Models.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF_glb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF_glb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF_gltf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/Assets/StreamingAssets/glTF_gltf.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/BurstAotSettings_StandaloneOSX.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/BurstAotSettings_StandaloneOSX.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2019.4/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF-Sample-Models-glb.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF-Sample-Models-glb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF-Sample-Models-gltf.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF-Sample-Models-gltf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF-Sample-Models.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF-Sample-Models.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF_glb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF_glb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF_gltf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/Assets/StreamingAssets/glTF_gltf.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glTF-demo-2021.2/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../glTF-demo-2021.2/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.glTF-demo-minsize/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.glTF-demo-minsize/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +68,17 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../../DracoUnity/Runtime/Scripts/DracoNative.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../DracoUnity/Runtime/Scripts/DracoNative.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85ADAF68-5B12-4E45-ADD4-F4EA2AAB47DC/cd/86bdc9a0/ArtifactInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C44B2DE2-D625-4C49-B40B-69B984312582/9d/028a6ba9/Texture2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../DracoUnity/Runtime/Scripts/DracoMeshLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../DracoUnity/Runtime/Scripts/DracoMeshLoader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../glTFast/Runtime/Scripts/PrimitiveDracoCreateContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/202F8C08-1A50-4AA2-9401-03428E3FD66B/26/086c7c0f/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../DracoUnity/Editor/OnScriptsReloadHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011C2FC5-780B-4B49-8C3B-6EA5313C6351/cc/de243180/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../glTFast/Runtime/Scripts/GltfImport.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C44B2DE2-D625-4C49-B40B-69B984312582/b4/bec34734/TextureCreationFlags.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../KtxUnity/Editor/Scripts/OnScriptsReloadHandler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -129,6 +151,9 @@
       <workItem from="1626350851000" duration="403000" />
       <workItem from="1629997754710" duration="2459000" />
       <workItem from="1631269520814" duration="553000" />
+      <workItem from="1633604809365" duration="1102000" />
+      <workItem from="1635352270197" duration="656000" />
+      <workItem from="1635368413203" duration="1569000" />
     </task>
     <servers />
   </component>
