@@ -22,6 +22,7 @@
   },
   "type": "sample",
   "dependencies": {
-    "com.atteneder.gltfast": "4.0.0"
+    "com.atteneder.gltfast": "4.4.3",
+    "com.atteneder.gltf-test-framework": "0.1.0"
   }
 }
