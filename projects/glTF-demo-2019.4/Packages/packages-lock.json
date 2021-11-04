@@ -14,28 +14,31 @@
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.atteneder.gltfast": "4.0.0"
+        "com.atteneder.gltfast": "4.4.3",
+        "com.atteneder.gltf-test-framework": "0.1.0"
       }
     },
     "com.atteneder.gltf-test-framework": {
-      "version": "https://github.com/atteneder/gltf-test-framework.git",
+      "version": "file:../../../packages/gltf-test-framework",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "03a0f34de6a63ade020af54f4b3a35cd5463ef21"
+      "source": "local",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.30",
+        "com.unity.test-framework.performance": "2.8.0-preview",
+        "com.unity.testtools.codecoverage": "1.1.0"
+      }
     },
     "com.atteneder.gltfast": {
-      "version": "4.4.3",
+      "version": "file:../../../packages/glTFast",
       "depth": 0,
-      "source": "registry",
+      "source": "local",
       "dependencies": {
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.modules.unitywebrequesttexture": "1.0.0",
         "com.unity.mathematics": "1.2.1",
         "com.unity.burst": "1.4.11"
-      },
-      "url": "https://package.openupm.com"
+      }
     },
     "com.atteneder.ktx": {
       "version": "1.1.2",
@@ -72,8 +75,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
-      "version": "1.2.1",
-      "depth": 1,
+      "version": "1.2.4",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -88,65 +91,22 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.nuget.mono-cecil": {
-      "version": "0.1.6-preview.2",
-      "depth": 2,
-      "source": "registry",
-      "dependencies": {
-        "nuget.mono-cecil": "0.1.6-preview"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "2.0.0-preview",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.package-manager-doctools": {
-      "version": "git@github.cds.internal.unity3d.com:unity/com.unity.package-manager-doctools.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.package-validation-suite": "0.19.2-preview",
-        "com.unity.nuget.newtonsoft-json": "2.0.0-preview",
-        "com.unity.sharp-zip-lib": "1.2.2-preview"
-      },
-      "hash": "b854af7a6427d8cbf64e557e2bc418353861da03"
-    },
-    "com.unity.package-validation-suite": {
-      "version": "0.19.2-preview",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.nuget.mono-cecil": "0.1.6-preview.2"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.performance.profile-analyzer": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.settings-manager": {
-      "version": "1.0.1",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.sharp-zip-lib": {
-      "version": "1.2.2-preview",
-      "depth": 1,
+      "version": "1.0.3",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.29",
+      "version": "1.1.30",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -177,15 +137,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ui.builder": {
-      "version": "1.0.0-preview.17",
+      "version": "1.0.0-preview.18",
       "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "nuget.mono-cecil": {
-      "version": "0.1.6-preview",
-      "depth": 3,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -198,19 +151,19 @@
     },
     "com.unity.modules.imageconversion": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.imgui": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.jsonserialize": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
@@ -220,21 +173,15 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.modules.physics2d": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {}
-    },
     "com.unity.modules.unitywebrequest": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.unitywebrequesttexture": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.unitywebrequest": "1.0.0",

@@ -42,7 +42,10 @@ sysinfo.txt
 
 /projects/glTF-demo-dots
 /Assets/UnityGLTF
-/Assets/StreamingAssets/glTF-Sample-Models*
+/projects/*/Assets/StreamingAssets/glTF-Sample-Models*
+/projects/*/Logs
+/projects/*/Assets/Models*
+/projects/*/Assets/Scenes*
 /test-results/*.xml
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider

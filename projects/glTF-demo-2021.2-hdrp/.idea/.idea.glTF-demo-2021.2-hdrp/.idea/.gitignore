@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.glTF-demo-2021.2-hdrp.iml
+# Editor-based HTTP Client requests
+/httpRequests/

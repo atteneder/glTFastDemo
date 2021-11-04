@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.atteneder.gltfast": "file:/Users/aa/u/glTFast",
+    "com.atteneder.gltfast": "file:../../../packages/glTFast",
     "com.unity.modules.imageconversion": "1.0.0",
     "com.unity.modules.jsonserialize": "1.0.0",
     "com.unity.modules.unitywebrequest": "1.0.0",

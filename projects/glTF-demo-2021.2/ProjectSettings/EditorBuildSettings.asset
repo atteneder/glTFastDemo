@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Packages/com.atteneder.gltf-demo/Runtime/Scenes/ResponsiveMassLoader.unity
     guid: f258793d08df04fcda6f4200b0f14c1d
+  - enabled: 1
+    path: Packages/com.atteneder.gltf-test-framework/Runtime/Export/Scenes/ExportScene.unity
+    guid: 73f3aef2a2f804af18c408d874958bd1
   m_configObjects: {}
