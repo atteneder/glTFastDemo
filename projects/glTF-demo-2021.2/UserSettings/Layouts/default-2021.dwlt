@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1027
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Code Coverage
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 19
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1349
+    width: 1206
     height: 977
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
@@ -164,7 +164,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1349
+    width: 1206
     height: 592
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
@@ -187,13 +187,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 333
+    width: 299
     height: 592
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
@@ -211,16 +211,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 333
+    x: 299
     y: 0
-    width: 1016
+    width: 907
     height: 592
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 16}
   - {fileID: 17}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &10
@@ -242,12 +242,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 592
-    width: 1349
+    width: 1206
     height: 385
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 111
+  controlID: 30
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,14 +265,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 818
+    width: 731
     height: 385
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 18}
-  - {fileID: 14}
+  - {fileID: 19}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &12
@@ -290,15 +290,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 818
+    x: 731
     y: 0
-    width: 531
+    width: 475
     height: 385
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 19}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &13
@@ -311,24 +311,53 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: CodeCoverageWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1349
+    x: 1206
     y: 0
-    width: 571
+    width: 714
     height: 977
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 446, y: 406}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 20}
   - {fileID: 21}
-  m_Selected: 1
-  m_LastSelected: 0
+  - {fileID: 22}
+  - {fileID: 14}
+  m_Selected: 2
+  m_LastSelected: 1
 --- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5115ff20f1ea204dac14fa49c0e8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 445, y: 385}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Code Coverage
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: -714
+    y: 83
+    width: 713
+    height: 956
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,7 +389,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_LastSelectedObjectID: -1262
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,7 +412,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1920
     y: 83
-    width: 332
+    width: 298
     height: 571
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -394,7 +423,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ceebffff18ecffff18efffffaaeffffff2efffff80f0ffffcaf0ffff04f2ffff22f2ffff42f2ffff4ef2ffff7af2ffff86f2ffff8af2ffff04f3ffff1cfbffff
+      m_ExpandedIDs: e2f0ffff2cf1ffff32f4ffffd2f4ffff1cf5ffff38f8ffff40f9ffff20fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -418,7 +447,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 16907356f10aa4c96902c0d56b95171b
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -439,9 +468,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1587
+    x: -1621
     y: 83
-    width: 1014
+    width: 905
     height: 571
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -724,7 +753,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -745,9 +774,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1587
+    x: -1621
     y: 83
-    width: 1014
+    width: 905
     height: 571
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -759,7 +788,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 2028, y: 1100}
+  m_TargetSize: {x: 1810, y: 1100}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -774,8 +803,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -507
-    m_HBaseRangeMax: 507
+    m_HBaseRangeMin: -452.5
+    m_HBaseRangeMax: 452.5
     m_VBaseRangeMin: -275
     m_VBaseRangeMax: 275
     m_HAllowExceedBaseRangeMin: 1
@@ -795,29 +824,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1014
+      width: 905
       height: 550
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 507, y: 275}
+    m_Translation: {x: 452.5, y: 275}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -507
+      x: -452.5
       y: -275
-      width: 1014
+      width: 905
       height: 550
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2028, y: 1142}
+  m_LastWindowPixelSize: {x: 1810, y: 1142}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -840,7 +869,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1920
     y: 675
-    width: 817
+    width: 730
     height: 364
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -859,22 +888,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages/com.atteneder.gltf-test-framework/Tests/Runtime
+    - Packages/com.atteneder.gltfast/Runtime/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Packages/com.atteneder.gltf-test-framework/Tests/Runtime
+  - Packages/com.atteneder.gltfast/Runtime/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 288.0011}
-    m_SelectedIDs: d24e0000
-    m_LastClickedID: 20178
-    m_ExpandedIDs: 00000000a6480000a8480000aa480000ac480000ae480000b0480000b2480000b4480000b6480000b8480000ba480000bc480000be480000c0480000c2480000c4480000c6480000c8480000ca48000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 518.262}
+    m_SelectedIDs: b0480000
+    m_LastClickedID: 18608
+    m_ExpandedIDs: 00000000a4480000a6480000a8480000aa480000ac480000ae480000b0480000b2480000b4480000b6480000b8480000ba480000bc480000be480000c0480000c2480000c4480000c6480000c848000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -902,7 +931,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a6480000a8480000aa480000ac480000ae480000b0480000b2480000b4480000b6480000b8480000ba480000bc480000be480000c0480000c2480000c4480000c6480000c8480000ca480000
+    m_ExpandedIDs: 00000000a4480000a6480000a8480000aa480000ac480000ae480000b0480000b2480000b4480000b6480000b8480000ba480000bc480000be480000c0480000c2480000c4480000c6480000c8480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -929,7 +958,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000032590000965d000058600000206700007a60000034680000166c000000000000246d000004700000f8510000cc4e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -958,7 +987,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 255
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -979,15 +1008,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1102
+    x: -1189
     y: 675
-    width: 529
+    width: 473
     height: 364
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &20
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1008,9 +1037,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -571
+    x: -714
     y: 83
-    width: 570
+    width: 713
     height: 956
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1029,7 +1058,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &21
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1049,16 +1078,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -571
+    x: -714
     y: 83
-    width: 570
+    width: 713
     height: 956
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 173
+    ID: 219
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1083,14 +1112,14 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 21}
+    m_Window: {fileID: 22}
     m_NewResultList:
     - id: 1028
       uniqueId: '[glTFastDemo][suite]'
       name: glTFastDemo
       fullName: glTFastDemo
       resultStatus: 1
-      duration: 0.5170931
+      duration: 0.5531993
       messages: 
       output: 
       stacktrace: 
@@ -1106,7 +1135,7 @@ MonoBehaviour:
       name: glTF-test-framework.Tests.dll
       fullName: /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2/Library/ScriptAssemblies/glTF-test-framework.Tests.dll
       resultStatus: 1
-      duration: 0.3352981
+      duration: 0.3496968
       messages: 
       output: 
       stacktrace: 
@@ -1122,7 +1151,7 @@ MonoBehaviour:
       name: GLTFTest
       fullName: GLTFTest
       resultStatus: 1
-      duration: 0.3295876
+      duration: 0.3302243
       messages: 
       output: 
       stacktrace: 
@@ -1465,7 +1494,7 @@ MonoBehaviour:
       name: Jobs
       fullName: GLTFTest.Jobs
       resultStatus: 1
-      duration: 0.2987596
+      duration: 0.3015963
       messages: 
       output: 
       stacktrace: 
@@ -1481,7 +1510,7 @@ MonoBehaviour:
       name: BoneIndexJobs
       fullName: GLTFTest.Jobs.BoneIndexJobs
       resultStatus: 1
-      duration: 0.0443465
+      duration: 0.0437695
       messages: 
       output: 
       stacktrace: 
@@ -1497,7 +1526,7 @@ MonoBehaviour:
       name: ConvertBoneJointsUInt16ToUInt32Job
       fullName: GLTFTest.Jobs.BoneIndexJobs.ConvertBoneJointsUInt16ToUInt32Job
       resultStatus: 1
-      duration: 0.017683
+      duration: 0.0151463
       messages: 
       output: 
       stacktrace: 
@@ -1514,7 +1543,7 @@ MonoBehaviour:
       name: ConvertBoneJointsUInt8ToUInt32Job
       fullName: GLTFTest.Jobs.BoneIndexJobs.ConvertBoneJointsUInt8ToUInt32Job
       resultStatus: 1
-      duration: 0.0027906
+      duration: 0.0024873
       messages: 
       output: 
       stacktrace: 
@@ -1531,7 +1560,7 @@ MonoBehaviour:
       name: ColorJobs
       fullName: GLTFTest.Jobs.ColorJobs
       resultStatus: 1
-      duration: 0.0254139
+      duration: 0.0281608
       messages: 
       output: 
       stacktrace: 
@@ -1547,7 +1576,7 @@ MonoBehaviour:
       name: ConvertColorsRGBAFloatToRGBAFloatJob
       fullName: GLTFTest.Jobs.ColorJobs.ConvertColorsRGBAFloatToRGBAFloatJob
       resultStatus: 1
-      duration: 0.0046491
+      duration: 0.00501
       messages: 
       output: 
       stacktrace: 
@@ -1564,7 +1593,7 @@ MonoBehaviour:
       name: ConvertColorsRGBAUInt16ToRGBAFloatJob
       fullName: GLTFTest.Jobs.ColorJobs.ConvertColorsRGBAUInt16ToRGBAFloatJob
       resultStatus: 1
-      duration: 0.0026865
+      duration: 0.0021348
       messages: 
       output: 
       stacktrace: 
@@ -1581,7 +1610,7 @@ MonoBehaviour:
       name: ConvertColorsRGBAUInt8ToRGBAFloatJob
       fullName: GLTFTest.Jobs.ColorJobs.ConvertColorsRGBAUInt8ToRGBAFloatJob
       resultStatus: 1
-      duration: 0.0027737
+      duration: 0.0028222
       messages: 
       output: 
       stacktrace: 
@@ -1598,7 +1627,7 @@ MonoBehaviour:
       name: ConvertColorsRGBFloatToRGBAFloatJob
       fullName: GLTFTest.Jobs.ColorJobs.ConvertColorsRGBFloatToRGBAFloatJob
       resultStatus: 1
-      duration: 0.0027761
+      duration: 0.0025612
       messages: 
       output: 
       stacktrace: 
@@ -1615,7 +1644,7 @@ MonoBehaviour:
       name: ConvertColorsRGBUInt16ToRGBAFloatJob
       fullName: GLTFTest.Jobs.ColorJobs.ConvertColorsRGBUInt16ToRGBAFloatJob
       resultStatus: 1
-      duration: 0.0025263
+      duration: 0.0023535
       messages: 
       output: 
       stacktrace: 
@@ -1632,7 +1661,7 @@ MonoBehaviour:
       name: ConvertColorsRGBUInt8ToRGBAFloatJob
       fullName: GLTFTest.Jobs.ColorJobs.ConvertColorsRGBUInt8ToRGBAFloatJob
       resultStatus: 1
-      duration: 0.0025002
+      duration: 0.0021113
       messages: 
       output: 
       stacktrace: 
@@ -1649,7 +1678,7 @@ MonoBehaviour:
       name: IndexJobs
       fullName: GLTFTest.Jobs.IndexJobs
       resultStatus: 1
-      duration: 0.0414125
+      duration: 0.0412599
       messages: 
       output: 
       stacktrace: 
@@ -1665,7 +1694,7 @@ MonoBehaviour:
       name: ConvertIndicesUInt16ToInt32FlippedJob
       fullName: GLTFTest.Jobs.IndexJobs.ConvertIndicesUInt16ToInt32FlippedJob
       resultStatus: 1
-      duration: 0.0153161
+      duration: 0.0151934
       messages: 
       output: 
       stacktrace: 
@@ -1682,7 +1711,7 @@ MonoBehaviour:
       name: ConvertIndicesUInt16ToInt32Job
       fullName: GLTFTest.Jobs.IndexJobs.ConvertIndicesUInt16ToInt32Job
       resultStatus: 1
-      duration: 0.0027416
+      duration: 0.0026291
       messages: 
       output: 
       stacktrace: 
@@ -1699,7 +1728,7 @@ MonoBehaviour:
       name: ConvertIndicesUInt32ToInt32FlippedJob
       fullName: GLTFTest.Jobs.IndexJobs.ConvertIndicesUInt32ToInt32FlippedJob
       resultStatus: 1
-      duration: 0.0024067
+      duration: 0.0023414
       messages: 
       output: 
       stacktrace: 
@@ -1716,7 +1745,7 @@ MonoBehaviour:
       name: ConvertIndicesUInt32ToInt32Job
       fullName: GLTFTest.Jobs.IndexJobs.ConvertIndicesUInt32ToInt32Job
       resultStatus: 1
-      duration: 0.0027328
+      duration: 0.0021276
       messages: 
       output: 
       stacktrace: 
@@ -1733,7 +1762,7 @@ MonoBehaviour:
       name: ConvertIndicesUInt8ToInt32FlippedJob
       fullName: GLTFTest.Jobs.IndexJobs.ConvertIndicesUInt8ToInt32FlippedJob
       resultStatus: 1
-      duration: 0.0025336
+      duration: 0.0020815
       messages: 
       output: 
       stacktrace: 
@@ -1750,7 +1779,7 @@ MonoBehaviour:
       name: ConvertIndicesUInt8ToInt32Job
       fullName: GLTFTest.Jobs.IndexJobs.ConvertIndicesUInt8ToInt32Job
       resultStatus: 1
-      duration: 0.0025986
+      duration: 0.0020259
       messages: 
       output: 
       stacktrace: 
@@ -1767,7 +1796,7 @@ MonoBehaviour:
       name: CreateIndicesInt32FlippedJob
       fullName: GLTFTest.Jobs.IndexJobs.CreateIndicesInt32FlippedJob
       resultStatus: 1
-      duration: 0.0028173
+      duration: 0.0021084
       messages: 
       output: 
       stacktrace: 
@@ -1784,7 +1813,7 @@ MonoBehaviour:
       name: CreateIndicesInt32Job
       fullName: GLTFTest.Jobs.IndexJobs.CreateIndicesInt32Job
       resultStatus: 1
-      duration: 0.0023418
+      duration: 0.0020134
       messages: 
       output: 
       stacktrace: 
@@ -1801,7 +1830,7 @@ MonoBehaviour:
       name: MatrixJobs
       fullName: GLTFTest.Jobs.MatrixJobs
       resultStatus: 1
-      duration: 0.0117605
+      duration: 0.0148382
       messages: 
       output: 
       stacktrace: 
@@ -1817,7 +1846,7 @@ MonoBehaviour:
       name: ConvertMatricesJob
       fullName: GLTFTest.Jobs.MatrixJobs.ConvertMatricesJob
       resultStatus: 1
-      duration: 0.0057637
+      duration: 0.0056973
       messages: 
       output: 
       stacktrace: 
@@ -1834,7 +1863,7 @@ MonoBehaviour:
       name: PositionSparseJobs
       fullName: GLTFTest.Jobs.PositionSparseJobs
       resultStatus: 1
-      duration: 0.0150544
+      duration: 0.017456
       messages: 
       output: 
       stacktrace: 
@@ -1850,7 +1879,7 @@ MonoBehaviour:
       name: ConvertPositionsSparseJob
       fullName: GLTFTest.Jobs.PositionSparseJobs.ConvertPositionsSparseJob
       resultStatus: 1
-      duration: 0.0101185
+      duration: 0.0102685
       messages: 
       output: 
       stacktrace: 
@@ -1867,7 +1896,7 @@ MonoBehaviour:
       name: ScalarJobs
       fullName: GLTFTest.Jobs.ScalarJobs
       resultStatus: 1
-      duration: 0.0183964
+      duration: 0.0197541
       messages: 
       output: 
       stacktrace: 
@@ -1883,7 +1912,7 @@ MonoBehaviour:
       name: ConvertScalarInt16ToFloatNormalizedJob
       fullName: GLTFTest.Jobs.ScalarJobs.ConvertScalarInt16ToFloatNormalizedJob
       resultStatus: 1
-      duration: 0.0032824
+      duration: 0.0035139
       messages: 
       output: 
       stacktrace: 
@@ -1900,7 +1929,7 @@ MonoBehaviour:
       name: ConvertScalarInt8ToFloatNormalizedJob
       fullName: GLTFTest.Jobs.ScalarJobs.ConvertScalarInt8ToFloatNormalizedJob
       resultStatus: 1
-      duration: 0.0026575
+      duration: 0.0021924
       messages: 
       output: 
       stacktrace: 
@@ -1917,7 +1946,7 @@ MonoBehaviour:
       name: ConvertScalarUInt16ToFloatNormalizedJob
       fullName: GLTFTest.Jobs.ScalarJobs.ConvertScalarUInt16ToFloatNormalizedJob
       resultStatus: 1
-      duration: 0.0029295
+      duration: 0.0022925
       messages: 
       output: 
       stacktrace: 
@@ -1934,7 +1963,7 @@ MonoBehaviour:
       name: ConvertScalarUInt8ToFloatNormalizedJob
       fullName: GLTFTest.Jobs.ScalarJobs.ConvertScalarUInt8ToFloatNormalizedJob
       resultStatus: 1
-      duration: 0.0024946
+      duration: 0.0020655
       messages: 
       output: 
       stacktrace: 
@@ -1951,7 +1980,7 @@ MonoBehaviour:
       name: UVJobs
       fullName: GLTFTest.Jobs.UVJobs
       resultStatus: 1
-      duration: 0.0655738
+      duration: 0.0633204
       messages: 
       output: 
       stacktrace: 
@@ -1967,7 +1996,7 @@ MonoBehaviour:
       name: ConvertUVsFloatToFloatInterleavedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsFloatToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.003484
+      duration: 0.0043612
       messages: 
       output: 
       stacktrace: 
@@ -1984,7 +2013,7 @@ MonoBehaviour:
       name: ConvertUVsInt16ToFloatInterleavedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsInt16ToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0026679
+      duration: 0.0017239
       messages: 
       output: 
       stacktrace: 
@@ -2001,7 +2030,7 @@ MonoBehaviour:
       name: ConvertUVsInt16ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsInt16ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0025706
+      duration: 0.0021007
       messages: 
       output: 
       stacktrace: 
@@ -2018,7 +2047,7 @@ MonoBehaviour:
       name: ConvertUVsInt8ToFloatInterleavedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsInt8ToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0021634
+      duration: 0.0022667
       messages: 
       output: 
       stacktrace: 
@@ -2035,7 +2064,7 @@ MonoBehaviour:
       name: ConvertUVsInt8ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsInt8ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.002009
+      duration: 0.0017578
       messages: 
       output: 
       stacktrace: 
@@ -2052,7 +2081,7 @@ MonoBehaviour:
       name: ConvertUVsUInt16ToFloatInterleavedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsUInt16ToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0021882
+      duration: 0.0017122
       messages: 
       output: 
       stacktrace: 
@@ -2069,7 +2098,7 @@ MonoBehaviour:
       name: ConvertUVsUInt16ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsUInt16ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0022041
+      duration: 0.0020426
       messages: 
       output: 
       stacktrace: 
@@ -2086,7 +2115,7 @@ MonoBehaviour:
       name: ConvertUVsUInt8ToFloatInterleavedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsUInt8ToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0023441
+      duration: 0.0017092
       messages: 
       output: 
       stacktrace: 
@@ -2103,7 +2132,7 @@ MonoBehaviour:
       name: ConvertUVsUInt8ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.UVJobs.ConvertUVsUInt8ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0025265
+      duration: 0.0022053
       messages: 
       output: 
       stacktrace: 
@@ -2120,7 +2149,7 @@ MonoBehaviour:
       name: Vector3Jobs
       fullName: GLTFTest.Jobs.Vector3Jobs
       resultStatus: 1
-      duration: 0.0381095
+      duration: 0.0365765
       messages: 
       output: 
       stacktrace: 
@@ -2136,7 +2165,7 @@ MonoBehaviour:
       name: ConvertNormalsInt16ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertNormalsInt16ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.002408
+      duration: 0.0029479
       messages: 
       output: 
       stacktrace: 
@@ -2153,7 +2182,7 @@ MonoBehaviour:
       name: ConvertNormalsInt8ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertNormalsInt8ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0024409
+      duration: 0.0021861
       messages: 
       output: 
       stacktrace: 
@@ -2170,7 +2199,7 @@ MonoBehaviour:
       name: ConvertPositionsInt16ToFloatInterleavedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertPositionsInt16ToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0025466
+      duration: 0.0020454
       messages: 
       output: 
       stacktrace: 
@@ -2187,7 +2216,7 @@ MonoBehaviour:
       name: ConvertPositionsInt8ToFloatInterleavedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertPositionsInt8ToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0025466
+      duration: 0.001914
       messages: 
       output: 
       stacktrace: 
@@ -2204,7 +2233,7 @@ MonoBehaviour:
       name: ConvertPositionsUInt16ToFloatInterleavedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertPositionsUInt16ToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0027943
+      duration: 0.0023905
       messages: 
       output: 
       stacktrace: 
@@ -2221,7 +2250,7 @@ MonoBehaviour:
       name: ConvertPositionsUInt16ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertPositionsUInt16ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0022223
+      duration: 0.0024212
       messages: 
       output: 
       stacktrace: 
@@ -2238,7 +2267,7 @@ MonoBehaviour:
       name: ConvertPositionsUInt8ToFloatInterleavedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertPositionsUInt8ToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0024141
+      duration: 0.0021385
       messages: 
       output: 
       stacktrace: 
@@ -2255,7 +2284,7 @@ MonoBehaviour:
       name: ConvertPositionsUInt8ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertPositionsUInt8ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0024271
+      duration: 0.0021027
       messages: 
       output: 
       stacktrace: 
@@ -2272,7 +2301,7 @@ MonoBehaviour:
       name: ConvertVector3FloatToFloatInterleavedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertVector3FloatToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0021346
+      duration: 0.0024219
       messages: 
       output: 
       stacktrace: 
@@ -2289,7 +2318,7 @@ MonoBehaviour:
       name: ConvertVector3FloatToFloatJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertVector3FloatToFloatJob
       resultStatus: 1
-      duration: 0.0025048
+      duration: 0.0025669
       messages: 
       output: 
       stacktrace: 
@@ -2306,7 +2335,7 @@ MonoBehaviour:
       name: ConvertVector3Int16ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertVector3Int16ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0022894
+      duration: 0.0022898
       messages: 
       output: 
       stacktrace: 
@@ -2323,7 +2352,7 @@ MonoBehaviour:
       name: ConvertVector3Int8ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.Vector3Jobs.ConvertVector3Int8ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0023229
+      duration: 0.0021662
       messages: 
       output: 
       stacktrace: 
@@ -2340,7 +2369,7 @@ MonoBehaviour:
       name: Vector4Jobs
       fullName: GLTFTest.Jobs.Vector4Jobs
       resultStatus: 1
-      duration: 0.0326723
+      duration: 0.0304137
       messages: 
       output: 
       stacktrace: 
@@ -2356,7 +2385,7 @@ MonoBehaviour:
       name: ConvertBoneWeightsFloatToFloatInterleavedJob
       fullName: GLTFTest.Jobs.Vector4Jobs.ConvertBoneWeightsFloatToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.002817
+      duration: 0.0027441
       messages: 
       output: 
       stacktrace: 
@@ -2373,7 +2402,7 @@ MonoBehaviour:
       name: ConvertRotationsFloatToFloatJob
       fullName: GLTFTest.Jobs.Vector4Jobs.ConvertRotationsFloatToFloatJob
       resultStatus: 1
-      duration: 0.0027232
+      duration: 0.0028368
       messages: 
       output: 
       stacktrace: 
@@ -2390,7 +2419,7 @@ MonoBehaviour:
       name: ConvertRotationsInt16ToFloatJob
       fullName: GLTFTest.Jobs.Vector4Jobs.ConvertRotationsInt16ToFloatJob
       resultStatus: 1
-      duration: 0.0024001
+      duration: 0.0021684
       messages: 
       output: 
       stacktrace: 
@@ -2407,7 +2436,7 @@ MonoBehaviour:
       name: ConvertRotationsInt8ToFloatJob
       fullName: GLTFTest.Jobs.Vector4Jobs.ConvertRotationsInt8ToFloatJob
       resultStatus: 1
-      duration: 0.0028953
+      duration: 0.0021663
       messages: 
       output: 
       stacktrace: 
@@ -2424,7 +2453,7 @@ MonoBehaviour:
       name: ConvertTangentsFloatToFloatInterleavedJob
       fullName: GLTFTest.Jobs.Vector4Jobs.ConvertTangentsFloatToFloatInterleavedJob
       resultStatus: 1
-      duration: 0.0027608
+      duration: 0.0022767
       messages: 
       output: 
       stacktrace: 
@@ -2441,7 +2470,7 @@ MonoBehaviour:
       name: ConvertTangentsInt16ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.Vector4Jobs.ConvertTangentsInt16ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0026104
+      duration: 0.0031442
       messages: 
       output: 
       stacktrace: 
@@ -2458,7 +2487,7 @@ MonoBehaviour:
       name: ConvertTangentsInt8ToFloatInterleavedNormalizedJob
       fullName: GLTFTest.Jobs.Vector4Jobs.ConvertTangentsInt8ToFloatInterleavedNormalizedJob
       resultStatus: 1
-      duration: 0.0024814
+      duration: 0.0021482
       messages: 
       output: 
       stacktrace: 
@@ -28408,10 +28437,10 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1410
       parentUniqueId: glTF-test-framework.Tests.dll/GLTFTest/SampleModelsTest/[glTF-test-framework.Tests][GLTFTest.SampleModelsTest.UninterruptedLoading][suite]
-    m_ResultText: Jobs (0.299s)
+    m_ResultText: Jobs (0.302s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 2.000122}
       m_SelectedIDs: 801f1dd8
       m_LastClickedID: -669180032
       m_ExpandedIDs: b65f4a8275da95908a787b916c68e297b04e25ad8e2f7ead837958b0d8999cbb4810e7bd7ad246d1d22ce9d6801f1dd8d59dfbe9ca2012f886cf40ffb9f74d0cf1b2951043b9253c932905423af9ee49e8f57158a647f75b04a38b5f284830661e24bc68bee8c477ffffff7f
@@ -28444,14 +28473,14 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 1
   m_EditModeTestListGUI:
-    m_Window: {fileID: 21}
+    m_Window: {fileID: 22}
     m_NewResultList:
     - id: 1000
       uniqueId: '[glTFastDemo][suite]'
       name: glTFastDemo
       fullName: glTFastDemo
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.5377347
       messages: 
       output: 
       stacktrace: 
@@ -28466,8 +28495,8 @@ MonoBehaviour:
       uniqueId: '[glTFastEditorTests.dll][suite]'
       name: glTFastEditorTests.dll
       fullName: /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2/Library/ScriptAssemblies/glTFastEditorTests.dll
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.4962935
       messages: 
       output: 
       stacktrace: 
@@ -28482,8 +28511,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/[GLTFast][suite]
       name: GLTFast
       fullName: GLTFast
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.4950347
       messages: 
       output: 
       stacktrace: 
@@ -28498,8 +28527,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/[glTFastEditorTests][GLTFast.Tests][suite]
       name: Tests
       fullName: GLTFast.Tests
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.4909075
       messages: 
       output: 
       stacktrace: 
@@ -28514,8 +28543,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/[glTFastEditorTests][GLTFast.Tests.JsonParsingTests][suite]
       name: JsonParsingTests
       fullName: GLTFast.Tests.JsonParsingTests
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0736398
       messages: 
       output: 
       stacktrace: 
@@ -28530,8 +28559,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/JsonParsingTests/[glTFastEditorTests][GLTFast.Tests.JsonParsingTests.MaterialExtensions]
       name: MaterialExtensions
       fullName: GLTFast.Tests.JsonParsingTests.MaterialExtensions
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0438773
       messages: 
       output: 
       stacktrace: 
@@ -28547,8 +28576,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/JsonParsingTests/[glTFastEditorTests][GLTFast.Tests.JsonParsingTests.MeshTargetNames]
       name: MeshTargetNames
       fullName: GLTFast.Tests.JsonParsingTests.MeshTargetNames
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0016597
       messages: 
       output: 
       stacktrace: 
@@ -28564,8 +28593,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/JsonParsingTests/[glTFastEditorTests][GLTFast.Tests.JsonParsingTests.MinMagFilter]
       name: MinMagFilter
       fullName: GLTFast.Tests.JsonParsingTests.MinMagFilter
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0023836
       messages: 
       output: 
       stacktrace: 
@@ -28581,10 +28610,12 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/JsonParsingTests/[glTFastEditorTests][GLTFast.Tests.JsonParsingTests.SparseAccessors]
       name: SparseAccessors
       fullName: GLTFast.Tests.JsonParsingTests.SparseAccessors
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0036589
       messages: 
-      output: 
+      output: 'Invalid Sparse Accessors will break glTFast
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -28598,8 +28629,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/JsonParsingTests/[glTFastEditorTests][GLTFast.Tests.JsonParsingTests.UnknownNodeExtension]
       name: UnknownNodeExtension
       fullName: GLTFast.Tests.JsonParsingTests.UnknownNodeExtension
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0008546
       messages: 
       output: 
       stacktrace: 
@@ -28615,8 +28646,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/[glTFastEditorTests][GLTFast.Tests.LoggerTest][suite]
       name: LoggerTest
       fullName: GLTFast.Tests.LoggerTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0415546
       messages: 
       output: 
       stacktrace: 
@@ -28631,8 +28662,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/LoggerTest/[glTFastEditorTests][GLTFast.Tests.LoggerTest.CollectingLoggerTest]
       name: CollectingLoggerTest
       fullName: GLTFast.Tests.LoggerTest.CollectingLoggerTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0051768
       messages: 
       output: 
       stacktrace: 
@@ -28648,10 +28679,12 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/LoggerTest/[glTFastEditorTests][GLTFast.Tests.LoggerTest.ConsoleLoggerTest]
       name: ConsoleLoggerTest
       fullName: GLTFast.Tests.LoggerTest.ConsoleLoggerTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0034575
       messages: 
-      output: 
+      output: 'Download URL https://something.com/nowherfound.glb failed: 404
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -28665,8 +28698,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/[glTFastEditorTests][GLTFast.Tests.MatrixExtensionTest][suite]
       name: MatrixExtensionTest
       fullName: GLTFast.Tests.MatrixExtensionTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.2881479
       messages: 
       output: 
       stacktrace: 
@@ -28681,8 +28714,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/MatrixExtensionTest/[glTFastEditorTests][GLTFast.Tests.MatrixExtensionTest.MatrixDecomposeTest]
       name: MatrixDecomposeTest
       fullName: GLTFast.Tests.MatrixExtensionTest.MatrixDecomposeTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.2807213
       messages: 
       output: 
       stacktrace: 
@@ -28698,8 +28731,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/[glTFastEditorTests][GLTFast.Tests.MeshPrimitiveTest][suite]
       name: MeshPrimitiveTest
       fullName: GLTFast.Tests.MeshPrimitiveTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0256478
       messages: 
       output: 
       stacktrace: 
@@ -28714,8 +28747,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/MeshPrimitiveTest/[glTFastEditorTests][GLTFast.Tests.MeshPrimitiveTest.MeshPrimitiveEqualTest]
       name: MeshPrimitiveEqualTest
       fullName: GLTFast.Tests.MeshPrimitiveTest.MeshPrimitiveEqualTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0031025
       messages: 
       output: 
       stacktrace: 
@@ -28731,8 +28764,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/[glTFastEditorTests][GLTFast.Tests.UriHelperTest][suite]
       name: UriHelperTest
       fullName: GLTFast.Tests.UriHelperTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.055715
       messages: 
       output: 
       stacktrace: 
@@ -28747,8 +28780,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/UriHelperTest/[glTFastEditorTests][GLTFast.Tests.UriHelperTest.GetBaseUriTest]
       name: GetBaseUriTest
       fullName: GLTFast.Tests.UriHelperTest.GetBaseUriTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0121
       messages: 
       output: 
       stacktrace: 
@@ -28764,8 +28797,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/UriHelperTest/[glTFastEditorTests][GLTFast.Tests.UriHelperTest.GetImageFormatFromUriTest]
       name: GetImageFormatFromUriTest
       fullName: GLTFast.Tests.UriHelperTest.GetImageFormatFromUriTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0015291
       messages: 
       output: 
       stacktrace: 
@@ -28781,8 +28814,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/UriHelperTest/[glTFastEditorTests][GLTFast.Tests.UriHelperTest.GetUriStringTest]
       name: GetUriStringTest
       fullName: GLTFast.Tests.UriHelperTest.GetUriStringTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0026031
       messages: 
       output: 
       stacktrace: 
@@ -28798,8 +28831,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/UriHelperTest/[glTFastEditorTests][GLTFast.Tests.UriHelperTest.IsGltfBinaryTest]
       name: IsGltfBinaryTest
       fullName: GLTFast.Tests.UriHelperTest.IsGltfBinaryTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0301632
       messages: 
       output: 
       stacktrace: 
@@ -28815,8 +28848,8 @@ MonoBehaviour:
       uniqueId: glTFastEditorTests.dll/GLTFast/Tests/UriHelperTest/[glTFastEditorTests][GLTFast.Tests.UriHelperTest.RemoveDotSegments]
       name: RemoveDotSegments
       fullName: GLTFast.Tests.UriHelperTest.RemoveDotSegments
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0007086
       messages: 
       output: 
       stacktrace: 

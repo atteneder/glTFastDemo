@@ -47,6 +47,55 @@ echo "DOTS PlayMode $PLAYMODE_PLATFORM"
 time $UNITY_2020_EXE -runTests -batchmode -projectPath ./projects/glTF-demo-dots -testResults "$PWD/test-results/glTF-demo-dots-runtime.xml" -testPlatform "$PLAYMODE_PLATFORM" -testCategory "!Performance;!Export"
 
 #
+# Code Coverage
+#
+
+echo "Code Coverage EditMode"
+time $UNITY_2021_EXE \
+-projectPath ./projects/glTF-demo-2021.2 \
+-batchmode \
+-testPlatform EditMode \
+-runTests \
+-testResults "$PWD/test-results/glTF-demo-code-coverage-editmode.xml" \
+-debugCodeOptimization \
+-burst-disable-compilation \
+-enableCodeCoverage \
+-coverageResultsPath "$PWD/test-results/CodeCoverage" \
+-coverageHistoryPath "$PWD/test-results/CodeCoverage" \
+-coverageOptions "generateAdditionalMetrics;assemblyFilters:+glTFast,+glTFast.*,+glTFastSchema,+glTFastFakeSchema,+glTFastEditor" \
+-testCategory "!Performance"
+
+echo "Code Coverage PlayMode"
+time $UNITY_2021_EXE \
+-projectPath ./projects/glTF-demo-2021.2 \
+-batchmode \
+-testPlatform PlayMode \
+-runTests \
+-testResults "$PWD/test-results/glTF-demo-code-coverage-playmode.xml" \
+-debugCodeOptimization \
+-burst-disable-compilation \
+-enableCodeCoverage \
+-coverageResultsPath "$PWD/test-results/CodeCoverage" \
+-coverageHistoryPath "$PWD/test-results/CodeCoverage" \
+-coverageOptions "generateAdditionalMetrics;assemblyFilters:+glTFast,+glTFast.*,+glTFastSchema,+glTFastFakeSchema,+glTFastEditor" \
+-testCategory "!Performance"
+
+echo "Code Coverage HTML Report"
+$UNITY_2021_EXE \
+-projectPath ./projects/glTF-demo-2021.2 \
+-batchmode \
+-testPlatform PlayMode \
+-runTests \
+-testResults "$PWD/test-results/glTF-demo-coverage.xml" \
+-debugCodeOptimization \
+-burst-disable-compilation \
+-enableCodeCoverage \
+-coverageResultsPath "$PWD/test-results/CodeCoverage" \
+-coverageHistoryPath "$PWD/test-results/CodeCoverage" \
+-coverageOptions "generateHtmlReport;generateHtmlReportHistory;generateBadgeReport;assemblyFilters:+glTFast,+glTFast.*,+glTFastSchema,+glTFastFakeSchema,+glTFastEditor" \
+-testCategory "!Performance"
+
+#
 # Create builds
 #
 
