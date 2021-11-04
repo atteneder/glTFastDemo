@@ -14,28 +14,31 @@
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.atteneder.gltfast": "4.0.0"
+        "com.atteneder.gltfast": "4.4.3",
+        "com.atteneder.gltf-test-framework": "0.1.0"
       }
     },
     "com.atteneder.gltf-test-framework": {
-      "version": "https://github.com/atteneder/gltf-test-framework.git",
+      "version": "file:../../../packages/gltf-test-framework",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "49c5ff8f36b8d6028200a82bfb23d92819e1664e"
+      "source": "local",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.30",
+        "com.unity.test-framework.performance": "2.8.0-preview",
+        "com.unity.testtools.codecoverage": "1.1.0"
+      }
     },
     "com.atteneder.gltfast": {
-      "version": "4.4.3",
+      "version": "file:../../../packages/glTFast",
       "depth": 0,
-      "source": "registry",
+      "source": "local",
       "dependencies": {
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.modules.unitywebrequesttexture": "1.0.0",
         "com.unity.mathematics": "1.2.1",
         "com.unity.burst": "1.4.11"
-      },
-      "url": "https://package.openupm.com"
+      }
     },
     "com.atteneder.ktx": {
       "version": "2.0.0",
@@ -88,6 +91,44 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.settings-manager": {
+      "version": "1.0.3",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.test-framework": {
+      "version": "1.1.30",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ext.nunit": "1.0.6",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.test-framework.performance": {
+      "version": "2.8.0-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.testtools.codecoverage": {
+      "version": "1.1.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.0.16",
+        "com.unity.settings-manager": "1.0.1"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.modules.animation": {
       "version": "1.0.0",
       "depth": 0,
@@ -96,13 +137,13 @@
     },
     "com.unity.modules.imageconversion": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.imgui": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {}
     },
@@ -112,21 +153,15 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.modules.nvidia": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {}
-    },
     "com.unity.modules.unitywebrequest": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.unitywebrequesttexture": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.unitywebrequest": "1.0.0",
