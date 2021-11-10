@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "com.atteneder.draco": "3.3.2",
+    "com.atteneder.gltf-demo": "file:../../../packages/glTF-demo",
+    "com.atteneder.gltf-test-framework": "file:../../../packages/gltf-test-framework",
+    "com.atteneder.gltfast": "file:../../../packages/glTFast",
+    "com.atteneder.ktx": "1.1.2",
+    "com.unity.burst": "1.4.11",
+    "com.unity.ext.nunit": "1.0.6",
+    "com.unity.ide.rider": "3.0.7",
+    "com.unity.mathematics": "1.2.4",
+    "com.unity.meshopt.decompress": "0.1.0-preview.2",
+    "com.unity.performance.profile-analyzer": "1.1.1",
+    "com.unity.render-pipelines.high-definition": "7.7.1",
+    "com.unity.render-pipelines.high-definition-config": "file:../LocalPackages/com.unity.render-pipelines.high-definition-config",
+    "com.unity.settings-manager": "1.0.3",
+    "com.unity.test-framework": "1.1.30",
+    "com.unity.test-framework.performance": "2.8.0-preview",
+    "com.unity.testtools.codecoverage": "1.1.0",
+    "com.unity.ui.builder": "1.0.0-preview.18",
+    "com.unity.modules.animation": "1.0.0",
+    "com.unity.modules.physics": "1.0.0"
+  },
+  "testables": [
+    "com.atteneder.gltfast",
+    "com.atteneder.gltf-test-framework"
+  ],
+  "scopedRegistries": [
+    {
+      "name": "Atteneder",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.atteneder"
+      ]
+    }
+  ]
+}
