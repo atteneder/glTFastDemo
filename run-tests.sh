@@ -7,8 +7,24 @@ set -e
 PWD=$(pwd)
 
 UNITY_2019_EXE=/Applications/Unity/Hub/Editor/2019.4.32f1/Unity.app/Contents/MacOS/Unity
-UNITY_2020_EXE=/Applications/Unity/Hub/Editor/2020.3.21f1/Unity.app/Contents/MacOS/Unity
-UNITY_2021_EXE=/Applications/Unity/Hub/Editor/2021.2.0f1/Unity.app/Contents/MacOS/Unity
+UNITY_2020_EXE=/Applications/Unity/Hub/Editor/2020.3.22f1/Unity.app/Contents/MacOS/Unity
+UNITY_2021_EXE=/Applications/Unity/Hub/Editor/2021.2.2f1/Unity.app/Contents/MacOS/Unity
+
+if [ ! -f "$UNITY_2019_EXE" ]; then
+    echo "Unity not found at $UNITY_2019_EXE"
+    exit -1
+fi
+
+if [ ! -f "$UNITY_2020_EXE" ]; then
+    echo "Unity not found at $UNITY_2020_EXE"
+    exit -1
+fi
+
+if [ ! -f "$UNITY_2021_EXE" ]; then
+    echo "Unity not found at $UNITY_2021_EXE"
+    exit -1
+fi
+
 
 #
 # Run Unit Tests
