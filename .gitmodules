@@ -1,6 +1,6 @@
 [submodule "packages/glTFast"]
-	path = packages/glTFast
+	path = packages-tmp/glTFast
 	url = git@github.com:atteneder/glTFast.git
 [submodule "packages/gltf-test-framework"]
-	path = packages/gltf-test-framework
+	path = packages-tmp/gltf-test-framework
 	url = git@github.com:atteneder/gltf-test-framework.git

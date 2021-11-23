@@ -1,0 +1,327 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bdf3fe6678e40fea6df4342d07093a, type: 3}
+  m_Name: gltf-sample-models-meshopt
+  m_EditorClassIdentifier: 
+  baseLocalPath: /Users/aa/gltf/enc/gltf-sample-models/meshopt
+  streamingAssetsPath: 
+  baseUrlWeb: 
+  baseUrlLocal: 
+  items:
+  - active: 1
+    item:
+      name: 2CylinderEngine.gltf
+      path: 2CylinderEngine/glTF/2CylinderEngine.gltf
+  - active: 1
+    item:
+      name: AlphaBlendModeTest.gltf
+      path: AlphaBlendModeTest/glTF/AlphaBlendModeTest.gltf
+  - active: 1
+    item:
+      name: AnimatedCube.gltf
+      path: AnimatedCube/glTF/AnimatedCube.gltf
+  - active: 1
+    item:
+      name: AnimatedMorphCube.gltf
+      path: AnimatedMorphCube/glTF/AnimatedMorphCube.gltf
+  - active: 1
+    item:
+      name: AnimatedMorphSphere.gltf
+      path: AnimatedMorphSphere/glTF/AnimatedMorphSphere.gltf
+  - active: 1
+    item:
+      name: AnimatedTriangle.gltf
+      path: AnimatedTriangle/glTF/AnimatedTriangle.gltf
+  - active: 1
+    item:
+      name: AntiqueCamera.gltf
+      path: AntiqueCamera/glTF/AntiqueCamera.gltf
+  - active: 1
+    item:
+      name: AttenuationTest.gltf
+      path: AttenuationTest/glTF/AttenuationTest.gltf
+  - active: 1
+    item:
+      name: Avocado.gltf
+      path: Avocado/glTF/Avocado.gltf
+  - active: 1
+    item:
+      name: BarramundiFish.gltf
+      path: BarramundiFish/glTF/BarramundiFish.gltf
+  - active: 1
+    item:
+      name: BoomBox.gltf
+      path: BoomBox/glTF/BoomBox.gltf
+  - active: 1
+    item:
+      name: BoomBoxWithAxes.gltf
+      path: BoomBoxWithAxes/glTF/BoomBoxWithAxes.gltf
+  - active: 1
+    item:
+      name: Box.gltf
+      path: Box/glTF/Box.gltf
+  - active: 1
+    item:
+      name: Box With Spaces.gltf
+      path: Box With Spaces/glTF/Box With Spaces.gltf
+  - active: 1
+    item:
+      name: BoxAnimated.gltf
+      path: BoxAnimated/glTF/BoxAnimated.gltf
+  - active: 1
+    item:
+      name: BoxInterleaved.gltf
+      path: BoxInterleaved/glTF/BoxInterleaved.gltf
+  - active: 1
+    item:
+      name: BoxTextured.gltf
+      path: BoxTextured/glTF/BoxTextured.gltf
+  - active: 1
+    item:
+      name: BoxTexturedNonPowerOfTwo.gltf
+      path: BoxTexturedNonPowerOfTwo/glTF/BoxTexturedNonPowerOfTwo.gltf
+  - active: 1
+    item:
+      name: BoxVertexColors.gltf
+      path: BoxVertexColors/glTF/BoxVertexColors.gltf
+  - active: 1
+    item:
+      name: BrainStem.gltf
+      path: BrainStem/glTF/BrainStem.gltf
+  - active: 1
+    item:
+      name: Buggy.gltf
+      path: Buggy/glTF/Buggy.gltf
+  - active: 1
+    item:
+      name: Cameras.gltf
+      path: Cameras/glTF/Cameras.gltf
+  - active: 1
+    item:
+      name: CesiumMan.gltf
+      path: CesiumMan/glTF/CesiumMan.gltf
+  - active: 1
+    item:
+      name: CesiumMilkTruck.gltf
+      path: CesiumMilkTruck/glTF/CesiumMilkTruck.gltf
+  - active: 1
+    item:
+      name: ClearCoatTest.gltf
+      path: ClearCoatTest/glTF/ClearCoatTest.gltf
+  - active: 1
+    item:
+      name: Corset.gltf
+      path: Corset/glTF/Corset.gltf
+  - active: 1
+    item:
+      name: Cube.gltf
+      path: Cube/glTF/Cube.gltf
+  - active: 1
+    item:
+      name: DamagedHelmet.gltf
+      path: DamagedHelmet/glTF/DamagedHelmet.gltf
+  - active: 1
+    item:
+      name: DragonAttenuation.gltf
+      path: DragonAttenuation/glTF/DragonAttenuation.gltf
+  - active: 1
+    item:
+      name: Duck.gltf
+      path: Duck/glTF/Duck.gltf
+  - active: 1
+    item:
+      name: EnvironmentTest.gltf
+      path: EnvironmentTest/glTF/EnvironmentTest.gltf
+  - active: 1
+    item:
+      name: FlightHelmet.gltf
+      path: FlightHelmet/glTF/FlightHelmet.gltf
+  - active: 1
+    item:
+      name: Fox.gltf
+      path: Fox/glTF/Fox.gltf
+  - active: 1
+    item:
+      name: GearboxAssy.gltf
+      path: GearboxAssy/glTF/GearboxAssy.gltf
+  - active: 1
+    item:
+      name: GlamVelvetSofa.gltf
+      path: GlamVelvetSofa/glTF/GlamVelvetSofa.gltf
+  - active: 1
+    item:
+      name: InterpolationTest.gltf
+      path: InterpolationTest/glTF/InterpolationTest.gltf
+  - active: 1
+    item:
+      name: Lantern.gltf
+      path: Lantern/glTF/Lantern.gltf
+  - active: 1
+    item:
+      name: MaterialsVariantsShoe.gltf
+      path: MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf
+  - active: 1
+    item:
+      name: MetalRoughSpheres.gltf
+      path: MetalRoughSpheres/glTF/MetalRoughSpheres.gltf
+  - active: 1
+    item:
+      name: MetalRoughSpheresNoTextures.gltf
+      path: MetalRoughSpheresNoTextures/glTF/MetalRoughSpheresNoTextures.gltf
+  - active: 1
+    item:
+      name: MorphPrimitivesTest.gltf
+      path: MorphPrimitivesTest/glTF/MorphPrimitivesTest.gltf
+  - active: 1
+    item:
+      name: MorphStressTest.gltf
+      path: MorphStressTest/glTF/MorphStressTest.gltf
+  - active: 1
+    item:
+      name: MultiUVTest.gltf
+      path: MultiUVTest/glTF/MultiUVTest.gltf
+  - active: 1
+    item:
+      name: NormalTangentMirrorTest.gltf
+      path: NormalTangentMirrorTest/glTF/NormalTangentMirrorTest.gltf
+  - active: 1
+    item:
+      name: NormalTangentTest.gltf
+      path: NormalTangentTest/glTF/NormalTangentTest.gltf
+  - active: 1
+    item:
+      name: OrientationTest.gltf
+      path: OrientationTest/glTF/OrientationTest.gltf
+  - active: 1
+    item:
+      name: ReciprocatingSaw.gltf
+      path: ReciprocatingSaw/glTF/ReciprocatingSaw.gltf
+  - active: 1
+    item:
+      name: RecursiveSkeletons.gltf
+      path: RecursiveSkeletons/glTF/RecursiveSkeletons.gltf
+  - active: 1
+    item:
+      name: RiggedFigure.gltf
+      path: RiggedFigure/glTF/RiggedFigure.gltf
+  - active: 1
+    item:
+      name: RiggedSimple.gltf
+      path: RiggedSimple/glTF/RiggedSimple.gltf
+  - active: 1
+    item:
+      name: SciFiHelmet.gltf
+      path: SciFiHelmet/glTF/SciFiHelmet.gltf
+  - active: 1
+    item:
+      name: SheenChair.gltf
+      path: SheenChair/glTF/SheenChair.gltf
+  - active: 1
+    item:
+      name: SheenCloth.gltf
+      path: SheenCloth/glTF/SheenCloth.gltf
+  - active: 1
+    item:
+      name: SimpleMeshes.gltf
+      path: SimpleMeshes/glTF/SimpleMeshes.gltf
+  - active: 1
+    item:
+      name: SimpleMorph.gltf
+      path: SimpleMorph/glTF/SimpleMorph.gltf
+  - active: 1
+    item:
+      name: SimpleSkin.gltf
+      path: SimpleSkin/glTF/SimpleSkin.gltf
+  - active: 1
+    item:
+      name: SimpleSparseAccessor.gltf
+      path: SimpleSparseAccessor/glTF/SimpleSparseAccessor.gltf
+  - active: 1
+    item:
+      name: SpecGlossVsMetalRough.gltf
+      path: SpecGlossVsMetalRough/glTF/SpecGlossVsMetalRough.gltf
+  - active: 1
+    item:
+      name: SpecularTest.gltf
+      path: SpecularTest/glTF/SpecularTest.gltf
+  - active: 1
+    item:
+      name: Sponza.gltf
+      path: Sponza/glTF/Sponza.gltf
+  - active: 1
+    item:
+      name: Suzanne.gltf
+      path: Suzanne/glTF/Suzanne.gltf
+  - active: 1
+    item:
+      name: TextureCoordinateTest.gltf
+      path: TextureCoordinateTest/glTF/TextureCoordinateTest.gltf
+  - active: 1
+    item:
+      name: TextureEncodingTest.gltf
+      path: TextureEncodingTest/glTF/TextureEncodingTest.gltf
+  - active: 1
+    item:
+      name: TextureLinearInterpolationTest.gltf
+      path: TextureLinearInterpolationTest/glTF/TextureLinearInterpolationTest.gltf
+  - active: 1
+    item:
+      name: TextureSettingsTest.gltf
+      path: TextureSettingsTest/glTF/TextureSettingsTest.gltf
+  - active: 1
+    item:
+      name: TextureTransformMultiTest.gltf
+      path: TextureTransformMultiTest/glTF/TextureTransformMultiTest.gltf
+  - active: 1
+    item:
+      name: TextureTransformTest.gltf
+      path: TextureTransformTest/glTF/TextureTransformTest.gltf
+  - active: 1
+    item:
+      name: ToyCar.gltf
+      path: ToyCar/glTF/ToyCar.gltf
+  - active: 1
+    item:
+      name: TransmissionRoughnessTest.gltf
+      path: TransmissionRoughnessTest/glTF/TransmissionRoughnessTest.gltf
+  - active: 1
+    item:
+      name: TransmissionTest.gltf
+      path: TransmissionTest/glTF/TransmissionTest.gltf
+  - active: 1
+    item:
+      name: Triangle.gltf
+      path: Triangle/glTF/Triangle.gltf
+  - active: 1
+    item:
+      name: TriangleWithoutIndices.gltf
+      path: TriangleWithoutIndices/glTF/TriangleWithoutIndices.gltf
+  - active: 1
+    item:
+      name: TwoSidedPlane.gltf
+      path: TwoSidedPlane/glTF/TwoSidedPlane.gltf
+  - active: 1
+    item:
+      name: UnlitTest.gltf
+      path: UnlitTest/glTF/UnlitTest.gltf
+  - active: 1
+    item:
+      name: VC.gltf
+      path: VC/glTF/VC.gltf
+  - active: 1
+    item:
+      name: VertexColorTest.gltf
+      path: VertexColorTest/glTF/VertexColorTest.gltf
+  - active: 1
+    item:
+      name: WaterBottle.gltf
+      path: WaterBottle/glTF/WaterBottle.gltf
