@@ -6,9 +6,13 @@ set -e
 
 PWD=$(pwd)
 
-UNITY_2019_EXE=/Applications/Unity/Hub/Editor/2019.4.32f1/Unity.app/Contents/MacOS/Unity
-UNITY_2020_EXE=/Applications/Unity/Hub/Editor/2020.3.22f1/Unity.app/Contents/MacOS/Unity
-UNITY_2021_EXE=/Applications/Unity/Hub/Editor/2021.2.2f1/Unity.app/Contents/MacOS/Unity
+UNITY_2019=/Applications/Unity/Hub/Editor/2019.4.34f1
+UNITY_2020=/Applications/Unity/Hub/Editor/2020.3.24f1
+UNITY_2021=/Applications/Unity/Hub/Editor/2021.2.6f1
+
+UNITY_2019_EXE="$UNITY_2019/Unity.app/Contents/MacOS/Unity"
+UNITY_2020_EXE="$UNITY_2020/Unity.app/Contents/MacOS/Unity"
+UNITY_2021_EXE="$UNITY_2021/Unity.app/Contents/MacOS/Unity"
 
 if [ ! -f "$UNITY_2019_EXE" ]; then
     echo "Unity not found at $UNITY_2019_EXE"
@@ -32,10 +36,13 @@ fi
 
 PLAYMODE_PLATFORM=StandaloneOSX
 
+PROJECT="/Users/aa/u/glTFastDemo/projects/glTF-demo-2019.4"
 echo "2019 LTS BiRP EditMode"
 time $UNITY_2019_EXE -runTests -batchmode -projectPath ./projects/glTF-demo-2019.4 -testResults "$PWD/test-results/glTF-demo-2019.4-editor.xml" -testPlatform EditMode
+#UnifiedTestRunner --suite=editor  --testproject="$PROJECT" --editor-location="$UNITY_2019"
 echo "2019 LTS BiRP PlayMode $PLAYMODE_PLATFORM"
 time $UNITY_2019_EXE -runTests -batchmode -projectPath ./projects/glTF-demo-2019.4 -testResults "$PWD/test-results/glTF-demo-2019.4-runtime.xml" -testPlatform "$PLAYMODE_PLATFORM" -testCategory "!Performance;!Export"
+#UnifiedTestRunner --suite=playmode --testlist="testlist.txt" --testproject="$PROJECT" --editor-location="$UNITY_2019" --platform="$PLAYMODE_PLATFORM" --a="$PWD/test-results/glTF-demo-2019.4-runtime"
 
 echo "2019 LTS URP EditMode"
 time $UNITY_2019_EXE -runTests -batchmode -projectPath ./projects/glTF-demo-2019.4-urp -testResults "$PWD/test-results/glTF-demo-2019.4-urp-editor.xml" -testPlatform EditMode
@@ -110,6 +117,8 @@ $UNITY_2021_EXE \
 -coverageHistoryPath "$PWD/test-results/CodeCoverage" \
 -coverageOptions "generateHtmlReport;generateHtmlReportHistory;generateBadgeReport;assemblyFilters:+glTFast,+glTFast.*,+glTFastSchema,+glTFastFakeSchema,+glTFastEditor" \
 -testCategory "!Performance"
+
+cp "test-results/CodeCoverage/Report/badge_linecoverage.svg" "packages/glTFast/Documentation~/img/badge_linecoverage.svg"
 
 #
 # Create builds
