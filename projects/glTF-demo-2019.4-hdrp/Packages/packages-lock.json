@@ -25,7 +25,8 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.30",
         "com.unity.test-framework.performance": "2.8.0-preview",
-        "com.unity.testtools.codecoverage": "1.1.0"
+        "com.unity.testtools.codecoverage": "1.1.0",
+        "com.unity.modules.animation": "1.0.0"
       }
     },
     "com.atteneder.gltfast": {
@@ -75,7 +76,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
-      "version": "1.2.4",
+      "version": "1.2.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
