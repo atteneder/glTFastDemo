@@ -1,17 +1,17 @@
 {
   "dependencies": {
-    "com.atteneder.draco": "4.0.0",
+    "com.atteneder.draco": "4.0.1",
     "com.atteneder.gltf-demo": "file:../../../packages/glTF-demo",
     "com.atteneder.gltf-test-framework": "file:../../../packages/gltf-test-framework",
     "com.atteneder.gltfast": "file:../../../packages/glTFast",
-    "com.atteneder.ktx": "2.0.0",
-    "com.unity.formats.gltf.validator": "file:/Users/aa/u/unity-gltf-validator",
-    "com.unity.ide.rider": "3.0.7",
-    "com.unity.meshopt.decompress": "0.1.0-preview.2",
+    "com.atteneder.ktx": "2.0.1",
+    "com.unity.formats.gltf.validator": "file:../../../packages/unity-gltf-validator",
+    "com.unity.ide.rider": "3.0.9",
+    "com.unity.meshopt.decompress": "0.1.0-preview.3",
     "com.unity.performance.profile-analyzer": "1.1.1",
+    "com.unity.shadergraph": "12.1.2",
     "com.unity.test-framework": "1.1.30",
     "com.unity.test-framework.performance": "2.8.0-preview",
-    "com.unity.ui.builder": "1.0.0-preview.18",
     "com.unity.modules.animation": "1.0.0"
   },
   "testables": [
