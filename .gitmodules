@@ -4,3 +4,6 @@
 [submodule "packages/gltf-test-framework"]
 	path = packages/gltf-test-framework
 	url = git@github.com:atteneder/gltf-test-framework.git
+[submodule "packages/unity-gltf-validator"]
+	path = packages/unity-gltf-validator
+	url = git@github.com:atteneder/unity-gltf-validator.git
