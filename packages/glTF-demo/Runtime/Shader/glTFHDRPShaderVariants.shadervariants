@@ -8,152 +8,64 @@ ShaderVariantCollection:
   m_PrefabAsset: {fileID: 0}
   m_Name: glTFHDRPShaderVariants
   m_Shaders:
-  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9101, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 9103, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: -6465566751694194690, guid: 41356b46cd8884ec5b404223e1338fa0,
+  - first: {fileID: -6465566751694194690, guid: b9d29dfa1474148e792ac720cbd45122,
       type: 3}
     second:
       variants:
-      - keywords: EMISSION OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: 
         passType: 8
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: EMISSION OCCLUSION
         passType: 8
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION OCCLUSION PROBE_VOLUMES_OFF
-          _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF _BLENDMODE_OFF
-          _REFRACTION_OFF
-        passType: 13
-      - keywords: EMISSION OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-  - first: {fileID: -6465566751694194690, guid: f06cd296b834444abb6dbc0acccf9414,
-      type: 3}
-    second:
-      variants:
-      - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: EMISSION OCCLUSION _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
         passType: 8
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 8
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
-          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
-          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-  - first: {fileID: -6465566751694194690, guid: ba6d401c74b2c4f96af7edf0fe32241e,
-      type: 3}
-    second:
-      variants:
-      - keywords: EMISSION OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 8
-      - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 8
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 8
-      - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 12
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 12
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION OCCLUSION PROBE_VOLUMES_OFF
-          _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF _BLENDMODE_OFF
-          _REFRACTION_OFF
-        passType: 13
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF _BLENDMODE_OFF
-          _REFRACTION_OFF
-        passType: 13
-      - keywords: EMISSION OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-  - first: {fileID: -6465566751694194690, guid: 81efe6bcd8aa64c21b80376f539ee767,
-      type: 3}
-    second:
-      variants:
-      - keywords: _BLENDMODE_OFF
-        passType: 8
-      - keywords: _BLENDMODE_OFF _UV_ROTATION
-        passType: 8
-      - keywords: _BLENDMODE_OFF
-        passType: 13
-      - keywords: _BLENDMODE_OFF _UV_ROTATION
-        passType: 13
-  - first: {fileID: -6465566751694194690, guid: 90c26dfde11bf4ff69ef936c6e6b1ed1,
-      type: 3}
-    second:
-      variants:
-      - keywords: EMISSION OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: EMISSION _ALPHATEST_ON _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
         passType: 8
       - keywords: EMISSION _BLENDMODE_OFF _REFRACTION_OFF
         passType: 8
       - keywords: EMISSION _BLENDMODE_OFF _REFRACTION_OFF _UV_ROTATION
         passType: 8
+      - keywords: OCCLUSION _ALPHATEST_ON _BLENDMODE_OFF _DISABLE_SSR_TRANSPARENT
+          _ENABLE_FOG_ON_TRANSPARENT _REFRACTION_OFF _SURFACE_TYPE_TRANSPARENT
+        passType: 8
+      - keywords: OCCLUSION _ALPHATEST_ON _BLENDMODE_OFF _REFRACTION_OFF
+        passType: 8
+      - keywords: OCCLUSION _ALPHATEST_ON _BLENDMODE_OFF _REFRACTION_OFF _SURFACE_TYPE_TRANSPARENT
+        passType: 8
+      - keywords: OCCLUSION _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 8
       - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
         passType: 8
       - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF _UV_ROTATION
         passType: 8
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: _ALPHATEST_ON _BLENDMODE_OFF _DISABLE_SSR_TRANSPARENT _DOUBLESIDED_ON
+          _ENABLE_FOG_ON_TRANSPARENT _REFRACTION_OFF _SURFACE_TYPE_TRANSPARENT
+        passType: 8
+      - keywords: _ALPHATEST_ON _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 8
+      - keywords: _ALPHATEST_ON _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF _SURFACE_TYPE_TRANSPARENT
+        passType: 8
+      - keywords: _ALPHATEST_ON _DISABLE_SSR_TRANSPARENT _ENABLE_FOG_ON_TRANSPARENT
+          _SURFACE_TYPE_TRANSPARENT
+        passType: 8
+      - keywords: _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
         passType: 8
       - keywords: _BLENDMODE_OFF _REFRACTION_OFF _UV_ROTATION
         passType: 8
+      - keywords: OCCLUSION _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 12
       - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
+        passType: 12
+      - keywords: _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
         passType: 12
       - keywords: _BLENDMODE_OFF _REFRACTION_OFF
         passType: 12
       - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION OCCLUSION PROBE_VOLUMES_OFF
-          _BLENDMODE_OFF _REFRACTION_OFF
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION OCCLUSION PROBE_VOLUMES_OFF
+          _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION PROBE_VOLUMES_OFF _ALPHATEST_ON
+          _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
         passType: 13
       - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION PROBE_VOLUMES_OFF _BLENDMODE_OFF
           _REFRACTION_OFF
@@ -161,184 +73,99 @@ ShaderVariantCollection:
       - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION PROBE_VOLUMES_OFF _BLENDMODE_OFF
           _REFRACTION_OFF _UV_ROTATION
         passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
+          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _ALPHATEST_ON _BLENDMODE_OFF _DISABLE_SSR_TRANSPARENT
+          _ENABLE_FOG_ON_TRANSPARENT _REFRACTION_OFF _SURFACE_TYPE_TRANSPARENT
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
+          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF _ALPHATEST_ON
+          _BLENDMODE_OFF _REFRACTION_OFF
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF _BLENDMODE_OFF
+          _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 13
       - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF _BLENDMODE_OFF
           _REFRACTION_OFF
         passType: 13
       - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF _BLENDMODE_OFF
           _REFRACTION_OFF _UV_ROTATION
         passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
+          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _ALPHATEST_ON _BLENDMODE_OFF _DISABLE_SSR_TRANSPARENT
+          _DOUBLESIDED_ON _ENABLE_FOG_ON_TRANSPARENT _REFRACTION_OFF _SURFACE_TYPE_TRANSPARENT
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
+          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _ALPHATEST_ON _DISABLE_SSR_TRANSPARENT
+          _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
+          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
+          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
+        passType: 13
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF _ALPHATEST_ON
+          _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 13
       - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF _BLENDMODE_OFF
-          _REFRACTION_OFF
+          _DOUBLESIDED_ON _REFRACTION_OFF
         passType: 13
       - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF _BLENDMODE_OFF
           _REFRACTION_OFF _UV_ROTATION
         passType: 13
-      - keywords: EMISSION OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: EMISSION OCCLUSION _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 13
+      - keywords: EMISSION _ALPHATEST_ON _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
         passType: 13
       - keywords: EMISSION _BLENDMODE_OFF _REFRACTION_OFF
         passType: 13
       - keywords: EMISSION _BLENDMODE_OFF _REFRACTION_OFF _UV_ROTATION
         passType: 13
+      - keywords: OCCLUSION _ALPHATEST_ON _BLENDMODE_OFF _REFRACTION_OFF
+        passType: 13
+      - keywords: OCCLUSION _ALPHATEST_ON _BLENDMODE_OFF _REFRACTION_OFF _SURFACE_TYPE_TRANSPARENT
+        passType: 13
+      - keywords: OCCLUSION _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 13
       - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
         passType: 13
       - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF _UV_ROTATION
+        passType: 13
+      - keywords: _ALPHATEST_ON _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
+        passType: 13
+      - keywords: _ALPHATEST_ON _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF _SURFACE_TYPE_TRANSPARENT
+        passType: 13
+      - keywords: _BLENDMODE_OFF _DOUBLESIDED_ON _REFRACTION_OFF
         passType: 13
       - keywords: _BLENDMODE_OFF _REFRACTION_OFF
         passType: 13
       - keywords: _BLENDMODE_OFF _REFRACTION_OFF _UV_ROTATION
         passType: 13
-  - first: {fileID: -6465566751694194690, guid: c9ba521fe23b44d6db1017a2d9d47a17,
+  - first: {fileID: -6465566751694194690, guid: c87047c884d9843f5b0f4cce282aa760,
       type: 3}
     second:
       variants:
-      - keywords: EMISSION _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: 
         passType: 8
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: _BLENDMODE_OFF _UV_ROTATION
         passType: 8
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
-          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: 
         passType: 13
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
-          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: _BLENDMODE_OFF _UV_ROTATION
         passType: 13
-      - keywords: EMISSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-  - first: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-    second:
-      variants:
-      - keywords: _DISABLE_SSR_TRANSPARENT
-        passType: 8
-      - keywords: _DISABLE_SSR_TRANSPARENT _NORMALMAP_TANGENT_SPACE
-        passType: 8
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF _DISABLE_SSR_TRANSPARENT
-          _NORMALMAP_TANGENT_SPACE
-        passType: 13
-      - keywords: _DISABLE_SSR_TRANSPARENT
-        passType: 13
-      - keywords: _DISABLE_SSR_TRANSPARENT _NORMALMAP_TANGENT_SPACE
-        passType: 13
-  - first: {fileID: 4800000, guid: 2fcfb8d92f45e4549b3f0bad5d0654bf, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 02ae56f4306413c4a96dcf005cde1971, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 2e37131331fbdca449b1a2bc47a639ca, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 035941b63024d1943af48811c1db20d9, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 8ea49ef16606acd489439e676ab84040, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 42dfcc8fe803ece4096c58630689982f, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: e22fc1942c664490980b8793dd4a163d, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 67d6171b0acc6554aad48c845ec7e67f, type: 3}
-    second:
-      variants:
-      - keywords: CHECKERBOARD_DOWNSAMPLE
-        passType: 0
-  - first: {fileID: 4800000, guid: 2ad7ce40f0dbaf64dadef1f58d8524d3, type: 3}
-    second:
-      variants:
-      - keywords: NEAREST_DEPTH
-        passType: 0
-  - first: {fileID: 4800000, guid: 123ed592ad5c2494b8aed301fd609e7b, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 9bd32a6ece529fd4f9408b8d7e00c10d, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-      - keywords: USE_CLUSTERED_LIGHTLIST
-        passType: 0
-      - keywords: USE_FPTL_LIGHTLIST
-        passType: 0
-  - first: {fileID: 4800000, guid: 123f13d52852ef547b2962de4bd9eaad, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 3b3bf235775cf8b4baae7f3306787ab0, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: d279c46a545b0af4f9f0c4fa82cd489e, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: a6402c19b020b4a4fb7073aaa2e26aba, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: e3cab24f27741f44d8af1e94d006267c, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: fd532bf1795188c4daaa66ea798b8b0a, type: 3}
-    second:
-      variants:
-      - keywords: DECAL_SURFACE_GRADIENT
-        passType: 0
-  - first: {fileID: 4800000, guid: 5ac9ef0c50282754b93c7692488e7ee7, type: 3}
-    second:
-      variants:
-      - keywords: APPLY_AFTER_POST
-        passType: 0
-  - first: {fileID: -6465566751694194690, guid: 0370904c39b8a4cd4a5db6bcf181055d,
+  - first: {fileID: -6465566751694194690, guid: 9a07dad0f3c4e43ff8312e3b5fa42300,
       type: 3}
     second:
       variants:
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: 
         passType: 8
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
-          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-  - first: {fileID: -6465566751694194690, guid: 7954f2f1aefcf4383b97888420a84c00,
-      type: 3}
-    second:
-      variants:
-      - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: EMISSION OCCLUSION
         passType: 8
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 8
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT OCCLUSION PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
-          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT EMISSION OCCLUSION PROBE_VOLUMES_OFF
         passType: 13
-      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF SCREEN_SPACE_SHADOWS_OFF
-          SHADOW_MEDIUM USE_CLUSTERED_LIGHTLIST _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: OCCLUSION _BLENDMODE_OFF _REFRACTION_OFF
-        passType: 13
-      - keywords: _BLENDMODE_OFF _REFRACTION_OFF
+      - keywords: DECALS_3RT DECAL_SURFACE_GRADIENT PROBE_VOLUMES_OFF
         passType: 13
