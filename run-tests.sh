@@ -7,7 +7,7 @@ set -e
 PWD=$(pwd)
 
 UNITY_2019=/Applications/Unity/Hub/Editor/2019.4.34f1
-UNITY_2020=/Applications/Unity/Hub/Editor/2020.3.25f1
+UNITY_2020=/Applications/Unity/Hub/Editor/2020.3.26f1
 UNITY_2021=/Applications/Unity/Hub/Editor/2021.2.7f1
 
 UNITY_2019_EXE="$UNITY_2019/Unity.app/Contents/MacOS/Unity"
