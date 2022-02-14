@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1027
   m_ShowMode: 4
-  m_Title: Code Coverage
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 17
+  controlID: 86
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1127
+    width: 1315
     height: 977
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 87
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1127
-    height: 604
+    width: 1315
+    height: 632
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 19
+  controlID: 88
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +187,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 268
-    height: 604
+    width: 313
+    height: 632
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -206,22 +206,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 268
+    x: 313
     y: 0
-    width: 859
-    height: 604
+    width: 1002
+    height: 632
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 1
+  m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -241,13 +241,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 604
-    width: 1127
-    height: 373
+    y: 632
+    width: 1315
+    height: 345
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 138
+  controlID: 98
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,8 +265,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 682
-    height: 373
+    width: 797
+    height: 345
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 19}
@@ -290,10 +290,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 682
+    x: 797
     y: 0
-    width: 445
-    height: 373
+    width: 518
+    height: 345
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
@@ -311,23 +311,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: CodeCoverageWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1127
+    x: 1315
     y: 0
-    width: 793
+    width: 605
     height: 977
-  m_MinSize: {x: 446, y: 511}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
   - {fileID: 22}
   - {fileID: 14}
-  m_Selected: 2
+  m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &14
 MonoBehaviour:
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5115ff20f1ea204dac14fa49c0e8f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 445, y: 490}
+  m_MinSize: {x: 445, y: 385}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Code Coverage
@@ -388,7 +388,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -5680
+  m_LastSelectedObjectID: 44404
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -412,8 +412,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1920
     y: 83
-    width: 267
-    height: 583
+    width: 312
+    height: 611
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -421,9 +421,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 1efbffff
+      m_SelectedIDs: 26610000
+      m_LastClickedID: 24870
+      m_ExpandedIDs: 1efaffff30fbffff205f0000a85f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -468,10 +468,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1577
+    x: -1607
     y: 83
-    width: 1089
-    height: 583
+    width: 1000
+    height: 611
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -673,9 +673,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -180.55634, y: 15.145798, z: -203.37909}
+    m_Target: {x: 26.543777, y: -1.4966025, z: 2.941338}
     speed: 2
-    m_Value: {x: -180.55634, y: 15.145798, z: -203.37909}
+    m_Value: {x: 26.543777, y: -1.4966025, z: 2.941338}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -722,13 +722,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.06440262, y: -0.5405891, z: 0.04172354, w: -0.8378225}
+    m_Target: {x: 0.33144525, y: 0.00397677, z: -0.0015104336, w: 0.943552}
     speed: 2
-    m_Value: {x: 0.06440262, y: 0.5405891, z: -0.041723542, w: 0.83782256}
+    m_Value: {x: -0.33144522, y: -0.0039767697, z: 0.0015104335, w: -0.943552}
   m_Size:
-    m_Target: 10.592801
+    m_Target: 3.4852996
     speed: 2
-    m_Value: 10.592801
+    m_Value: 4.031212
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -774,9 +774,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1652
+    x: -1607
     y: 83
-    width: 857
+    width: 1000
     height: 583
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1714, y: 1124}
+  m_TargetSize: {x: 1000, y: 562}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -803,10 +803,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -428.5
-    m_HBaseRangeMax: 428.5
-    m_VBaseRangeMin: -281
-    m_VBaseRangeMax: 281
+    m_HBaseRangeMin: -500
+    m_HBaseRangeMax: 500
+    m_VBaseRangeMin: -291.5
+    m_VBaseRangeMax: 291.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -815,7 +815,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -823,24 +823,24 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
-      width: 857
-      height: 562
+      y: 0
+      width: 1000
+      height: 583
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 428.5, y: 281}
+    m_Translation: {x: 500, y: 291.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -428.5
-      y: -281
-      width: 857
-      height: 562
+      x: -500
+      y: -291.5
+      width: 1000
+      height: 583
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1714, y: 1166}
+  m_LastWindowPixelSize: {x: 1000, y: 583}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -868,16 +868,17 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: -1920
-    y: 687
-    width: 681
-    height: 352
+    y: 715
+    width: 796
+    height: 324
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
     m_NameFilter: 
-    m_ClassNames: []
+    m_ClassNames:
+    - scene
     m_AssetLabels: []
     m_AssetBundleNames: []
     m_VersionControlStates: []
@@ -886,24 +887,23 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Packages/com.atteneder.gltfast/Runtime/Scripts/Export
+    m_SearchArea: 2
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Packages/com.atteneder.gltfast/Runtime/Scripts/Export
+  - Packages/com.atteneder.gltf-test-framework/Runtime/Export/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 559.74304}
-    m_SelectedIDs: ea510000
-    m_LastClickedID: 20970
-    m_ExpandedIDs: 000000007c5100007e51000080510000825100008451000086510000885100008a5100008c5100008e51000090510000925100009451000096510000985100009a5100009c5100009e510000a0510000a2510000a4510000a6510000a851000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 03ca9a3b
+    m_LastClickedID: 1000000003
+    m_ExpandedIDs: 00000000a65c0000a85c0000aa5c0000ac5c0000ae5c0000b05c0000b25c0000b45c0000b65c0000b85c0000ba5c0000bc5c0000be5c0000c05c0000c25c0000c45c0000c65c0000c85c0000ca5c0000cc5c0000ce5c0000d05c0000d25c0000d45c0000d65c0000d85c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -931,7 +931,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c5100007e51000080510000825100008451000086510000885100008a5100008c5100008e51000090510000925100009451000096510000985100009a5100009c5100009e510000a0510000a2510000a4510000a6510000a8510000
+    m_ExpandedIDs: 00000000a65c0000a85c0000aa5c0000ac5c0000ae5c0000b05c0000b25c0000b45c0000b65c0000b85c0000ba5c0000bc5c0000be5c0000c05c0000c25c0000c45c0000c65c0000c85c0000ca5c0000cc5c0000ce5c0000d05c0000d25c0000d45c0000d65c0000d85c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -958,8 +958,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000032590000965d000058600000206700007a60000034680000166c000000000000246d000004700000f8510000cc4e0000405e000002adffff
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c623000032590000965d000058600000206700007a60000034680000166c000000000000246d000004700000f8510000cc4e0000405e000002adffffea650000c4800000aa6800008c6e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1008,10 +1008,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1238
-    y: 687
-    width: 443
-    height: 352
+    x: -1123
+    y: 715
+    width: 516
+    height: 324
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1032,14 +1032,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -486
+    x: -605
     y: 83
-    width: 485
+    width: 604
     height: 956
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1048,10 +1048,10 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 360
+    m_CachedPref: 350
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 2058
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1078,21 +1078,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -486
+    x: 1227.5
     y: 83
-    width: 485
-    height: 956
+    width: 563.5
+    height: 996
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 195
+    ID: 211
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 664.5
-    - 221.5
+    - 694.5
+    - 231.5
     relativeSizes:
     - 0.75
     - 0.25
@@ -1102,7 +1102,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 886
+    lastTotalSize: 926
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -1118,9 +1118,9 @@ MonoBehaviour:
       uniqueId: '[glTFastDemo][suite]'
       name: glTFastDemo
       fullName: glTFastDemo
-      resultStatus: 1
-      duration: 0.0675124
-      messages: 
+      resultStatus: 2
+      duration: 1.0543493
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1134,9 +1134,9 @@ MonoBehaviour:
       uniqueId: '[glTF-test-framework.Tests.dll][suite]'
       name: glTF-test-framework.Tests.dll
       fullName: /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2/Library/ScriptAssemblies/glTF-test-framework.Tests.dll
-      resultStatus: 1
-      duration: 0.3496968
-      messages: 
+      resultStatus: 2
+      duration: 0.8825177
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1150,9 +1150,9 @@ MonoBehaviour:
       uniqueId: glTF-test-framework.Tests.dll/[glTF-test-framework.Tests][GLTFTest][suite]
       name: GLTFTest
       fullName: GLTFTest
-      resultStatus: 1
-      duration: 0.3302243
-      messages: 
+      resultStatus: 2
+      duration: 0.8085181
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1166,9 +1166,9 @@ MonoBehaviour:
       uniqueId: glTF-test-framework.Tests.dll/GLTFTest/[glTF-test-framework.Tests][GLTFTest.GameObjectExportTest][suite]
       name: GameObjectExportTest
       fullName: GLTFTest.GameObjectExportTest
-      resultStatus: 1
-      duration: 1.3229756
-      messages: 
+      resultStatus: 2
+      duration: 0.7878825
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1183,11 +1183,11 @@ MonoBehaviour:
       name: Empty
       fullName: GLTFTest.GameObjectExportTest.Empty
       resultStatus: 1
-      duration: 0.0899999
+      duration: 0.0772431
       messages: 
       output: 'Exporting empty glTF
 
-        glTF summary: 72 bytes JSON + 0 bytes
+        glTF summary: 73 bytes JSON + 0 bytes
         buffer, 0 nodes ,0 meshes ,0 materials ,0 images
 
 '
@@ -1204,14 +1204,41 @@ MonoBehaviour:
       uniqueId: glTF-test-framework.Tests.dll/GLTFTest/GameObjectExportTest/[glTF-test-framework.Tests][GLTFTest.GameObjectExportTest.ExportSceneAllBinary]
       name: ExportSceneAllBinary
       fullName: GLTFTest.GameObjectExportTest.ExportSceneAllBinary
-      resultStatus: 1
-      duration: 0.3105515
-      messages: 
-      output: 'glTF summary: 18042 bytes JSON + 126232 bytes buffer, 78 nodes ,40
-        meshes ,26 materials ,3 images
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0443398
+      messages: "System.AggregateException : One or more errors occurred. (Exporting
+        textures at runtime is not yet implemented)\n  ----> System.NotImplementedException
+        : Exporting textures at runtime is not yet implemented"
+      output: 
+      stacktrace: "  at GLTFTest.Utils+<WaitForTask>d__0.MoveNext () [0x00089] in
+        /Users/aa/u/glTFastDemo/packages/gltf-test-framework/Tests/Runtime/Utils.cs:34
+        \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
+        in /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2/Library/PackageCache/com.unity.test-framework@1.1.30/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:46
+        \n--NotImplementedException\n  at GLTFast.Export.GltfWriter.AddImage (UnityEngine.Texture
+        uTexture) [0x0005a] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GltfWriter.cs:250
+        \n  at GLTFast.Export.StandardMaterialExport.ExportTextureInfo (UnityEngine.Texture
+        texture, GLTFast.Export.StandardMaterialExport+TextureMapType textureMapType,
+        GLTFast.Export.IGltfWritable gltf) [0x00001] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/StandardMaterialExport.cs:317
+        \n  at GLTFast.Export.StandardMaterialExport.ExportPbrMetallicRoughness (UnityEngine.Material
+        material, GLTFast.Schema.PbrMetallicRoughness& pbr, GLTFast.Export.IGltfWritable
+        gltf, GLTFast.ICodeLogger logger) [0x00144] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/StandardMaterialExport.cs:244
+        \n  at GLTFast.Export.StandardMaterialExport.ConvertMaterial (UnityEngine.Material
+        uMaterial, GLTFast.Schema.Material& material, GLTFast.Export.IGltfWritable
+        gltf, GLTFast.ICodeLogger logger) [0x00239] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/StandardMaterialExport.cs:151
+        \n  at GLTFast.Export.GltfWriter.AddMaterial (UnityEngine.Material uMaterial,
+        System.Int32& materialId) [0x0004a] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GltfWriter.cs:405
+        \n  at GLTFast.Export.GltfWriter.AddMeshToNode (System.Int32 nodeId, UnityEngine.Mesh
+        uMesh, System.Collections.Generic.List`1[T] uMaterials) [0x00062] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GltfWriter.cs:179
+        \n  at GLTFast.Export.GameObjectExport.AddGameObject (UnityEngine.GameObject
+        gameObject, System.Collections.Generic.List`1[T] tempMaterials, System.Int32&
+        nodeId) [0x00175] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GameObjectExport.cs:137
+        \n  at GLTFast.Export.GameObjectExport.AddGameObject (UnityEngine.GameObject
+        gameObject, System.Collections.Generic.List`1[T] tempMaterials, System.Int32&
+        nodeId) [0x00061] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GameObjectExport.cs:104
+        \n  at GLTFast.Export.GameObjectExport.AddScene (UnityEngine.GameObject[]
+        gameObjects, System.String name) [0x00035] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GameObjectExport.cs:61
+        \n  at GLTFTest.GameObjectExportTest.ExportSceneAll (System.Boolean binary)
+        [0x00075] in /Users/aa/u/glTFastDemo/packages/gltf-test-framework/Tests/Runtime/Export/GameObjectExportTest.cs:231 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1224,14 +1251,41 @@ MonoBehaviour:
       uniqueId: glTF-test-framework.Tests.dll/GLTFTest/GameObjectExportTest/[glTF-test-framework.Tests][GLTFTest.GameObjectExportTest.ExportSceneAllJson]
       name: ExportSceneAllJson
       fullName: GLTFTest.GameObjectExportTest.ExportSceneAllJson
-      resultStatus: 1
-      duration: 0.1293038
-      messages: 
-      output: 'glTF summary: 17932 bytes JSON + 61932 bytes buffer, 78 nodes ,40
-        meshes ,26 materials ,3 images
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0653948
+      messages: "System.AggregateException : One or more errors occurred. (Exporting
+        textures at runtime is not yet implemented)\n  ----> System.NotImplementedException
+        : Exporting textures at runtime is not yet implemented"
+      output: 
+      stacktrace: "  at GLTFTest.Utils+<WaitForTask>d__0.MoveNext () [0x00089] in
+        /Users/aa/u/glTFastDemo/packages/gltf-test-framework/Tests/Runtime/Utils.cs:34
+        \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
+        in /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2/Library/PackageCache/com.unity.test-framework@1.1.30/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:46
+        \n--NotImplementedException\n  at GLTFast.Export.GltfWriter.AddImage (UnityEngine.Texture
+        uTexture) [0x0005a] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GltfWriter.cs:250
+        \n  at GLTFast.Export.StandardMaterialExport.ExportTextureInfo (UnityEngine.Texture
+        texture, GLTFast.Export.StandardMaterialExport+TextureMapType textureMapType,
+        GLTFast.Export.IGltfWritable gltf) [0x00001] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/StandardMaterialExport.cs:317
+        \n  at GLTFast.Export.StandardMaterialExport.ExportPbrMetallicRoughness (UnityEngine.Material
+        material, GLTFast.Schema.PbrMetallicRoughness& pbr, GLTFast.Export.IGltfWritable
+        gltf, GLTFast.ICodeLogger logger) [0x00144] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/StandardMaterialExport.cs:244
+        \n  at GLTFast.Export.StandardMaterialExport.ConvertMaterial (UnityEngine.Material
+        uMaterial, GLTFast.Schema.Material& material, GLTFast.Export.IGltfWritable
+        gltf, GLTFast.ICodeLogger logger) [0x00239] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/StandardMaterialExport.cs:151
+        \n  at GLTFast.Export.GltfWriter.AddMaterial (UnityEngine.Material uMaterial,
+        System.Int32& materialId) [0x0004a] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GltfWriter.cs:405
+        \n  at GLTFast.Export.GltfWriter.AddMeshToNode (System.Int32 nodeId, UnityEngine.Mesh
+        uMesh, System.Collections.Generic.List`1[T] uMaterials) [0x00062] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GltfWriter.cs:179
+        \n  at GLTFast.Export.GameObjectExport.AddGameObject (UnityEngine.GameObject
+        gameObject, System.Collections.Generic.List`1[T] tempMaterials, System.Int32&
+        nodeId) [0x00175] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GameObjectExport.cs:137
+        \n  at GLTFast.Export.GameObjectExport.AddGameObject (UnityEngine.GameObject
+        gameObject, System.Collections.Generic.List`1[T] tempMaterials, System.Int32&
+        nodeId) [0x00061] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GameObjectExport.cs:104
+        \n  at GLTFast.Export.GameObjectExport.AddScene (UnityEngine.GameObject[]
+        gameObjects, System.String name) [0x00035] in /Users/aa/u/glTFastDemo/packages/glTFast/Runtime/Scripts/Export/GameObjectExport.cs:61
+        \n  at GLTFTest.GameObjectExportTest.ExportSceneAll (System.Boolean binary)
+        [0x00075] in /Users/aa/u/glTFastDemo/packages/gltf-test-framework/Tests/Runtime/Export/GameObjectExportTest.cs:231 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1244,80 +1298,22 @@ MonoBehaviour:
       uniqueId: glTF-test-framework.Tests.dll/GLTFTest/GameObjectExportTest/[glTF-test-framework.Tests][GLTFTest.GameObjectExportTest.ExportSceneGameObjectsBinary]
       name: ExportSceneGameObjectsBinary
       fullName: GLTFTest.GameObjectExportTest.ExportSceneGameObjectsBinary
-      resultStatus: 1
-      duration: 0.307841
-      messages: 
-      output: 'glTF summary: 149 bytes JSON + 0 bytes buffer, 1 nodes ,0 meshes ,0
-        materials ,0 images
-
-        glTF summary: 2070 bytes JSON + 34864 bytes
-        buffer, 3 nodes ,2 meshes ,2 materials ,0 images
-
-        glTF summary: 1346
-        bytes JSON + 204 bytes buffer, 1 nodes ,1 meshes ,2 materials ,0 images
-
-        glTF
-        summary: 1000 bytes JSON + 1416 bytes buffer, 2 nodes ,1 meshes ,0 materials
-        ,0 images
-
-        glTF summary: 1230 bytes JSON + 204 bytes buffer, 2 nodes
-        ,1 meshes ,1 materials ,0 images
-
-        glTF summary: 1367 bytes JSON +
-        1416 bytes buffer, 3 nodes ,2 meshes ,1 materials ,0 images
-
-        glTF
-        summary: 1487 bytes JSON + 1416 bytes buffer, 3 nodes ,2 meshes ,2 materials
-        ,0 images
-
-        glTF summary: 1030 bytes JSON + 912 bytes buffer, 2 nodes
-        ,1 meshes ,1 materials ,0 images
-
-        glTF summary: 2187 bytes JSON +
-        24576 bytes buffer, 11 nodes ,5 meshes ,5 materials ,0 images
-
-        glTF
-        summary: 2515 bytes JSON + 24576 bytes buffer, 11 nodes ,5 meshes ,5 materials
-        ,0 images
-
-        glTF summary: 2079 bytes JSON + 42634 bytes buffer, 4
-        nodes ,2 meshes ,1 materials ,1 images
-
-        glTF summary: 2140 bytes
-        JSON + 41063 bytes buffer, 4 nodes ,2 meshes ,1 materials ,1 images
-
-        glTF
-        summary: 2117 bytes JSON + 41063 bytes buffer, 4 nodes ,2 meshes ,1 materials
-        ,1 images
-
-        glTF summary: 2138 bytes JSON + 41063 bytes buffer, 4
-        nodes ,2 meshes ,1 materials ,1 images
-
-        glTF summary: 2093 bytes
-        JSON + 42634 bytes buffer, 4 nodes ,2 meshes ,1 materials ,1 images
-
-        glTF
-        summary: 2079 bytes JSON + 54787 bytes buffer, 4 nodes ,2 meshes ,1 materials
-        ,1 images
-
-        glTF summary: 1850 bytes JSON + 24728 bytes buffer, 4
-        nodes ,2 meshes ,1 materials ,0 images
-
-        glTF summary: 2135 bytes
-        JSON + 42634 bytes buffer, 4 nodes ,2 meshes ,1 materials ,1 images
-
-        glTF
-        summary: 2169 bytes JSON + 42634 bytes buffer, 4 nodes ,2 meshes ,1 materials
-        ,1 images
-
-        glTF summary: 1052 bytes JSON + 152 bytes buffer, 1 nodes
-        ,1 meshes ,1 materials ,0 images
-
-        glTF summary: 1432 bytes JSON +
-        19130 bytes buffer, 2 nodes ,1 meshes ,1 materials ,1 images
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0612522
+      messages: "System.AggregateException : One or more errors occurred. (  Expected:
+        33\n  But was:  35\n)\n  ----> NUnit.Framework.AssertionException :   Expected:
+        33\n  But was:  35\n"
+      output: 
+      stacktrace: "  at GLTFTest.Utils+<WaitForTask>d__0.MoveNext () [0x00089] in
+        /Users/aa/u/glTFastDemo/packages/gltf-test-framework/Tests/Runtime/Utils.cs:34
+        \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
+        in /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2/Library/PackageCache/com.unity.test-framework@1.1.30/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:46
+        \n--AssertionException\n  at NUnit.Framework.Assert.That[TActual] (TActual
+        actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String
+        message, System.Object[] args) [0x00044] in <10b6135e63434fdba4fc6c109928ab3b>:0
+        \n  at NUnit.Framework.Assert.AreEqual (System.Object expected, System.Object
+        actual) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0 \n  at GLTFTest.GameObjectExportTest.ExportSceneGameObjects
+        (System.Boolean binary) [0x0002e] in /Users/aa/u/glTFastDemo/packages/gltf-test-framework/Tests/Runtime/Export/GameObjectExportTest.cs:189 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1330,80 +1326,22 @@ MonoBehaviour:
       uniqueId: glTF-test-framework.Tests.dll/GLTFTest/GameObjectExportTest/[glTF-test-framework.Tests][GLTFTest.GameObjectExportTest.ExportSceneGameObjectsJson]
       name: ExportSceneGameObjectsJson
       fullName: GLTFTest.GameObjectExportTest.ExportSceneGameObjectsJson
-      resultStatus: 1
-      duration: 0.35294
-      messages: 
-      output: 'glTF summary: 149 bytes JSON + 0 bytes buffer, 1 nodes ,0 meshes ,0
-        materials ,0 images
-
-        glTF summary: 2089 bytes JSON + 34864 bytes
-        buffer, 3 nodes ,2 meshes ,2 materials ,0 images
-
-        glTF summary: 1366
-        bytes JSON + 204 bytes buffer, 1 nodes ,1 meshes ,2 materials ,0 images
-
-        glTF
-        summary: 1023 bytes JSON + 1416 bytes buffer, 2 nodes ,1 meshes ,0 materials
-        ,0 images
-
-        glTF summary: 1254 bytes JSON + 204 bytes buffer, 2 nodes
-        ,1 meshes ,1 materials ,0 images
-
-        glTF summary: 1397 bytes JSON +
-        1416 bytes buffer, 3 nodes ,2 meshes ,1 materials ,0 images
-
-        glTF
-        summary: 1509 bytes JSON + 1416 bytes buffer, 3 nodes ,2 meshes ,2 materials
-        ,0 images
-
-        glTF summary: 1049 bytes JSON + 912 bytes buffer, 2 nodes
-        ,1 meshes ,1 materials ,0 images
-
-        glTF summary: 2208 bytes JSON +
-        24576 bytes buffer, 11 nodes ,5 meshes ,5 materials ,0 images
-
-        glTF
-        summary: 2538 bytes JSON + 24576 bytes buffer, 11 nodes ,5 meshes ,5 materials
-        ,0 images
-
-        glTF summary: 2064 bytes JSON + 24728 bytes buffer, 4
-        nodes ,2 meshes ,1 materials ,1 images
-
-        glTF summary: 2136 bytes
-        JSON + 24728 bytes buffer, 4 nodes ,2 meshes ,1 materials ,1 images
-
-        glTF
-        summary: 2111 bytes JSON + 24728 bytes buffer, 4 nodes ,2 meshes ,1 materials
-        ,1 images
-
-        glTF summary: 2139 bytes JSON + 24728 bytes buffer, 4
-        nodes ,2 meshes ,1 materials ,1 images
-
-        glTF summary: 2087 bytes
-        JSON + 24728 bytes buffer, 4 nodes ,2 meshes ,1 materials ,1 images
-
-        glTF
-        summary: 2058 bytes JSON + 24728 bytes buffer, 4 nodes ,2 meshes ,1 materials
-        ,1 images
-
-        glTF summary: 1868 bytes JSON + 24728 bytes buffer, 4
-        nodes ,2 meshes ,1 materials ,0 images
-
-        glTF summary: 2117 bytes
-        JSON + 24728 bytes buffer, 4 nodes ,2 meshes ,1 materials ,1 images
-
-        glTF
-        summary: 2160 bytes JSON + 24728 bytes buffer, 4 nodes ,2 meshes ,1 materials
-        ,1 images
-
-        glTF summary: 1076 bytes JSON + 152 bytes buffer, 1 nodes
-        ,1 meshes ,1 materials ,0 images
-
-        glTF summary: 1406 bytes JSON +
-        1224 bytes buffer, 2 nodes ,1 meshes ,1 materials ,1 images
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0666437
+      messages: "System.AggregateException : One or more errors occurred. (  Expected:
+        33\n  But was:  35\n)\n  ----> NUnit.Framework.AssertionException :   Expected:
+        33\n  But was:  35\n"
+      output: 
+      stacktrace: "  at GLTFTest.Utils+<WaitForTask>d__0.MoveNext () [0x00089] in
+        /Users/aa/u/glTFastDemo/packages/gltf-test-framework/Tests/Runtime/Utils.cs:34
+        \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
+        in /Users/aa/u/glTFastDemo/projects/glTF-demo-2021.2/Library/PackageCache/com.unity.test-framework@1.1.30/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:46
+        \n--AssertionException\n  at NUnit.Framework.Assert.That[TActual] (TActual
+        actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String
+        message, System.Object[] args) [0x00044] in <10b6135e63434fdba4fc6c109928ab3b>:0
+        \n  at NUnit.Framework.Assert.AreEqual (System.Object expected, System.Object
+        actual) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0 \n  at GLTFTest.GameObjectExportTest.ExportSceneGameObjects
+        (System.Boolean binary) [0x0002e] in /Users/aa/u/glTFastDemo/packages/gltf-test-framework/Tests/Runtime/Export/GameObjectExportTest.cs:189 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1417,7 +1355,7 @@ MonoBehaviour:
       name: MeshMaterialCombinationTest
       fullName: GLTFTest.GameObjectExportTest.MeshMaterialCombinationTest
       resultStatus: 1
-      duration: 0.0059113
+      duration: 0.0058105
       messages: 
       output: 
       stacktrace: 
@@ -1434,9 +1372,9 @@ MonoBehaviour:
       name: SavedTwice
       fullName: GLTFTest.GameObjectExportTest.SavedTwice
       resultStatus: 1
-      duration: 0.0244041
+      duration: 0.1307621
       messages: 
-      output: 'glTF summary: 1093 bytes JSON + 1416 bytes buffer, 1 nodes ,1 meshes
+      output: 'glTF summary: 1086 bytes JSON + 1416 bytes buffer, 1 nodes ,1 meshes
         ,1 materials ,0 images
 
 '
@@ -1454,9 +1392,9 @@ MonoBehaviour:
       name: SimpleTree
       fullName: GLTFTest.GameObjectExportTest.SimpleTree
       resultStatus: 1
-      duration: 0.025425
+      duration: 0.2180124
       messages: 
-      output: 'glTF summary: 1943 bytes JSON + 34864 bytes buffer, 3 nodes ,2 meshes
+      output: 'glTF summary: 1936 bytes JSON + 34864 bytes buffer, 3 nodes ,2 meshes
         ,1 materials ,0 images
 
 '
@@ -1474,9 +1412,9 @@ MonoBehaviour:
       name: TwoScenes
       fullName: GLTFTest.GameObjectExportTest.TwoScenes
       resultStatus: 1
-      duration: 0.0391832
+      duration: 0.0941625
       messages: 
-      output: 'glTF summary: 1306 bytes JSON + 1416 bytes buffer, 2 nodes ,2 meshes
+      output: 'glTF summary: 1299 bytes JSON + 1416 bytes buffer, 2 nodes ,2 meshes
         ,1 materials ,0 images
 
 '
@@ -28520,13 +28458,18 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1410
       parentUniqueId: glTF-test-framework.Tests.dll/GLTFTest/SampleModelsTest/[glTF-test-framework.Tests][GLTFTest.SampleModelsTest.UninterruptedLoading][suite]
-    m_ResultText: Jobs (0.302s)
+    m_ResultText: 'TwoScenes (0.094s)
+
+      ---
+
+      glTF summary: 1299 bytes
+      JSON + 1416 bytes buffer, 2 nodes ,2 meshes ,1 materials ,0 images'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 801f1dd8
-      m_LastClickedID: -669180032
-      m_ExpandedIDs: b65f4a8275da95908a787b916c68e297b04e25ad8e2f7ead837958b0d8999cbb4810e7bdd5703ac87ad246d1d22ce9d6801f1dd8d59dfbe9ca2012f886cf40ffb9f74d0cf1b2951043b9253c932905423af9ee49e8f57158a647f75b04a38b5f1e24bc68bee8c477ffffff7f
+      m_SelectedIDs: d64f9e51
+      m_LastClickedID: 1369329622
+      m_ExpandedIDs: b65f4a8275da95908a787b916c68e297b04e25ad8e2f7ead837958b0d8999cbb4810e7bd7ad246d1d22ce9d6801f1dd8d59dfbe9ca2012f886cf40ff53e62b07b9f74d0cf1b2951043b9253c932905423af9ee49e8f5715804a38b5f284830661e24bc68bee8c477ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -28549,7 +28492,7 @@ MonoBehaviour:
       FailedHidden: 0
       NotRunHidden: 0
       m_SearchString: 
-      selectedCategoryMask: 5
+      selectedCategoryMask: 1
       availableCategories:
       - Export
       - Performance
