@@ -77,46 +77,46 @@ echo "Code Coverage EditMode"
 time $UNITY_2021_EXE \
 -projectPath ./projects/glTF-demo-2021.2 \
 -batchmode \
--testPlatform EditMode \
--runTests \
--testResults "$PWD/test-results/glTF-demo-code-coverage-editmode.xml" \
 -debugCodeOptimization \
 -burst-disable-compilation \
 -enableCodeCoverage \
+-testPlatform EditMode \
+-testResults "$PWD/test-results/glTF-demo-code-coverage-editmode.xml" \
 -coverageResultsPath "$PWD/test-results/CodeCoverage" \
 -coverageHistoryPath "$PWD/test-results/CodeCoverage" \
 -coverageOptions "generateAdditionalMetrics;assemblyFilters:+glTFast,+glTFast.*,+glTFastSchema,+glTFastFakeSchema,+glTFastEditor" \
--testCategory "!Performance"
+-testCategory "!Performance" \
+-runTests
 
 echo "Code Coverage PlayMode"
 time $UNITY_2021_EXE \
 -projectPath ./projects/glTF-demo-2021.2 \
 -batchmode \
--testPlatform PlayMode \
--runTests \
--testResults "$PWD/test-results/glTF-demo-code-coverage-playmode.xml" \
 -debugCodeOptimization \
 -burst-disable-compilation \
 -enableCodeCoverage \
+-testPlatform PlayMode \
+-testResults "$PWD/test-results/glTF-demo-code-coverage-playmode.xml" \
 -coverageResultsPath "$PWD/test-results/CodeCoverage" \
 -coverageHistoryPath "$PWD/test-results/CodeCoverage" \
 -coverageOptions "generateAdditionalMetrics;assemblyFilters:+glTFast,+glTFast.*,+glTFastSchema,+glTFastFakeSchema,+glTFastEditor" \
--testCategory "!Performance"
+-testCategory "!Performance" \
+-runTests
 
 echo "Code Coverage HTML Report"
 $UNITY_2021_EXE \
 -projectPath ./projects/glTF-demo-2021.2 \
 -batchmode \
--testPlatform PlayMode \
--runTests \
--testResults "$PWD/test-results/glTF-demo-coverage.xml" \
 -debugCodeOptimization \
 -burst-disable-compilation \
 -enableCodeCoverage \
+-testPlatform PlayMode \
+-testResults "$PWD/test-results/glTF-demo-coverage.xml" \
 -coverageResultsPath "$PWD/test-results/CodeCoverage" \
 -coverageHistoryPath "$PWD/test-results/CodeCoverage" \
 -coverageOptions "generateHtmlReport;generateHtmlReportHistory;generateBadgeReport;assemblyFilters:+glTFast,+glTFast.*,+glTFastSchema,+glTFastFakeSchema,+glTFastEditor" \
--testCategory "!Performance"
+-testCategory "!Performance" \
+-runTests
 
 cp "test-results/CodeCoverage/Report/badge_linecoverage.svg" "packages/glTFast/Documentation~/img/badge_linecoverage.svg"
 
