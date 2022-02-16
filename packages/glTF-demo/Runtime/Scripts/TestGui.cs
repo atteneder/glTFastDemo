@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using GLTFast;
-using GLTFast.Utils;
+using GLTFTest;
 using GLTFTest.Sample;
 
 #if UNITY_EDITOR
