@@ -20,6 +20,18 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-4:
       value: 5308520200000c0d5a0f5a721677084346164a7a7f2c20607c7a4c65e4e16261
       flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 5402525504500f090c5c0a7a40775e16474f1b7e7c7022687a7d4466bae23069
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 0757040257025e5f0e570d7a4877064615164b7e7f2c75637d7a4e37e3b63061
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 5000505201070c0208560a7b45775d1645161d7f292e77342c794436e6e26c6a
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 54090105540d0f0b5e5d582341775d4415164178292a22637a2a1937b0b56d69
+      flags: 0
     UnityEditor.ShaderGraph.Blackboard:
       value: 18135939215a0a5004000b0e15254b524c030a3f2964643d120d1230e9e93a3fd6e826abbd2e2d293c4ead313b08042de6030a0afa240c0d020be94c4ba75e435d8715fa32c70d15d11612dacc11fee5d3c5d1fe9ab1bf968e93e2ffcbc3e7e2f0b3ffe0e8b0be9af8ffaeffff8e85dd8390e3949c8899daa7
       flags: 0
@@ -31,6 +43,9 @@ EditorUserSettings:
       flags: 0
     UnityEditor.ShaderGraph.ToggleSettings:
       value: 18135d1527590858060c032302276919051e1a26296a7c243f3c187fa0e92708f0e220e0e22d09352a0bed30017c5b2be01f0c47b40219221f1ded0b12eb1f0127cc0bcc18c41a5e910d0edbc85193e0dadadbf8e8f9e8ced7dba5e0b6aaaca4dbfeabfef4eae1
+      flags: 0
+    glTF.saveFilePath:
+      value: 4c6447031746465a0c410b2e042510150e071738383b
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
