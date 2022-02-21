@@ -51,6 +51,7 @@ MonoBehaviour:
   stopWatchGui: {fileID: -4745815946667895209}
   showMenu: 1
   local: 1
+  cameraObject: {fileID: 0}
 --- !u!114 &7832398387831198115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a799d0d524043ecb397ac73faf6aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  responsive: 1
+  trackBallCtrl: {fileID: 0}
 --- !u!114 &7832398387831198124
 MonoBehaviour:
   m_ObjectHideFlags: 0

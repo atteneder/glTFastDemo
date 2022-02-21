@@ -8,6 +8,31 @@ ShaderVariantCollection:
   m_PrefabAsset: {fileID: 0}
   m_Name: glTFURP
   m_Shaders:
+  - first: {fileID: -6465566751694194690, guid: 9a07dad0f3c4e43ff8312e3b5fa42300,
+      type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: EMISSION OCCLUSION
+        passType: 8
+      - keywords: EMISSION OCCLUSION _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
+          _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS
+        passType: 13
+  - first: {fileID: -6465566751694194690, guid: c87047c884d9843f5b0f4cce282aa760,
+      type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _UV_ROTATION
+        passType: 0
+      - keywords: 
+        passType: 8
+      - keywords: _UV_ROTATION
+        passType: 8
   - first: {fileID: -6465566751694194690, guid: b9d29dfa1474148e792ac720cbd45122,
       type: 3}
     second:
@@ -82,29 +107,4 @@ ShaderVariantCollection:
         passType: 13
       - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS
           _UV_ROTATION
-        passType: 13
-  - first: {fileID: -6465566751694194690, guid: c87047c884d9843f5b0f4cce282aa760,
-      type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-      - keywords: _UV_ROTATION
-        passType: 0
-      - keywords: 
-        passType: 8
-      - keywords: _UV_ROTATION
-        passType: 8
-  - first: {fileID: -6465566751694194690, guid: 9a07dad0f3c4e43ff8312e3b5fa42300,
-      type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 8
-      - keywords: EMISSION OCCLUSION
-        passType: 8
-      - keywords: EMISSION OCCLUSION _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
-          _MAIN_LIGHT_SHADOWS
-        passType: 13
-      - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS
         passType: 13
