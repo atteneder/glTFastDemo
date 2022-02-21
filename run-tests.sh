@@ -116,7 +116,7 @@ $UNITY_2021_EXE \
 -testCategory "!Performance" \
 -runTests
 
-cp "test-results/CodeCoverage/Report/badge_linecoverage.svg" "packages/glTFast/Documentation~/img/badge_linecoverage.svg"
+cp "test-results/CodeCoverage/Report/badge_linecoverage.svg" "packages/glTFast/Documentation~/Images/badge_linecoverage.svg"
 
 #
 # Create builds
