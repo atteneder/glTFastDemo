@@ -70,3 +70,5 @@ sysinfo.txt
 **/.idea/**/dynamic.xml
 **/.idea/**/uiDesigner.xml
 **/.idea/**/dbnavigator.xml
+projects/*/UserSettings
+projects/*/.idea
