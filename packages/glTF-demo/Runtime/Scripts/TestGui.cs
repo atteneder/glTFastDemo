@@ -156,7 +156,8 @@ public class TestGui : MonoBehaviour {
         testLoader.loadingEnd += OnLoadingEnd;
     }
 
-    void OnLoadingBegin() {
+    void OnLoadingBegin(string title) {
+        stopWatchGui.SetTitle(title);
         stopWatch.StartTime();
     }
 

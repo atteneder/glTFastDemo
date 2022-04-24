@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1173143197}
-  m_IndirectSpecularColor: {r: 0.7534017, g: 0.7527552, b: 0.7534017, a: 1}
+  m_IndirectSpecularColor: {r: 0.75340164, g: 0.7527554, b: 0.75340164, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 870010695}
   - component: {fileID: 870010694}
   - component: {fileID: 870010696}
-  - component: {fileID: 870010692}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -144,18 +143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &870010692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870010691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!20 &870010694
 Camera:
   m_ObjectHideFlags: 0
@@ -165,7 +152,7 @@ Camera:
   m_GameObject: {fileID: 870010691}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -228,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yawSensitivity: 1
   pitchSensitivity: 1
-  scrollSensitivity: 0.1
+  scrollSensitivity: 0.25
 --- !u!1 &1037917612
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +341,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: 150, z: 0}
+--- !u!1 &1273295163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7832398387831198112, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7832398386713901860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1273295167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7832398387831198115, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7832398386713901860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273295163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a799d0d524043ecb397ac73faf6aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1273295170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273295163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d7e608411ce0341b15b6d12d312865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnGotFile:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1273295167}
+        m_TargetAssemblyTypeName: TestLoader, glTFastDemo
+        m_MethodName: LoadFromUrl
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1651403461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -459,6 +491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832398387831198115, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
+        type: 3}
+      propertyPath: loadType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7832398387831198115, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
         type: 3}

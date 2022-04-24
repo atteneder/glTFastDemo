@@ -14,13 +14,13 @@
 //
 
 #if UNITY_GLTF
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using System;
 using System.IO;
-using GLTF;
-using GLTF.Schema;
+using System.Runtime.ExceptionServices;
 using UnityGLTF;
 using UnityGLTF.Loader;
 
@@ -29,10 +29,7 @@ using UnityGLTF.Loader;
 /// </summary>
 public class UnityGLTFLoader : MonoBehaviour
 {
-
-
     public string GLTFUri;
-    public bool Multithreaded = true;
     public bool UseStream = false;
 
     public int MaximumLod = 300;
@@ -43,7 +40,7 @@ public class UnityGLTFLoader : MonoBehaviour
     IEnumerator Start()
     {
         GLTFSceneImporter sceneImporter = null;
-        ILoader loader = null;
+        IDataLoader loader = null;
 
         if (UseStream)
         {
@@ -56,7 +53,7 @@ public class UnityGLTFLoader : MonoBehaviour
             loader = new FileLoader(directoryPath);
             sceneImporter = new GLTFSceneImporter(
                 Path.GetFileName(GLTFUri),
-                loader
+                new ImportOptions() { DataLoader = loader }
                 );
         }
         else
@@ -65,7 +62,7 @@ public class UnityGLTFLoader : MonoBehaviour
             loader = new WebRequestLoader(directoryPath);
             sceneImporter = new GLTFSceneImporter(
                 URIHelper.GetFileFromUri(new Uri(GLTFUri)),
-                loader
+                new ImportOptions() { DataLoader = loader }
                 );
 
         }
@@ -73,14 +70,15 @@ public class UnityGLTFLoader : MonoBehaviour
         sceneImporter.SceneParent = gameObject.transform;
         sceneImporter.Collider = Colliders;
         sceneImporter.MaximumLod = MaximumLod;
-        yield return sceneImporter.LoadScene(-1, Multithreaded,HandleAction);
+        yield return sceneImporter.LoadScene(-1, true, HandleAction);
     }
 
-    void HandleAction(GameObject obj)
+    void HandleAction(GameObject obj, ExceptionDispatchInfo exceptionDispatchInfo)
     {
         if(onLoadComplete!=null) {
             onLoadComplete();
         }
     }
 }
+
 #endif

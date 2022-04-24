@@ -16,7 +16,7 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-#if !NO_GLTFAST
+#if GLTFAST_4_OR_NEWER
 using GLTFast;
 #endif
 #if UNITY_GLTF
@@ -24,43 +24,44 @@ using UnityGLTF;
 #endif
 
 public class TestLoader : MonoBehaviour {
-
-#if !NO_GLTFAST && UNITY_GLTF
-    public const float variantDistance = 1;
-#else
-    public const float variantDistance = 0;
-#endif
     
     [SerializeField] bool responsive = true;
 
+    [SerializeField] private LoadType loadType = LoadType.glTFast;
+    public enum LoadType
+    {
+        glTFast = 2,
+        UnityGltf = 4,
+    }
+    
     public UnityAction<string> urlChanged;
-    public UnityAction loadingBegin;
+    public UnityAction<string> loadingBegin;
     public UnityAction loadingEnd;
 
     [SerializeField] TrackballCamera trackBallCtrl;
     
     public string[] GetSceneNames() {
 #if GLTFAST_4_OR_NEWER
-        return gltf1.sceneNames;
+        if (gltf1) return gltf1.sceneNames;
 #else
-        return null;
-#endif 
+#endif
+        return null; 
     }
 
     public int? currentSceneIndex {
         get {
 #if GLTFAST_4_OR_NEWER
-            return gltf1.currentSceneId;
+            if (gltf1) return gltf1.currentSceneId;
 #else
-            return null;
 #endif
+            return null;
         }
     }
     
     GameObject go1 = null;
     GameObject go2 = null;
 
-#if !NO_GLTFAST
+#if GLTFAST
 #if UNITY_DOTS_HYBRID
     GltfEntityAsset gltf1;
 #else
@@ -69,7 +70,7 @@ public class TestLoader : MonoBehaviour {
 #endif
 #endif
 #if UNITY_GLTF
-    UnityGLTFLoader gltf2;
+    GLTFComponent gltf2;
 #endif
 
     float startTime = -1;
@@ -85,6 +86,8 @@ public class TestLoader : MonoBehaviour {
         // LoadUrl( GltfSampleModels.baseUrl+"Duck/glTF-Binary/Duck.glb" );
     }
 
+    public async void LoadFromUrl(string url) => await LoadUrl(url);
+    
     public async Task LoadUrl(string url) {
 
 #if UNITY_GLTF
@@ -105,46 +108,55 @@ public class TestLoader : MonoBehaviour {
         // Wait one frame to minimize distortion by current frame's delta time
         await Task.Yield();
         
-        Debug.Log("loading "+url);
+        Debug.Log("[TestLoader] loading " + url);
 
         startTime = Time.realtimeSinceStartup;
         urlChanged(url);
-        loadingBegin();
+        loadingBegin(loadType.ToString());
 
-#if !NO_GLTFAST
-        go1 = new GameObject();
-        
+        if (loadType.HasFlag(LoadType.glTFast))
+        {
+#if GLTFAST
+            go1 = new GameObject();
+            
 #if UNITY_DOTS_HYBRID
-        gltf1 = go1.AddComponent<GltfEntityAsset>();
+            gltf1 = go1.AddComponent<GltfEntityAsset>();
 #else
-        gltf1 = go1.AddComponent<GltfAsset>();
+            gltf1 = go1.AddComponent<GltfAsset>();
 #endif
-        gltf1.loadOnStartup = false;
-        var success = await gltf1.Load(url,null,deferAgent);
-        loadingEnd();
-        if(success) {
-            if (!gltf1.currentSceneId.HasValue && gltf1.sceneCount > 0) {
-                // Fallback to first scene
-                Debug.LogWarning("glTF has no main scene. Falling back to first scene.");
-                gltf1.InstantiateScene(0);
+            gltf1.loadOnStartup = false;
+            var success = await gltf1.Load(url,null,deferAgent);
+            loadingEnd();
+            if(success) {
+                if (!gltf1.currentSceneId.HasValue && gltf1.sceneCount > 0) {
+                    // Fallback to first scene
+                    Debug.LogWarning("glTF has no main scene. Falling back to first scene.");
+                    gltf1.InstantiateScene(0);
+                }
+                GLTFast_onLoadComplete(gltf1);
+            } else {
+                Debug.LogError("TestLoader: loading failed!");
             }
-            GLTFast_onLoadComplete(gltf1);
-        } else {
-            Debug.LogError("TestLoader: loading failed!");
+#endif
         }
-#endif
+        
+        if(loadType.HasFlag(LoadType.UnityGltf))
+        {
 #if UNITY_GLTF
-        go2 = new GameObject();
-        go2.transform.rotation = Quaternion.Euler(0,180,0);
-        gltf2 = go2.AddComponent<UnityGLTFLoader>();
-        gltf2.GLTFUri = url;
-        gltf2.onLoadComplete += UnityGltf_OnLoadComplete;
+            Debug.Log("[TestLoader] Loading UnityGltf (loadType=" + loadType + ")");
+            go2 = new GameObject();
+            gltf2 = go2.AddComponent<GLTFComponent>();
+            gltf2.UseStream = true;
+            gltf2.AppendStreamingAssets = false;
+            gltf2.GLTFUri = url;
+            gltf2.onLoadComplete += UnityGltf_OnLoadComplete;
 #endif
+        }
     }
 
     public void ClearScene() {
 #if GLTFAST_4_OR_NEWER
-        gltf1.ClearScenes();
+        if (gltf1) gltf1.ClearScenes();
 #endif
     }
 
@@ -160,33 +172,25 @@ public class TestLoader : MonoBehaviour {
 #if UNITY_GLTF
     void UnityGltf_OnLoadComplete()
     {
+        Debug.Log("[TestLoader] " + nameof(UnityGltf_OnLoadComplete));
         loadingEnd();
-        // time2Update((Time.realtimeSinceStartup-startTime)*1000);
+        
         var bounds = CalculateLocalBounds(go2.transform);
         
-        float targetSize = 2.0f;
-        
-        float scale = Mathf.Min(
-            targetSize / bounds.extents.x,
-            targetSize / bounds.extents.y,
-            targetSize / bounds.extents.z
-            );
-
-        go2.transform.localScale = Vector3.one * scale;
-        Vector3 pos = bounds.center;
-        pos.x -= bounds.extents.x * variantDistance;
-        pos *= -scale;
-        go2.transform.position = pos;
+        if (trackBallCtrl != null) {
+            trackBallCtrl.SetTarget(bounds);
+        }
     }
 #endif
 
-#if !NO_GLTFAST
+#if GLTFAST
     void GLTFast_onLoadComplete(GltfAssetBase asset) {
 #if UNITY_DOTS_HYBRID
         // TODO: calculate the bounding box
         trackBallCtrl.SetTarget(new Bounds(asset.transform.position,Vector3.one));
 #else
         sceneInstance = (asset as GltfAsset).sceneInstance;
+        
         var bounds = CalculateLocalBounds(asset.transform);
 
         if (trackBallCtrl != null) {
@@ -200,8 +204,13 @@ public class TestLoader : MonoBehaviour {
     {
         Quaternion currentRotation = transform.rotation;
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        Bounds bounds = new Bounds(transform.position, Vector3.zero);
-        foreach (Renderer renderer in transform.GetComponentsInChildren<Renderer>())
+        var rends = transform.GetComponentsInChildren<Renderer>();
+        Debug.Log("Root: " + transform + ", renderers: " + rends.Length, transform);
+        
+        if (rends.Length < 1) return new Bounds(Vector3.zero, Vector3.one);
+        
+        Bounds bounds = new Bounds(rends[0].bounds.center, Vector3.zero);
+        foreach (Renderer renderer in rends)
         {
             bounds.Encapsulate(renderer.bounds);
         }

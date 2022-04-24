@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7832398387831198114}
   - component: {fileID: 7832398387831198113}
   - component: {fileID: 7832398387831198115}
-  - component: {fileID: 7832398387831198124}
   - component: {fileID: -4745815946667895209}
   - component: {fileID: 7832398387831198125}
+  - component: {fileID: 1688263377763703893}
   m_Layer: 0
   m_Name: TestGui
   m_TagString: Untagged
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf03a0bd1c09446fabe7711acfc7b231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopWatch: {fileID: 7832398387831198124}
+  stopWatch: {fileID: 1688263377763703893}
   stopWatchGui: {fileID: -4745815946667895209}
   showMenu: 1
   local: 1
@@ -69,20 +69,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   responsive: 1
+  loadType: 0
   trackBallCtrl: {fileID: 0}
---- !u!114 &7832398387831198124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7832398387831198112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f276fbc045ea4078bc375686d48c1bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDeltaTime: 10
 --- !u!114 &-4745815946667895209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +98,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sampleSetCollection: {fileID: 11400000, guid: 8cf05cea8602c44288c5d35119d889ec,
     type: 2}
+--- !u!114 &1688263377763703893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7832398387831198112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ac4a02ef50ae94baa0d405f46bfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDeltaTime: 10
