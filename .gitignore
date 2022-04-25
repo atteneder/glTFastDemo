@@ -43,7 +43,9 @@ sysinfo.txt
 /projects/glTF-demo-dots
 /Assets/UnityGLTF
 /projects/*/Assets/StreamingAssets/glTF-Sample-Models*
+/projects/*/Assets/StreamingAssets/glTF-Sample-Models.meta
 /projects/*/Assets/StreamingAssets/gsm*
+/projects/*/Assets/StreamingAssets/gsm.meta
 /projects/*/Logs
 /projects/*/Assets/Models*
 /projects/*/Assets/Scenes*
@@ -74,3 +76,5 @@ sysinfo.txt
 projects/*/UserSettings
 projects/*/ProjectSettings/RiderScriptEditorPersistedState.asset
 projects/*/.idea
+/projects/*/Assets/BuildReports
+/projects/*/Assets/BuildReports.meta

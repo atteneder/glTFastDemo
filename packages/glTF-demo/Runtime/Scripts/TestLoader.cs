@@ -151,8 +151,8 @@ public class TestLoader : MonoBehaviour {
             Debug.Log("[TestLoader] Loading UnityGltf (loadType=" + loadType + ")");
             go2 = new GameObject();
             gltf2 = go2.AddComponent<GLTFComponent>();
-            gltf2.UseStream = true;
             gltf2.AppendStreamingAssets = false;
+            gltf2.Multithreaded = false;
             gltf2.GLTFUri = url;
             gltf2.onLoadComplete += UnityGltf_OnLoadComplete;
 #endif

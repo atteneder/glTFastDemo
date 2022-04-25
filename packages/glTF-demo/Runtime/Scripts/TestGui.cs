@@ -261,7 +261,7 @@ public class TestGui : MonoBehaviour {
             urlFieldWidth -= GlobalGui.buttonWidth;
 #endif
 
-            urlField = GUI.TextField( new Rect(0,0,urlFieldWidth,GlobalGui.barHeightWidth),urlField);
+            urlField = GUI.TextField( new Rect(130,0,urlFieldWidth,GlobalGui.barHeightWidth),urlField);
             if(GUI.Button( new Rect(width-GlobalGui.buttonWidth,0,GlobalGui.buttonWidth,GlobalGui.barHeightWidth),"Load")) {
                 LoadUrlAsync(urlField);
             }
@@ -378,7 +378,7 @@ public class TestGui : MonoBehaviour {
         if (sceneInstance?.cameras != null && sceneInstance.cameras.Count > 0) {
             var names = new string[sceneInstance.cameras.Count];
             for (var index = 0; index < sceneInstance.cameras.Count; index++) {
-                names[index] = sceneInstance.cameras[index].name;
+                names[index] = sceneInstance.cameras[index]?.name;
             }
 
             cameraDropDown = new DropDown(names, true, "Camera");
