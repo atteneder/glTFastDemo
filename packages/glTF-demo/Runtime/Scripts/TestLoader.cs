@@ -26,8 +26,13 @@ using UnityGLTF;
 public class TestLoader : MonoBehaviour {
     
     [SerializeField] bool responsive = true;
-
     [SerializeField] private LoadType loadType = LoadType.glTFast;
+    public LoadType Loader
+    {
+        get => loadType;
+        set => loadType = value;
+    }
+
     public enum LoadType
     {
         glTFast = 2,

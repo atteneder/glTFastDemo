@@ -198,7 +198,8 @@ public class TestGui : MonoBehaviour {
     {
         urlField = newUrl;
     }
-
+    
+    TestLoader loader;
     private void OnGUI()
     {
         float width = Screen.width;
@@ -235,6 +236,12 @@ public class TestGui : MonoBehaviour {
             }
         }
         
+        if (!loader) loader = GetComponent<TestLoader>();
+        var topLeft = new Rect(0, 0, 130, 20);
+        if (GUI.Button(topLeft, "Loader: " + loader.Loader)) {
+            loader.Loader = loader.Loader == TestLoader.LoadType.glTFast ? TestLoader.LoadType.UnityGltf : TestLoader.LoadType.glTFast;
+        }
+
         if(showMenu && sampleSet!=null) {
 
             var y = 0f;
