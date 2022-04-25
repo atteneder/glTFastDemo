@@ -341,51 +341,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: 150, z: 0}
---- !u!1 &1273295163 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7832398387831198112, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7832398386713901860}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1273295167 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7832398387831198115, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7832398386713901860}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273295163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a799d0d524043ecb397ac73faf6aa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1273295170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273295163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90d7e608411ce0341b15b6d12d312865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnGotFile:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1273295167}
-        m_TargetAssemblyTypeName: TestLoader, glTFastDemo
-        m_MethodName: LoadFromUrl
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &1651403461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,17 +400,17 @@ PrefabInstance:
     - target: {fileID: 7832398387831198114, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.000024816021
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7832398387831198114, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000010523945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7832398387831198114, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0018715495
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7832398387831198114, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
         type: 3}
@@ -491,11 +446,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832398387831198115, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
-        type: 3}
-      propertyPath: loadType
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7832398387831198115, guid: fdc4282f063a7424b9ab4a6cf85a17bf,
         type: 3}
