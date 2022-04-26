@@ -42,6 +42,7 @@ public class TestLoader : MonoBehaviour {
     public UnityAction<string> urlChanged;
     public UnityAction<string> loadingBegin;
     public UnityAction loadingEnd;
+    public UnityEvent<Bounds> gotSceneBounds;
 
     [SerializeField] TrackballCamera trackBallCtrl;
     
@@ -185,6 +186,8 @@ public class TestLoader : MonoBehaviour {
         if (trackBallCtrl != null) {
             trackBallCtrl.SetTarget(bounds);
         }
+
+        gotSceneBounds?.Invoke(bounds);
     }
 #endif
 
@@ -201,6 +204,8 @@ public class TestLoader : MonoBehaviour {
         if (trackBallCtrl != null) {
             trackBallCtrl.SetTarget(bounds);
         }
+
+        gotSceneBounds?.Invoke(bounds);
 #endif
     }
 #endif

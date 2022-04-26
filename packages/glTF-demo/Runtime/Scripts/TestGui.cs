@@ -174,15 +174,18 @@ public class TestGui : MonoBehaviour {
 
         sampleSet = newSet;
 
-        foreach(var item in sampleSet.GetItemsPrefixed()) {
 #if LOCAL_LOADING
+        foreach (var item in sampleSet.GetItemsPrefixed())
+        {
             testItemsLocal.Add(
                 new Tuple<string, string>(
                     item.name,
-                    string.Format( "file://{0}", item.path)
+                    string.Format("file://{0}", item.path)
                 )
             );
+        }
 #endif
+        foreach(var item in sampleSet.GetItemsPrefixed(false)) {
             testItems.Add( new Tuple<string, string>(item.name,item.path));
         }
     }

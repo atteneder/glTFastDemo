@@ -78,3 +78,4 @@ projects/*/ProjectSettings/RiderScriptEditorPersistedState.asset
 projects/*/.idea
 /projects/*/Assets/BuildReports
 /projects/*/Assets/BuildReports.meta
+projects/*/UIElementsSchema
