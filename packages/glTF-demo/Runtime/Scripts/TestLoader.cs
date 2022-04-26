@@ -42,6 +42,7 @@ public class TestLoader : MonoBehaviour {
     public UnityAction<string> urlChanged;
     public UnityAction<string> loadingBegin;
     public UnityAction loadingEnd;
+    public UnityEvent<Transform> gotSceneRoot;
     public UnityEvent<Bounds> gotSceneBounds;
 
     [SerializeField] TrackballCamera trackBallCtrl;
@@ -187,6 +188,7 @@ public class TestLoader : MonoBehaviour {
             trackBallCtrl.SetTarget(bounds);
         }
 
+        gotSceneRoot?.Invoke(go2.transform);
         gotSceneBounds?.Invoke(bounds);
     }
 #endif
@@ -205,6 +207,7 @@ public class TestLoader : MonoBehaviour {
             trackBallCtrl.SetTarget(bounds);
         }
 
+        gotSceneRoot?.Invoke(asset.transform);
         gotSceneBounds?.Invoke(bounds);
 #endif
     }
