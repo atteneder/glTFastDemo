@@ -39,7 +39,6 @@ public class TestGui : MonoBehaviour {
         float buttonHeight = GlobalGui.listItemHeight;
         bool allowUnset = false;
         string label = null;
-        GUIStyle buttonStyle;
 
         public DropDown(string[] items, bool allowUnset = false, string label = null ) {
             this.items = items;
@@ -54,11 +53,7 @@ public class TestGui : MonoBehaviour {
         
         public void DrawGUI( Rect dropDownRect, Action<int> selectCallback ) {
 
-            if (buttonStyle == null) {
-                buttonStyle = GUI.skin.button;
-                buttonStyle.clipping = TextClipping.Clip;
-                buttonStyle.wordWrap = false;
-            }
+            
             
             string mainButtonText;
             if (string.IsNullOrEmpty(label)) {
@@ -116,7 +111,12 @@ public class TestGui : MonoBehaviour {
 
     [SerializeField]
     GameObject cameraObject;
+    
+    [SerializeField]
+    Texture2D guiButtonSprite;
 
+    [SerializeField]
+    Texture2D guiButtonActiveSprite;
     
     List<Tuple<string,string>> testItems = new List<Tuple<string, string>>();
     List<Tuple<string,string>> testItemsLocal = new List<Tuple<string, string>>();
@@ -131,6 +131,11 @@ public class TestGui : MonoBehaviour {
     DropDown cameraDropDown;
     
     TestLoader testLoader;
+    
+    GUIStyle labelStyle;
+    GUIStyle buttonStyle;
+    GUIStyle toggleStyle;
+    GUIStyle textFieldStyle;
     
     int? currentSceneIndex => testLoader.currentSceneIndex;
 
@@ -198,8 +203,39 @@ public class TestGui : MonoBehaviour {
         float width = Screen.width;
         float height = Screen.height;
 
+        if (labelStyle == null) {
+            labelStyle = GUI.skin.label;
+            buttonStyle = GUI.skin.button;
+            toggleStyle = GUI.skin.toggle;
+            textFieldStyle = GUI.skin.textField;
+                
+            labelStyle.normal.textColor =
+                labelStyle.hover.textColor =
+                    buttonStyle.normal.textColor =
+                        buttonStyle.active.textColor =
+                            buttonStyle.hover.textColor =
+                                textFieldStyle.normal.textColor =
+                                    textFieldStyle.active.textColor =
+                                        textFieldStyle.hover.textColor = 
+                                            toggleStyle.normal.textColor =
+                                                toggleStyle.active.textColor =
+                                                    toggleStyle.hover.textColor = Color.black;
+                
+            buttonStyle.clipping = TextClipping.Clip;
+            buttonStyle.wordWrap = false;
+
+            if (guiButtonSprite != null) {
+                buttonStyle.normal.background = guiButtonSprite;
+            }
+            if (guiButtonActiveSprite != null) {
+                buttonStyle.active.background =
+                    buttonStyle.focused.background =
+                        buttonStyle.hover.background = guiButtonActiveSprite;
+            }
+        }
+        
         if(showMenu && sampleSet!=null) {
-            
+
             var y = 0f;
             
             GUI.BeginGroup( new Rect(0,0,width,GlobalGui.barHeightWidth) );

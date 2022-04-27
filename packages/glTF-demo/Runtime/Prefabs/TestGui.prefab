@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.000024816021, y: 0.00000010523945, z: 0.0018715495}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,6 +53,9 @@ MonoBehaviour:
   showMenu: 1
   local: 1
   cameraObject: {fileID: 0}
+  guiButtonSprite: {fileID: 2800000, guid: 5d6207b056d2943a288a8b169d6b25ac, type: 3}
+  guiButtonActiveSprite: {fileID: 2800000, guid: 1dfbf2a8a7f0949bfb6f1edbee20c596,
+    type: 3}
 --- !u!114 &7832398387831198115
 MonoBehaviour:
   m_ObjectHideFlags: 0
