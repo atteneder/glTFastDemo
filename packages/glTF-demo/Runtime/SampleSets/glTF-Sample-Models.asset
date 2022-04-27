@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2bdf3fe6678e40fea6df4342d07093a, type: 3}
   m_Name: glTF-Sample-Models
   m_EditorClassIdentifier: 
-  baseLocalPath: /Users/Shared/SDK/glTF-Sample-Models/2.0
-  streamingAssetsPath: glTF-Sample-Models/2.0
+  baseLocalPath: /Users/aa/sdk/glTF-Sample-Models/2.0
+  streamingAssetsPath: gsm
   baseUrlWeb: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/
   baseUrlLocal: http://localhost:8080/glTF-Sample-Models/2.0/
   items:
