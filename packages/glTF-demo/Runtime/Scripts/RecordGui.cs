@@ -65,13 +65,16 @@ public class RecordGui : MonoBehaviour
         GLTFSceneExporter.ExportDisabledGameObjects = true;
         GLTFSceneExporter.ExportAnimations = false;
 
-        var exporter = new GLTFSceneExporter(new Transform[] { root }, new ExportOptions()
+        // assume root is a scene (empty node): we actually want to export it's children as a new scene.
+        var roots = new Transform[root.childCount];
+        for (int i = 0; i < root.childCount; i++)
+            roots[i] = root.GetChild(i);
+        var exporter = new GLTFSceneExporter(roots, new ExportOptions()
         {
             ExportInactivePrimitives = true,
         });
-        string filename = "todo.glb";
             
-        var data = exporter.SaveGLBToByteArray(filename);
+        var data = exporter.SaveGLBToByteArray(root.name);
 
         GLTFSceneExporter.ExportDisabledGameObjects = previousExportDisabledState;
         GLTFSceneExporter.ExportAnimations = previousExportAnimationState;
@@ -81,9 +84,11 @@ public class RecordGui : MonoBehaviour
 
     private void StopRecordingAndDownloadAsGlb()
     {
-        // TODO add binary callback so we can use this on WebGL
-        using (var stream = new MemoryStream()) {
+        using (var stream = new MemoryStream())
+        {
             recorder.EndRecording(stream);
+            stream.Flush();
+            stream.Capacity = (int) stream.Length;
             fileExport.DownloadGLB("todo.glb", stream.GetBuffer());
         }
     }

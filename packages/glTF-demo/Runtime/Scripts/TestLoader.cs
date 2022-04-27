@@ -124,7 +124,7 @@ public class TestLoader : MonoBehaviour {
         if (loadType.HasFlag(LoadType.glTFast))
         {
 #if GLTFAST
-            go1 = new GameObject();
+            go1 = new GameObject("glTFast Loader");
             
 #if UNITY_DOTS_HYBRID
             gltf1 = go1.AddComponent<GltfEntityAsset>();
@@ -151,7 +151,7 @@ public class TestLoader : MonoBehaviour {
         {
 #if UNITY_GLTF
             Debug.Log("[TestLoader] Loading UnityGltf (loadType=" + loadType + ")");
-            go2 = new GameObject();
+            go2 = new GameObject("UnityGltf Loader");
             gltf2 = go2.AddComponent<GLTFComponent>();
             gltf2.AppendStreamingAssets = false;
             gltf2.Multithreaded = false;
@@ -188,7 +188,7 @@ public class TestLoader : MonoBehaviour {
             trackBallCtrl.SetTarget(bounds);
         }
 
-        gotSceneRoot?.Invoke(go2.transform);
+        gotSceneRoot?.Invoke(go2.transform.childCount > 0 ? go2.transform.GetChild(0) : go2.transform);
         gotSceneBounds?.Invoke(bounds);
     }
 #endif
@@ -207,7 +207,7 @@ public class TestLoader : MonoBehaviour {
             trackBallCtrl.SetTarget(bounds);
         }
 
-        gotSceneRoot?.Invoke(asset.transform);
+        gotSceneRoot?.Invoke(asset.transform.childCount > 0 ? asset.transform.GetChild(0) : asset.transform);
         gotSceneBounds?.Invoke(bounds);
 #endif
     }
