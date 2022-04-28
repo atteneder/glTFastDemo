@@ -1,8 +1,10 @@
 using System;
 using System.IO;
 using UnityEngine;
+#if UNITY_GLTF
 using UnityGLTF;
 using UnityGLTF.Timeline;
+#endif
 
 public class RecordGui : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class RecordGui : MonoBehaviour
     {
         this.root = root;
     }
+    
+    #if UNITY_GLTF
     
     private void OnGUI()
     {
@@ -106,4 +110,6 @@ public class RecordGui : MonoBehaviour
         if(recorder != null && recorder.IsRecording)
             recorder.UpdateRecording(Time.realtimeSinceStartupAsDouble);
     }
+    
+    #endif
 }

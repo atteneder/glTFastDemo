@@ -79,3 +79,4 @@ projects/*/.idea
 /projects/*/Assets/BuildReports
 /projects/*/Assets/BuildReports.meta
 projects/*/UIElementsSchema
+projects/*/Assets/Hidden~
