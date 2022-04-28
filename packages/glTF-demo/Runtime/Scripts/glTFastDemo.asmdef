@@ -1,17 +1,21 @@
 {
     "name": "glTFastDemo",
+    "rootNamespace": "",
     "references": [
         "glTFast",
         "glTFastSchema",
         "glTFast.dots",
         "glTFastEditor",
         "glTF-test-framework",
-        "glTF-test-framework.Sample"
+        "glTF-test-framework.Sample",
+        "UnityGLTFScripts",
+        "GLTFSerialization",
+        "Unity.RenderPipelines.HighDefinition.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
+    "overrideReferences": true,
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
@@ -25,6 +29,21 @@
             "name": "com.atteneder.gltfast",
             "expression": "4.0",
             "define": "GLTFAST_4_OR_NEWER"
+        },
+        {
+            "name": "com.atteneder.gltfast",
+            "expression": "0.0.0",
+            "define": "GLTFAST"
+        },
+        {
+            "name": "org.khronos.unitygltf",
+            "expression": "1.0.0",
+            "define": "UNITY_GLTF"
+        },
+        {
+            "name": "com.unity.render-pipelines.high-definition",
+            "expression": "1.0.0",
+            "define": "UNITY_HDRP"
         }
     ],
     "noEngineReferences": false

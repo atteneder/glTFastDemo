@@ -34,6 +34,7 @@ public class SampleSetSelectGui : MonoBehaviour
 #endif
     }
 
+#if !PLATFORM_WEBGL || UNITY_EDITOR
     private void OnGUI()
     {
         GlobalGui.Init();
@@ -60,4 +61,5 @@ public class SampleSetSelectGui : MonoBehaviour
 
         GUI.EndScrollView();
     }
+#endif
 }

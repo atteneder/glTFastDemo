@@ -20,7 +20,8 @@ using GLTFTest;
 [RequireComponent(typeof(StopWatch))]
 public class StopWatchGui : MonoBehaviour {
     StopWatch m_StopWatch;
-    
+
+    private string title = "glTFast";
     public float posX;
 
     void Start() {
@@ -44,7 +45,7 @@ public class StopWatchGui : MonoBehaviour {
             )
             : "";
             var label = string.Format(
-                "glTFast time: {0:0.00} ms{1}"
+                title + " time: {0:0.00} ms{1}"
                 ,duration>=0 ? duration : m_StopWatch.now
                 ,fpsString
                 );
@@ -52,5 +53,10 @@ public class StopWatchGui : MonoBehaviour {
             var timeHeight = GUI.skin.label.fontSize*1.5f;
             GUI.Label(new Rect(posX+10,height-timeHeight,width-posX-10,timeHeight),label);
         }
+    }
+
+    public void SetTitle(string title)
+    {
+        this.title = title;
     }
 }

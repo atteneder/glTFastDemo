@@ -156,7 +156,8 @@ public class TestGui : MonoBehaviour {
         testLoader.loadingEnd += OnLoadingEnd;
     }
 
-    void OnLoadingBegin() {
+    void OnLoadingBegin(string title) {
+        stopWatchGui.SetTitle(title);
         stopWatch.StartTime();
     }
 
@@ -173,15 +174,18 @@ public class TestGui : MonoBehaviour {
 
         sampleSet = newSet;
 
-        foreach(var item in sampleSet.GetItemsPrefixed()) {
 #if LOCAL_LOADING
+        foreach (var item in sampleSet.GetItemsPrefixed())
+        {
             testItemsLocal.Add(
                 new Tuple<string, string>(
                     item.name,
-                    string.Format( "file://{0}", item.path)
+                    string.Format("file://{0}", item.path)
                 )
             );
+        }
 #endif
+        foreach(var item in sampleSet.GetItemsPrefixed(false)) {
             testItems.Add( new Tuple<string, string>(item.name,item.path));
         }
     }
@@ -197,7 +201,8 @@ public class TestGui : MonoBehaviour {
     {
         urlField = newUrl;
     }
-
+    
+    TestLoader loader;
     private void OnGUI()
     {
         float width = Screen.width;
@@ -234,6 +239,15 @@ public class TestGui : MonoBehaviour {
             }
         }
         
+#if UNITY_GLTF
+        // for switching between glTFast and UnityGltf in the same instance
+        if (!loader) loader = GetComponent<TestLoader>();
+        var topLeft = new Rect(0, 0, 130, 20);
+        if (GUI.Button(topLeft, "Loader: " + loader.Loader)) {
+            loader.Loader = loader.Loader == TestLoader.LoadType.glTFast ? TestLoader.LoadType.UnityGltf : TestLoader.LoadType.glTFast;
+        }
+#endif
+
         if(showMenu && sampleSet!=null) {
 
             var y = 0f;
@@ -253,7 +267,7 @@ public class TestGui : MonoBehaviour {
             urlFieldWidth -= GlobalGui.buttonWidth;
 #endif
 
-            urlField = GUI.TextField( new Rect(0,0,urlFieldWidth,GlobalGui.barHeightWidth),urlField);
+            urlField = GUI.TextField( new Rect(130,0,urlFieldWidth,GlobalGui.barHeightWidth),urlField);
             if(GUI.Button( new Rect(width-GlobalGui.buttonWidth,0,GlobalGui.buttonWidth,GlobalGui.barHeightWidth),"Load")) {
                 LoadUrlAsync(urlField);
             }
@@ -370,7 +384,7 @@ public class TestGui : MonoBehaviour {
         if (sceneInstance?.cameras != null && sceneInstance.cameras.Count > 0) {
             var names = new string[sceneInstance.cameras.Count];
             for (var index = 0; index < sceneInstance.cameras.Count; index++) {
-                names[index] = sceneInstance.cameras[index].name;
+                names[index] = sceneInstance.cameras[index]?.name;
             }
 
             cameraDropDown = new DropDown(names, true, "Camera");
