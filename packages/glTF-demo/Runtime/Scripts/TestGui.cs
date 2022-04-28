@@ -239,11 +239,14 @@ public class TestGui : MonoBehaviour {
             }
         }
         
+#if UNITY_GLTF
+        // for switching between glTFast and UnityGltf in the same instance
         if (!loader) loader = GetComponent<TestLoader>();
         var topLeft = new Rect(0, 0, 130, 20);
         if (GUI.Button(topLeft, "Loader: " + loader.Loader)) {
             loader.Loader = loader.Loader == TestLoader.LoadType.glTFast ? TestLoader.LoadType.UnityGltf : TestLoader.LoadType.glTFast;
         }
+#endif
 
         if(showMenu && sampleSet!=null) {
 
