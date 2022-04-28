@@ -20,8 +20,5 @@
     "email": "andreas.atteneder@gmail.com",
     "url": "https://pixel.engineer"
   },
-  "type": "sample",
-  "dependencies": {
-    "com.atteneder.gltf-test-framework": "0.1.0"
-  }
+  "type": "sample"
 }
