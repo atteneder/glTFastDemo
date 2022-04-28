@@ -13,20 +13,13 @@
       "version": "file:../../../packages/glTF-demo",
       "depth": 0,
       "source": "local",
-      "dependencies": {
-        "com.atteneder.gltf-test-framework": "0.1.0"
-      }
+      "dependencies": {}
     },
     "com.atteneder.gltf-test-framework": {
       "version": "file:../../../packages/gltf-test-framework",
       "depth": 0,
       "source": "local",
-      "dependencies": {
-        "com.unity.test-framework": "1.1.31",
-        "com.unity.test-framework.performance": "2.8.0-preview",
-        "com.unity.testtools.codecoverage": "1.1.1",
-        "com.unity.modules.animation": "1.0.0"
-      }
+      "dependencies": {}
     },
     "com.atteneder.gltfast": {
       "version": "file:../../../packages/glTFast",
@@ -88,44 +81,6 @@
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
         "com.unity.burst": "1.4.11"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.settings-manager": {
-      "version": "1.0.3",
-      "depth": 2,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.test-framework": {
-      "version": "1.1.31",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ext.nunit": "1.0.6",
-        "com.unity.modules.imgui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.test-framework.performance": {
-      "version": "2.8.0-preview",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.test-framework": "1.1.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.testtools.codecoverage": {
-      "version": "1.1.1",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.test-framework": "1.0.16",
-        "com.unity.settings-manager": "1.0.1"
       },
       "url": "https://packages.unity.com"
     },
