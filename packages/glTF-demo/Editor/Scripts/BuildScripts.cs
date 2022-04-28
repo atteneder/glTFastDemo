@@ -14,6 +14,8 @@
 //
 
 using System;
+using System.IO;
+using System.Web.WebPages;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
@@ -21,6 +23,19 @@ using UnityEngine;
 namespace GltfDemo.Editor {
 
     public static class BuildScripts {
+
+        const string k_EditorSettingBuildDirectory = "glTFWebDemo.buildDirectory";
+        
+        static string SaveFolderPath {
+            get {
+                var saveFolderPath = EditorUserSettings.GetConfigValue(k_EditorSettingBuildDirectory);
+                if (string.IsNullOrEmpty(saveFolderPath)) {
+                    saveFolderPath = Application.streamingAssetsPath;
+                }
+                return saveFolderPath;
+            }
+            set => EditorUserSettings.SetConfigValue(k_EditorSettingBuildDirectory,value);
+        }
         
         [MenuItem("glTF Demo/Build WebGL")]
         public static void BuildWebPlayer() {
@@ -47,9 +62,12 @@ namespace GltfDemo.Editor {
             if (buildPath == null) {
                 buildPath = EditorUtility.SaveFolderPanel(
                     "glTF demo build path",
-                    null,
+                    SaveFolderPath,
                     $"glTFast"
                 );
+                if (Directory.Exists(buildPath)) {
+                    SaveFolderPath = buildPath;
+                }
             }
             
             if (string.IsNullOrEmpty(buildPath)) {
