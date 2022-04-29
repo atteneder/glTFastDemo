@@ -19,10 +19,12 @@ using GLTFTest;
 
 [RequireComponent(typeof(StopWatch))]
 public class StopWatchGui : MonoBehaviour {
-    StopWatch m_StopWatch;
-
-    private string title = "glTFast";
+    
     public float posX;
+
+#if UNITY_IMGUI
+    StopWatch m_StopWatch;
+    string title = "glTFast";
 
     void Start() {
         m_StopWatch = gameObject.GetComponent<StopWatch>();
@@ -59,4 +61,5 @@ public class StopWatchGui : MonoBehaviour {
     {
         this.title = title;
     }
+#endif
 }

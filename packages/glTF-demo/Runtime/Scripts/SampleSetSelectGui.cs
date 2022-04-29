@@ -20,9 +20,12 @@ using GLTFTest.Sample;
 public class SampleSetSelectGui : MonoBehaviour
 {
     [SerializeField]
+#pragma warning disable 0414
     SampleSetCollection sampleSetCollection = null;
-
+#pragma warning restore 0414
+    
     public UnityAction<SampleSet> onSampleSetSelected;
+#if UNITY_IMGUI
 
     Vector2 scrollPos;
 
@@ -61,5 +64,6 @@ public class SampleSetSelectGui : MonoBehaviour
 
         GUI.EndScrollView();
     }
+#endif
 #endif
 }

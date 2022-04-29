@@ -54,10 +54,12 @@ public class ImageExample : MonoBehaviour
     {
         if (aInfo == null)
             return;
+#if UNITY_IMGUI
         // get the GUI rect of the last Label / box
         var rect = GUILayoutUtility.GetLastRect();
         // check if the drop position is inside that rect
         if (rect.Contains(aInfo.pos))
+#endif
         {
             var data = System.IO.File.ReadAllBytes(aInfo.file);
             var tex = new Texture2D(1,1);
@@ -68,6 +70,7 @@ public class ImageExample : MonoBehaviour
         }
     }
 
+#if UNITY_IMGUI
     private void OnGUI()
     {
         DropInfo tmp = null;
@@ -97,4 +100,5 @@ public class ImageExample : MonoBehaviour
         }
         GUILayout.EndHorizontal();
     }
+#endif
 }

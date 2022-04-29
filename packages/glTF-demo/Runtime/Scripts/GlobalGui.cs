@@ -15,6 +15,7 @@
 
 using UnityEngine;
 
+#if UNITY_IMGUI
 public static class GlobalGui
 {
     public static float screenFactor;
@@ -47,3 +48,4 @@ public static class GlobalGui
         initialized = true;
     }
 }
+#endif

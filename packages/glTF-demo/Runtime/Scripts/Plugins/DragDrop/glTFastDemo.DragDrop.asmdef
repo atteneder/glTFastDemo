@@ -14,6 +14,12 @@
     "precompiledReferences": [],
     "autoReferenced": false,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.modules.imgui",
+            "expression": "",
+            "define": "UNITY_IMGUI"
+        }
+    ],
     "noEngineReferences": false
 }

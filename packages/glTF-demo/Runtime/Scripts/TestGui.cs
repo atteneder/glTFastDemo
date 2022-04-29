@@ -31,6 +31,7 @@ using UnityEditor;
 [RequireComponent(typeof(TestLoader))]
 public class TestGui : MonoBehaviour {
 
+#if UNITY_IMGUI
     public class DropDown {
         public bool show { get; private set; }
         string[] items;
@@ -95,15 +96,15 @@ public class TestGui : MonoBehaviour {
             }
         }
     }
+#endif
 
-    SampleSet sampleSet = null;
-
-
+#pragma warning disable 0414
     [SerializeField]
     StopWatch stopWatch = null;
 
     [SerializeField]
     StopWatchGui stopWatchGui = null;
+#pragma warning restore 0414
 
     public bool showMenu = true;
     // Load files locally (from streaming assets) or via HTTP
@@ -117,7 +118,10 @@ public class TestGui : MonoBehaviour {
 
     [SerializeField]
     Texture2D guiButtonActiveSprite;
-    
+
+#if UNITY_IMGUI
+    SampleSet sampleSet = null;
+
     List<Tuple<string,string>> testItems = new List<Tuple<string, string>>();
     List<Tuple<string,string>> testItemsLocal = new List<Tuple<string, string>>();
 
@@ -402,4 +406,5 @@ public class TestGui : MonoBehaviour {
         testLoader.loadingBegin -= OnLoadingBegin;
         testLoader.loadingEnd -= OnLoadingEnd;
     }
+#endif
 }

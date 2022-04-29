@@ -28,6 +28,7 @@ public class FileDragAndDrop : MonoBehaviour
         log.Add(str);
     }
 
+#if UNITY_IMGUI
     private void OnGUI()
     {
         if (GUILayout.Button("clear log"))
@@ -35,4 +36,5 @@ public class FileDragAndDrop : MonoBehaviour
         foreach (var s in log)
             GUILayout.Label(s);
     }
+#endif
 }

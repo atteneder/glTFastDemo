@@ -17,13 +17,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneSelection : MonoBehaviour
 {
+    #pragma warning disable 0414
     [SerializeField] string[] scenes = null;
     [SerializeField] float width = 300;
     [SerializeField] float height = 100;
     [SerializeField] float yGap = 10;
     [SerializeField] bool alignRight = false;
     [SerializeField] bool alignBottom = false;
+    #pragma warning restore 0414
 
+#if UNITY_IMGUI
     bool hidden;
 
     void Start() {
@@ -56,4 +59,5 @@ public class SceneSelection : MonoBehaviour
             hidden = !hidden;
         }
     }
+#endif
 }
