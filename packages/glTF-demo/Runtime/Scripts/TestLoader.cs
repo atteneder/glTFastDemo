@@ -118,8 +118,8 @@ public class TestLoader : MonoBehaviour {
         Debug.Log("[TestLoader] loading " + url);
 
         startTime = Time.realtimeSinceStartup;
-        urlChanged(url);
-        loadingBegin(loadType.ToString());
+        urlChanged?.Invoke(url);
+        loadingBegin?.Invoke(loadType.ToString());
 
         if (loadType.HasFlag(LoadType.glTFast))
         {
@@ -133,7 +133,7 @@ public class TestLoader : MonoBehaviour {
 #endif
             gltf1.loadOnStartup = false;
             var success = await gltf1.Load(url,null,deferAgent);
-            loadingEnd();
+            loadingEnd?.Invoke();
             if(success) {
                 if (!gltf1.currentSceneId.HasValue && gltf1.sceneCount > 0) {
                     // Fallback to first scene
@@ -180,7 +180,7 @@ public class TestLoader : MonoBehaviour {
     void UnityGltf_OnLoadComplete()
     {
         Debug.Log("[TestLoader] " + nameof(UnityGltf_OnLoadComplete));
-        loadingEnd();
+        loadingEnd?.Invoke();
         
         var bounds = CalculateLocalBounds(go2.transform);
         
