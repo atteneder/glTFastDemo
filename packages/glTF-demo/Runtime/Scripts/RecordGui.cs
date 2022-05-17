@@ -16,7 +16,7 @@ public class RecordGui : MonoBehaviour
         this.root = root;
     }
     
-    #if UNITY_GLTF
+    #if UNITY_GLTF && UNITY_IMGUI
     
     private void OnGUI()
     {
