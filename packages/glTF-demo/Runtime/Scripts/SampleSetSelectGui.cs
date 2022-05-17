@@ -57,7 +57,7 @@ public class SampleSetSelectGui : MonoBehaviour
             if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),set.name)) {
                 // Hide menu during loading, since it can distort the performance profiling.
                 this.enabled = false;
-                onSampleSetSelected(set);
+                onSampleSetSelected?.Invoke(set);
             }
             y+=GlobalGui.listItemHeight;
         }
