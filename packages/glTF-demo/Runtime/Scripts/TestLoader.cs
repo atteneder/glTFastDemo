@@ -220,7 +220,6 @@ public class TestLoader : MonoBehaviour {
         Quaternion currentRotation = transform.rotation;
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         var rends = transform.GetComponentsInChildren<Renderer>();
-        Debug.Log("Root: " + transform + ", renderers: " + rends.Length, transform);
         
         if (rends.Length < 1) return new Bounds(Vector3.zero, Vector3.one);
         
