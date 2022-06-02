@@ -43,7 +43,7 @@
       "url": "https://package.openupm.com"
     },
     "com.unity.burst": {
-      "version": "1.6.5",
+      "version": "1.7.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -93,6 +93,12 @@
     "com.unity.modules.imageconversion": {
       "version": "1.0.0",
       "depth": 2,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.imgui": {
+      "version": "1.0.0",
+      "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },

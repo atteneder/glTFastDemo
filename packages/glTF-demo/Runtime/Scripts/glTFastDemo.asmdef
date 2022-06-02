@@ -44,6 +44,11 @@
             "name": "com.unity.render-pipelines.high-definition",
             "expression": "1.0.0",
             "define": "UNITY_HDRP"
+        },
+        {
+            "name": "com.unity.modules.imgui",
+            "expression": "",
+            "define": "UNITY_IMGUI"
         }
     ],
     "noEngineReferences": false
