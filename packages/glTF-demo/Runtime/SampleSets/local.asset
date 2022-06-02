@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: local
   m_EditorClassIdentifier: 
   baseLocalPath: /Users/aa/tmp/gltf/multiscene
+  assetRelativePath: 
   streamingAssetsPath: 
   baseUrlWeb: 
   baseUrlLocal: 

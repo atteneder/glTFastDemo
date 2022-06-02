@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: glTF-Sample-Models-gltf
   m_EditorClassIdentifier: 
   baseLocalPath: /Users/Shared/SDK/glTF-Sample-Models/2.0
+  assetRelativePath: 
   streamingAssetsPath: gsm
   baseUrlWeb: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/
   baseUrlLocal: http://localhost:8080/glTF-Sample-Models/2.0/
