@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7832398387831198115}
   - component: {fileID: -4745815946667895209}
   - component: {fileID: 7832398387831198125}
-  - component: {fileID: 1688263377763703893}
   - component: {fileID: 1273295170}
+  - component: {fileID: 1688263377763703893}
   m_Layer: 0
   m_Name: TestGui
   m_TagString: Untagged
@@ -71,6 +71,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responsive: 1
   loadType: 2
+  gotSceneRoot:
+    m_PersistentCalls:
+      m_Calls: []
+  gotSceneBounds:
+    m_PersistentCalls:
+      m_Calls: []
   trackBallCtrl: {fileID: 0}
 --- !u!114 &-4745815946667895209
 MonoBehaviour:
@@ -99,19 +105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sampleSetCollection: {fileID: 11400000, guid: 8cf05cea8602c44288c5d35119d889ec,
     type: 2}
---- !u!114 &1688263377763703893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7832398387831198112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f276fbc045ea4078bc375686d48c1bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDeltaTime: 10
 --- !u!114 &1273295170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +132,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1688263377763703893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7832398387831198112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789bc1534d4c64735934043b188b3bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDeltaTime: 10
