@@ -52,6 +52,7 @@ public class ImageExample : MonoBehaviour
 
     void LoadImage(int aIndex, DropInfo aInfo)
     {
+#if UNITY_IMAGECONVERSION
         if (aInfo == null)
             return;
 #if UNITY_IMGUI
@@ -68,6 +69,9 @@ public class ImageExample : MonoBehaviour
                 Destroy(textures[aIndex]);
             textures[aIndex] = tex;
         }
+#else
+        Debug.LogError("Image loading not enabled.");
+#endif
     }
 
 #if UNITY_IMGUI

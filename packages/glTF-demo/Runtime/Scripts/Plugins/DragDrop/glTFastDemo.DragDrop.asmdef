@@ -19,6 +19,11 @@
             "name": "com.unity.modules.imgui",
             "expression": "",
             "define": "UNITY_IMGUI"
+        },
+        {
+            "name": "com.unity.modules.imageconversion",
+            "expression": "",
+            "define": "UNITY_IMAGECONVERSION"
         }
     ],
     "noEngineReferences": false

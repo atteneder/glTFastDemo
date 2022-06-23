@@ -10,7 +10,8 @@
     "com.unity.meshopt.decompress": "0.1.0-preview.5",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.imgui": "1.0.0",
-    "com.unity.modules.jsonserialize": "1.0.0"
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.modules.unitywebrequesttexture": "1.0.0"
   },
   "scopedRegistries": [
     {

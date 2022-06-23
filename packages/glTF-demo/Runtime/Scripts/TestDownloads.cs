@@ -28,7 +28,7 @@ public class TestDownloads : MonoBehaviour
     async void Start()
     {
         var headers = new []{
-            new HttpHeader(){Key="key",Value="value"}
+            new HttpHeader(){key="key",value="value"}
         };
         var x = new CustomHeaderDownloadProvider(headers);
 
