@@ -27,6 +27,9 @@ public class CustomLoadDemo : MonoBehaviour {
         var success = await gltf.Load("file:///path/to/file.gltf", settings);
 
         if (success) {
+#if GLTFAST_5_OR_NEWER
+            await
+#endif
             gltf.InstantiateMainScene(new GameObject("glTF").transform);
         }
         else {
@@ -36,9 +39,9 @@ public class CustomLoadDemo : MonoBehaviour {
     
     static async Task CustomInstantiation() {
 #if GLTFAST_4_OR_NEWER
-        var gltf = new GLTFast.GltfImport();
+        var gltf = new GltfImport();
 #else
-        var gltf = new GLTFast.GLTFast();
+        var gltf = new GLTFast();
 #endif
         var success = await gltf.Load("file:///path/to/file.gltf");
 
@@ -48,7 +51,27 @@ public class CustomLoadDemo : MonoBehaviour {
             Debug.LogFormat("The first material is called {0}", material.name);
 
             // Instantiate the scene multiple times
-#if GLTFAST_4_OR_NEWER
+#if GLTFAST_5_OR_NEWER
+            await gltf.InstantiateMainScene(new GameObject("Instance 1").transform);
+            await gltf.InstantiateMainScene(new GameObject("Instance 2").transform);
+            await gltf.InstantiateMainScene(new GameObject("Instance 3").transform);
+
+            // Create custom instantiation settings
+            var settings = new InstantiationSettings {
+                layer = 13,
+                lightIntensityFactor = 1000,
+                mask = ComponentType.Mesh | ComponentType.Animation,
+                sceneObjectCreation = InstantiationSettings.SceneObjectCreation.Never,
+                skinUpdateWhenOffscreen = false
+            };
+            
+            // Feed settings into instantiator
+            var instantiator = new GameObjectInstantiator(gltf, new GameObject("CustomizedInstance").transform, settings: settings);
+            
+            // Start instantiaton
+            await gltf.InstantiateMainScene(instantiator);
+            
+#elif GLTFAST_4_OR_NEWER
             gltf.InstantiateMainScene(new GameObject("Instance 1").transform);
             gltf.InstantiateMainScene(new GameObject("Instance 2").transform);
             gltf.InstantiateMainScene(new GameObject("Instance 3").transform);

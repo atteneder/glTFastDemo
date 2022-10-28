@@ -27,13 +27,18 @@
         },
         {
             "name": "com.atteneder.gltfast",
+            "expression": "0.0.0",
+            "define": "GLTFAST"
+        },
+        {
+            "name": "com.atteneder.gltfast",
             "expression": "4.0",
             "define": "GLTFAST_4_OR_NEWER"
         },
         {
             "name": "com.atteneder.gltfast",
-            "expression": "0.0.0",
-            "define": "GLTFAST"
+            "expression": "4.8",
+            "define": "GLTFAST_5_OR_NEWER"
         },
         {
             "name": "org.khronos.unitygltf",
