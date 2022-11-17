@@ -134,7 +134,8 @@ public class TestLoader : MonoBehaviour {
             gltf1 = go1.AddComponent<GltfAsset>();
 #endif
             gltf1.loadOnStartup = false;
-            var success = await gltf1.Load(url,null,deferAgent);
+            var logger = new CollectingLogger();
+            var success = await gltf1.Load(url,null,deferAgent,logger:logger);
             loadingEnd?.Invoke();
             if(success) {
                 if (!gltf1.currentSceneId.HasValue && gltf1.sceneCount > 0) {
@@ -145,6 +146,7 @@ public class TestLoader : MonoBehaviour {
                 GLTFast_onLoadComplete(gltf1);
             } else {
                 Debug.LogError("TestLoader: loading failed!");
+                logger.LogAll();
             }
 #endif
         }
