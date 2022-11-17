@@ -16,6 +16,9 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+#if GLTFAST_5_OR_NEWER
+using GLTFast.Logging;
+#endif
 #if GLTFAST_4_OR_NEWER
 using GLTFast;
 #endif

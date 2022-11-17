@@ -27,10 +27,12 @@ public class CustomLoadDemo : MonoBehaviour {
         var success = await gltf.Load("file:///path/to/file.gltf", settings);
 
         if (success) {
+            var gameObject = new GameObject("glTF");
 #if GLTFAST_5_OR_NEWER
-            await
+            await gltf.InstantiateMainSceneAsync(gameObject.transform);
+#else
+            gltf.InstantiateMainScene(gameObject.transform);
 #endif
-            gltf.InstantiateMainScene(new GameObject("glTF").transform);
         }
         else {
             Debug.LogError("Loading glTF failed!");
@@ -52,9 +54,9 @@ public class CustomLoadDemo : MonoBehaviour {
 
             // Instantiate the scene multiple times
 #if GLTFAST_5_OR_NEWER
-            await gltf.InstantiateMainScene(new GameObject("Instance 1").transform);
-            await gltf.InstantiateMainScene(new GameObject("Instance 2").transform);
-            await gltf.InstantiateMainScene(new GameObject("Instance 3").transform);
+            await gltf.InstantiateMainSceneAsync(new GameObject("Instance 1").transform);
+            await gltf.InstantiateMainSceneAsync(new GameObject("Instance 2").transform);
+            await gltf.InstantiateMainSceneAsync(new GameObject("Instance 3").transform);
 
             // Create custom instantiation settings
             var settings = new InstantiationSettings {
@@ -69,7 +71,7 @@ public class CustomLoadDemo : MonoBehaviour {
             var instantiator = new GameObjectInstantiator(gltf, new GameObject("CustomizedInstance").transform, settings: settings);
             
             // Start instantiaton
-            await gltf.InstantiateMainScene(instantiator);
+            await gltf.InstantiateMainSceneAsync(instantiator);
             
 #elif GLTFAST_4_OR_NEWER
             gltf.InstantiateMainScene(new GameObject("Instance 1").transform);
@@ -98,17 +100,28 @@ public class CustomLoadDemo : MonoBehaviour {
         
         foreach( var url in manyUrls) {
 #if GLTFAST_4_OR_NEWER
-            var gltf = new GLTFast.GltfImport(null,deferAgent);
+            var gltf = new GltfImport(null,deferAgent);
 #else
             var gltf = new GLTFast.GLTFast(null,deferAgent);
 #endif
             var task = gltf.Load(url).ContinueWith(
+#if GLTFAST_5_OR_NEWER
+                async
+#endif
                 t => {
                     if (t.Result) {
 #if GLTFAST_4_OR_NEWER
+#if GLTFAST_5_OR_NEWER
+                        await gltf.InstantiateMainSceneAsync(transform);
+#else
                         gltf.InstantiateMainScene(transform);
+#endif
                         for (int sceneId = 0; sceneId < gltf.sceneCount; sceneId++) {
+#if GLTFAST_5_OR_NEWER
+                            await gltf.InstantiateSceneAsync(transform, sceneId);
+#else
                             gltf.InstantiateScene(transform, sceneId);
+#endif
                         }
 #else
                         gltf.InstantiateGltf(transform);
