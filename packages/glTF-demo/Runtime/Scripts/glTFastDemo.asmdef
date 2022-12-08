@@ -3,8 +3,8 @@
     "rootNamespace": "",
     "references": [
         "glTFast",
-        "glTFastSchema",
         "glTFast.dots",
+        "glTFast.Export",
         "glTFastEditor",
         "glTF-test-framework",
         "glTF-test-framework.Sample",
