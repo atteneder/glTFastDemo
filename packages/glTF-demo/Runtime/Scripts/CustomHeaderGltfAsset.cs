@@ -27,6 +27,6 @@ public class CustomHeaderGltfAsset : MonoBehaviour
     void Start() {
         downloadProvider = new CustomHeaderDownloadProvider(headers);
         var gltf = GetComponent<GltfAsset>();
-        gltf.Load(gltf.url,downloadProvider);
+        gltf.Load(gltf.Url,downloadProvider);
     }
 }

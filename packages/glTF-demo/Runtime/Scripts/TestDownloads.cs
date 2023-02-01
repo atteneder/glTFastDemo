@@ -28,7 +28,7 @@ public class TestDownloads : MonoBehaviour
     async void Start()
     {
         var headers = new []{
-            new HttpHeader(){key="key",value="value"}
+            new HttpHeader("key","value")
         };
         var x = new CustomHeaderDownloadProvider(headers);
 
@@ -42,7 +42,7 @@ public class TestDownloads : MonoBehaviour
         var downloads = await Task.WhenAll(downloadTasks);
 
         for (var index = 0; index < downloads.Length; index++) {
-            results[index] = downloads[index].texture;
+            results[index] = downloads[index].Texture;
         }
 
         for (int i = 0; i < urls.Length; i++)

@@ -83,7 +83,7 @@ public class SimultaneousMassLoader : MassLoader {
         var go = new GameObject(System.IO.Path.GetFileNameWithoutExtension(url));
         // Debug.Log(go.name);
         var gltfAsset = go.AddComponent<GLTFast.GltfAsset>();
-        gltfAsset.loadOnStartup = false; // prevent auto-loading
+        gltfAsset.LoadOnStartup = false; // prevent auto-loading
         await gltfAsset.Load(url,null,deferAgent); // load manually with custom defer agent
         if(visibleAssets.Count>=numVisibleAssets) {
             var oldAsset = visibleAssets.Dequeue();

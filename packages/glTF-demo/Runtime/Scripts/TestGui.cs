@@ -130,7 +130,7 @@ public class TestGui : MonoBehaviour {
     Vector2 scrollPos;
 
     string[] sceneNames;
-    GameObjectInstantiator.SceneInstance sceneInstance;
+    GameObjectSceneInstance sceneInstance;
     DropDown sceneDropDown;
     DropDown cameraDropDown;
     
@@ -165,7 +165,7 @@ public class TestGui : MonoBehaviour {
         stopWatch.StartTime();
     }
 
-    void OnLoadingEnd() {
+    void OnLoadingEnd(bool success) {
         showMenu = true;
         stopWatch.StopTime();
     }
@@ -350,8 +350,8 @@ public class TestGui : MonoBehaviour {
     }
     
     void SetCameraIndex(int index) {
-        for (var i = 0; i < sceneInstance.cameras.Count; i++) {
-            var camera = sceneInstance.cameras[i];
+        for (var i = 0; i < sceneInstance.Cameras.Count; i++) {
+            var camera = sceneInstance.Cameras[i];
             camera.enabled = i == index;
         }
 
@@ -385,10 +385,10 @@ public class TestGui : MonoBehaviour {
         // TODO: query cameras and feed into list
 #else
         sceneInstance = loader.sceneInstance;
-        if (sceneInstance?.cameras != null && sceneInstance.cameras.Count > 0) {
-            var names = new string[sceneInstance.cameras.Count];
-            for (var index = 0; index < sceneInstance.cameras.Count; index++) {
-                names[index] = sceneInstance.cameras[index]?.name;
+        if (sceneInstance?.Cameras != null && sceneInstance.Cameras.Count > 0) {
+            var names = new string[sceneInstance.Cameras.Count];
+            for (var index = 0; index < sceneInstance.Cameras.Count; index++) {
+                names[index] = sceneInstance.Cameras[index]?.name;
             }
 
             cameraDropDown = new DropDown(names, true, "Camera");

@@ -19,9 +19,9 @@ public class CustomLoadDemo : MonoBehaviour {
         var gltf = new GLTFast.GltfImport();
         // Create a settings object and configure it accordingly
         var settings = new ImportSettings {
-            generateMipMaps = true,
-            anisotropicFilterLevel = 3,
-            nodeNameMethod = ImportSettings.NameImportMethod.OriginalUnique
+            GenerateMipMaps = true,
+            AnisotropicFilterLevel = 3,
+            NodeNameMethod = NameImportMethod.OriginalUnique
         };
         // Load the glTF and pass along the settings
         var success = await gltf.Load("file:///path/to/file.gltf", settings);
@@ -60,11 +60,11 @@ public class CustomLoadDemo : MonoBehaviour {
 
             // Create custom instantiation settings
             var settings = new InstantiationSettings {
-                layer = 13,
-                lightIntensityFactor = 1000,
-                mask = ComponentType.Mesh | ComponentType.Animation,
-                sceneObjectCreation = InstantiationSettings.SceneObjectCreation.Never,
-                skinUpdateWhenOffscreen = false
+                Layer = 13,
+                LightIntensityFactor = 1000,
+                Mask = ComponentType.Mesh | ComponentType.Animation,
+                SceneObjectCreation = SceneObjectCreation.Never,
+                SkinUpdateWhenOffscreen = false
             };
             
             // Feed settings into instantiator
@@ -116,7 +116,7 @@ public class CustomLoadDemo : MonoBehaviour {
 #else
                         gltf.InstantiateMainScene(transform);
 #endif
-                        for (int sceneId = 0; sceneId < gltf.sceneCount; sceneId++) {
+                        for (int sceneId = 0; sceneId < gltf.SceneCount; sceneId++) {
 #if GLTFAST_5_OR_NEWER
                             await gltf.InstantiateSceneAsync(transform, sceneId);
 #else
@@ -134,5 +134,36 @@ public class CustomLoadDemo : MonoBehaviour {
         }
 
         await Task.WhenAll(tasks);
+    }
+    
+    async Task InstanceAccess() 
+    {
+        var gltfImport = new GltfImport();
+        await gltfImport.Load("test.gltf");
+        var instantiator = new GameObjectInstantiator(gltfImport,transform);
+        var success = await gltfImport.InstantiateMainSceneAsync(instantiator);
+        if (success) {
+        
+            // Get the SceneInstance to access the instance's properties
+            var sceneInstance = instantiator.SceneInstance;
+
+            // Enable the first imported camera (which are disabled by default)
+            if (sceneInstance.Cameras is { Count: > 0 }) {
+                sceneInstance.Cameras[0].enabled = true;
+            }
+        
+            // Decrease lights' ranges
+            if (sceneInstance.Lights != null) {
+                foreach (var glTFLight in sceneInstance.Lights) {
+                    glTFLight.range *= 0.1f;
+                }
+            }
+        
+            // Play the default (i.e. the first) animation clip
+            var legacyAnimation = instantiator.SceneInstance.LegacyAnimation;
+            if (legacyAnimation != null) {
+                legacyAnimation.Play();
+            }
+        }
     }
 }

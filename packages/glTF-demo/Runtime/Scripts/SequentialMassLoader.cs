@@ -62,7 +62,7 @@ public class SequentialMassLoader : MassLoader
         Debug.Log(go.name);
 
         gltfAsset = go.AddComponent<T>();
-        gltfAsset.loadOnStartup = false;
+        gltfAsset.LoadOnStartup = false;
         var success = await gltfAsset.Load(url);
         if(!success) {
             Debug.LogError("Ups");

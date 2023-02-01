@@ -44,7 +44,7 @@ public class TestLoader : MonoBehaviour {
     
     public UnityAction<string> urlChanged;
     public UnityAction<string> loadingBegin;
-    public UnityAction loadingEnd;
+    public UnityAction<bool> loadingEnd;
     public UnityEvent<Transform> gotSceneRoot;
     public UnityEvent<Bounds> gotSceneBounds;
 
@@ -52,7 +52,7 @@ public class TestLoader : MonoBehaviour {
     
     public string[] GetSceneNames() {
 #if GLTFAST_4_OR_NEWER
-        if (gltf1) return gltf1.sceneNames;
+        if (gltf1) return gltf1.SceneNames;
 #else
 #endif
         return null; 
@@ -61,7 +61,7 @@ public class TestLoader : MonoBehaviour {
     public int? currentSceneIndex {
         get {
 #if GLTFAST_4_OR_NEWER
-            if (gltf1) return gltf1.currentSceneId;
+            if (gltf1) return gltf1.CurrentSceneId;
 #else
 #endif
             return null;
@@ -76,7 +76,7 @@ public class TestLoader : MonoBehaviour {
     GltfEntityAsset gltf1;
 #else
     GltfAsset gltf1;
-    public GameObjectInstantiator.SceneInstance sceneInstance { get; private set; }
+    public GameObjectSceneInstance sceneInstance { get; private set; }
 #endif
 #endif
 #if UNITY_GLTF
@@ -136,12 +136,12 @@ public class TestLoader : MonoBehaviour {
 #else
             gltf1 = go1.AddComponent<GltfAsset>();
 #endif
-            gltf1.loadOnStartup = false;
+            gltf1.LoadOnStartup = false;
             var logger = new CollectingLogger();
             var success = await gltf1.Load(url,null,deferAgent,logger:logger);
-            loadingEnd?.Invoke();
+            loadingEnd?.Invoke(success);
             if(success) {
-                if (!gltf1.currentSceneId.HasValue && gltf1.sceneCount > 0) {
+                if (!gltf1.CurrentSceneId.HasValue && gltf1.SceneCount > 0) {
                     // Fallback to first scene
                     Debug.LogWarning("glTF has no main scene. Falling back to first scene.");
 #if GLTFAST_5_OR_NEWER
@@ -181,7 +181,7 @@ public class TestLoader : MonoBehaviour {
 #if GLTFAST_4_OR_NEWER
         var success = gltf1.InstantiateScene(sceneIndex);
 #if !UNITY_DOTS_HYBRID
-        sceneInstance = gltf1.sceneInstance;
+        sceneInstance = gltf1.SceneInstance;
 #endif
 #endif
     }
@@ -190,7 +190,7 @@ public class TestLoader : MonoBehaviour {
     void UnityGltf_OnLoadComplete()
     {
         Debug.Log("[TestLoader] " + nameof(UnityGltf_OnLoadComplete));
-        loadingEnd?.Invoke();
+        loadingEnd?.Invoke(true);
         
         var bounds = CalculateLocalBounds(go2.transform);
         
@@ -209,7 +209,7 @@ public class TestLoader : MonoBehaviour {
         // TODO: calculate the bounding box
         trackBallCtrl.SetTarget(new Bounds(asset.transform.position,Vector3.one));
 #else
-        sceneInstance = (asset as GltfAsset).sceneInstance;
+        sceneInstance = (asset as GltfAsset).SceneInstance;
         
         var bounds = CalculateLocalBounds(asset.transform);
 
