@@ -9,43 +9,20 @@
       onSuccess = function(unityInstance) {
         window.gameInstance = unityInstance;
         
-        if (parent.globals && parent.globals.onReady)
+        if (parent.globals && parent.globals.onReady) {
           parent.globals.onReady('{{{ PRODUCT_NAME }}}');
+        }
 
         window.addEventListener("dragover",function(e) { e.preventDefault(); },false);
         window.addEventListener("drop",function(e) { e.preventDefault(); },false);
 
         document.getElementById("unity-canvas").addEventListener('drop', (event) => {
           event.preventDefault();
-          const files = event.dataTransfer.files;
-          if(files && files.length > 0) {
-            let rootFile;
-            for (const file of files) {
-              if (file.name.match(/\.gl(tf|b)$/)) {
-                rootFile = file;
-              }
-            }
-            if(!rootFile) {
-              console.error('No valid glTF file found');
-              return;
-            }
-            if(!rootFile.type) {
-              // Unknown mime type, so we try to infer it from the file extension
-              const isBinary = rootFile.name.match(/\.glb$/);
-              if(files.length>1) {
-                console.warn('Multi-file glTFs are not supported yet!');
-              }
-              rootFile = new File([rootFile],rootFile.name,{type: isBinary ? "model/gltf-binary" : "model/gltf+json"});
-            }
-            unityInstance.SendMessage("TestGui","LoadUrl",window.URL.createObjectURL(rootFile));
-            
-            onFileSelected();
-          }
+          parent.globals.drop(event);
         }, false);
       };
 
       onFileSelected = function() {
-          document.querySelector("div.menu").classList.add("hidden");
       }
     </script>
     <style type="text/css">
@@ -55,25 +32,42 @@
         overflow:hidden;
       }
 
-      div.menu {
-        display: flex;
-        position: absolute;
-        justify-content: space-around;
-        top: 0;
+      footer {
+        position: fixed;
+        bottom: 0;
         width: 100%;
-        pointer-events: none;
-        user-select: none;
-        -webkit-user-select: none;
+        display: flex;
+        align-items: center;
       }
 
-      div.menu.hidden {
-        display:none;
+      footer .separator {
+        margin: 0 10px;
       }
     </style>
   </head>
   <body>
     <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} style="width: 100vw; height: 100vh; background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}}"></canvas>
     <script>
+
+      let viewer = {};
+
+      viewer.loadGltf = function(url) {
+        if(!window.gameInstance) {
+          console.error('glTFast not ready');
+          return;
+        }
+        window.gameInstance.Module.SendMessage("TestGui","LoadUrl",url);
+      }
+
+      viewer.onModelLoaded = function() {
+        parent.globals.onModelLoaded();
+      }
+      window.viewer = viewer;
+
+      if (parent.globals && parent.globals.registerViewer) {
+        parent.globals.registerViewer('glTFast',viewer);
+      }
+
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
         var meta = document.createElement('meta');
@@ -100,6 +94,14 @@
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       }).then(onSuccess);
     </script>
-    <div class="menu"><p>Drop .glb or .gltf files to view</p></div>
+    <footer>
+      <a href="https://unity.com/" target="_blank"><img src="../mwu.svg" style="width: 200px;" /></a>
+      <span class="separator"> • </span>
+      <a href="https://github.com/atteneder/glTFast" target="_blank">glTFast 4.9.0</a>
+      <span class="separator"> • </span>
+      <a href="https://unity.com/" target="_blank">Unity 2021.3f1</a>
+      <span class="separator"> • </span>
+      <p>Built-In Render Pipeline</p>
+    </footer>
   </body>
 </html>

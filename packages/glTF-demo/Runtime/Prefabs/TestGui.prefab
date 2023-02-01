@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7832398387831198125}
   - component: {fileID: 1273295170}
   - component: {fileID: 1688263377763703893}
+  - component: {fileID: 8386425889639630682}
   m_Layer: 0
   m_Name: TestGui
   m_TagString: Untagged
@@ -145,3 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDeltaTime: 10
+--- !u!114 &8386425889639630682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7832398387831198112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f040d8dafa2d14b96a1ce8dbd557504a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
