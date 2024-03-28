@@ -28,9 +28,13 @@
     <style type="text/css">
       body {
         font-family: sans-serif;
+        color: #999;
         margin: 0px;
         overflow:hidden;
       }
+
+      a { color: #666; }
+      a:hover { color: #009; }
 
       footer {
         position: fixed;
@@ -95,13 +99,12 @@
       }).then(onSuccess);
     </script>
     <footer>
-      <a href="https://unity.com/" target="_blank"><img src="../mwu.svg" style="width: 200px;" /></a>
-      <span class="separator"> • </span>
+      <a href="https://unity.com/" target="_blank" title="Unity 6000.0.0b12"><img src="../mwu.svg" style="width: 200px;" /></a>
       <a href="https://docs.unity3d.com/Packages/com.unity.cloud.gltfast@latest/" target="_blank" title="glTFast 6.2.0">glTFast</a>
       <span class="separator"> • </span>
-      <a href="https://unity.com/" target="_blank" title="Unity 6000.0.0b12">Unity 6</a>
-      <span class="separator"> • </span>
       <p>Built-In Render Pipeline</p>
+      <span class="separator"> • </span>
+      <p>WebGL 2</p>
     </footer>
   </body>
 </html>
