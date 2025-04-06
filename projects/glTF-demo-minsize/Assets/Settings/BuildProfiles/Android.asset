@@ -12,14 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Android
   m_EditorClassIdentifier: 
+  m_AssetVersion: 1
   m_BuildTarget: 13
   m_Subtarget: 0
-  m_ModuleName: Android
+  m_PlatformId: b9b35072a6f44c2e863f17467ea3dc13
   m_PlatformBuildProfile:
     rid: 8096972517339561984
+  m_OverrideGlobalSceneList: 0
   m_Scenes:
   - m_enabled: 1
     m_path: Packages/com.atteneder.gltf-demo/Runtime/Scenes/TestLoadScene.unity
+  m_ScriptingDefines: []
+  m_PlayerSettingsYaml:
+    m_Settings: []
   references:
     version: 2
     RefIds:
@@ -40,10 +45,10 @@ MonoBehaviour:
         m_BuildSubtarget: 0
         m_BuildSystem: 1
         m_ExportAsGoogleAndroidProject: 0
-        m_DebugSymbolLevel: 1
-        m_DebugSymbolFormat: 5
+        m_DebugSymbolLevel: 2
+        m_DebugSymbolFormat: 6
         m_CurrentDeploymentTargetId: __builtin__target_default
         m_BuildType: 2
-        m_BuildAppBundle: 0
+        m_BuildAppBundle: 1
         m_IPAddressToConnect: 
         m_SymlinkSources: 0
