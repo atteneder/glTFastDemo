@@ -12,14 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Web
   m_EditorClassIdentifier: 
+  m_AssetVersion: 1
   m_BuildTarget: 20
   m_Subtarget: 0
-  m_ModuleName: WebGL
+  m_PlatformId: 84a3bb9e7420477f885e98145999eb20
   m_PlatformBuildProfile:
     rid: 8096972480159940609
+  m_OverrideGlobalSceneList: 0
   m_Scenes:
   - m_enabled: 1
     m_path: Packages/com.atteneder.gltf-demo/Runtime/Scenes/TestLoadScene.unity
+  m_HasScriptingDefines: 0
+  m_ScriptingDefines: []
+  m_PlayerSettingsYaml:
+    m_Settings: []
   references:
     version: 2
     RefIds:
@@ -37,6 +43,9 @@ MonoBehaviour:
         m_ExplicitArrayBoundsChecks: 0
         m_CompressionType: -1
         m_InstallInBuildFolder: 0
+        m_InsightsSettingsContainer:
+          m_BuildProfileEngineDiagnosticsState: 2
+        m_AdaptivePerformanceEnabled: 0
         m_CodeOptimization: 3
         m_WebGLClientBrowserPath: 
         m_WebGLClientBrowserType: 0

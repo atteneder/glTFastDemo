@@ -836,7 +836,7 @@ PlayerSettings:
   webGLCompressionFormat: 2
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
-  webGLThreadsSupport: 0
+  webGLThreadsSupport: 1
   webGLDecompressionFallback: 0
   webGLInitialMemorySize: 32
   webGLMaximumMemorySize: 2048

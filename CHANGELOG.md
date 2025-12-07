@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- (Performance) Enabled Native C/C++ Multithreading on Web
 - Updates
   - Unity 6000.0.63f1
   - glTFast 6.15.0
