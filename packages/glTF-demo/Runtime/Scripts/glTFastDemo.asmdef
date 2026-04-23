@@ -5,7 +5,7 @@
         "glTFast",
         "glTFast.dots",
         "glTFast.Export",
-        "glTFastEditor",
+        "glTFast.Editor",
         "glTF-test-framework",
         "glTF-test-framework.Sample",
         "UnityGLTFScripts",
@@ -27,18 +27,8 @@
         },
         {
             "name": "com.unity.cloud.gltfast",
-            "expression": "0.0.0",
+            "expression": "6.0.0",
             "define": "GLTFAST"
-        },
-        {
-            "name": "com.unity.cloud.gltfast",
-            "expression": "4.0",
-            "define": "GLTFAST_4_OR_NEWER"
-        },
-        {
-            "name": "com.unity.cloud.gltfast",
-            "expression": "4.8",
-            "define": "GLTFAST_5_OR_NEWER"
         },
         {
             "name": "org.khronos.unitygltf",

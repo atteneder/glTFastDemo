@@ -16,12 +16,10 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-#if GLTFAST_5_OR_NEWER
+#if GLTFAST
 using GLTFast.Logging;
-#endif
-#if GLTFAST_4_OR_NEWER
 using GLTFast;
-#endif
+#endif // GLTFAST
 #if UNITY_GLTF
 using UnityGLTF;
 #endif
@@ -50,24 +48,13 @@ public class TestLoader : MonoBehaviour {
 
     [SerializeField] TrackballCamera trackBallCtrl;
     
-    public string[] GetSceneNames() {
-#if GLTFAST_4_OR_NEWER
-        if (gltf1) return gltf1.SceneNames;
-#else
-#endif
-        return null; 
+    public string[] GetSceneNames()
+    {
+        return gltf1?.SceneNames;
     }
 
-    public int? currentSceneIndex {
-        get {
-#if GLTFAST_4_OR_NEWER
-            if (gltf1) return gltf1.CurrentSceneId;
-#else
-#endif
-            return null;
-        }
-    }
-    
+    public int? currentSceneIndex => gltf1?.CurrentSceneId;
+
     GameObject go1 = null;
     GameObject go2 = null;
 
@@ -144,10 +131,7 @@ public class TestLoader : MonoBehaviour {
                 if (!gltf1.CurrentSceneId.HasValue && gltf1.SceneCount > 0) {
                     // Fallback to first scene
                     Debug.LogWarning("glTF has no main scene. Falling back to first scene.");
-#if GLTFAST_5_OR_NEWER
-                    await
-#endif
-                    gltf1.InstantiateScene(0);
+                    await gltf1.InstantiateScene(0);
                 }
                 GLTFast_onLoadComplete(gltf1);
             } else {
@@ -172,17 +156,14 @@ public class TestLoader : MonoBehaviour {
     }
 
     public void ClearScene() {
-#if GLTFAST_4_OR_NEWER
-        if (gltf1) gltf1.ClearScenes();
-#endif
+        gltf1?.ClearScenes();
     }
 
-    public void InstantiateScene(int sceneIndex) {
-#if GLTFAST_4_OR_NEWER
-        var success = gltf1.InstantiateScene(sceneIndex);
+    public void InstantiateScene(int sceneIndex)
+    {
+        gltf1.InstantiateScene(sceneIndex);
 #if !UNITY_DOTS_HYBRID
         sceneInstance = gltf1.SceneInstance;
-#endif
 #endif
     }
 

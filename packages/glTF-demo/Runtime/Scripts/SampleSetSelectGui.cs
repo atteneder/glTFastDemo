@@ -20,10 +20,8 @@ using GLTFTest.Sample;
 public class SampleSetSelectGui : MonoBehaviour
 {
     [SerializeField]
-#pragma warning disable 0414
-    SampleSetCollection sampleSetCollection = null;
-#pragma warning restore 0414
-    
+    SampleSetCollection sampleSetCollection;
+
     public UnityAction<SampleSet> onSampleSetSelected;
 #if UNITY_IMGUI
 
@@ -41,7 +39,6 @@ public class SampleSetSelectGui : MonoBehaviour
     private void OnGUI()
     {
         GlobalGui.Init();
-        float width = Screen.safeArea.width;
         float height = Screen.safeArea.height;
 
         float listItemWidth = GlobalGui.listWidth-16;
@@ -55,7 +52,7 @@ public class SampleSetSelectGui : MonoBehaviour
         foreach( var set in sampleSetCollection.sampleSets ) {
             if(GUI.Button(new Rect(0,y,listItemWidth,GlobalGui.listItemHeight),set.name)) {
                 // Hide menu during loading, since it can distort the performance profiling.
-                this.enabled = false;
+                enabled = false;
                 onSampleSetSelected?.Invoke(set);
             }
             y+=GlobalGui.listItemHeight;
@@ -63,6 +60,6 @@ public class SampleSetSelectGui : MonoBehaviour
 
         GUI.EndScrollView();
     }
-#endif
-#endif
+#endif // !PLATFORM_WEBGL || UNITY_EDITOR
+#endif // UNITY_IMGUI
 }

@@ -23,5 +23,5 @@ public class NativeInterface : MonoBehaviour {
 #else
     static void OnModelLoaded(bool success) {}
 #endif
-#endif
+#endif // !UNITY_EDITOR
 }
