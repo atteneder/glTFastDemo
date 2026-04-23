@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updates
-  - Unity 6000.0.73f1
+  - Unity 6000.3.14f1
   - glTFast 6.18.0
   - KTX for Unity 3.6.3
   - Draco for Unity 5.4.3
