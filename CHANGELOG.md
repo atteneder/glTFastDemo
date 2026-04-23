@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - (Performance) Enabled Native C/C++ Multithreading on Web
+  - Target WebAssembly 2023
+  - Enabled explicitly thrown exceptions for Web
 - Updates
   - Unity 6000.0.63f1
   - glTFast 6.15.0
