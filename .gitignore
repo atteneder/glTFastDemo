@@ -46,6 +46,7 @@ sysinfo.txt
 /projects/*/Assets/StreamingAssets/glTF-Sample-Models.meta
 /projects/*/Assets/StreamingAssets/gsm*
 /projects/*/Assets/StreamingAssets/gsm.meta
+/projects/*/Data/Plugins/lib_burst_generated.*
 /projects/*/Logs
 /projects/*/Assets/Models*
 /projects/*/Assets/Scenes*
