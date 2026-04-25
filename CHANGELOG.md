@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- (Web) Stopwatch state is passed on to web app.
+
 ### Changed
 - Updates
   - Unity 6000.3.14f1

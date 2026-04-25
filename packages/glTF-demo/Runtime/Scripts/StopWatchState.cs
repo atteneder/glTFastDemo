@@ -3,7 +3,7 @@
 
 using System;
 
-struct StopWatchState : IEquatable<StopWatchState>
+public struct StopWatchState : IEquatable<StopWatchState>
 {
     public float duration;
     public int frameCount;

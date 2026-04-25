@@ -138,6 +138,39 @@ public class TestGui : MonoBehaviour {
     [SerializeField]
     Texture2D guiScrollBarThumbSprite;
 
+    TestLoader testLoader;
+
+    void Awake() {
+        testLoader = GetComponent<TestLoader>();
+        stopWatchGui.posX = GlobalGui.listWidth;
+
+#if GUI_ENABLED
+        var selectSet = GetComponent<SampleSetSelectGui>();
+        selectSet.onSampleSetSelected += OnSampleSetSelected;
+
+#endif
+        testLoader.urlChanged += UrlChanged;
+        testLoader.loadingBegin += OnLoadingBegin;
+        testLoader.loadingEnd += OnLoadingEnd;
+    }
+
+    void UrlChanged(string newUrl)
+    {
+#if GUI_ENABLED
+        urlField = newUrl;
+#endif
+    }
+
+    void OnLoadingBegin(string title) {
+        stopWatchGui.SetTitle(title);
+        stopWatch.StartTime();
+    }
+
+    void OnLoadingEnd(bool success) {
+        state = MenuState.ShowButton;
+        stopWatch.StopTime();
+    }
+
 #if GUI_ENABLED
     bool enableLocalSwitch = true;
     bool enableUrlField = true;
@@ -156,8 +189,6 @@ public class TestGui : MonoBehaviour {
     DropDown sceneDropDown;
     DropDown cameraDropDown;
     
-    TestLoader testLoader;
-    
     GUIStyle labelStyle;
     GUIStyle buttonStyle;
     GUIStyle toggleStyle;
@@ -165,22 +196,7 @@ public class TestGui : MonoBehaviour {
    
     int? currentSceneIndex => testLoader.currentSceneIndex;
 
-    void Awake() {
-        testLoader = GetComponent<TestLoader>();
-        stopWatchGui.posX = GlobalGui.listWidth;
-
-#if PLATFORM_WEBGL && !UNITY_EDITOR
-        // Hide UI in glTF compare web
-        state = MenuState.Hidden;
-#endif
-
-        var selectSet = GetComponent<SampleSetSelectGui>();
-        selectSet.onSampleSetSelected += OnSampleSetSelected;
-
-        testLoader.urlChanged += UrlChanged;
-        testLoader.loadingBegin += OnLoadingBegin;
-        testLoader.loadingEnd += OnLoadingEnd;
-    }
+    
 
     void Start() {
 #if UNITY_ANDROID
@@ -188,16 +204,6 @@ public class TestGui : MonoBehaviour {
         enableLocalSwitch = false;
         enableUrlField = false;
 #endif
-    }
-
-    void OnLoadingBegin(string title) {
-        stopWatchGui.SetTitle(title);
-        stopWatch.StartTime();
-    }
-
-    void OnLoadingEnd(bool success) {
-        state = MenuState.ShowButton;
-        stopWatch.StopTime();
     }
 
     void OnSampleSetSelected(SampleSet newSet) {
@@ -231,11 +237,7 @@ public class TestGui : MonoBehaviour {
         var selectSet = GetComponent<SampleSetSelectGui>();
         selectSet.enabled = true;
     }
-    void UrlChanged(string newUrl)
-    {
-        urlField = newUrl;
-    }
-    
+
     TestLoader loader;
     private void OnGUI()
     {

@@ -66,6 +66,11 @@
       viewer.onModelLoaded = function() {
         parent.globals.onModelLoaded();
       }
+
+      viewer.updateStopWatch = function(duration, frameCount, averageFrameTime, maxFrameTime, minFrameTime) {
+        parent.globals.updateStopWatch(duration, frameCount, averageFrameTime, maxFrameTime, minFrameTime);
+      }
+
       window.viewer = viewer;
 
       if (parent.globals && parent.globals.registerViewer) {
