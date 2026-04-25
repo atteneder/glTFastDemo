@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - (Web) Errors about missing scripts and difference in serialization size.
+- (Web) Removed IMGUI artifacts by disabling IMGUI in Web builds.
 
 ## [0.9.3] - 2026-04-23
 

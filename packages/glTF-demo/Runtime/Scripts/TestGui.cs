@@ -13,6 +13,10 @@
 // limitations under the License.
 //
 
+#if UNITY_IMGUI && (UNITY_EDITOR || !UNITY_WEBGL)
+#define GUI_ENABLED
+#endif
+
 #if !(UNITY_ANDROID || UNITY_WEBGL) || UNITY_EDITOR
 #define LOCAL_LOADING
 #endif
@@ -32,7 +36,7 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(TestLoader))]
 public class TestGui : MonoBehaviour {
 
-#if UNITY_IMGUI
+#if GUI_ENABLED
     public class DropDown {
         public bool show { get; private set; }
         string[] items;
@@ -97,7 +101,7 @@ public class TestGui : MonoBehaviour {
             }
         }
     }
-#endif
+#endif // GUI_ENABLED
 
     enum MenuState {
         Hidden,
@@ -134,7 +138,7 @@ public class TestGui : MonoBehaviour {
     [SerializeField]
     Texture2D guiScrollBarThumbSprite;
 
-#if UNITY_IMGUI
+#if GUI_ENABLED
     bool enableLocalSwitch = true;
     bool enableUrlField = true;
 
@@ -454,5 +458,5 @@ public class TestGui : MonoBehaviour {
         testLoader.loadingBegin -= OnLoadingBegin;
         testLoader.loadingEnd -= OnLoadingEnd;
     }
-#endif
+#endif // GUI_ENABLED
 }
