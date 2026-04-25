@@ -63,8 +63,8 @@
         window.gameInstance.Module.SendMessage("TestGui","LoadUrl",url);
       }
 
-      viewer.onModelLoaded = function() {
-        parent.globals.onModelLoaded();
+      viewer.onModelLoaded = function(success) {
+        parent.globals.onModelLoaded(success);
       }
 
       viewer.updateStopWatch = function(duration, frameCount, averageFrameTime, maxFrameTime, minFrameTime) {
