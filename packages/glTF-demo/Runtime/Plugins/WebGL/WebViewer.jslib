@@ -1,7 +1,7 @@
 mergeInto(LibraryManager.library, {
-  OnModelLoaded: function () {
+  OnModelLoaded: function (success) {
     if(window.viewer.onModelLoaded) {
-      window.viewer.onModelLoaded();
+      window.viewer.onModelLoaded(success);
     }
   }
 });
