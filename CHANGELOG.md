@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - KTX for Unity 3.6.3
   - Draco for Unity 5.4.3
   - meshoptimizer mesh compression for Unity 0.2.0-exp.1
+- (Performance) Stop watch UI string is updated upon change only.
 
 ### Removed
 - `CustomLoadDemo`

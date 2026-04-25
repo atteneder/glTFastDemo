@@ -1,17 +1,9 @@
-﻿// Copyright 2020-2022 Andreas Atteneder
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-//
+﻿// SPDX-FileCopyrightText: 2020 Andreas Atteneder
+// SPDX-License-Identifier: Apache-2.0
+
+#if UNITY_IMGUI && (UNITY_EDITOR || !UNITY_WEBGL)
+#define GUI_ENABLED
+#endif
 
 using UnityEngine;
 using GLTFTest;
@@ -19,25 +11,47 @@ using GLTFTest;
 [RequireComponent(typeof(StopWatch))]
 public class StopWatchGui : MonoBehaviour {
     
-    public float posX;
-
-#if UNITY_IMGUI
     StopWatch m_StopWatch;
-    string title = "glTFast";
+    private StopWatchState m_State;
 
     void Start() {
         m_StopWatch = gameObject.GetComponent<StopWatch>();
         if(m_StopWatch==null) Destroy(this);
     }
-    
-    void OnGUI() {
-        if(m_StopWatch.active) {
-            GlobalGui.Init();
-            var duration = m_StopWatch.lastDuration;
-            float width = Screen.width;
-            float height = Screen.height;
-            var frameCount = m_StopWatch.frameCount;
-            var fpsString = (frameCount > 0)
+
+    void Update()
+    {
+        if (!m_StopWatch.active) return;
+        var duration = m_StopWatch.lastDuration;
+        var current = new StopWatchState
+        {
+            duration = duration >= 0 ? duration : m_StopWatch.now,
+            frameCount = m_StopWatch.frameCount,
+            averageFrameTime = m_StopWatch.averageFrameTime,
+            maxFrameTime = m_StopWatch.maxFrameTime,
+            minFrameTime = m_StopWatch.minFrameTime,
+        };
+
+        if (!m_State.Equals(current))
+        {
+            m_State = current;
+#if GUI_ENABLED
+            UpdateGuiString();
+#endif
+        }
+    }
+
+#if GUI_ENABLED
+    public float posX;
+    string title = "glTFast";
+    private string m_Label;
+
+    void UpdateGuiString()
+    {
+        var duration = m_StopWatch.lastDuration;
+        
+        var frameCount = m_StopWatch.frameCount;
+        var fpsString = (frameCount > 0)
             ? string.Format(
                 " (fps avg: {0} min: {1} ms max: {2} ms)"
                 ,m_StopWatch.averageFrameTime.ToString("0.00")
@@ -45,20 +59,26 @@ public class StopWatchGui : MonoBehaviour {
                 ,m_StopWatch.maxFrameTime > float.MinValue ? m_StopWatch.maxFrameTime.ToString("0.00") : "-"
             )
             : "";
-            var label = string.Format(
-                title + " time: {0:0.00} ms{1}"
-                ,duration>=0 ? duration : m_StopWatch.now
-                ,fpsString
-                );
-
-            var timeHeight = GUI.skin.label.fontSize*1.5f;
-            GUI.Label(new Rect(posX+10,height-timeHeight,width-posX-10,timeHeight),label);
-        }
+        m_Label = string.Format(
+            title + " time: {0:0.00} ms{1}"
+            ,duration>=0 ? duration : m_StopWatch.now
+            ,fpsString
+        );
     }
 
-    public void SetTitle(string title)
+    void OnGUI()
     {
-        this.title = title;
+        if (m_Label == null) return;
+        GlobalGui.Init();
+        float width = Screen.width;
+        float height = Screen.height;
+        var timeHeight = GUI.skin.label.fontSize*1.5f;
+        GUI.Label(new Rect(posX+10, height-timeHeight,width-posX-10, timeHeight), m_Label);
     }
-#endif
+
+    public void SetTitle(string newTitle)
+    {
+        title = newTitle;
+    }
+#endif // GUI_ENABLED
 }
