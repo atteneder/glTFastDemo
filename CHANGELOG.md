@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - (Web) Stopwatch state is passed on to web app.
+- (Web) Forwarding `dragover`/`dragleave` events.
 
 ### Changed
 - Updates

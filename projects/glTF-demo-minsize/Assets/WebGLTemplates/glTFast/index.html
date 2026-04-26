@@ -20,6 +20,16 @@
           event.preventDefault();
           parent.globals.drop(event);
         }, false);
+
+        document.getElementById("unity-canvas").addEventListener('dragover', (event) => {
+          event.preventDefault();
+          parent.globals.dragover(event);
+        }, false);
+
+        document.getElementById("unity-canvas").addEventListener('dragleave', (event) => {
+          event.preventDefault();
+          parent.globals.dragleave(event);
+        }, false);
       };
 
       onFileSelected = function() {
