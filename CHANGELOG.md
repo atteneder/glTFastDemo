@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - (Web) Stopwatch state is passed on to web app.
 - (Web) Forwarding `dragover`/`dragleave` events.
+- (Web) Using the [Web Stripping Tool package](https://docs.unity3d.com/Packages/com.unity.web.stripping-tool@latest/) to reduce loading time/build size.
 
 ### Changed
 - Updates

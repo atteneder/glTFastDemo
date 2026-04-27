@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3efdd41947995b14ea6378b017ee4784, type: 3}
+  m_Name: DefaultSubmoduleStrippingSettings
+  m_EditorClassIdentifier: Unity.Web.Stripping.Editor::Unity.Web.Stripping.Editor.SubmoduleStrippingSettings
+  OptimizeCodeAfterStripping: 1
+  RemoveEmbeddedDebugSymbols: 1
+  MissingSubmoduleErrorHandling: 0
+  SubmodulesToStrip:
+  - 2D Rendering
+  - Advanced Text Generator Support
+  - AndroidJNIModule
+  - Expression Evaluator
+  - Freetype2 Base
+  - Freetype2 CFF
+  - Freetype2 OpenType Validation
+  - Freetype2 Postscript
+  - Freetype2 SFNT
+  - Freetype2 TrueType
+  - GPU Instancing
+  - GPU Resident Drawer
+  - IMGUI
+  - IMGUI Script Bindings
+  - Mesh Combiner
+  - Mesh Optimizer
+  - Mesh Sprite Rendering
+  - Mono Globalization
+  - Mono Runtime
+  - Newtonsoft Json.NET
+  - ParticleSystem
+  - System.ComponentModel
+  - System.Data
+  - System.DateTimeOffset
+  - System.DateTimeParse
+  - System.Dynamic
+  - System.Linq
+  - System.Numerics
+  - System.Security
+  - System.TimeZoneInfo
+  - System.Xml
+  - TetGen
+  - Text Editing Utilities
+  - Text Selecting Utilities
+  - Texture Decompression
+  - Texture Decompression Crunch
+  - UI Toolkit Framework
+  - Unity 2D Feature Set
+  - Unity Collections - NativeBitArray
+  - Unity Collections - NativeHashMap
+  - Unity Collections - NativeList
+  - Unity Collections - NativeQueue
+  - Unity Collections - NativeReference
+  - Unity Collections - NativeRingQueue
+  - Unity Collections - NativeStream
+  - Unity Collections - NativeText
+  - Unity Collections - UnsafeBitArray
+  - Unity Collections - UnsafeHashMap
+  - Unity Collections - UnsafeList
+  - Unity Collections - UnsafeParallelHashMap
+  - Unity Collections - UnsafeRingQueue
+  - Unity Collections - UnsafeStream
+  - Unity Collections - UnsafeText
+  - Unity In-App Purchasing
+  - Unity UI
+  - WebGPU Support
