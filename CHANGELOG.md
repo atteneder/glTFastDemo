@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - *Project Auditor Rules* 1.0.3
 
 ### Changed
+- Enabled Graphics Jobs
 - Updated *KTX for Unity* to 3.7.1
 - Updated *Draco for Unity* to 5.5.0
 - Updated *meshoptimizer mesh compression for Unity* to 0.3.0-exp.1
