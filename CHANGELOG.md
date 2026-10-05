@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- *Unity Pipeline* package 0.8.0-exp.1
+- *Project Auditor Rules* 1.0.3
+
+### Changed
+- Updated *KTX for Unity* to 3.7.1
+- Updated *Draco for Unity* to 5.5.0
+- Updated *meshoptimizer mesh compression for Unity* to 0.3.0-exp.1
+- Updated *JetBrains Rider Editor* to 3.1.0
+
 ## [0.11.0] - 2026-09-29
 
 ### Changed
