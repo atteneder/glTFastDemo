@@ -41,7 +41,6 @@ sysinfo.txt
 *.unitypackage
 
 /projects/glTF-demo-dots
-/Assets/UnityGLTF
 /projects/*/Assets/StreamingAssets/glTF-Sample-Models*
 /projects/*/Assets/StreamingAssets/glTF-Sample-Models.meta
 /projects/*/Assets/StreamingAssets/gsm*

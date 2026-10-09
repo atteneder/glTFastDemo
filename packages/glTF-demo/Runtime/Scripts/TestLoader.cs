@@ -16,32 +16,15 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-#if GLTFAST
 using GLTFast.Logging;
 using GLTFast;
-#endif // GLTFAST
-#if UNITY_GLTF
-using UnityGLTF;
-#endif
 
 public class TestLoader : MonoBehaviour {
     
     [SerializeField] bool responsive = true;
-    [SerializeField] private LoadType loadType = LoadType.glTFast;
-    public LoadType Loader
-    {
-        get => loadType;
-        set => loadType = value;
-    }
 
-    public enum LoadType
-    {
-        glTFast = 2,
-        UnityGltf = 4,
-    }
-    
     public UnityAction<string> urlChanged;
-    public UnityAction<string> loadingBegin;
+    public UnityAction loadingBegin;
     public UnityAction<bool> loadingEnd;
     public UnityEvent<Transform> gotSceneRoot;
     public UnityEvent<Bounds> gotSceneBounds;
@@ -50,28 +33,21 @@ public class TestLoader : MonoBehaviour {
     
     public string[] GetSceneNames()
     {
-        return gltf1?.SceneNames;
+        return gltf?.SceneNames;
     }
 
-    public int? currentSceneIndex => gltf1?.CurrentSceneId;
+    public int? currentSceneIndex => gltf?.CurrentSceneId;
 
-    GameObject go1 = null;
-    GameObject go2 = null;
+    GameObject go;
 
-#if GLTFAST
 #if UNITY_DOTS_HYBRID
     GltfEntityAsset gltf1;
 #else
-    GltfAsset gltf1;
+    GltfAsset gltf;
     public GameObjectSceneInstance sceneInstance { get; private set; }
 #endif
-#endif
-#if UNITY_GLTF
-    GLTFComponent gltf2;
-#endif
 
-    float startTime = -1;
-    GLTFast.IDeferAgent deferAgent;
+    IDeferAgent deferAgent;
 
     // Use this for initialization
     void Start () {
@@ -86,20 +62,9 @@ public class TestLoader : MonoBehaviour {
     public async void LoadFromUrl(string url) => await LoadUrl(url);
     
     public async Task LoadUrl(string url) {
-
-#if UNITY_GLTF
-        if(gltf2!=null) {
-            gltf2.onLoadComplete-= UnityGltf_OnLoadComplete;
-            gltf2 = null;
-        }
-#endif
-
-        if(go1!=null) {
-            gltf1.ClearScenes();
-            Destroy(go1);
-        }
-        if(go2!=null) {
-            Destroy(go2);
+        if(go!=null) {
+            gltf.ClearScenes();
+            Destroy(go);
         }
 
         sceneInstance = null;
@@ -109,82 +74,45 @@ public class TestLoader : MonoBehaviour {
         
         Debug.Log("[TestLoader] loading " + url);
 
-        startTime = Time.realtimeSinceStartup;
         urlChanged?.Invoke(url);
-        loadingBegin?.Invoke(loadType.ToString());
-
-        if (loadType.HasFlag(LoadType.glTFast))
-        {
-#if GLTFAST
-            go1 = new GameObject("glTFast Loader");
-            
-#if UNITY_DOTS_HYBRID
-            gltf1 = go1.AddComponent<GltfEntityAsset>();
-#else
-            gltf1 = go1.AddComponent<GltfAsset>();
-#endif
-            gltf1.LoadOnStartup = false;
-            var logger = new CollectingLogger();
-            var success = await gltf1.Load(url,null,deferAgent,logger:logger);
-            loadingEnd?.Invoke(success);
-            if(success) {
-                if (!gltf1.CurrentSceneId.HasValue && gltf1.SceneCount > 0) {
-                    // Fallback to first scene
-                    Debug.LogWarning("glTF has no main scene. Falling back to first scene.");
-                    await gltf1.InstantiateScene(0);
-                }
-                GLTFast_onLoadComplete(gltf1);
-            } else {
-                Debug.LogError("TestLoader: loading failed!");
-                logger.LogAll();
-            }
-#endif
-        }
+        loadingBegin?.Invoke();
         
-        if(loadType.HasFlag(LoadType.UnityGltf))
-        {
-#if UNITY_GLTF
-            Debug.Log("[TestLoader] Loading UnityGltf (loadType=" + loadType + ")");
-            go2 = new GameObject("UnityGltf Loader");
-            gltf2 = go2.AddComponent<GLTFComponent>();
-            gltf2.AppendStreamingAssets = false;
-            gltf2.Multithreaded = false;
-            gltf2.GLTFUri = url;
-            gltf2.onLoadComplete += UnityGltf_OnLoadComplete;
+        go = new GameObject("glTFast Loader");
+        
+#if UNITY_DOTS_HYBRID
+        gltf1 = go1.AddComponent<GltfEntityAsset>();
+#else
+        gltf = go.AddComponent<GltfAsset>();
 #endif
+        gltf.LoadOnStartup = false;
+        var logger = new CollectingLogger();
+        var success = await gltf.Load(url,null,deferAgent,logger:logger);
+        loadingEnd?.Invoke(success);
+        if(success) {
+            if (!gltf.CurrentSceneId.HasValue && gltf.SceneCount > 0) {
+                // Fallback to first scene
+                Debug.LogWarning("glTF has no main scene. Falling back to first scene.");
+                await gltf.InstantiateScene(0);
+            }
+            GLTFast_onLoadComplete(gltf);
+        } else {
+            Debug.LogError("TestLoader: loading failed!");
+            logger.LogAll();
         }
     }
 
     public void ClearScene() {
-        gltf1?.ClearScenes();
+        gltf?.ClearScenes();
     }
 
     public void InstantiateScene(int sceneIndex)
     {
-        gltf1.InstantiateScene(sceneIndex);
+        gltf.InstantiateScene(sceneIndex);
 #if !UNITY_DOTS_HYBRID
-        sceneInstance = gltf1.SceneInstance;
+        sceneInstance = gltf.SceneInstance;
 #endif
     }
 
-#if UNITY_GLTF
-    void UnityGltf_OnLoadComplete()
-    {
-        Debug.Log("[TestLoader] " + nameof(UnityGltf_OnLoadComplete));
-        loadingEnd?.Invoke(true);
-        
-        var bounds = CalculateLocalBounds(go2.transform);
-        
-        if (trackBallCtrl != null) {
-            trackBallCtrl.SetTarget(bounds);
-        }
-
-        gotSceneRoot?.Invoke(go2.transform.childCount > 0 ? go2.transform.GetChild(0) : go2.transform);
-        gotSceneBounds?.Invoke(bounds);
-    }
-#endif
-
-#if GLTFAST
     void GLTFast_onLoadComplete(GltfAssetBase asset) {
 #if UNITY_DOTS_HYBRID
         // TODO: calculate the bounding box
@@ -202,7 +130,6 @@ public class TestLoader : MonoBehaviour {
         gotSceneBounds?.Invoke(bounds);
 #endif
     }
-#endif
 
     static Bounds CalculateLocalBounds(Transform transform)
     {

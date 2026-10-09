@@ -2,15 +2,12 @@
     "name": "glTFastDemo",
     "rootNamespace": "",
     "references": [
-        "glTFast",
-        "glTFast.dots",
-        "glTFast.Export",
-        "glTFast.Editor",
-        "glTF-test-framework",
-        "glTF-test-framework.Sample",
-        "UnityGLTFScripts",
-        "GLTFSerialization",
-        "Unity.RenderPipelines.HighDefinition.Runtime"
+        "GUID:a42927d1d4a3b4cda9b076a7adecb9cc",
+        "GUID:d688d3cbc2c1041f68fa250ae633471b",
+        "GUID:5e7ba8d6d26c84943b64dd07bd1c9510",
+        "GUID:76676817d91ba4f44b4aa7df71867256",
+        "GUID:14605048ca5414a7faab8e2b3deea5a3",
+        "GUID:7b62e07dfb0974cd9bfe044ee746bc12"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -29,11 +26,6 @@
             "name": "com.unity.cloud.gltfast",
             "expression": "6.0.0",
             "define": "GLTFAST"
-        },
-        {
-            "name": "org.khronos.unitygltf",
-            "expression": "1.0.0",
-            "define": "UNITY_GLTF"
         },
         {
             "name": "com.unity.render-pipelines.high-definition",

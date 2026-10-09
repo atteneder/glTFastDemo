@@ -24,6 +24,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Keeping `NativeReference` restored Draco decoding.
 - (Web) Disabled external debugging symbols to avoid templating error.
 
+### Removed
+- Removed UnityGLTF support from project glTFast-Demo. If we bring it back, it should be a dedicated, separate project.
+
 ## [0.11.0] - 2026-09-29
 
 ### Changed

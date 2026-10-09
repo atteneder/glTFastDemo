@@ -50,7 +50,7 @@ namespace GltfDemo.Editor {
             };
 
             string buildPath = null;
-            var args = System.Environment.GetCommandLineArgs ();
+            var args = Environment.GetCommandLineArgs ();
             for (var i = 0; i < args.Length; i++) {
                 if (args[i] == "-buildPath" && i<=args.Length) {
                     buildPath = args[i + 1];

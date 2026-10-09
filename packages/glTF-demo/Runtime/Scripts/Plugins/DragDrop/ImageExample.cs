@@ -7,7 +7,7 @@ using B83.Win32;
 public class ImageExample : MonoBehaviour
 {
     Texture2D[] textures = new Texture2D[6];
-    DropInfo dropInfo = null;
+    DropInfo dropInfo;
     class DropInfo
     {
         public string file;

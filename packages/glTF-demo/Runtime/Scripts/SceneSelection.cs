@@ -18,12 +18,12 @@ using UnityEngine.SceneManagement;
 public class SceneSelection : MonoBehaviour
 {
     #pragma warning disable 0414
-    [SerializeField] string[] scenes = null;
+    [SerializeField] string[] scenes;
     [SerializeField] float width = 300;
     [SerializeField] float height = 100;
     [SerializeField] float yGap = 10;
-    [SerializeField] bool alignRight = false;
-    [SerializeField] bool alignBottom = false;
+    [SerializeField] bool alignRight;
+    [SerializeField] bool alignBottom;
     #pragma warning restore 0414
 
 #if UNITY_IMGUI

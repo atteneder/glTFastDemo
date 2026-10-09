@@ -23,7 +23,7 @@ public abstract class MassLoader : MonoBehaviour
     protected bool local = true;
 
     [SerializeField]
-    protected StopWatch stopWatch = null;
+    protected StopWatch stopWatch;
 
     void Start()
     {

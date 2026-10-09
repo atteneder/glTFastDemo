@@ -43,8 +43,8 @@ public class TestGui : MonoBehaviour {
         Vector2 scrollViewVector = Vector2.zero;
         int indexNumber;
         float buttonHeight = GlobalGui.listItemHeight;
-        bool allowUnset = false;
-        string label = null;
+        bool allowUnset;
+        string label;
 
         public DropDown(string[] items, bool allowUnset = false, string label = null ) {
             this.items = items;
@@ -112,16 +112,16 @@ public class TestGui : MonoBehaviour {
 
 #pragma warning disable 0414
     [SerializeField]
-    StopWatch stopWatch = null;
+    StopWatch stopWatch;
 
     [SerializeField]
-    StopWatchGui stopWatchGui = null;
+    StopWatchGui stopWatchGui;
 #pragma warning restore 0414
 
     [SerializeField]
     MenuState state = MenuState.Visible;
     // Load files locally (from streaming assets) or via HTTP
-    public bool local = false;
+    public bool local;
 
     [SerializeField]
     GameObject cameraObject;
@@ -161,8 +161,7 @@ public class TestGui : MonoBehaviour {
 #endif
     }
 
-    void OnLoadingBegin(string title) {
-        stopWatchGui.SetTitle(title);
+    void OnLoadingBegin() {
         stopWatch.StartTime();
     }
 
@@ -175,7 +174,7 @@ public class TestGui : MonoBehaviour {
     bool enableLocalSwitch = true;
     bool enableUrlField = true;
 
-    SampleSet sampleSet = null;
+    SampleSet sampleSet;
 
     List<Tuple<string,string>> testItems = new List<Tuple<string, string>>();
     List<Tuple<string,string>> testItemsLocal = new List<Tuple<string, string>>();
@@ -285,15 +284,6 @@ public class TestGui : MonoBehaviour {
                 vScrollBarThumbStyle.normal.background = guiScrollBarThumbSprite;
             }
         }
-
-#if UNITY_GLTF
-        // for switching between glTFast and UnityGltf in the same instance
-        if (!loader) loader = GetComponent<TestLoader>();
-        var topLeft = new Rect(0, 0, 130, 20);
-        if (GUI.Button(topLeft, "Loader: " + loader.Loader)) {
-            loader.Loader = loader.Loader == TestLoader.LoadType.glTFast ? TestLoader.LoadType.UnityGltf : TestLoader.LoadType.glTFast;
-        }
-#endif
 
         var y = Screen.safeArea.y;
         

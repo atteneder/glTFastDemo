@@ -21,7 +21,7 @@ public class NormalTester : MonoBehaviour {
 	public bool showNormals = true;
 	public Color color = new Color(0,1,0);
 	public float length = 0.1f;
-	public bool showTangents = false;
+	public bool showTangents;
 	public Color tangentsColor = new Color(1,0,1);
 	private Mesh mesh;
 	
@@ -60,14 +60,14 @@ public class NormalTester : MonoBehaviour {
 				// end = tmpVerts[i] + tmpNorms[i]*length;
 				// end = mat.MultiplyPoint3x4(end);
 				end = start + (rot * tmpNorms[i])*length;
-				UnityEngine.Debug.DrawLine( start, end, color);
+				Debug.DrawLine( start, end, color);
 			}
 			
 			if(showTangents && tmpTans!=null && tmpTans.Length>0 ) {
 				Vector4 t = tmpTans[i];
 				end = mat.MultiplyPoint3x4( tmpVerts[i] + (new Vector3(t.x,t.y,t.z)*(t.w*length) ) );
 				end = start + (rot * new Vector3(t.x,t.y,t.z) )*(t.w*length);
-				UnityEngine.Debug.DrawLine( start, end, tangentsColor);
+				Debug.DrawLine( start, end, tangentsColor);
 			}
 			
 		}
