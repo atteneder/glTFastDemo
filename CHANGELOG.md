@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated *JetBrains Rider Editor* to 3.1.0
 - Updated *Web Stripping Tool* to 1.4.0
 
+### Fixed
+- (Web) Less aggressive web stripping.
+  - Keeping `NativeReference` restored Draco decoding.
+
 ## [0.11.0] - 2026-09-29
 
 ### Changed

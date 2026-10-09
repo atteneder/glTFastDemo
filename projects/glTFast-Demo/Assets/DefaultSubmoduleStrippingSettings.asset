@@ -16,7 +16,9 @@ MonoBehaviour:
   RemoveEmbeddedDebugSymbols: 1
   MissingSubmoduleErrorHandling: 0
   SubmodulesToStrip:
-  - 2D Rendering
+  - 2D Rendering Common
+  - 2D Rendering Sorting
+  - 2D Rendering Sprite Tiling
   - Advanced Text Generator Support
   - AndroidJNIModule
   - Expression Evaluator
@@ -27,12 +29,8 @@ MonoBehaviour:
   - Freetype2 SFNT
   - Freetype2 TrueType
   - GPU Instancing
-  - GPU Resident Drawer
-  - IMGUI
-  - IMGUI Script Bindings
   - Mesh Combiner
   - Mesh Optimizer
-  - Mesh Sprite Rendering
   - Mono Globalization
   - Mono Runtime
   - Newtonsoft Json.NET
@@ -58,7 +56,6 @@ MonoBehaviour:
   - Unity Collections - NativeHashMap
   - Unity Collections - NativeList
   - Unity Collections - NativeQueue
-  - Unity Collections - NativeReference
   - Unity Collections - NativeRingQueue
   - Unity Collections - NativeStream
   - Unity Collections - NativeText
