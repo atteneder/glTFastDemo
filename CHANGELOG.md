@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - (Web) Less aggressive web stripping.
   - Keeping `NativeReference` restored Draco decoding.
+- (Web) Disabled external debugging symbols to avoid templating error.
 
 ## [0.11.0] - 2026-09-29
 
