@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- *Project Auditor Rules* 1.0.3
+- *Project Auditor Rules* 2.0.0
 
 ### Changed
 - Enabled Graphics Jobs
